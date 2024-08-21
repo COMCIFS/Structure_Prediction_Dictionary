@@ -2,4 +2,4 @@
 
 ## Conceptual Model
 
-![image](Images\Conceptual_model.png)
+![image](Images/Conceptual_model.png)

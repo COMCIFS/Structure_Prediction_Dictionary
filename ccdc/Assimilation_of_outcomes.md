@@ -9,14 +9,14 @@
 | Category | Description |
 |-----------|-------------|
 | Chemical System | One or more chemical components of the structure being predicted/calculated. A prediction may involve different combinations of these components. |
-| Structure Generation Methods | The methods used to generate initial candidate structures that are then subsequently optimised for possible inclusion in a final landscape. <br> Retrieving a 3D structure from an existing database could be considered as a form of “structure generation” so TCOD methods relating to this fit here. |
+| Structure Generation Methods | The methods used to generate initial candidate structures that are then subsequently optimised for possible inclusion in a final landscape. <br> Retrieving a 3D structure from an existing database could be considered as a form of “structure generation” so TCOD methods relating to this fit here. See: <br> https://wiki.crystallography.net/cif/dictionaries/ddl1/cif_tcod/ |
 | Energy and Optimization Methods | The method(s) used to optimize a structure and calculate its energy. |
 | Simulation Conditions | Simulation temperature/pressure if specified. Will need to report with structure as a landscape may contain structures simulated under different conditions. |
 | Predicted Structures | The 3D crystal structures resulting from the calculation / prediction and contributing to an overall landscape. |
 | Energies | The energies calculated for each calculated / predicted structure. <br> Expect total energy, absolute free energy or absolute lattice energy. <br> Allow for free energy to be expressed as lattice energy + free energy correction. <br> Accommodate relative lattice energies but encourage one of the others. <br> Define terms for energy uncertainties / standard error. <br>May want to be able to know the method(s) used for calculating final energy – this might be best captured in the list of methods used. |
 | Structure Rank | Optional - allows for alternative ranking methods to be captured. Will assume ranking is based on energy if not provided. |
 
-## Not considered in great detail
+## Not considered in great detail for this use case
 
 | Category | Description |
 |-----------|-------------|
@@ -99,7 +99,7 @@ Recipe Item: A Recipe Item is a calculation undertaken for a particular purpose 
 
 | DFT Parameters | Notes |
 |-----------|-------------|
-| Blind test recommended the following data items: <br>- approximation<br>- functional<br>- dispersion correction<br>- basis set<br>K point grid has additionally been highlighted as important.| Detailed description of a DFT calculation can be provided by the TCOD DFT dictionary terms.<br>Specific items listed are those considered important to report for a general understanding of the parameters used and to support assessment of the results.<br>cell_energy_conv from TCOD DFT dictionary also noted as useful but may also be applicable beyond just DFT. |
+| Blind test recommended the following data items: <br>- approximation<br>- functional<br>- dispersion correction<br>- basis set<br>K point grid has additionally been highlighted as important.| Detailed description of a DFT calculation can be provided by the TCOD DFT dictionary terms, see: https://wiki.crystallography.net/cif/dictionaries/ddl1/cif_dft/ .<br> Specific items listed are those considered important to report for a general understanding of the parameters used and to support assessment of the results.<br>cell_energy_conv from TCOD DFT dictionary also noted as useful but may also be applicable beyond just DFT. |
 
 | ForceField Parameters | Notes |
 |-----------|-------------|
@@ -138,7 +138,7 @@ May want to have a link back to chemical system to indicate the stoichiometry of
 
 ## Simulation Conditions
 
-Simulation temperature/pressure if specified. Will need to report with structure as a landscape may contain structures simulated under different conditions.
+Simulation temperature/pressure if specified. It is anticipated that structures on the same landscape will be simulated using the same conditions, but the alternative can be considered.
 
 | Category | Description |
 |-----------|-------------|

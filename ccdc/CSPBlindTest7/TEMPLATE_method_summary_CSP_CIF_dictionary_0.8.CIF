@@ -1,0 +1,131 @@
+# Template method summary CIF for CSP CIF dictionary v0.8
+
+# Simulation type (static= no thermal corrections. Dynamic= includes thermal corrections)
+_ccdc_csp_simulation_type			.	
+
+# Conformer generation
+loop_
+_ccdc_csp_conformer_generation_method				
+_ccdc_csp_conformer_generation_software					
+_ccdc_csp_conformer_generation_software_version	
+_ccdc_csp_conformer_generation_stage	
+. . . .		
+
+# Conformer optimisation
+loop_
+_ccdc_csp_conformer_optimisation_method	
+_ccdc_csp_conformer_optimisation_force_field_name
+_ccdc_csp_conformer_optimisation_force_field_description
+_ccdc_csp_conformer_optimisation_semi_empirical_method
+_ccdc_csp_conformer_optimisation_DFT_approximation
+_ccdc_csp_conformer_optimisation_DFT_functional
+_ccdc_csp_conformer_optimisation_DFT_dispersion_correction	
+_ccdc_csp_conformer_optimisation_DFT_basis_set
+_ccdc_csp_conformer_optimisation_wavefunction_electronic_method
+_ccdc_csp_conformer_optimisation_wavefunction_basis_set
+_ccdc_csp_conformer_optimisation_software		
+_ccdc_csp_conformer_optimisation_software_version
+_ccdc_csp_conformer_optimisation_stage
+. . . . . . . . . . . . .
+
+# Conformer clustering
+loop_
+_ccdc_csp_conformer_clustering_method
+_ccdc_csp_conformer_clustering_cutoff
+_ccdc_csp_conformer_clustering_cutoff_units
+_ccdc_csp_conformer_clustering_software
+_ccdc_csp_conformer_clustering_software_version
+_ccdc_csp_conformer_clustering_stage
+. . . . . .
+
+# Structure generation
+_ccdc_csp_structure_generation_space_group_selection		.
+loop_
+_ccdc_csp_structure_generation_space_group_number_list
+[INSERT NUMBERS SEPARATED BY A SPACE]
+loop_
+_ccdc_csp_structure_generation_method			
+_ccdc_csp_structure_generation_software			
+_ccdc_csp_structure_generation_software_version	
+_ccdc_csp_structure_generation_stage
+. . . .			
+
+# Structure optimisation
+loop_
+_ccdc_csp_structure_optimisation_method
+_ccdc_csp_structure_optimisation_force_field_name
+_ccdc_csp_structure_optimisation_force_field_description
+_ccdc_csp_structure_optimisation_semi_empirical_method
+_ccdc_csp_structure_optimisation_DFT_approximation
+_ccdc_csp_structure_optimisation_DFT_functional
+_ccdc_csp_structure_optimisation_DFT_dispersion_correction
+_ccdc_csp_structure_optimisation_DFT_basis_set
+_ccdc_csp_structure_optimisation_wavefunction_electronic_method
+_ccdc_csp_structure_optimisation_wavefunction_basis_set
+_ccdc_csp_structure_optimisation_software
+_ccdc_csp_structure_optimisation_software_version
+_ccdc_csp_structure_optimisation_stage
+. . . . . . . . . . . . .
+
+# Structure clustering
+loop_
+_ccdc_csp_structure_clustering_method
+_ccdc_csp_structure_clustering_cutoff
+_ccdc_csp_structure_clustering_cutoff_units
+_ccdc_csp_structure_clustering_software
+_ccdc_csp_structure_clustering_software_version
+_ccdc_csp_structure_clustering_stage
+. . . . . .
+
+# Free energy
+_ccdc_csp_free_energy_correction_method			.
+_ccdc_csp_free_energy_correction_software		.
+_ccdc_csp_free_energy_correction_software_version	.
+_ccdc_csp_free_energy_correction_stage			.
+
+
+# References
+loop_
+_ccdc_csp_reference_category
+_ccdc_csp_reference_citation
+_ccdc_csp_reference_identifier
+#Reference 1
+[INSERT REFERENCE CATEGORY]
+;
+[INSERT CITATION]
+;
+[INSERT DOI OR SIMILAR]
+#Reference 2
+[INSERT REFERENCE CATEGORY]
+;
+[INSERT CITATION]
+;
+[INSERT DOI OR SIMILAR]
+
+# Author information
+loop_
+_publ_author_name
+_publ_author_address
+_publ_author_id_orcid
+#Author 1
+'[INSERT AUTHOR1 NAME]'
+;
+[INSERT AUTHOR1 ADDRESS
+WHICH CAN BE
+MULTIPLE LINES]
+;
+'[INSERT AUTHOR1 ORCID ID]'
+#Author 2
+'[INSERT AUTHOR2 NAME]'
+;
+[INSERT AUTHOR2 ADDRESS
+WHICH CAN BE
+MULTIPLE LINES]
+;
+'[INSERT AUTHOR2 ORCID ID]'
+
+# Main contact details
+_audit_contact_author_name		.
+_audit_contact_author_address		.
+_audit_contact_author_email		.
+

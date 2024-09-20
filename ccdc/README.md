@@ -1,11 +1,10 @@
-# CSP Blind Test
+# CSP data standard development
 
-This folder contains files which provide a summary of reporting requirements requested of participants in the 7th blind test.
+This folder contains information relevant to the community-driven initiative facilitated by the CCDC to establish a standardised dictionary to capture data associated with theoretical/predicted structures.
 
-It contains 3 files:
+Assimiliation_of_outcomes.md: A markdown file summarising the output from various discussions with the community on how theoretical and predicted crystal structure data can be captured.
 
-* CSP_CIF_dictionary_0.8_summary.pdf: A PDF file, sent to participating groups, listing requested theoretical cif data fields, and associated type, definition, constraints, units and examples, for each data field
-* TEMPLATE_method_summary_CSP_CIF_dictionary_0.8.CIF: A template theoretical cif file, containing each of the data fields, with a small amount of context
-* TEMPLATE_structure_specific_data_CSP_CIF_dictionary_0.8.csv: A template Metadata file, containing information on a given landscape
-
-Following the ECM in 2024, it also includes Assimiliation_of_outcomes.md, a markdown file documenting the learnings from the various discussions had on this subject.
+CSPBlindTest7 folder: Archived files utilised during the 7th CSP Blind Test;
+-	CSP_CIF_dictionary_0.8_summary.pdf: A PDF file, sent to participating groups, listing requested theoretical cif data fields, and associated type, definition, constraints, units and examples, for each data field
+-	TEMPLATE_method_summary_CSP_CIF_dictionary_0.8.CIF: A template theoretical cif file, containing each of the data fields describing CSP methods, with a small amount of context
+-	TEMPLATE_structure_specific_data_CSP_CIF_dictionary_0.8.csv: A template Metadata file, containing information on a given set of predicted structures for a system

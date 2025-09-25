@@ -45,7 +45,7 @@ This repository is organised into:
 
 We encourage the community to contribute to both the dictionaries and the shared landscapes.
 
-* For Dictionaries: If you believe a data field is missing or a description could be improved, please open an issue or
+* For Dictionaries: If you believe a data field is missing or a description could be improved, please open an issue or, via a fork,
   submit a pull request with your suggested changes. Alternatively, write to _nfrancia@ccdc.cam.ac.uk_.
 
 * For CSP Methods: Please follow the submission guidelines to add your CSP landscape to the

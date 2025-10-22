@@ -1,0 +1,184 @@
+#
+# Structure Generation Methods
+#
+
+# Random Search
+data_rs
+    _csp.data_block.class GenerationMethod
+    _csp.data_block.identifier rs
+    _csp.data_block.uuid 6e0147be-0454-44a1-a3bb-de7b326dde1b
+    
+    _csp.structure_generation.stopping_criteria "Max Structures"
+    _csp.structure_generation.stopping_criteria_max_structures_evaluated 1000
+    _csp.random.random_numbers_algorithm "Quasi-random"
+
+# Simulated Annealing
+data_sa
+    _csp.data_block.class GenerationMethod
+    _csp.data_block.identifier sa
+    _csp.data_block.uuid 95f28b3c-d029-4840-a69a-3ced34219c28
+    
+    _csp.structure_generation.stopping_criteria "Max Structures"
+    _csp.structure_generation.stopping_criteria_max_structures_evaluated 2000000
+    _csp.simulated_annealing.initial_temperature 400
+    _csp.simulated_annealing.cooling_rate 0.95
+    _csp.simulated_annealing.number_of_steps 100
+
+# Evolutionary Algorithm
+data_ea
+    _csp.data_block.class GenerationMethod
+    _csp.data_block.identifier ea
+    _csp.data_block.uuid af534fed-8153-4af2-bd9f-29b0fef8d805
+
+    _csp.structure_generation.method "Evolutionary Algorithm"
+    _csp.evolutionary_algorithm.population_size 20
+    _csp.evolutionary_algorithm.number_of_generations 100
+    _csp.evolutionary_algorithm.parents_structure_fraction 0.7
+    _csp.evolutionary_algorithm.heredity_fraction 0.5
+    _csp.evolutionary_algorithm.mutation_fraction 0.2
+    _csp.evolutionary_algorithm.permutation_fraction 0.1
+
+#
+# Structure Ranking
+#
+
+# General Purpose FF
+data_gaff
+    _csp.data_block.class RankingMethod
+    _csp.data_block.identifier gaff
+    _csp.data_block.uuid 83f824d3-6d17-4e42-9952-31ed161ef811
+    
+    _ff.name "GAFF"
+    _ff.intramolecular_term "Bonded-Parameters"
+    _ff.electrostatic_term "Point-Charges"
+    _ff.vdw_term "LJ(epsilon,sigma)"
+    _ff.parameterization_method "BCC"
+    _ff.qm_parameterization_functional "AM1"
+
+# Multipoles-based Approach
+data_psi_mol
+    _csp.data_block.class RankingMethod
+    _csp.data_block.identifier psi_mol
+    _csp.data_block.uuid d6f196c5-88d9-4ecd-b388-bcd92fd93a05
+    
+    _ff.name "Psi_mol"
+    _ff.intramolecular_term "Isolated Molecule Energy"
+    _ff.electrostatic_term "Multipoles"
+    _ff.vdw_term "Buckingham"
+    _ff.parameterization_method "GDMA"
+    _ff.qm_parameterization_functional "PBE0"
+    _ff.qm_parameterization_basis_set "6-31G(d,p)"
+
+# GGA DFT
+data_pbe
+    _csp.data_block.class RankingMethod
+    _csp.data_block.identifier pbe
+    _csp.data_block.uuid 17ad684a-2337-4a96-9808-b8b8d3013dc3
+    
+    _dft.exchange_correlation_functional_type "GGA"
+    _dft.exchange_correlation_functional_name "PBE"
+
+# Hybrid DFT
+data_pbe0
+    _csp.data_block.class RankingMethod
+    _csp.data_block.identifier pbe0
+    _csp.data_block.uuid a741eea0-d308-436a-916f-31964b86b649
+    
+    _dft.exchange_correlation_functional_type "Hybrid"
+    _dft.exchange_correlation_functional_name "PBE0"
+    _dft.dispersion_correction "TS"
+
+data_optb88
+    _csp.data_block.class RankingMethod
+    _csp.data_block.identifier optb88
+    _csp.data_block.uuid 2ba152e5-4690-4af4-be55-68789b38b166
+
+    _dft.exchange_correlation_functional_type "Hybrid"
+    _dft.exchange_correlation_functional_name "optb88"
+    _dft.dispersion_correction "TS"
+
+# Free Energy
+data_pbe0_qha
+    _csp.data_block.class RankingMethod
+    _csp.data_block.identifier pbe0
+    _csp.data_block.uuid 00d2779e-6396-4c2c-91ff-d62dddaf9cc1
+
+    _dft.exchange_correlation_functional_type "Hybrid"
+    _dft.exchange_correlation_functional_name "PBE0"
+    _dft.dispersion_correction "MBD"
+
+    _free_energy_method "QHA"
+    _free_energy_reference_temperature [100 200 300]
+    _free_energy_reference_pressure 100000.0
+
+#
+# Workflows and general settings
+#
+
+data_workflow_1
+    _csp.data_block.class Workflow
+    _csp.data_block.identifier wf1
+    _csp.data_block.uuid 29ba6f2f-0a56-47be-bc90-9c8adc7760e9
+    
+    # General Settings
+    _csp.structure_generation.space_group_number_list [14 2 15 61 19 4 33 29 5 1]
+    _csp.structure_generation.density_lower_limit 750
+
+    # Structure Generetion Methods
+    loop_
+        _csp.structure_generation.stage
+        _csp.structure_generation.preceding_stage
+        _csp.structure_generation.stage_id
+        _csp.structure_generation.method
+        _csp.structure_generation.data_block
+        0 . "rs" "Random Sampling"     6e0147be-0454-44a1-a3bb-de7b326dde1b
+        1 0 "sa" "Simulated Annealing" 95f28b3c-d029-4840-a69a-3ced34219c28
+
+    # Structure Ranking Methods
+    loop_
+        _csp.structure_ranking.stage
+        _csp.structure_ranking.preceding_stage
+        _csp.structure_ranking.stage_id
+        _csp.structure_ranking.calculation_type
+        _geometry_optimisation.atoms
+        _geometry_optimisation.cell
+        _csp.structure_ranking.method
+        _csp.structure_ranking.data_block
+        0 . "gaff"    "Optimisation" "all" "anisotropic" "Forcefield" 83f824d3-6d17-4e42-9952-31ed161ef811
+        1 0 "psi_mol" "Optimisation" "all" "anisotropic" "Forcefield" d6f196c5-88d9-4ecd-b388-bcd92fd93a05
+        2 1 "pbe"     "Optimisation" "all" "anisotropic" "pDFT"       17ad684a-2337-4a96-9808-b8b8d3013dc3
+        3 2 "pbe0"    "Single-Point" .     .             "pDFT"       a741eea0-d308-436a-916f-31964b86b649
+        4 2 "optb88"  "Single-Point" .     .             "pDFT"       2ba152e5-4690-4af4-be55-68789b38b166
+
+data_workflow_2
+    _csp.data_block.class Workflow
+    _csp.data_block.identifier wf2
+    _csp.data_block.uuid 964fcd15-82e1-4c4d-a7cb-61b0b34c3421
+
+    # General Settings
+    _csp.structure_generation.space_group_number_list [14 2 15 61 19 4 33 29 5 1]
+    _csp.structure_generation.density_lower_limit 750
+
+    # Structure Generetion Methods
+    loop_
+        _csp.structure_generation.stage
+        _csp.structure_generation.stage_id
+        _csp.structure_generation.preceding_stage
+        _csp.structure_generation.method
+        _csp.structure_generation.data_block
+        0 "rs" . "Random Sampling"        6e0147be-0454-44a1-a3bb-de7b326dde1b
+        1 "ea" 0 "Evolutionary Algorithm" af534fed-8153-4af2-bd9f-29b0fef8d805
+
+    # Structure Ranking Methods
+    loop_
+        _csp.structure_ranking.stage
+        _csp.structure_ranking.stage_id
+        _csp.structure_ranking.preceding_stage
+        _csp.structure_ranking.calculation_type
+        _geometry_optimisation.atoms
+        _geometry_optimisation.cell
+        _csp.structure_ranking.method
+        _csp.structure_ranking.data_block
+        0 "gaff"     . "Optimisation"     "all" "anisotropic" "Forcefield" 83f824d3-6d17-4e42-9952-31ed161ef811
+        1 "psi_mol"  0 "Optimisation"     "all" "anisotropic" "Forcefield" d6f196c5-88d9-4ecd-b388-bcd92fd93a05
+        2 "pbe0_qha" 1 "Dynamic Ensemble" .     .             "pDFT"       00d2779e-6396-4c2c-91ff-d62dddaf9cc1

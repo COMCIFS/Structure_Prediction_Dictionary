@@ -9,6 +9,7 @@ calculate these.
 
 ### Table of contents
 
+* **0. Datablocks identifiers and file cross-referencing** describing the links betweenmethods, workflows and output structures.
 * **1. Input Chemical System** describing the input atoms or molecules for CSP.
 * **2. Structure Generation Methods** describing the workflow used to generate theoretical crystal structures.
 * **3. Structure Ranking Methods** describing the energy evaluation models used to generate and rank the structures.
@@ -16,6 +17,16 @@ calculate these.
   density.
 * **5. Conventions** specifying guidelines to avoid multiple labels for the same term.
 * **6. Future Developments** describing what is missing from the current dictionary.
+
+## 0. Datablocks identifiers and file cross-referencing
+
+| Category   | Data Field         | Type | Definition                                                                                                         | Constraints                        | Units | Example                                             |
+|------------|--------------------|------|--------------------------------------------------------------------------------------------------------------------|------------------------------------|-------|-----------------------------------------------------|
+| Data Block | `class`            | char |                                                                                                                    |                                    |       |                                                     |
+| Data Block | `text_identifier`  | char |                                                                                                                    |                                    |       |                                                     |
+| Data Block | `uuid`             | char |                                                                                                                    |                                    |       |                                                     |
+| Data Block | `additional_files` | list |                                                                                                                    |                                    |       |                                                     |
+
 
 ## 1. Input Chemical System
 
@@ -191,6 +202,10 @@ Category `_csp.structure_generation_[]`: Category for structure generation metho
 |----------------------|----------------------------------------------------|----------------|-----------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------|-----------------------------------------------------|
 | Structure Generation | `space_group_number_list`                          | char/numb/list | Space group selection could be “all” or a subset (list) specifying which spacegroups were used.                                                     | Either "all" or list of sg numbers                                                                                                                                                                                                         |                     | `[14 2 15 61 19 4 33 29 5 1]`                       |
 | Structure Generation | `method`                                           | char/list      | Structure generation method or list of methods.                                                                                                     | - Evolutionary Algorithm (Sec. 2.2) <br>- Particle Swarm Optimisation (Sec. 2.3) <br>- Simulated Annealing (Sec. 2.4) <br>- Monte Carlo Parallel tempering (Sec. 2.5) <br>- Random Sampling (Sec. 2.6)<br>- Analogue Templates <br>- Other |                     | Simulated Annealing                                 |
+| Structure Generation | `stage`                                            | numb           |                                                                                                                                                     |                                                                                                                                                                                                                                            |                     |                                                     |
+| Structure Generation | `stage_id`                                         | char           |                                                                                                                                                     |                                                                                                                                                                                                                                            |                     |                                                     |
+| Structure Generation | `preceding_stage`                                  | numb           |                                                                                                                                                     |                                                                                                                                                                                                                                            |                     |                                                     |
+| Structure Generation | `data_block`                                       | char           |                                                                                                                                                     |                                                                                                                                                                                                                                            |                     |                                                     |
 | Structure Generation | `software`                                         | char           | Name of the software used for structure generation.                                                                                                 | Free text                                                                                                                                                                                                                                  |                     |                                                     |
 | Structure Generation | `software_citation`                                | char           | Details of the software used for structure generation. Either URL to webpage or DOI of the related publication.                                     | Free text                                                                                                                                                                                                                                  |                     |                                                     |
 | Structure Generation | `software_version`                                 | char           | Version of software used for structure generation.                                                                                                  | Free text                                                                                                                                                                                                                                  |                     |                                                     |
@@ -306,7 +321,8 @@ _csp.simulated_annealing.number_of_steps 100
 ## 3. Structure Ranking Methods (High-level)
 
 Within this section, you can define the workflow used to rank the different crystals and give high-level details of the
-methods used.
+methods used. To allow compatibility with other dictionaries and possible future works on computational chemistry 
+calculations, single methods datafields don't have the `_csp` prefix.
 
 ### 3.1 General Fields
 
@@ -316,16 +332,18 @@ Category `_csp.structure_ranking_[]`: Category for structure ranking and optimis
 |-----------------------|:--------------------------|:-----|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------|:------------------------------------|:---------------|
 | Structure Ranking     | `method`                  | char | The energy or scoring model used to rank structures.                                                                                                                                                                      | - pDFT (Sec. 3.2) <br>- Forcefield (Sec. 3.3) <br>- Semi-Empirical (Sec. 3.4) <br>- Wavefunction (Sec. 3.5) <br>- ML Potentials (Sec. 3.6) <br>- Other |                                     | Forcefield     |
 | Structure Ranking     | `calculation_type`        | char | Indicates how atomic positions are changed.                                                                                                                                                                               | - Optimisation<br>- Ensemble Average<br>- Single point                                                                                                 |                                     | "Single point" |
-| Structure Ranking     | `software_citation`       | char | Details of the software used for structure generation.                                                                                                                                                                    | Free Text                                                                                                                                              |                                     |                |
-| Structure Ranking     | `software_version`        | char | Version of software used for structure generation.                                                                                                                                                                        | Free Text                                                                                                                                              |                                     |                |
+| Structure Ranking     | `software`                | char | Name of the software used for structure ranking.                                                                                                                                                                          | Free Text                                                                                                                                              |                                     |                |
+| Structure Ranking     | `software_citation`       | char | Details of the software used for structure ranking.                                                                                                                                                                       | Free Text                                                                                                                                              |                                     |                |
+| Structure Ranking     | `software_version`        | char | Version of software used for structure ranking.                                                                                                                                                                           | Free Text                                                                                                                                              |                                     |                |
 | Structure Ranking     | `stage`                   | numb | In case of multi-step approaches, the stage of the ranking method.                                                                                                                                                        | \>=0                                                                                                                                                   |                                     | 0              |
 | Structure Ranking     | `stage_id`                | char | In case of multi-step approaches, the stage identifier of the ranking method.                                                                                                                                             | Free Text                                                                                                                                              |                                     | FF, PBE, PBE0  |
+| Structure Ranking     | `preceding_stage`         | numb |                                                                                                                                                                                                                           |                                                                                                                                                        |                                     |                |
+| Structure Ranking     | `data_block`              | char |                                                                                                                                                                                                                           |                                                                                                                                                        |                                     |                |
 | Geometry Optimisation | `algorithm`               | char | Geometry optimisation algorithm.                                                                                                                                                                                          | - BFGS<br>- L-BFGS<br>- Quasi-Newton<br>- FIRE<br>- Steepest Descent<br>- Conjugate Gradient<br>- Other                                                |                                     |                |
 | Geometry Optimisation | `cell`                    | char | It can be "fixed" for no cell optimisation, "isotropic" or "anisotropic" for cell relaxation calculations.                                                                                                                | - fixed<br/>- isotropic<br/>- anisotropic                                                                                                              |                                     |                |
 | Geometry Optimisation | `atoms`                   | char | It can be "fixed" for no atoms' position optimisation, "all" for all-atoms geometry optimization, "hydrogens" for optimisation of only H atoms, "non-hydrogens" for non-H atoms or a list of atoms for custom relaxation. | - fixed<br/>- all<br/>- hydrogens<br/>- non-hydrogens<br/>- `[List of _chemical.conn_atom.number]`                                                     |                                     | `[1 2 3 4]`    |
 | Geometry Optimisation | `relax_force_convergence` | numb | Convergence criteria for stopping the geometry optimisation. Present in TCOD as `_dft_atom_relax_force_conv`.                                                                                                             | \>0                                                                                                                                                    | kJ mol<sup>-1</sup> nm<sup>-1</sup> | 0.1            |
-
-#### Examples
+| Geometry Optimisation | `max_steps`               | numb |                                                                                                                                                                                                                           | \>0                                                                                                                                                    |                                     |                |
 
 ### 3.2 Periodic Density Functional Theory
 
@@ -388,9 +406,10 @@ Category `_ml_potential_[]`: Subgroup for CSP Structure Ranking methods that use
 For
 these fields to be used, the `_csp.ranking_method` should be set to "ML Potentials".
 
-| Category     | Data Field | Type | Definition                                                                                                                                   | Constraints                               | Units | Example |
-|:-------------|:-----------|:-----|:---------------------------------------------------------------------------------------------------------------------------------------------|:------------------------------------------|:------|:--------|
-| ML Potential | `method`   | char | Specifies the name of the ML Potential used. In case of ML parameterisation of classical forcefields, refer to the Forcefields dictionaries. | - ANI<br/>- Mace<br/>- GAP/SOAP<br/>- ... |       |         |
+| Category     | Data Field  | Type | Definition                                                                                                                                   | Constraints                               | Units | Example |
+|:-------------|:------------|:-----|:---------------------------------------------------------------------------------------------------------------------------------------------|:------------------------------------------|:------|:--------|
+| ML Potential | `method`    | char | Specifies the name of the ML Potential used. In case of ML parameterisation of classical forcefields, refer to the Forcefields dictionaries. | - ANI<br/>- Mace<br/>- GAP/SOAP<br/>- ... |       |         |
+| ML Potential | `precision` | char |                                                                                                                                              |                                           |       |         |
 
 ### 3.7 Free Energy
 
@@ -443,7 +462,6 @@ loop_
     2 "pbe"     "Optimisation" "all" "anisotropic" "DFT"
     3 "pbe0"    "Single-Point" .     .             "DFT"
 
-# END
 
 # Additional Parameters for each method
 data_gaff
@@ -453,7 +471,6 @@ _ff.electrostatic_term "Point-Charges"
 _ff.vdw_term "LJ(epsilon,sigma)"
 _ff.parameterization_method "BCC"
 _ff.qm_parameterization_functional "AM1"
-# END
 
 data_psi_mol
 _ff.name "Psi_mol"
@@ -463,38 +480,47 @@ _ff.vdw_term "Buckingham"
 _ff.parameterization_method "GDMA"
 _ff.qm_parameterization_functional "PBE0"
 _ff.qm_parameterization_basis_set "6-31G(d,p)"
-# END
 
 data_pbe
 _dft.exchange_correlation_functional_type "GGA"
 _dft.exchange_correlation_functional_name "PBE"
-# END
 
 data_pbe0
 _dft.exchange_correlation_functional_type "Hybrid"
 _dft.exchange_correlation_functional_name "PBE0"
 _dft.dispersion_correction "TS"
-# END
 ```
 
-## 4. Predicted Crystal Structure
+## 4. Theoretical Crystal Structure
 
 Describes the structure-specific outputs of CSP methods.
-Category `_predicted_structure_[]`
+Category `_theoretical_structure_[]`
 
-| Category            | Data Field                | Type | Definition                                                                                                                                | Constraints | Units               | Example         |
-|---------------------|---------------------------|------|-------------------------------------------------------------------------------------------------------------------------------------------|-------------|---------------------|-----------------|
-| Predicted Structure | `temperature`             | numb | The temperature at which the energy and other properties of the theoretical structure were calculated.                                    | \>=0        | K                   | 298.15          |
-| Predicted Structure | `pressure`                | numb | The pressure at which the energy and other properties of the theoretical structure were calculated.                                       | :           | Pa                  | 101325.0        |
-| Predicted Structure | `calculated_density`      | numb | The calculated density of the crystal.                                                                                                    | \>=0        | kg m<sup>-1</sup>   | 1420.0          |
-| Predicted Structure | `total_energy`            | numb | The total energy of the theoretical structure, i.e. energy relative to all of the nuclei and electrons seperated to an infinite distance. | :           | kJ mol<sup>-1</sup> | -1500.5         |
-| Predicted Structure | `absolute_lattice_energy` | numb | The absolute lattice energy of the crystal, i.e. energy relative to all the molecules seperated to an infinite distance.                  | :           | kJ mol<sup>-1</sup> | -1600.8         |
-| Predicted Structure | `absolute_free_energy`    | numb | The absolute free energy of the crystal.                                                                                                  | :           | kJ mol<sup>-1</sup> | -1450.2         |
-| Predicted Structure | `free_energy_correction`  | numb | The correction applied to the lattice energy to obtain the free energy, accounting for vibrational and other thermal effects.             | :           | kJ mol<sup>-1</sup> | 50.6            |
-| Predicted Structure | `relative_lattice_energy` | numb | The lattice energy of the theoretical structure relative to the lowest energy structure found in the CSP.                                 | \>=0        | kJ mol<sup>-1</sup> | 0.0, 5.2        |
-| Predicted Structure | `energy_uncertainty`      | numb | An estimate of the uncertainty associated with the calculated energy of the theoretical structure.                                        | \>=0        | kJ mol<sup>-1</sup> | 0.1             |
-| Predicted Structure | `score`                   | numb | To allow for methods that may rank by criteria other than energies (e.g., based on stability or other desired properties).                | :           |                     | 1, 0.3333, 0.01 |
-| Predicted Structure | `rank`                    | numb | The rank of the structure when ordered by chosen criteria where 1 is considered to be the most favorable or likely structure.             | \>=1        |                     | 2, 7, 12        |
+| Category              | Data Field                            | Type | Definition                                                                                                                                | Constraints | Units               | Example         |
+|-----------------------|---------------------------------------|------|-------------------------------------------------------------------------------------------------------------------------------------------|-------------|---------------------|-----------------|
+| Theoretical Structure | `temperature`                         | numb | The temperature at which the energy and other properties of the theoretical structure were calculated.                                    | \>=0        | K                   | 298.15          |
+| Theoretical Structure | `pressure`                            | numb | The pressure at which the energy and other properties of the theoretical structure were calculated.                                       | :           | Pa                  | 101325.0        |
+| Theoretical Structure | `calculated_density`                  | numb | The calculated density of the crystal.                                                                                                    | \>=0        | kg m<sup>-1</sup>   | 1420.0          |
+| Theoretical Structure | `total_energy`                        | numb | The total energy of the theoretical structure, i.e. energy relative to all of the nuclei and electrons seperated to an infinite distance. | :           | kJ mol<sup>-1</sup> | -1500.5         |
+| Theoretical Structure | `absolute_lattice_energy`             | numb | The absolute lattice energy of the crystal, i.e. energy relative to all the molecules seperated to an infinite distance.                  | :           | kJ mol<sup>-1</sup> | -1600.8         |
+| Theoretical Structure | `absolute_free_energy`                | numb | The absolute free energy of the crystal.                                                                                                  | :           | kJ mol<sup>-1</sup> | -1450.2         |
+| Theoretical Structure | `free_energy_correction`              | numb | The correction applied to the lattice energy to obtain the free energy, accounting for vibrational and other thermal effects.             | :           | kJ mol<sup>-1</sup> | 50.6            |
+| Theoretical Structure | `relative_lattice_energy`             | numb | The lattice energy of the theoretical structure relative to the lowest energy structure found in the CSP.                                 | \>=0        | kJ mol<sup>-1</sup> | 0.0, 5.2        |
+| Theoretical Structure | `energy_uncertainty`                  | numb | An estimate of the uncertainty associated with the calculated energy of the theoretical structure.                                        | \>=0        | kJ mol<sup>-1</sup> | 0.1             |
+| Theoretical Structure | `score`                               | numb | To allow for methods that may rank by criteria other than energies (e.g., based on stability or other desired properties).                | :           |                     | 1, 0.3333, 0.01 |
+| Theoretical Structure | `rank`                                | numb | The rank of the structure when ordered by chosen criteria where 1 is considered to be the most favorable or likely structure.             | \>=1        |                     | 2, 7, 12        |
+| Theoretical Structure | `input_system_identifier`             | char |                                                                                                                                           |             |                     |                 |
+| Theoretical Structure | `input_system_uuid`                   | char |                                                                                                                                           |             |                     |                 |
+| Theoretical Structure | `workflow_identifier`                 | char |                                                                                                                                           |             |                     |                 |
+| Theoretical Structure | `workflow_uuid`                       | char |                                                                                                                                           |             |                     |                 |
+| Theoretical Structure | `generation_stage_identifier`         | char |                                                                                                                                           |             |                     |                 |
+| Theoretical Structure | `generation_stage_uuid`               | char |                                                                                                                                           |             |                     |                 |
+| Theoretical Structure | `ranking_stage_identifier`            | char |                                                                                                                                           |             |                     |                 |
+| Theoretical Structure | `ranking_stage_uuid`                  | char |                                                                                                                                           |             |                     |                 |
+| Theoretical Structure | `previous_stage_structure_identifier` | char |                                                                                                                                           |             |                     |                 |
+| Theoretical Structure | `previous_stage_structure_uuid`       | char |                                                                                                                                           |             |                     |                 |
+| Theoretical Structure | `reference_temperature`               | char |                                                                                                                                           |             |                     |                 |
+| Theoretical Structure | `reference_pressure`                  | char |                                                                                                                                           |             |                     |                 |
 
 Details on composition, unit cell, symmetry, and atomic coordinates can be specified through the CIF Core dictionary.
 
@@ -510,9 +536,9 @@ _csp.structure_ranking.stage 1
 _csp.structure_ranking.stage_id dftb
 
 # Properties
-_predicted_structure.temperature 0
-_predicted_structure.relative_lattice_energy 1.5
-_predicted_structure.rank 5 
+_theoretical_structure.temperature 0
+_theoretical_structure.relative_lattice_energy 1.5
+_theoretical_structure.rank 5 
 
 # Crystal
 _symmetry.cell_setting           monoclinic

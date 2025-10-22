@@ -1,0 +1,144 @@
+#
+# Output Structures
+#
+
+data_structure_1_0
+    # Structure identifiers
+    _csp.data_block.class                                  TheoreticalStructure
+    _csp.data_block.identifier                             structure_1_0
+    _csp.data_block.uuid                                   b9e19895-8438-488f-88f5-ce76c49a2449
+
+    # Workflow and stage identifiers
+    _csp.data_block.additional_files                       [ "csp_input.cif" "workflow.cif" ]
+
+    _csp.theoretical_structure.input_system_identifier     Urea_Hydrate
+    _csp.theoretical_structure.input_system_uuid           2a2611e3-2021-4b03-a7c6-0ef71239008f
+
+    _csp.theoretical_structure.workflow_identifier         wf2
+    _csp.theoretical_structure.workflow_uuid               964fcd15-82e1-4c4d-a7cb-61b0b34c3421
+
+    _csp.theoretical_structure.generation_stage_identifier ea
+    _csp.theoretical_structure.generation_stage_uuid       af534fed-8153-4af2-bd9f-29b0fef8d805
+
+    _csp.theoretical_structure.ranking_stage_identifier    gaff
+    _csp.theoretical_structure.ranking_stage_uuid          83f824d3-6d17-4e42-9952-31ed161ef811
+
+    # Crystal properties and details
+    ...
+
+data_structure_1_1
+    # Structure identifiers
+    _csp.data_block.class                                          TheoreticalStructure
+    _csp.data_block.identifier                                     structure_1_1
+    _csp.data_block.uuid                                           00d2779e-6396-4c2c-91ff-d62dddaf9cc1
+
+    # Workflow and stage identifiers
+    _csp.data_block.additional_files                               [ "csp_input.cif" "workflow.cif" ]
+
+    _csp.theoretical_structure.input_system_identifier             Urea_Hydrate
+    _csp.theoretical_structure.input_system_uuid                   2a2611e3-2021-4b03-a7c6-0ef71239008f
+
+    _csp.theoretical_structure.workflow_identifier                 wf2
+    _csp.theoretical_structure.workflow_uuid                       964fcd15-82e1-4c4d-a7cb-61b0b34c3421
+
+    _csp.theoretical_structure.generation_stage_identifier         ea
+    _csp.theoretical_structure.generation_stage_uuid               af534fed-8153-4af2-bd9f-29b0fef8d805
+
+    _csp.theoretical_structure.ranking_stage_identifier            psi_mol
+    _csp.theoretical_structure.ranking_stage_uuid                  d6f196c5-88d9-4ecd-b388-bcd92fd93a05
+
+    _csp.theoretical_structure.previous_stage_structure_identifier structure_1_0
+    _csp.theoretical_structure.previous_stage_structure_uuid       b9e19895-8438-488f-88f5-ce76c49a2449
+
+    # Crystal properties and details
+    ...
+
+data_structure_1_2_0
+    # Structure identifiers
+    _csp.data_block.class                                          TheoreticalStructure
+    _csp.data_block.identifier                                     structure_1_2_0
+    _csp.data_block.uuid                                           56cfac30-680a-4821-b29a-28c5991beba9
+
+    # Workflow and stage identifiers
+    _csp.data_block.additional_files                               [ "csp_input.cif" "workflow.cif" ]
+
+    _csp.theoretical_structure.input_system_identifier             Urea_Hydrate
+    _csp.theoretical_structure.input_system_uuid                   2a2611e3-2021-4b03-a7c6-0ef71239008f
+
+    _csp.theoretical_structure.workflow_identifier                 wf2
+    _csp.theoretical_structure.workflow_uuid                       964fcd15-82e1-4c4d-a7cb-61b0b34c3421
+
+    _csp.theoretical_structure.generation_stage_identifier         ea
+    _csp.theoretical_structure.generation_stage_uuid               af534fed-8153-4af2-bd9f-29b0fef8d805
+
+    _csp.theoretical_structure.ranking_stage_identifier            pbe0_qha
+    _csp.theoretical_structure.ranking_stage_uuid                  56cfac30-680a-4821-b29a-28c5991beba9
+
+    _csp.theoretical_structure.reference_temperature               100.0
+    _csp.theoretical_structure.reference_pressure                  100000.0
+
+    _csp.theoretical_structure.previous_stage_structure_identifier structure_1_1
+    _csp.theoretical_structure.previous_stage_structure_uuid       00d2779e-6396-4c2c-91ff-d62dddaf9cc1
+
+    # Crystal properties and details
+    ...
+
+data_structure_1_2_1
+    # Structure identifiers
+    _csp.data_block.class                                          TheoreticalStructure
+    _csp.data_block.identifier                                     structure_1_2_1
+    _csp.data_block.uuid                                           28775053-e8fb-4e2b-bdb7-0ae255a422ef
+
+    # Workflow and stage identifiers
+    _csp.data_block.additional_files                               [ "csp_input.cif" "workflow.cif" ]
+
+    _csp.theoretical_structure.input_system_identifier             Urea_Hydrate
+    _csp.theoretical_structure.input_system_uuid                   2a2611e3-2021-4b03-a7c6-0ef71239008f
+
+    _csp.theoretical_structure.workflow_identifier                 wf2
+    _csp.theoretical_structure.workflow_uuid                       964fcd15-82e1-4c4d-a7cb-61b0b34c3421
+
+    _csp.theoretical_structure.generation_stage_identifier         ea
+    _csp.theoretical_structure.generation_stage_uuid               af534fed-8153-4af2-bd9f-29b0fef8d805
+
+    _csp.theoretical_structure.ranking_stage_identifier            pbe0_qha
+    _csp.theoretical_structure.ranking_stage_uuid                  56cfac30-680a-4821-b29a-28c5991beba9
+
+    _csp.theoretical_structure.reference_temperature               200.0
+    _csp.theoretical_structure.reference_pressure                  100000.0
+
+    _csp.theoretical_structure.previous_stage_structure_identifier structure_1_1
+    _csp.theoretical_structure.previous_stage_structure_uuid       00d2779e-6396-4c2c-91ff-d62dddaf9cc1
+
+    # Crystal properties and details
+    ...
+
+data_structure_1_2_2
+    # Structure identifiers
+    _csp.data_block.class                                          TheoreticalStructure
+    _csp.data_block.identifier                                     structure_1_2_2
+    _csp.data_block.uuid                                           28775053-e8fb-4e2b-bdb7-0ae255a422ef
+
+    # Workflow and stage identifiers
+    _csp.data_block.additional_files                               [ "csp_input.cif" "workflow.cif" ]
+
+    _csp.theoretical_structure.input_system_identifier             Urea_Hydrate
+    _csp.theoretical_structure.input_system_uuid                   2a2611e3-2021-4b03-a7c6-0ef71239008f
+
+    _csp.theoretical_structure.workflow_identifier                 wf2
+    _csp.theoretical_structure.workflow_uuid                       964fcd15-82e1-4c4d-a7cb-61b0b34c3421
+
+    _csp.theoretical_structure.generation_stage_identifier         ea
+    _csp.theoretical_structure.generation_stage_uuid               af534fed-8153-4af2-bd9f-29b0fef8d805
+
+    _csp.theoretical_structure.ranking_stage_identifier            pbe0_qha
+    _csp.theoretical_structure.ranking_stage_uuid                  56cfac30-680a-4821-b29a-28c5991beba9
+
+    _csp.theoretical_structure.reference_temperature               300.0
+    _csp.theoretical_structure.reference_pressure                  100000.0
+
+    _csp.theoretical_structure.previous_stage_structure_identifier structure_1_1
+    _csp.theoretical_structure.previous_stage_structure_uuid       00d2779e-6396-4c2c-91ff-d62dddaf9cc1
+
+    # Crystal properties and details
+    ...

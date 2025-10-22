@@ -1,0 +1,57 @@
+#
+# Input Data
+#
+
+data_input
+    _csp.data_block.class "Input"
+    _csp.data_block.identifier "Urea_Hydrate"
+    _csp.data_block.uuid 2a2611e3-2021-4b03-a7c6-0ef71239008f
+
+    _csp.input.name Urea_Hydrate
+
+    # Molecules
+    loop_
+        _csp.input_molecule.number
+        _csp.input_molecule.identifier
+        _csp.input_molecule.smiles
+        _chemical.name_common
+        1 WAT O      water
+        2 URE OCN(N) urea
+
+    # Atoms in molecules
+    loop_
+        _csp.input_molecule.molecule_number
+        _csp.input_molecule.molecule_identifier
+        _csp.input_molecule.atom_label
+        _chemical.conn_atom.number
+        _chemical.conn_atom.type_symbol
+        _chemical.conn_atom.charge
+        1 WAT O1 1  O -0.800000
+        1 WAT H1 2  H  0.400000
+        1 WAT H1 3  H  0.400000
+        2 URE O1 4  O -0.613359
+        2 URE C1 5  C  0.880229
+        2 URE N1 6  N -0.923545
+        2 URE N2 7  N -0.923545
+        2 URE H1 8  H  0.395055
+        2 URE H2 9  H  0.395055
+        2 URE H3 10 H  0.395055
+        2 URE H4 11 H  0.395055
+
+    # Bonds
+    loop_
+        _chemical.conn_bond.atom_1
+        _chemical.conn_bond.atom_2
+        _chemical.conn_bond.type
+        1 2  sing
+        1 3  sing
+        4 5  doub
+        5 6  sing
+        5 7  sing
+        6 8  sing
+        6 9  sing
+        7 10 sing
+        8 11 sing
+
+    _csp.input.composition_calculation "fixed"
+    _csp.input.composition_coefficients  [2 1] # Indexes from molecule section (2 water molecules and one urea)

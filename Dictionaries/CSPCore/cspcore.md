@@ -33,7 +33,7 @@ to it.
 
 Single inputs systems, generation methods and ranking methods must be described in separate datablocks and a unique
 identifier should be assigned to them.
-We recommend the use of Universally Unique IDentifiers (UUIDs), described
+We recommend the use of Universally Unique Identifiers (UUIDs), described
 in [here](https://www.rfc-editor.org/rfc/rfc9562) and naturally implemented in most programming languages.
 The Workflow datablock is meant to connect different generation and ranking methods in multistep approaches.
 Finally, the output theoretical structures will have a link to the specific stage in the workflow and the previous
@@ -245,7 +245,7 @@ Category `_csp.structure_generation_[]`: Category for structure generation metho
 
 | Top Category | Category             | Data Field                                         | Type           | Definition                                                                                                                                          | Constraints                                                                                                                                                                                                                                | Units               | Example                                             |
 |--------------|----------------------|----------------------------------------------------|----------------|-----------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------|-----------------------------------------------------|
-| CSP          | Structure Generation | `space_group_number_list`                          | char/numb/list | Space group selection could be “all” or a subset (list) specifying which spacegroups were used.                                                     | Either "all" or list of sg numbers                                                                                                                                                                                                         |                     | `[14 2 15 61 19 4 33 29 5 1]`                       |
+| CSP          | Structure Generation | `space_group_number_list`                          | char/numb/list | Space group selection could be “all” or a subset (list) specifying which space groups were used.                                                    | Either "all" or list of sg numbers                                                                                                                                                                                                         |                     | `[14 2 15 61 19 4 33 29 5 1]`                       |
 | CSP          | Structure Generation | `method`                                           | char/list      | Structure generation method or list of methods.                                                                                                     | - Evolutionary Algorithm (Sec. 2.2) <br>- Particle Swarm Optimisation (Sec. 2.3) <br>- Simulated Annealing (Sec. 2.4) <br>- Monte Carlo Parallel tempering (Sec. 2.5) <br>- Random Sampling (Sec. 2.6)<br>- Analogue Templates <br>- Other |                     | Simulated Annealing                                 |
 | CSP          | Structure Generation | `stage`                                            | numb           | To be used in the "Workflow" datablock, it specify the stage number of the generation method.                                                       |                                                                                                                                                                                                                                            |                     |                                                     |
 | CSP          | Structure Generation | `preceding_stage`                                  | numb           | To be used in the "Workflow" datablock, it specify the stage number of the previous generation method.                                              |                                                                                                                                                                                                                                            |                     |                                                     |
@@ -388,7 +388,7 @@ data_workflow
     _csp.structure_generation_space_group_number_list                    [14 2 15 61 19 4 33 29 5 1]
     _csp.structure_generation_density_lower_limit                        750
 
-    # Structure Generetion Methods
+    # Structure Generation Methods
     loop_
         _csp.structure_generation_stage
         _csp.structure_generation_preceding_stage
@@ -410,7 +410,7 @@ For the last section, the mandatory data fields to identify and link the differe
 
 Within this section, you can define the workflow used to rank the different crystals and give high-level details of the
 methods used. To allow compatibility with other dictionaries and possible future works on computational chemistry
-calculations, single methods datafields don't have the `_csp` prefix.
+calculations, single methods data fields don't have the `_csp` prefix.
 
 ### 3.1 General Fields
 
@@ -448,7 +448,7 @@ the `_compchem.method` should be set to "pDFT".
 | pDFT         | `exchange_correlation_functional_type` | char | Specifies the type of exchange-correlation functional used. | - LDA<br/>- GGA<br/>- meta-GGA<br/>- Hybrid<br/>- Other                                                |       | GGA     |
 | pDFT         | `exchange_correlation_functional_name` | char | Specifies the name of exchange-correlation functional used. | - PBE<br/>- PBE0<br/>- SCAN<br/>- ...                                                                  |       | PBE     |
 | pDFT         | `pseudopotential_type`                 | char | Defines the type of pseudopotentials used.                  | - Plane-waves<br/>- PAW<br/>- Norm-conserving<br/>- Ultrasoft                                          |       | PAW     |
-| pDFT         | `dispersion_correction`                | char | The Van der Waals correction used.                          | - Grimme-D2<br/>- Grimme-D3<br/>- Tkatchenko-Scheffler<br/>- Many-body dipersion<br/>- XDM<br/>- Other |       | XDM     |
+| pDFT         | `dispersion_correction`                | char | The Van der Waals correction used.                          | - Grimme-D2<br/>- Grimme-D3<br/>- Tkatchenko-Scheffler<br/>- Many-body dispersion<br/>- XDM<br/>- Other |       | XDM     |
 
 ### 3.3 Forcefields
 
@@ -500,11 +500,11 @@ Category `_ml_potential_[]`: Subgroup for CSP Structure Ranking methods that use
 For
 these fields to be used, the `_compchem.method` should be set to "ML Potentials".
 
-| Top Category | Data Field  | Type | Definition                                                                                                                                   | Constraints                 | Units | Example |
-|:-------------|:------------|:-----|:---------------------------------------------------------------------------------------------------------------------------------------------|:----------------------------|:------|:--------|
-| ML Potential | `method`    | char | Specifies the name of the ML Potential used. In case of ML parameterisation of classical forcefields, refer to the Forcefields dictionaries. | - ANI<br/>- MACE<br/>- ...  |       |         |
-| ML Potential | `model`     | char | The specific model used to rank structures.                                                                                                  | - 2x<br/>- OFF24<br/>- ...  |       |         |
-| ML Potential | `precision` | char | Float precision in calculations.                                                                                                             | - `float32`<br/>- `float64` |       |         |
+| Top Category | Data Field  | Type | Definition                                                                                                                                  | Constraints                 | Units | Example |
+|:-------------|:------------|:-----|:--------------------------------------------------------------------------------------------------------------------------------------------|:----------------------------|:------|:--------|
+| ML Potential | `method`    | char | Specifies the name of the ML Potential used. In case of ML parametrisation of classical forcefields, refer to the Forcefields dictionaries. | - ANI<br/>- MACE<br/>- ...  |       |         |
+| ML Potential | `model`     | char | The specific model used to rank structures.                                                                                                 | - 2x<br/>- OFF24<br/>- ...  |       |         |
+| ML Potential | `precision` | char | Float precision in calculations.                                                                                                            | - `float32`<br/>- `float64` |       |         |
 
 ### 3.7 Free Energy
 
@@ -675,7 +675,7 @@ data_workflow_1
     _csp.data_block_description wf1
     _csp.data_block_id          29ba6f2f-0a56-47be-bc90-9c8adc7760e9
 
-    # Structure Generetion Methods
+    # Structure Generation Methods
     ...
 
     # Structure Ranking Methods
@@ -699,7 +699,7 @@ data_workflow_2
     _csp.data_block_description wf2
     _csp.data_block_id          964fcd15-82e1-4c4d-a7cb-61b0b34c3421
 
-    # Structure Generetion Methods
+    # Structure Generation Methods
     ...
 
     # Structure Ranking Methods
@@ -734,8 +734,8 @@ Categories:
 | Theoretical Structure | -        | `temperature`                          | numb | The temperature at which the energy and other properties of the theoretical structure were calculated.                                        | \>=0        | K                   | 298.15          |
 | Theoretical Structure | -        | `pressure`                             | numb | The pressure at which the energy and other properties of the theoretical structure were calculated.                                           | :           | Pa                  | 101325.0        |
 | Theoretical Structure | -        | `calculated_density`                   | numb | The calculated density of the crystal.                                                                                                        | \>=0        | kg m<sup>-1</sup>   | 1420.0          |
-| Theoretical Structure | -        | `total_energy`                         | numb | The total energy of the theoretical structure, i.e. energy relative to all of the nuclei and electrons seperated to an infinite distance.     | :           | kJ mol<sup>-1</sup> | -1500.5         |
-| Theoretical Structure | -        | `absolute_lattice_energy`              | numb | The absolute lattice energy of the crystal, i.e. energy relative to all the molecules seperated to an infinite distance.                      | :           | kJ mol<sup>-1</sup> | -1600.8         |
+| Theoretical Structure | -        | `total_energy`                         | numb | The total energy of the theoretical structure, i.e. energy relative to all of the nuclei and electrons separated to an infinite distance.     | :           | kJ mol<sup>-1</sup> | -1500.5         |
+| Theoretical Structure | -        | `absolute_lattice_energy`              | numb | The absolute lattice energy of the crystal, i.e. energy relative to all the molecules separated to an infinite distance.                      | :           | kJ mol<sup>-1</sup> | -1600.8         |
 | Theoretical Structure | -        | `absolute_free_energy`                 | numb | The absolute free energy of the crystal.                                                                                                      | :           | kJ mol<sup>-1</sup> | -1450.2         |
 | Theoretical Structure | -        | `free_energy_correction`               | numb | The correction applied to the lattice energy to obtain the free energy, accounting for vibrational and other thermal effects.                 | :           | kJ mol<sup>-1</sup> | 50.6            |
 | Theoretical Structure | -        | `relative_lattice_energy`              | numb | The lattice energy of the theoretical structure relative to the lowest energy structure found in the CSP.                                     | \>=0        | kJ mol<sup>-1</sup> | 0.0, 5.2        |
@@ -763,7 +763,7 @@ Structure optimised using a multipoles approach:
 
 ```text
 data_structure_1_1
-# Structure is thoeretically generated                                                  
+# Structure is theoretically generated                                                  
 _exptl.method                                                      'theoretical model'  
 
 # Datablock Details
@@ -858,7 +858,7 @@ Structures at different temperature conditions generated from the same structure
 # Structure at 100K
 #
 data_structure_1_2_0
-# Structure is thoeretically generated                                                  
+# Structure is theoretically generated                                                  
 _exptl.method                                                      'theoretical model'  
 
 # Datablock Details
@@ -895,7 +895,7 @@ _theoretical_structure.csp_previous_stage_structure_id             00d2779e-6396
 # Structure at 200K
 #
 data_structure_1_2_1
-# Structure is thoeretically generated
+# Structure is theoretically generated
 _exptl.method                                                      'theoretical model'
 
 # Datablock Details
@@ -933,8 +933,8 @@ _theoretical_structure.csp_previous_stage_structure_id             00d2779e-6396
 # Structure at 300K
 #
 data_structure_1_2_2
-# Structure is thoeretically generated
-_exptl.method 'theoretical model'
+# Structure is theoretically generated
+_exptl.method                                                      'theoretical model'
 
 # Datablock Details
 _csp.data_block_class                                              "Theoretical Structure"             

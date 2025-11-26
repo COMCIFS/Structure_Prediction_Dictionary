@@ -43,7 +43,7 @@ Examples of each one of these data blocks are available below.
 Datablocks can be stored in different files or in multiple files depending on the user. In the former case, the
 `_csp.data_block_additional_files` field should be used.
 In practice, one can have a set of default settings for the generation, ranking methods and workflows, with the
-different landscapes that will have only the input and output structures data blocks that differ.
+different landscapes differing only in the input and output structure's data blocks.
 
 ## 1. Input Chemical System
 
@@ -352,7 +352,7 @@ _csp.structure_generation_stopping_criteria                          "Max Struct
 _csp.structure_generation_stopping_criteria_max_structures_evaluated 10000
 ```
 
-Combination of different structure generation methods and search limited on most popular space groups for organic
+Combination of different structure generation methods, search limited on most popular space groups for organic
 crystals:
 
 ```text
@@ -418,13 +418,13 @@ Categories:
 
 * `_csp.structure_ranking_[]`: Category to define structure ranking stages in multistep approaches.
 * `_compchem.[]` : Details on calculation types and software citation.
-* `_compchem.geometry_optimistaion_[]`: Geometry optimisation datils.
+* `_compchem.geometry_optimistaion_[]`: Geometry optimisation details.
 
 | Top Category | Category              | Data Field                | Type | Definition                                                                                                                                                                                                                | Constraints                                                                                                                                            | Units                               | Example        |
 |--------------|-----------------------|:--------------------------|:-----|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------|:------------------------------------|:---------------|
-| CSP          | Structure Ranking     | `stage`                   | numb | To be used in the "Workflow" datablock, it specify the stage number of the ranking method.                                                                                                                                | \>=0                                                                                                                                                   |                                     | 0              |
-| CSP          | Structure Ranking     | `preceding_stage`         | numb | To be used in the "Workflow" datablock, it specify the stage number of the previous ranking method.                                                                                                                       |                                                                                                                                                        |                                     |                |
-| CSP          | Structure Ranking     | `data_block_description`  | char | To be used in the "Workflow" datablock, it specify the identifier of the datablock in which the structure ranking method is described.                                                                                    | Free Text                                                                                                                                              |                                     | FF, PBE, PBE0  |
+| CSP          | Structure Ranking     | `stage`                   | numb | To be used in the "Workflow" datablock, it specifies the stage number of the ranking method.                                                                                                                              | \>=0                                                                                                                                                   |                                     | 0              |
+| CSP          | Structure Ranking     | `preceding_stage`         | numb | To be used in the "Workflow" datablock, it specifies the stage number of the previous ranking method.                                                                                                                     |                                                                                                                                                        |                                     |                |
+| CSP          | Structure Ranking     | `data_block_description`  | char | To be used in the "Workflow" datablock, it specifies the identifier of the datablock in which the structure ranking method is described.                                                                                  | Free Text                                                                                                                                              |                                     | FF, PBE, PBE0  |
 | CSP          | Structure Ranking     | `data_block_id`           | char | To be used in the "Workflow" datablock, it is a short, human-readable description of the ranking method.                                                                                                                  |                                                                                                                                                        |                                     |                |
 | CompChem     | -                     | `method`                  | char | The energy or scoring model used to rank structures.                                                                                                                                                                      | - pDFT (Sec. 3.2) <br>- Forcefield (Sec. 3.3) <br>- Semi-Empirical (Sec. 3.4) <br>- Wavefunction (Sec. 3.5) <br>- ML Potentials (Sec. 3.6) <br>- Other |                                     | Forcefield     |
 | CompChem     | -                     | `calculation_type`        | char | Indicates how atomic positions are changed.                                                                                                                                                                               | - "Optimisation"<br>- "Dynamic Ensemble"<br>- "Single point"                                                                                           |                                     | "Single point" |
@@ -434,25 +434,25 @@ Categories:
 | CompChem     | Geometry Optimisation | `algorithm`               | char | Geometry optimisation algorithm.                                                                                                                                                                                          | - BFGS<br>- L-BFGS<br>- Quasi-Newton<br>- FIRE<br>- Steepest Descent<br>- Conjugate Gradient<br>- Other                                                |                                     |                |
 | CompChem     | Geometry Optimisation | `cell`                    | char | It can be "fixed" for no cell optimisation, "isotropic" or "anisotropic" for cell relaxation calculations.                                                                                                                | - fixed<br/>- isotropic<br/>- anisotropic                                                                                                              |                                     |                |
 | CompChem     | Geometry Optimisation | `atoms`                   | char | It can be "fixed" for no atoms' position optimisation, "all" for all-atoms geometry optimization, "hydrogens" for optimisation of only H atoms, "non-hydrogens" for non-H atoms or a list of atoms for custom relaxation. | - fixed<br/>- all<br/>- hydrogens<br/>- non-hydrogens<br/>- `[List of _chemical.conn_atom.number]`                                                     |                                     | `[1 2 3 4]`    |
-| CompChem     | Geometry Optimisation | `relax_force_convergence` | numb | Convergence criteria for stopping the geometry optimisation. Present in TCOD as `_dft_atom_relax_force_conv`.                                                                                                             | \>0                                                                                                                                                    | kJ mol<sup>-1</sup> nm<sup>-1</sup> | 0.1            |
+| CompChem     | Geometry Optimisation | `relax_force_convergence` | numb | Convergence criteria for stopping the geometry optimisation. Present in the TCOD DFT Dictionary as `_dft_atom_relax_force_conv`.                                                                                          | \>0                                                                                                                                                    | kJ mol<sup>-1</sup> nm<sup>-1</sup> | 0.1            |
 | CompChem     | Geometry Optimisation | `max_steps`               | numb | Maximum number of steps in the geometry optimisation.                                                                                                                                                                     | \>0                                                                                                                                                    |                                     |                |
 
 ### 3.2 Periodic Density Functional Theory
 
-Category `_dft_[]`: Subgroup for CSP Structure Ranking methods that use pDFT methods (the *p* of *pDFT* is removed in
-`_dft` for consistency with the TCOD Dictionary). For these fields to be used,
-the `_compchem.method` should be set to "pDFT".
+Category `_dft.[]`: Subgroup for CSP Structure Ranking methods that use pDFT methods. The *p* of *pDFT* is removed in
+`_dft` for consistency with the TCOD DFT Dictionary (https://wiki.crystallography.net/cif/dictionaries/ddl1/cif_dft/).
+For these fields to be used, the `_compchem.method` should be set to "pDFT".
 
-| Top Category | Data Field                             | Type | Definition                                                  | Constraints                                                                                            | Units | Example |
-|:-------------|:---------------------------------------|:-----|:------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------|:------|:--------|
-| pDFT         | `exchange_correlation_functional_type` | char | Specifies the type of exchange-correlation functional used. | - LDA<br/>- GGA<br/>- meta-GGA<br/>- Hybrid<br/>- Other                                                |       | GGA     |
-| pDFT         | `exchange_correlation_functional_name` | char | Specifies the name of exchange-correlation functional used. | - PBE<br/>- PBE0<br/>- SCAN<br/>- ...                                                                  |       | PBE     |
-| pDFT         | `pseudopotential_type`                 | char | Defines the type of pseudopotentials used.                  | - Plane-waves<br/>- PAW<br/>- Norm-conserving<br/>- Ultrasoft                                          |       | PAW     |
+| Top Category | Data Field                             | Type | Definition                                                  | Constraints                                                                                             | Units | Example |
+|:-------------|:---------------------------------------|:-----|:------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------|:------|:--------|
+| pDFT         | `exchange_correlation_functional_type` | char | Specifies the type of exchange-correlation functional used. | - LDA<br/>- GGA<br/>- meta-GGA<br/>- Hybrid<br/>- Other                                                 |       | GGA     |
+| pDFT         | `exchange_correlation_functional_name` | char | Specifies the name of exchange-correlation functional used. | - PBE<br/>- PBE0<br/>- SCAN<br/>- ...                                                                   |       | PBE     |
+| pDFT         | `pseudopotential_type`                 | char | Defines the type of pseudopotentials used.                  | - Plane-waves<br/>- PAW<br/>- Norm-conserving<br/>- Ultrasoft                                           |       | PAW     |
 | pDFT         | `dispersion_correction`                | char | The Van der Waals correction used.                          | - Grimme-D2<br/>- Grimme-D3<br/>- Tkatchenko-Scheffler<br/>- Many-body dispersion<br/>- XDM<br/>- Other |       | XDM     |
 
 ### 3.3 Forcefields
 
-Category `_forcefield_[]`: Subgroup for CSP Structure Ranking methods that use forcefield or mixed inter/intra
+Category `_forcefield.[]`: Subgroup for CSP Structure Ranking methods that use forcefield or mixed inter/intra
 molecular
 methods. For these fields to be used, the `_compchem.method` should be set to "Forcefield".
 
@@ -470,7 +470,7 @@ methods. For these fields to be used, the `_compchem.method` should be set to "F
 
 ### 3.4 Semi-Empirical
 
-Category `_semiempirical_[]`: Subgroup for CSP Structure Ranking methods that use Semi-Empirical methods. For these
+Category `_semiempirical.[]`: Subgroup for CSP Structure Ranking methods that use Semi-Empirical methods. For these
 fields to
 be used, the `_compchem.method` should be set to "Semi-Empirical".
 
@@ -486,7 +486,7 @@ be used, the `_compchem.method` should be set to "Semi-Empirical".
 
 ### 3.5 Wavefunction
 
-Category `_wavefunction_[]`: Subgroup for CSP Structure Ranking methods that use wavefunction methods. For these
+Category `_wavefunction.[]`: Subgroup for CSP Structure Ranking methods that use wavefunction methods. For these
 fields to be used, the `_compchem.method` should be set to "Wavefunction".
 
 | Top Category | Data Field                        | Type | Definition                             | Constraints                       | Units | Example |
@@ -496,7 +496,7 @@ fields to be used, the `_compchem.method` should be set to "Wavefunction".
 
 ### 3.6 ML Potentials
 
-Category `_ml_potential_[]`: Subgroup for CSP Structure Ranking methods that use machine learning potentials methods.
+Category `_ml_potential.[]`: Subgroup for CSP Structure Ranking methods that use machine learning potentials methods.
 For
 these fields to be used, the `_compchem.method` should be set to "ML Potentials".
 
@@ -508,7 +508,7 @@ these fields to be used, the `_compchem.method` should be set to "ML Potentials"
 
 ### 3.7 Free Energy
 
-Category `_free_energy_[]`: Subgroup for CSP Structure Ranking methods that use free energy methods.
+Category `_free_energy.[]`: Subgroup for CSP Structure Ranking methods that use free energy methods.
 
 | Top Category | Data Field              | Type      | Definition                                                                     | Constraints                                  | Units | Example                   |
 |:-------------|:------------------------|:----------|:-------------------------------------------------------------------------------|:---------------------------------------------|:------|:--------------------------|
@@ -984,7 +984,7 @@ A few guidelines are adopted in the description of specific data fields as highl
 In addition, the Structure Ranking `method` "ML Potential" refers to methods using *ad hoc* descriptors for neural
 network training to directly compute energy and forces.
 On the other hand, ML models used to parameterise models constants should be classified in the related method.
-For example, forcefield constants parametrised with a ML network should be classified as "Forcefield".
+For example, forcefield constants parametrised with a deep neural network should be classified as "Forcefield".
 
 ## 6. Future Developments
 
@@ -1010,7 +1010,7 @@ A list of missing sections is shown below:
 ## 7. Computational Chemistry Dictionary
 
 The `_csp` prefix in energy/scoring methods and output structures have been intentionally left out so that the present
-data fields could be used as a basis for the development of a more general computational chemistry dictionary.
+data fields could be used as the basis for the development of a more general computational chemistry dictionary.
 While this is currently limited to a selection of data fields relevant to CSP application, below is an example of how
 these can be used to describe a single geometry optimisation on a known structure:
 
@@ -1032,7 +1032,7 @@ _dft.exchange_correlation_functional_type GGA
 _dft.exchange_correlation_functional_name PBE
 _dft.pseudopotential_type PAW
 _dft.dispersion_correction XDM
-_dft.kinetic_energy_cutoff_wavefunctions 600  # TCOD Dictionary
+_dft.kinetic_energy_cutoff_wavefunctions 600  # TCOD DFT Dictionary
 _dft.BZ_integration.method "Monkhorst-Pack"
 _dft.BZ_integration.grid_dens_X 0.5
 _dft.BZ_integration.grid_dens_Y 0.5

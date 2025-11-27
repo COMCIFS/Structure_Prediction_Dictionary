@@ -9,9 +9,9 @@ calculate these.
 
 ### Table of contents
 
-* **0. Datablocks identifiers and file cross-referencing** describing the links between methods, workflows and output
+* **0. Datablocks Identifiers and File Cross-Referencing** describing the links between methods, workflows and output
   structures.
-* **1. Input Chemical System** describing the input atoms or molecules for CSP.
+* **1. Input Chemical System** describing the input atoms or molecular entities for CSP.
 * **2. Structure Generation Methods** describing the workflow used to generate theoretical crystal structures.
 * **3. Structure Ranking Methods** describing the energy evaluation models used to generate and rank the structures.
 * **4. Output Structure Properties** describing the properties of each output structure, such as their energy or
@@ -24,12 +24,12 @@ calculate these.
 Category `_csp.data_block_[]`: This section specifies the class type of the data block and assigns a unique identifier
 to it.
 
-| Top Category | Category   | Data Field         | Type | Definition                                                                                                                 | Constraints                                                                                                 | Units | Example                                                              |
-|--------------|------------|--------------------|------|----------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------|-------|----------------------------------------------------------------------|
-| CSP          | Data Block | `class`            | char | Class type of the data block                                                                                               | - "Input"<br/>- "Generation Method"<br/>- "Ranking Method" <br/>- "Workflow" <br/>- "Theoretical Structure" |       | "Input"                                                              |
-| CSP          | Data Block | `id`               | char | Unique identifier of the data block. This will be used to link the different datablocks in a workflow or output structure. | Recommended unique identifiers generation protocol use such as UUID                                         |       | `dd55207f-9649-435b-9708-c8154c33fc03`                               |
-| CSP          | Data Block | `description`      | char | Text identifier of a datablock for human readability.                                                                      | Free text                                                                                                   |       | "Molecule 1"                                                         |
-| CSP          | Data Block | `additional_files` | list | If datablocks are specified in different files, add the position of these files.                                           | `List[str]`                                                                                                 |       | `[ "generation_methods.cif" "ranking_methods.cif" "workflows.cif" ]` |
+| Group | Category   | Data Field         | Type | Definition                                                                                                                 | Constraints                                                                                                 | Units | Example                                                              |
+|-------|------------|--------------------|------|----------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------|-------|----------------------------------------------------------------------|
+| CSP   | Data Block | `class`            | char | Class type of the data block                                                                                               | - "Input"<br/>- "Generation Method"<br/>- "Ranking Method" <br/>- "Workflow" <br/>- "Theoretical Structure" |       | "Input"                                                              |
+| CSP   | Data Block | `id`               | char | Unique identifier of the data block. This will be used to link the different datablocks in a workflow or output structure. | Recommended unique identifiers generation protocol use such as UUID                                         |       | `dd55207f-9649-435b-9708-c8154c33fc03`                               |
+| CSP   | Data Block | `description`      | char | Text identifier of a datablock for human readability.                                                                      | Free text                                                                                                   |       | "Molecule 1"                                                         |
+| CSP   | Data Block | `additional_files` | list | If datablocks are specified in different files, add the position of these files.                                           | `List[str]`                                                                                                 |       | `[ "generation_methods.cif" "ranking_methods.cif" "workflows.cif" ]` |
 
 Single inputs systems, generation methods and ranking methods must be described in separate datablocks and a unique
 identifier should be assigned to them.
@@ -47,26 +47,30 @@ different landscapes differing only in the input and output structure's data blo
 
 ## 1. Input Chemical System
 
-Category `_csp.input_[]`: This section specifies the atoms used in inorganic CSP or the input molecular entities for
-molecular crystal generation.
+Category `_csp.input_[]`: This section specifies the atomic species used in inorganic CSP or the input molecular
+entities for organic or organometallic crystal generation.
 
-| Top Category | Category       | Data Field                     | Type | Definition                                                                                                         | Constraints                        | Units | Example                                             |
-|--------------|----------------|--------------------------------|------|--------------------------------------------------------------------------------------------------------------------|------------------------------------|-------|-----------------------------------------------------|
-| CSP          | Input          | `name`                         | char | See name_common and name_systematic from Core CIF dictionary.                                                      | Free Text                          |       | urea hydrate                                        |
-| CSP          | Input          | `composition_calculation`      | char | "fixed" or "variable" composition calculation.                                                                     | - Fixed<br/>- Variable             |       | Fixed                                               |
-| CSP          | Input          | `composition_coefficients`     | list | List of possible compositions for fixed-composition calculations or extremes for variable-composition simulations. | `List[PositiveInt]`                |       | `[1 1]` `[2 1]`                                     |
-| CSP          | Input          | `maximum_number_of_components` | numb | The maximum number of components (atoms or molecules) in the unit cell.                                            | 1:                                 |       | 4                                                   |
-| CSP          | Input          | `minimum_number_of_components` | numb | The minimum number of components (atoms or molecules) in the unit cell.                                            | 1:                                 |       | 2                                                   |
-| CSP          | Input Atoms    | `types`                        | list | List of atomic species defining the composition.                                                                   | `List[str]` or `List[PositiveInt]` |       | `[Mg O]` (atomic symbols), `[12 8]` (Atomic number) |
-| CSP          | Input Molecule | `number`                       | char | Molecule component index.                                                                                          | 1:                                 |       | 1                                                   |
-| CSP          | Input Molecule | `identifier`                   | char | Label used to identify the molecule.                                                                               | Free Text                          |       | urea, water                                         |
-| CSP          | Input Molecule | `smiles`                       | char | SMILES of the component.                                                                                           | -                                  |       | C(=O)(N)N                                           |
-| CSP          | Input Molecule | `molecule_number`              | char | Molecule component index for each atom.                                                                            | 1:                                 |       | 1                                                   |
-| CSP          | Input Molecule | `molecule_identifier`          | char | Label used to identify the molecule for each atom.                                                                 | Free Text                          |       | urea, water                                         |
-| CSP          | Input Molecule | `atom_label`                   | char | Label of atom in the component.                                                                                    | Free Text                          |       | C1                                                  |
+| Group | Category               | Data Field                     | Type | Definition                                                                                                                                                            | Constraints                        | Units | Example                                             |
+|-------|------------------------|--------------------------------|------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------|-------|-----------------------------------------------------|
+| CSP   | Input                  | `name`                         | char | See name_common and name_systematic from Core CIF dictionary.                                                                                                         | Free Text                          |       | urea hydrate                                        |
+| CSP   | Input                  | `composition_calculation`      | char | "fixed" or "variable" composition calculation.                                                                                                                        | - Fixed<br/>- Variable             |       | Fixed                                               |
+| CSP   | Input                  | `composition_coefficients`     | list | List of possible compositions for fixed-composition calculations or extremes for variable-composition simulations.                                                    | `List[PositiveInt]`                |       | `[1 1]` `[2 1]`                                     |
+| CSP   | Input                  | `maximum_number_of_components` | numb | The maximum number of components (atoms or molecular entities) in the unit cell.                                                                                      | 1:                                 |       | 4                                                   |
+| CSP   | Input                  | `minimum_number_of_components` | numb | The minimum number of components (atoms or molecular entities) in the unit cell.                                                                                      | 1:                                 |       | 2                                                   |
+| CSP   | Input Atom             | `types`                        | list | List of atomic species defining the composition. This simplify the input definition in inorganic CSP, avoiding defining a separate molecular entity for each species. | `List[str]` or `List[PositiveInt]` |       | `[Mg O]` (atomic symbols), `[12 8]` (Atomic number) |
+| CSP   | Input Molecular Entity | `number`                       | char | Molecular entity component index.                                                                                                                                     | 1:                                 |       | 1                                                   |
+| CSP   | Input Molecular Entity | `identifier`                   | char | Label used to identify the molecular entity.                                                                                                                          | Free Text                          |       | urea, water, Ag                                     |
+| CSP   | Input Molecular Entity | `smiles`                       | char | SMILES of the component.                                                                                                                                              | -                                  |       | C(=O)(N)N                                           |
+| CSP   | Input Atom             | `molecular_entity_number`      | char | In a loop describing the atoms in a molecular entity, the molecular entity component index of which the atom belongs.                                                 | 1:                                 |       | 1                                                   |
+| CSP   | Input Atom             | `molecular_entity__identifier` | char | In a loop describing the atoms in a molecular entity, the label of the molecular entity of which the atom belongs.                                                    | Free Text                          |       | urea, water                                         |
+| CSP   | Input Atom             | `label`                        | char | In a loop describing the atoms in a molecular entity, the label of the atom in the molecular entity.                                                                  | Free Text                          |       | C1                                                  |
 
 Additional details on atoms in molecule ad their connectivity can be specified through the CIF Chemical dictionary,
 available at: https://www.iucr.org/__data/iucr/cifdic_html/1/cif_core.dic/index.html
+
+The term "Molecular Entity" is used to describe any separately distinguishable entity as described in the IUPAC
+Compendium of Chemical Terminology at: https://doi.org/10.1351/goldbook.M03986. Data fields in this category can be
+used to describe both metals and ligands in a MOF.
 
 ### Examples
 
@@ -81,7 +85,7 @@ _csp.data_block_description         Ferrosilite
 
 # Input Details
 _csp.input_name                     Ferrosilite
-_csp.input_atoms_types              [ Fe Si O ] 
+_csp.input_atom_types               [ Fe Si O ] 
 _csp.input_composition_calculation  fixed
 _csp.input_composition_coefficients [ 1 1 3 ]
 ```
@@ -97,7 +101,7 @@ _csp.data_block_description             Hypersthene
 
 # Input Details
 _csp.input_name                         Hypersthene 
-_csp.input_atoms_types                  [ Fe Mg Si O ]
+_csp.input_atom_types                   [ Fe Mg Si O ]
 _csp.input_composition_calculation      variable
 _csp.input_composition_coefficients     [[1 0 1 3] [0 1 1 3]]
 _csp.input_minimum_number_of_components 2
@@ -120,18 +124,18 @@ _csp.input.name             Urea_Hydrate
 
 # Molecules
 loop_
-    _csp.input_molecule_number
-    _csp.input_molecule_identifier
-    _csp.input_molecule_smiles
+    _csp.input_molecular_entity_number
+    _csp.input_molecular_entity_identifier
+    _csp.input_molecular_entity_smiles
     _chemical.name_common
     1 WAT O      water
     2 URE OCN(N) urea
 
 # Atoms in molecules
 loop_
-    _csp.input_molecule_molecule_number
-    _csp.input_molecule_molecule_identifier
-    _csp.input_molecule_atom_label
+    _csp.input_atom_molecular_entity_number     
+    _csp.input_atom_molecular_entity_identifier
+    _csp.input_atom_label
     _chemical.conn_atom_number
     _chemical.conn_atom_type_symbol
     _chemical.conn_atom_charge
@@ -162,12 +166,12 @@ loop_
     7 10 sing
     8 11 sing
 
-_csp.input.composition_calculation  "fixed"
-_csp.input.composition_coefficients [ 2 1 ] # Indexes from molecule section (2 water molecules and one urea)
+_csp.input_composition_calculation  "fixed"
+_csp.input_composition_coefficients [ 2 1 ] # Indexes from molecule section (2 water molecules and one urea)
 ```
 
-`composition_coefficients` here refers to the molecule number. Worthy of note the use of the `Chemical` dictionary in
-defining the molecules.
+`composition_coefficients` here refers to the molecular entity number. Worthy of note the use of the `Chemical`
+dictionary in defining the molecules.
 
 Variable stoichiometry search can be specified in the same way as for inorganic systems:
 
@@ -179,8 +183,8 @@ _csp.input_maximum_number_of_components 4
 _csp.input_minimum_number_of_components 2
 ```
 
-For metal-organic systems, the `input_molecule` and `Chemical` dictionaries can be used specifying metallic atoms as
-"individual molecules":
+For metal-organic systems, the `_csp.input_molecular_entity` and `Chemical` dictionaries can be used specifying
+metallic atoms and ligands:
 
 ```text
 data_mo
@@ -193,17 +197,17 @@ _csp.input.name "(mi-tricyanomethanide)-silver"
 
 # Molecules
 loop_
-    _csp.input_molecule_number
-    _csp.input_molecule_identifier
+    _csp.input_molecular_entity_number
+    _csp.input_molecular_entity_identifier
     _chemical.name_common
     1 Metal Silver
     2 c4n3  tricyanomethanide
 
 # Atoms in molecules
 loop_
-    _csp.input_molecule_molecule_number
-    _csp.input_molecule_molecule_identifier
-    _csp.input_molecule_atom_label
+    _csp.input_atom_molecular_entity_number
+    _csp.input_atom_molecular_entity_identifier
+    _csp.input_atom_label
     _chemical.conn_atom_number
     _chemical.conn_atom_type_symbol
     1 Metal Ag1 1  Ag
@@ -230,7 +234,6 @@ loop_
     4 7  trip
     5 8  trip
 
-
 _csp.input_composition_calculation   "fixed"
 _csp.input_composition_coefficients  [1 1]
 ```
@@ -243,26 +246,26 @@ This section helps delineate the space search range and specify the parameters u
 
 Category `_csp.structure_generation_[]`: Category for structure generation methods.
 
-| Top Category | Category             | Data Field                                         | Type           | Definition                                                                                                                                          | Constraints                                                                                                                                                                                                                                | Units               | Example                                             |
-|--------------|----------------------|----------------------------------------------------|----------------|-----------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------|-----------------------------------------------------|
-| CSP          | Structure Generation | `space_group_number_list`                          | char/numb/list | Space group selection could be “all” or a subset (list) specifying which space groups were used.                                                    | Either "all" or list of sg numbers                                                                                                                                                                                                         |                     | `[14 2 15 61 19 4 33 29 5 1]`                       |
-| CSP          | Structure Generation | `method`                                           | char/list      | Structure generation method or list of methods.                                                                                                     | - Evolutionary Algorithm (Sec. 2.2) <br>- Particle Swarm Optimisation (Sec. 2.3) <br>- Simulated Annealing (Sec. 2.4) <br>- Monte Carlo Parallel tempering (Sec. 2.5) <br>- Random Sampling (Sec. 2.6)<br>- Analogue Templates <br>- Other |                     | Simulated Annealing                                 |
-| CSP          | Structure Generation | `stage`                                            | numb           | To be used in the "Workflow" datablock, it specify the stage number of the generation method.                                                       |                                                                                                                                                                                                                                            |                     |                                                     |
-| CSP          | Structure Generation | `preceding_stage`                                  | numb           | To be used in the "Workflow" datablock, it specify the stage number of the previous generation method.                                              |                                                                                                                                                                                                                                            |                     |                                                     |
-| CSP          | Structure Generation | `data_block_id`                                    | char           | To be used in the "Workflow" datablock, it specify the identifier of the datablock in which the structure generation method is described.           |                                                                                                                                                                                                                                            |                     |                                                     |
-| CSP          | Structure Generation | `data_block_description`                           | char           | To be used in the "Workflow" datablock, it is a short, human-readable description of the generation method.                                         |                                                                                                                                                                                                                                            |                     |                                                     |
-| CSP          | Structure Generation | `software`                                         | char           | Name of the software used for structure generation.                                                                                                 | Free text                                                                                                                                                                                                                                  |                     |                                                     |
-| CSP          | Structure Generation | `software_citation`                                | char           | Details of the software used for structure generation. Either URL to webpage or DOI of the related publication.                                     | Free text                                                                                                                                                                                                                                  |                     |                                                     |
-| CSP          | Structure Generation | `software_version`                                 | char           | Version of software used for structure generation.                                                                                                  | Free text                                                                                                                                                                                                                                  |                     |                                                     |
-| CSP          | Structure Generation | `density_lower_limit`                              | numb           | Minimum Cell Density.                                                                                                                               | \>0                                                                                                                                                                                                                                        | kg m<sup>-3</sup>   | 800                                                 |
-| CSP          | Structure Generation | `density_upper_limit`                              | numb           | Maximum Cell Density.                                                                                                                               | \>0                                                                                                                                                                                                                                        | kg m<sup>-3</sup>   | 1400                                                |
-| CSP          | Structure Generation | `reference_temperature`                            | numb           | Reference temperature for finite-temperature simulations.                                                                                           | \>0                                                                                                                                                                                                                                        | K                   | 0                                                   |
-| CSP          | Structure Generation | `reference_pressure`                               | numb           | Reference pressure for variable cell calculations.                                                                                                  | \>0                                                                                                                                                                                                                                        | Pa                  | 100000                                              |
-| CSP          | Structure Generation | `stopping_criteria`                                | char/list      | List of rules for stopping the generation of new structures.                                                                                        | Free text                                                                                                                                                                                                                                  |                     | "Max Structures", "Low-Energy Structures Unchanged" |
-| CSP          | Structure Generation | `stopping_criteria_max_structures_evaluated`       | numb           | The maximum total number of unique crystal structures that will be generated and evaluated during the search.                                       | \>0                                                                                                                                                                                                                                        |                     | 10000                                               |
-| CSP          | Structure Generation | `stopping_criteria_iterations_without_improvement` | numb           | The maximum number of consecutive iterations (generations, MC steps, etc.) where the global minimum (or the lowest few structures) does not change. | \>0                                                                                                                                                                                                                                        |                     | 50                                                  |
-| CSP          | Structure Generation | `stopping_criteria_energy_range`                   | numb           | An energy threshold for the selection of low-energy structures to be considered in the convergence criteria.                                        | \>0                                                                                                                                                                                                                                        | kJ mol<sup>-1</sup> | 5                                                   |
-| CSP          | Structure Generation | `stopping_criteria_structures_range`               | numb           | The number of low-energy structures to be considered in the convergence criteria.                                                                   | \>0                                                                                                                                                                                                                                        |                     | 1000                                                |
+| Group | Category             | Data Field                                         | Type           | Definition                                                                                                                                          | Constraints                                                                                                                                                                                                                                | Units               | Example                                             |
+|-------|----------------------|----------------------------------------------------|----------------|-----------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------|-----------------------------------------------------|
+| CSP   | Structure Generation | `space_group_number_list`                          | char/numb/list | Space group selection could be “all” or a subset (list) specifying which space groups were used.                                                    | Either "all" or list of sg numbers                                                                                                                                                                                                         |                     | `[14 2 15 61 19 4 33 29 5 1]`                       |
+| CSP   | Structure Generation | `method`                                           | char/list      | Structure generation method or list of methods.                                                                                                     | - Evolutionary Algorithm (Sec. 2.2) <br>- Particle Swarm Optimisation (Sec. 2.3) <br>- Simulated Annealing (Sec. 2.4) <br>- Monte Carlo Parallel tempering (Sec. 2.5) <br>- Random Sampling (Sec. 2.6)<br>- Analogue Templates <br>- Other |                     | Simulated Annealing                                 |
+| CSP   | Structure Generation | `stage`                                            | numb           | To be used in the "Workflow" datablock, it specify the stage number of the generation method.                                                       |                                                                                                                                                                                                                                            |                     |                                                     |
+| CSP   | Structure Generation | `preceding_stage`                                  | numb           | To be used in the "Workflow" datablock, it specify the stage number of the previous generation method.                                              |                                                                                                                                                                                                                                            |                     |                                                     |
+| CSP   | Structure Generation | `data_block_id`                                    | char           | To be used in the "Workflow" datablock, it specify the identifier of the datablock in which the structure generation method is described.           |                                                                                                                                                                                                                                            |                     |                                                     |
+| CSP   | Structure Generation | `data_block_description`                           | char           | To be used in the "Workflow" datablock, it is a short, human-readable description of the generation method.                                         |                                                                                                                                                                                                                                            |                     |                                                     |
+| CSP   | Structure Generation | `software`                                         | char           | Name of the software used for structure generation.                                                                                                 | Free text                                                                                                                                                                                                                                  |                     |                                                     |
+| CSP   | Structure Generation | `software_citation`                                | char           | Details of the software used for structure generation. Either URL to webpage or DOI of the related publication.                                     | Free text                                                                                                                                                                                                                                  |                     |                                                     |
+| CSP   | Structure Generation | `software_version`                                 | char           | Version of software used for structure generation.                                                                                                  | Free text                                                                                                                                                                                                                                  |                     |                                                     |
+| CSP   | Structure Generation | `density_lower_limit`                              | numb           | Minimum Cell Density.                                                                                                                               | \>0                                                                                                                                                                                                                                        | kg m<sup>-3</sup>   | 800                                                 |
+| CSP   | Structure Generation | `density_upper_limit`                              | numb           | Maximum Cell Density.                                                                                                                               | \>0                                                                                                                                                                                                                                        | kg m<sup>-3</sup>   | 1400                                                |
+| CSP   | Structure Generation | `reference_temperature`                            | numb           | Reference temperature for finite-temperature simulations.                                                                                           | \>0                                                                                                                                                                                                                                        | K                   | 0                                                   |
+| CSP   | Structure Generation | `reference_pressure`                               | numb           | Reference pressure for variable cell calculations.                                                                                                  | \>0                                                                                                                                                                                                                                        | Pa                  | 100000                                              |
+| CSP   | Structure Generation | `stopping_criteria`                                | char/list      | List of rules for stopping the generation of new structures.                                                                                        | Free text                                                                                                                                                                                                                                  |                     | "Max Structures", "Low-Energy Structures Unchanged" |
+| CSP   | Structure Generation | `stopping_criteria_max_structures_evaluated`       | numb           | The maximum total number of unique crystal structures that will be generated and evaluated during the search.                                       | \>0                                                                                                                                                                                                                                        |                     | 10000                                               |
+| CSP   | Structure Generation | `stopping_criteria_iterations_without_improvement` | numb           | The maximum number of consecutive iterations (generations, MC steps, etc.) where the global minimum (or the lowest few structures) does not change. | \>0                                                                                                                                                                                                                                        |                     | 50                                                  |
+| CSP   | Structure Generation | `stopping_criteria_energy_range`                   | numb           | An energy threshold for the selection of low-energy structures to be considered in the convergence criteria.                                        | \>0                                                                                                                                                                                                                                        | kJ mol<sup>-1</sup> | 5                                                   |
+| CSP   | Structure Generation | `stopping_criteria_structures_range`               | numb           | The number of low-energy structures to be considered in the convergence criteria.                                                                   | \>0                                                                                                                                                                                                                                        |                     | 1000                                                |
 
 ### 2.2 Evolutionary Algorithms
 
@@ -270,16 +273,16 @@ Category `_csp.evolutionary_algorithm_[]`: Subgroup for CSP Structure Generation
 Algorithms. For these fields
 to be used, the `_csp.structure_generation_method` must include "Evolutionary Algorithm".
 
-| Top Category | Category                | Data Field                    | Type | Definition                                                                                                                                                     | Constraints | Units | Example |
-|--------------|:------------------------|:------------------------------|:-----|:---------------------------------------------------------------------------------------------------------------------------------------------------------------|:------------|:------|:--------|
-| CSP          | Evolutionary Algorithms | `population_size`             | numb | The number of candidate structures in each generation.                                                                                                         | \>0         |       | 100     |
-| CSP          | Evolutionary Algorithms | `initial_population_size`     | numb | The number of candidate structures in the first generation.                                                                                                    | \>0         |       | 50      |
-| CSP          | Evolutionary Algorithms | `number_of_generations`       | numb | The maximum number of evolutionary cycles the algorithm will run before termination (unless other stopping criteria are met).                                  | \>0         |       | 50      |
-| CSP          | Evolutionary Algorithms | `nextgen_structure_selection` | numb | The number of individuals that survives in the next generation.                                                                                                | \>1         |       | 5       |
-| CSP          | Evolutionary Algorithms | `parents_structure_fraction`  | numb | The fraction of individuals in the current population that is used to generate structures in the next cycle.                                                   | 0-1         |       | 0.75    |
-| CSP          | Evolutionary Algorithms | `mutation_fraction`           | numb | The fraction of individuals in the population that will undergo mutation in each generation.                                                                   | 0-1         |       | 0.2     |
-| CSP          | Evolutionary Algorithms | `heredity_fraction`           | numb | The fraction of individuals in the population that will be generated through heredity (crossover/recombination) operations between two or more parents.        | 0-1         |       | 0.6     |
-| CSP          | Evolutionary Algorithms | `permutation_fraction`        | numb | The fraction of individuals in the population that will undergo a permutation operation (e.g., swapping atom positions within a structure) in each generation. | 0-1         |       | 0.1     |
+| Group | Category                | Data Field                    | Type | Definition                                                                                                                                                     | Constraints | Units | Example |
+|-------|:------------------------|:------------------------------|:-----|:---------------------------------------------------------------------------------------------------------------------------------------------------------------|:------------|:------|:--------|
+| CSP   | Evolutionary Algorithms | `population_size`             | numb | The number of candidate structures in each generation.                                                                                                         | \>0         |       | 100     |
+| CSP   | Evolutionary Algorithms | `initial_population_size`     | numb | The number of candidate structures in the first generation.                                                                                                    | \>0         |       | 50      |
+| CSP   | Evolutionary Algorithms | `number_of_generations`       | numb | The maximum number of evolutionary cycles the algorithm will run before termination (unless other stopping criteria are met).                                  | \>0         |       | 50      |
+| CSP   | Evolutionary Algorithms | `nextgen_structure_selection` | numb | The number of individuals that survives in the next generation.                                                                                                | \>1         |       | 5       |
+| CSP   | Evolutionary Algorithms | `parents_structure_fraction`  | numb | The fraction of individuals in the current population that is used to generate structures in the next cycle.                                                   | 0-1         |       | 0.75    |
+| CSP   | Evolutionary Algorithms | `mutation_fraction`           | numb | The fraction of individuals in the population that will undergo mutation in each generation.                                                                   | 0-1         |       | 0.2     |
+| CSP   | Evolutionary Algorithms | `heredity_fraction`           | numb | The fraction of individuals in the population that will be generated through heredity (crossover/recombination) operations between two or more parents.        | 0-1         |       | 0.6     |
+| CSP   | Evolutionary Algorithms | `permutation_fraction`        | numb | The fraction of individuals in the population that will undergo a permutation operation (e.g., swapping atom positions within a structure) in each generation. | 0-1         |       | 0.1     |
 
 ### 2.3 Particle Swarm Optimisation Algorithms
 
@@ -287,16 +290,16 @@ Category `_csp.particle_swarm_optimisation_[]`: Subgroup for CSP Structure Gener
 Optimisation. For these
 fields to be used, the `_csp.structure_generation_method` must include "Particle Swarm Optimisation".
 
-| Top Category | Category                    | Data Field              | Type | Definition                                                                                                                                        | Constraints | Units | Example |
-|--------------|:----------------------------|:------------------------|:-----|:--------------------------------------------------------------------------------------------------------------------------------------------------|:------------|:------|:--------|
-| CSP          | Particle Swarm Optimisation | `population_size`       | numb | The number of candidate crystal structures (particles) in the swarm.                                                                              | \>0         |       | 50      |
-| CSP          | Particle Swarm Optimisation | `number_of_generations` | numb | The maximum number of optimization cycles (generations or iterations) the PSO algorithm will run.                                                 | \>0         |       | 100     |
-| CSP          | Particle Swarm Optimisation | `inertia_weight`        | numb | A parameter controlling the contribution of the previous velocity of the particle to its current velocity.                                        | 0-1         |       | 0.7     |
-| CSP          | Particle Swarm Optimisation | `max_inertia_weight`    | numb | If the inertia weight changes with each iteration, this parameter specify the maximum value it can have.                                          | 0-1         |       | 0.9     |
-| CSP          | Particle Swarm Optimisation | `min_inertia_weight`    | numb | If the inertia weight changes with each iteration, this parameter specify the minimum value it can have.                                          | 0-1         |       | 0.4     |
-| CSP          | Particle Swarm Optimisation | `cognitive_coefficient` | numb | A parameter (also called self-confidence factor) controlling the influence of the particle's own best position found so far on its movement.      | \>=0        |       | 2       |
-| CSP          | Particle Swarm Optimisation | `social_coefficient`    | numb | A parameter (also called swarm confidence factor) controlling the influence of the swarm's best position found so far on the particle's movement. | \>=0        |       | 2       |
-| CSP          | Particle Swarm Optimisation | `velocity_clamp_max`    | numb | The maximum allowed velocity for each dimension if velocity clamping is enabled.                                                                  | \>0         |       | 0.2     |
+| Group | Category                    | Data Field              | Type | Definition                                                                                                                                        | Constraints | Units | Example |
+|-------|:----------------------------|:------------------------|:-----|:--------------------------------------------------------------------------------------------------------------------------------------------------|:------------|:------|:--------|
+| CSP   | Particle Swarm Optimisation | `population_size`       | numb | The number of candidate crystal structures (particles) in the swarm.                                                                              | \>0         |       | 50      |
+| CSP   | Particle Swarm Optimisation | `number_of_generations` | numb | The maximum number of optimization cycles (generations or iterations) the PSO algorithm will run.                                                 | \>0         |       | 100     |
+| CSP   | Particle Swarm Optimisation | `inertia_weight`        | numb | A parameter controlling the contribution of the previous velocity of the particle to its current velocity.                                        | 0-1         |       | 0.7     |
+| CSP   | Particle Swarm Optimisation | `max_inertia_weight`    | numb | If the inertia weight changes with each iteration, this parameter specify the maximum value it can have.                                          | 0-1         |       | 0.9     |
+| CSP   | Particle Swarm Optimisation | `min_inertia_weight`    | numb | If the inertia weight changes with each iteration, this parameter specify the minimum value it can have.                                          | 0-1         |       | 0.4     |
+| CSP   | Particle Swarm Optimisation | `cognitive_coefficient` | numb | A parameter (also called self-confidence factor) controlling the influence of the particle's own best position found so far on its movement.      | \>=0        |       | 2       |
+| CSP   | Particle Swarm Optimisation | `social_coefficient`    | numb | A parameter (also called swarm confidence factor) controlling the influence of the swarm's best position found so far on the particle's movement. | \>=0        |       | 2       |
+| CSP   | Particle Swarm Optimisation | `velocity_clamp_max`    | numb | The maximum allowed velocity for each dimension if velocity clamping is enabled.                                                                  | \>0         |       | 0.2     |
 
 ### 2.4 Simulated Annealing
 
@@ -304,11 +307,11 @@ Category `_csp.simulated_annealing_[]`: Subgroup for CSP Structure Generation me
 these fields to
 be used, the `_csp.structure_generation_method` must include "Simulated Annealing".
 
-| Top Category | Category            | Data Field            | Type | Definition                                                                                       | Constraints | Units | Example |
-|--------------|:--------------------|:----------------------|:-----|:-------------------------------------------------------------------------------------------------|:------------|:------|:--------|
-| CSP          | Simulated Annealing | `initial_temperature` | numb | The starting temperature of the simulated annealing process.                                     | \>0         | K     | 500     |
-| CSP          | Simulated Annealing | `cooling_rate`        | numb | The parameter that determine how the temperature is decreased over the course of the simulation. | 0-1         |       | 0.95    |
-| CSP          | Simulated Annealing | `number_of_steps`     | numb | The number of attempted structure generation and acceptance steps performed at each temperature. | \>0         |       | 10      |
+| Group | Category            | Data Field            | Type | Definition                                                                                       | Constraints | Units | Example |
+|-------|:--------------------|:----------------------|:-----|:-------------------------------------------------------------------------------------------------|:------------|:------|:--------|
+| CSP   | Simulated Annealing | `initial_temperature` | numb | The starting temperature of the simulated annealing process.                                     | \>0         | K     | 500     |
+| CSP   | Simulated Annealing | `cooling_rate`        | numb | The parameter that determine how the temperature is decreased over the course of the simulation. | 0-1         |       | 0.95    |
+| CSP   | Simulated Annealing | `number_of_steps`     | numb | The number of attempted structure generation and acceptance steps performed at each temperature. | \>0         |       | 10      |
 
 ### 2.5 Monte Carlo Parallel Tempering
 
@@ -316,21 +319,21 @@ Category `_csp.monte_carlo_parallel_tempering_[]`: Subgroup for CSP Structure Ge
 Parallel tempering. For
 these fields to be used, the `_csp.structure_generation_method` must be set to "Monte Carlo Parallel Tempering".
 
-| Top Category | Category                       | Data Field           | Type | Definition                                                                                                              | Constraints | Units | Example         |
-|--------------|:-------------------------------|:---------------------|:-----|:------------------------------------------------------------------------------------------------------------------------|:------------|:------|:----------------|
-| CSP          | Monte Carlo Parallel Tempering | `number_of_replicas` | numb | The number of independent Monte Carlo simulations (replicas) running in parallel at different temperatures.             | >1          |       | 3               |
-| CSP          | Monte Carlo Parallel Tempering | `temperatures_list`  | list | The list of temperatures at which the replicas are run.                                                                 | `[T >= 0]`  | K     | `[0, 300, 600]` |
-| CSP          | Monte Carlo Parallel Tempering | `number_of_steps`    | numb | The number of Monte Carlo steps performed by each replica at its assigned temperature in each parallel tempering cycle. | \>0         |       | 100             |
+| Group | Category                       | Data Field           | Type | Definition                                                                                                              | Constraints | Units | Example         |
+|-------|:-------------------------------|:---------------------|:-----|:------------------------------------------------------------------------------------------------------------------------|:------------|:------|:----------------|
+| CSP   | Monte Carlo Parallel Tempering | `number_of_replicas` | numb | The number of independent Monte Carlo simulations (replicas) running in parallel at different temperatures.             | >1          |       | 3               |
+| CSP   | Monte Carlo Parallel Tempering | `temperatures_list`  | list | The list of temperatures at which the replicas are run.                                                                 | `[T >= 0]`  | K     | `[0, 300, 600]` |
+| CSP   | Monte Carlo Parallel Tempering | `number_of_steps`    | numb | The number of Monte Carlo steps performed by each replica at its assigned temperature in each parallel tempering cycle. | \>0         |       | 100             |
 
 ### 2.6 Random Search
 
 Category `_csp.random_[]`: Subgroup for CSP Structure Generation methods that use Random, Quasi-random algorithms. For
 these fields to be used, the `_csp.structure_generation_method` should be set to "Random Sampling".
 
-| Top Category | Category      | Data Field                 | Type | Definition                                                                                            | Constraints                            | Units | Example        |
-|--------------|:--------------|:---------------------------|:-----|:------------------------------------------------------------------------------------------------------|:---------------------------------------|:------|:---------------|
-| CSP          | Random Search | `random_numbers_algorithm` | char | Specifies the type of random algorithm used.                                                          | "Pseudorandom", "Quasirandom", "Other" |       | "Pseudorandom" |
-| CSP          | Random Search | `number_of_samples`        | numb | The total number of unique crystal structures to be generated and evaluated during the random search. | \>0                                    |       | 5000           |
+| Group | Category      | Data Field                      | Type | Definition                                                                                            | Constraints                            | Units | Example        |
+|-------|:--------------|:--------------------------------|:-----|:------------------------------------------------------------------------------------------------------|:---------------------------------------|:------|:---------------|
+| CSP   | Random Search | `random_numbers_algorithm_type` | char | Specifies the type of random algorithm used.                                                          | "Pseudorandom", "Quasirandom", "Other" |       | "Pseudorandom" |
+| CSP   | Random Search | `random_numbers_algorithm`      | char | Specifies the type of random algorithm used.                                                          | "Sobol"                                |       | "Sobol"        |
 
 ### Examples
 
@@ -362,9 +365,11 @@ data_rs
     _csp.data_block_description                                          rs
     _csp.data_block_id                                                   6e0147be-0454-44a1-a3bb-de7b326dde1b
     
+    _csp.structure_generation_method                                     "Random Search"
     _csp.structure_generation_stopping_criteria                          "Max Structures"
     _csp.structure_generation_stopping_criteria_max_structures_evaluated 1000
-    _csp.random_random_numbers_algorithm                                 "Quasi-random"
+    _csp.random_search_random_numbers_algorithm_type                     "Quasi-random"
+    _csp.random_search_random_numbers_algorithm                          "Sobol"
 
 # Simulated Annealing
 data_sa
@@ -372,6 +377,7 @@ data_sa
     _csp.data_block_description                                          sa
     _csp.data_block_id                                                   95f28b3c-d029-4840-a69a-3ced34219c28
     
+    _csp.structure_generation_method                                     "Simulated Annealing"
     _csp.structure_generation_stopping_criteria                          "Max Structures"
     _csp.structure_generation_stopping_criteria_max_structures_evaluated 2000000
     _csp.simulated_annealing_initial_temperature                         400
@@ -420,22 +426,22 @@ Categories:
 * `_compchem.[]` : Details on calculation types and software citation.
 * `_compchem.geometry_optimistaion_[]`: Geometry optimisation details.
 
-| Top Category | Category              | Data Field                | Type | Definition                                                                                                                                                                                                                | Constraints                                                                                                                                            | Units                               | Example        |
-|--------------|-----------------------|:--------------------------|:-----|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------|:------------------------------------|:---------------|
-| CSP          | Structure Ranking     | `stage`                   | numb | To be used in the "Workflow" datablock, it specifies the stage number of the ranking method.                                                                                                                              | \>=0                                                                                                                                                   |                                     | 0              |
-| CSP          | Structure Ranking     | `preceding_stage`         | numb | To be used in the "Workflow" datablock, it specifies the stage number of the previous ranking method.                                                                                                                     |                                                                                                                                                        |                                     |                |
-| CSP          | Structure Ranking     | `data_block_description`  | char | To be used in the "Workflow" datablock, it specifies the identifier of the datablock in which the structure ranking method is described.                                                                                  | Free Text                                                                                                                                              |                                     | FF, PBE, PBE0  |
-| CSP          | Structure Ranking     | `data_block_id`           | char | To be used in the "Workflow" datablock, it is a short, human-readable description of the ranking method.                                                                                                                  |                                                                                                                                                        |                                     |                |
-| CompChem     | -                     | `method`                  | char | The energy or scoring model used to rank structures.                                                                                                                                                                      | - pDFT (Sec. 3.2) <br>- Forcefield (Sec. 3.3) <br>- Semi-Empirical (Sec. 3.4) <br>- Wavefunction (Sec. 3.5) <br>- ML Potentials (Sec. 3.6) <br>- Other |                                     | Forcefield     |
-| CompChem     | -                     | `calculation_type`        | char | Indicates how atomic positions are changed.                                                                                                                                                                               | - "Optimisation"<br>- "Dynamic Ensemble"<br>- "Single point"                                                                                           |                                     | "Single point" |
-| CompChem     | -                     | `software`                | char | Name of the software used for structure ranking.                                                                                                                                                                          | Free Text                                                                                                                                              |                                     |                |
-| CompChem     | -                     | `software_citation`       | char | Details of the software used for structure ranking.                                                                                                                                                                       | Free Text                                                                                                                                              |                                     |                |
-| CompChem     | -                     | `software_version`        | char | Version of software used for structure ranking.                                                                                                                                                                           | Free Text                                                                                                                                              |                                     |                |
-| CompChem     | Geometry Optimisation | `algorithm`               | char | Geometry optimisation algorithm.                                                                                                                                                                                          | - BFGS<br>- L-BFGS<br>- Quasi-Newton<br>- FIRE<br>- Steepest Descent<br>- Conjugate Gradient<br>- Other                                                |                                     |                |
-| CompChem     | Geometry Optimisation | `cell`                    | char | It can be "fixed" for no cell optimisation, "isotropic" or "anisotropic" for cell relaxation calculations.                                                                                                                | - fixed<br/>- isotropic<br/>- anisotropic                                                                                                              |                                     |                |
-| CompChem     | Geometry Optimisation | `atoms`                   | char | It can be "fixed" for no atoms' position optimisation, "all" for all-atoms geometry optimization, "hydrogens" for optimisation of only H atoms, "non-hydrogens" for non-H atoms or a list of atoms for custom relaxation. | - fixed<br/>- all<br/>- hydrogens<br/>- non-hydrogens<br/>- `[List of _chemical.conn_atom.number]`                                                     |                                     | `[1 2 3 4]`    |
-| CompChem     | Geometry Optimisation | `relax_force_convergence` | numb | Convergence criteria for stopping the geometry optimisation. Present in the TCOD DFT Dictionary as `_dft_atom_relax_force_conv`.                                                                                          | \>0                                                                                                                                                    | kJ mol<sup>-1</sup> nm<sup>-1</sup> | 0.1            |
-| CompChem     | Geometry Optimisation | `max_steps`               | numb | Maximum number of steps in the geometry optimisation.                                                                                                                                                                     | \>0                                                                                                                                                    |                                     |                |
+| Group    | Category              | Data Field                | Type | Definition                                                                                                                                                                                                                | Constraints                                                                                                                                            | Units                               | Example        |
+|----------|-----------------------|:--------------------------|:-----|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------|:------------------------------------|:---------------|
+| CSP      | Structure Ranking     | `stage`                   | numb | To be used in the "Workflow" datablock, it specifies the stage number of the ranking method.                                                                                                                              | \>=0                                                                                                                                                   |                                     | 0              |
+| CSP      | Structure Ranking     | `preceding_stage`         | numb | To be used in the "Workflow" datablock, it specifies the stage number of the previous ranking method.                                                                                                                     |                                                                                                                                                        |                                     |                |
+| CSP      | Structure Ranking     | `data_block_description`  | char | To be used in the "Workflow" datablock, it specifies the identifier of the datablock in which the structure ranking method is described.                                                                                  | Free Text                                                                                                                                              |                                     | FF, PBE, PBE0  |
+| CSP      | Structure Ranking     | `data_block_id`           | char | To be used in the "Workflow" datablock, it is a short, human-readable description of the ranking method.                                                                                                                  |                                                                                                                                                        |                                     |                |
+| CompChem | -                     | `method`                  | char | The energy or scoring model used to rank structures.                                                                                                                                                                      | - pDFT (Sec. 3.2) <br>- Forcefield (Sec. 3.3) <br>- Semi-Empirical (Sec. 3.4) <br>- Wavefunction (Sec. 3.5) <br>- ML Potentials (Sec. 3.6) <br>- Other |                                     | Forcefield     |
+| CompChem | -                     | `calculation_type`        | char | Indicates how atomic positions are changed.                                                                                                                                                                               | - "Optimisation"<br>- "Dynamic Ensemble"<br>- "Single point"                                                                                           |                                     | "Single point" |
+| CompChem | -                     | `software`                | char | Name of the software used for structure ranking.                                                                                                                                                                          | Free Text                                                                                                                                              |                                     |                |
+| CompChem | -                     | `software_citation`       | char | Details of the software used for structure ranking.                                                                                                                                                                       | Free Text                                                                                                                                              |                                     |                |
+| CompChem | -                     | `software_version`        | char | Version of software used for structure ranking.                                                                                                                                                                           | Free Text                                                                                                                                              |                                     |                |
+| CompChem | Geometry Optimisation | `algorithm`               | char | Geometry optimisation algorithm.                                                                                                                                                                                          | - BFGS<br>- L-BFGS<br>- Quasi-Newton<br>- FIRE<br>- Steepest Descent<br>- Conjugate Gradient<br>- Other                                                |                                     |                |
+| CompChem | Geometry Optimisation | `cell`                    | char | It can be "fixed" for no cell optimisation, "isotropic" or "anisotropic" for cell relaxation calculations.                                                                                                                | - fixed<br/>- isotropic<br/>- anisotropic                                                                                                              |                                     |                |
+| CompChem | Geometry Optimisation | `atoms`                   | char | It can be "fixed" for no atoms' position optimisation, "all" for all-atoms geometry optimization, "hydrogens" for optimisation of only H atoms, "non-hydrogens" for non-H atoms or a list of atoms for custom relaxation. | - fixed<br/>- all<br/>- hydrogens<br/>- non-hydrogens<br/>- `[List of _chemical.conn_atom.number]`                                                     |                                     | `[1 2 3 4]`    |
+| CompChem | Geometry Optimisation | `relax_force_convergence` | numb | Convergence criteria for stopping the geometry optimisation. Present in the TCOD DFT Dictionary as `_dft_atom_relax_force_conv`.                                                                                          | \>0                                                                                                                                                    | kJ mol<sup>-1</sup> nm<sup>-1</sup> | 0.1            |
+| CompChem | Geometry Optimisation | `max_steps`               | numb | Maximum number of steps in the geometry optimisation.                                                                                                                                                                     | \>0                                                                                                                                                    |                                     |                |
 
 ### 3.2 Periodic Density Functional Theory
 
@@ -443,12 +449,12 @@ Category `_dft.[]`: Subgroup for CSP Structure Ranking methods that use pDFT met
 `_dft` for consistency with the TCOD DFT Dictionary (https://wiki.crystallography.net/cif/dictionaries/ddl1/cif_dft/).
 For these fields to be used, the `_compchem.method` should be set to "pDFT".
 
-| Top Category | Data Field                             | Type | Definition                                                  | Constraints                                                                                             | Units | Example |
-|:-------------|:---------------------------------------|:-----|:------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------|:------|:--------|
-| pDFT         | `exchange_correlation_functional_type` | char | Specifies the type of exchange-correlation functional used. | - LDA<br/>- GGA<br/>- meta-GGA<br/>- Hybrid<br/>- Other                                                 |       | GGA     |
-| pDFT         | `exchange_correlation_functional_name` | char | Specifies the name of exchange-correlation functional used. | - PBE<br/>- PBE0<br/>- SCAN<br/>- ...                                                                   |       | PBE     |
-| pDFT         | `pseudopotential_type`                 | char | Defines the type of pseudopotentials used.                  | - Plane-waves<br/>- PAW<br/>- Norm-conserving<br/>- Ultrasoft                                           |       | PAW     |
-| pDFT         | `dispersion_correction`                | char | The Van der Waals correction used.                          | - Grimme-D2<br/>- Grimme-D3<br/>- Tkatchenko-Scheffler<br/>- Many-body dispersion<br/>- XDM<br/>- Other |       | XDM     |
+| Group | Data Field                             | Type | Definition                                                  | Constraints                                                                                             | Units | Example |
+|:------|:---------------------------------------|:-----|:------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------|:------|:--------|
+| pDFT  | `exchange_correlation_functional_type` | char | Specifies the type of exchange-correlation functional used. | - LDA<br/>- GGA<br/>- meta-GGA<br/>- Hybrid<br/>- Other                                                 |       | GGA     |
+| pDFT  | `exchange_correlation_functional_name` | char | Specifies the name of exchange-correlation functional used. | - PBE<br/>- PBE0<br/>- SCAN<br/>- ...                                                                   |       | PBE     |
+| pDFT  | `pseudopotential_type`                 | char | Defines the type of pseudopotentials used.                  | - Plane-waves<br/>- PAW<br/>- Norm-conserving<br/>- Ultrasoft                                           |       | PAW     |
+| pDFT  | `dispersion_correction`                | char | The Van der Waals correction used.                          | - Grimme-D2<br/>- Grimme-D3<br/>- Tkatchenko-Scheffler<br/>- Many-body dispersion<br/>- XDM<br/>- Other |       | XDM     |
 
 ### 3.3 Forcefields
 
@@ -456,17 +462,17 @@ Category `_forcefield.[]`: Subgroup for CSP Structure Ranking methods that use f
 molecular
 methods. For these fields to be used, the `_compchem.method` should be set to "Forcefield".
 
-| Top Category | Data Field                        | Type | Definition                                                                                                                     | Constraints                                                                                                                  | Units | Example                                                                       |
-|--------------|:----------------------------------|:-----|:-------------------------------------------------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------------------------|:------|:------------------------------------------------------------------------------|
-| Forcefield   | `name`                            | char | Name of the force field.                                                                                                       | Free Text                                                                                                                    |       | OPLS, GAFF                                                                    |
-| Forcefield   | `intramolecular_term`             | char | The energy evaluation method for intramolecular interactions.                                                                  | - "Bonded Parameters"<br/>- "Isolated Molecule Energy"<br/>- None<br/>- Other                                                |       |                                                                               |
-| Forcefield   | `electrostatic_term`              | char | Functional form of electrostatic interactions.                                                                                 | - "Point-Charges"<br/>- Multipoles<br/>- Other                                                                               |       |                                                                               |
-| Forcefield   | `vdw_term`                        | char | Functional form of van der Waals interactions.                                                                                 | - LJ(C6<br/>-C12)<br/>- LJ(epsilon<br/>-sigma)<br/>- Buckingham<br/>- ReaxFF Morse-Potential<br/>- 14-7 function<br/>- Other |       |                                                                               |
-| Forcefield   | `parameterization_method_intra`   | char | Briefly describes the primary method used to derive the intramolecular force field parameters.                                 | Free Text                                                                                                                    |       | "Fitting to gas-phase QM data", "Transferable parameters based on atom types" |
-| Forcefield   | `parameterization_method_coulomb` | char | Briefly describes the primary method used to derive the electrostatic force field parameters.                                  | Free Text                                                                                                                    |       | "Fitting to gas-phase QM data", "Transferable parameters based on atom types" |
-| Forcefield   | `parameterization_method_vdw`     | char | Briefly describes the primary method used to derive the dispersion/repulsion force field parameters.                           | Free Text                                                                                                                    |       | "Fitting to gas-phase QM data", "Transferable parameters based on atom types" |
-| Forcefield   | `qm_parameterization_functional`  | char | The exchange-correlation functional used in the gas-phase quantum mechanical calculations when fitting force field parameters. | - "MP2"<br/>- "CCSD(T)"<br/>- "B3LYP"<br/>- ...                                                                              |       | MP2                                                                           |
-| Forcefield   | `qm_parameterization_basis_set`   | char | The basis set used in the gas-phase quantum mechanical calculations when fitting force field parameters.                       | - "aug-cc-pVTZ"<br/>- "6-31G(d,p)"<br/>- ...                                                                                 |       | 6-31G                                                                         |
+| Group      | Data Field                        | Type | Definition                                                                                                                     | Constraints                                                                                                                  | Units | Example                                                                       |
+|------------|:----------------------------------|:-----|:-------------------------------------------------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------------------------|:------|:------------------------------------------------------------------------------|
+| Forcefield | `name`                            | char | Name of the force field.                                                                                                       | Free Text                                                                                                                    |       | OPLS, GAFF                                                                    |
+| Forcefield | `intramolecular_term`             | char | The energy evaluation method for intramolecular interactions.                                                                  | - "Bonded Parameters"<br/>- "Isolated Molecule Energy"<br/>- None<br/>- Other                                                |       |                                                                               |
+| Forcefield | `electrostatic_term`              | char | Functional form of electrostatic interactions.                                                                                 | - "Point-Charges"<br/>- Multipoles<br/>- Other                                                                               |       |                                                                               |
+| Forcefield | `vdw_term`                        | char | Functional form of van der Waals interactions.                                                                                 | - LJ(C6<br/>-C12)<br/>- LJ(epsilon<br/>-sigma)<br/>- Buckingham<br/>- ReaxFF Morse-Potential<br/>- 14-7 function<br/>- Other |       |                                                                               |
+| Forcefield | `parameterization_method_intra`   | char | Briefly describes the primary method used to derive the intramolecular force field parameters.                                 | Free Text                                                                                                                    |       | "Fitting to gas-phase QM data", "Transferable parameters based on atom types" |
+| Forcefield | `parameterization_method_coulomb` | char | Briefly describes the primary method used to derive the electrostatic force field parameters.                                  | Free Text                                                                                                                    |       | "Fitting to gas-phase QM data", "Transferable parameters based on atom types" |
+| Forcefield | `parameterization_method_vdw`     | char | Briefly describes the primary method used to derive the dispersion/repulsion force field parameters.                           | Free Text                                                                                                                    |       | "Fitting to gas-phase QM data", "Transferable parameters based on atom types" |
+| Forcefield | `qm_parameterization_functional`  | char | The exchange-correlation functional used in the gas-phase quantum mechanical calculations when fitting force field parameters. | - "MP2"<br/>- "CCSD(T)"<br/>- "B3LYP"<br/>- ...                                                                              |       | MP2                                                                           |
+| Forcefield | `qm_parameterization_basis_set`   | char | The basis set used in the gas-phase quantum mechanical calculations when fitting force field parameters.                       | - "aug-cc-pVTZ"<br/>- "6-31G(d,p)"<br/>- ...                                                                                 |       | 6-31G                                                                         |
 
 ### 3.4 Semi-Empirical
 
@@ -474,7 +480,7 @@ Category `_semiempirical.[]`: Subgroup for CSP Structure Ranking methods that us
 fields to
 be used, the `_compchem.method` should be set to "Semi-Empirical".
 
-| Top Category   | Data Field                 | Type | Definition                                                                                                     | Constraints                                                       | Units | Example |
+| Group          | Data Field                 | Type | Definition                                                                                                     | Constraints                                                       | Units | Example |
 |:---------------|:---------------------------|:-----|:---------------------------------------------------------------------------------------------------------------|:------------------------------------------------------------------|:------|:--------|
 | Semi-Empirical | `type`                     | char | Type of semi-empirical method.                                                                                 | - Tight-Binding<br/>- "Self-Consistent Tight-Bonding"<br/>- Other |       |         |
 | Semi-Empirical | `method`                   | char | Specifies the name of the Semi-Empirical method used.                                                          | - AM1<br/>- PM3<br/>- PM6<br/>- xTB<br/>- ...                     |       | PM6     |
@@ -489,7 +495,7 @@ be used, the `_compchem.method` should be set to "Semi-Empirical".
 Category `_wavefunction.[]`: Subgroup for CSP Structure Ranking methods that use wavefunction methods. For these
 fields to be used, the `_compchem.method` should be set to "Wavefunction".
 
-| Top Category | Data Field                        | Type | Definition                             | Constraints                       | Units | Example |
+| Group        | Data Field                        | Type | Definition                             | Constraints                       | Units | Example |
 |:-------------|:----------------------------------|:-----|:---------------------------------------|:----------------------------------|:------|:--------|
 | Wavefunction | `exchange_correlation_functional` | char | Specifies the name of functional used. | - HF<br/>- MP2<br/>- CC<br/>- ... |       | MP2     |
 | Wavefunction | `basis_set_type`                  | char | Defines the type of basis used.        | - GTH<br/>- NAO<br/>- ...         |       | NAO     |
@@ -500,7 +506,7 @@ Category `_ml_potential.[]`: Subgroup for CSP Structure Ranking methods that use
 For
 these fields to be used, the `_compchem.method` should be set to "ML Potentials".
 
-| Top Category | Data Field  | Type | Definition                                                                                                                                  | Constraints                 | Units | Example |
+| Group        | Data Field  | Type | Definition                                                                                                                                  | Constraints                 | Units | Example |
 |:-------------|:------------|:-----|:--------------------------------------------------------------------------------------------------------------------------------------------|:----------------------------|:------|:--------|
 | ML Potential | `method`    | char | Specifies the name of the ML Potential used. In case of ML parametrisation of classical forcefields, refer to the Forcefields dictionaries. | - ANI<br/>- MACE<br/>- ...  |       |         |
 | ML Potential | `model`     | char | The specific model used to rank structures.                                                                                                 | - 2x<br/>- OFF24<br/>- ...  |       |         |
@@ -510,11 +516,11 @@ these fields to be used, the `_compchem.method` should be set to "ML Potentials"
 
 Category `_free_energy.[]`: Subgroup for CSP Structure Ranking methods that use free energy methods.
 
-| Top Category | Data Field              | Type      | Definition                                                                     | Constraints                                  | Units | Example                   |
-|:-------------|:------------------------|:----------|:-------------------------------------------------------------------------------|:---------------------------------------------|:------|:--------------------------|
-| Free Energy  | `method`                | char      | Specifies the name of the approach used to calculate free energies.            | - HA<br/>- QHA<br/>- PSCP<br/>- EC<br/>- ... |       | QHA                       |
-| Free Energy  | `reference_temperature` | numb/list | The temperature or list of temperatures at which free energies are calculated. | \>0 or `List[PositiveFloat]`                 | K     | `[ 100.0, 200.0, 300.0 ]` |
-| Free Energy  | `reference_pressure`    | numb/list | The pressure or list of pressures at which free energies are calculated.       | \>0 or `List[PositiveFloat]`                 | Pa    | `[ 100000.0, 200000.0 ]`  |
+| Group       | Data Field              | Type      | Definition                                                                     | Constraints                                  | Units | Example                   |
+|:------------|:------------------------|:----------|:-------------------------------------------------------------------------------|:---------------------------------------------|:------|:--------------------------|
+| Free Energy | `method`                | char      | Specifies the name of the approach used to calculate free energies.            | - HA<br/>- QHA<br/>- PSCP<br/>- EC<br/>- ... |       | QHA                       |
+| Free Energy | `reference_temperature` | numb/list | The temperature or list of temperatures at which free energies are calculated. | \>0 or `List[PositiveFloat]`                 | K     | `[ 100.0, 200.0, 300.0 ]` |
+| Free Energy | `reference_pressure`    | numb/list | The pressure or list of pressures at which free energies are calculated.       | \>0 or `List[PositiveFloat]`                 | Pa    | `[ 100000.0, 200000.0 ]`  |
 
 ### Examples
 
@@ -564,6 +570,7 @@ data_gaff
     _csp.data_block_id          83f824d3-6d17-4e42-9952-31ed161ef811
     
     # Forcefield details
+    _compchem.method                   "Forcefield"
     _compchem.calculation_type         "Optimisation"
     _ff.name                           "GAFF"
     _ff.intramolecular_term            "Bonded-Parameters"
@@ -588,6 +595,7 @@ data_psi_mol
     _csp.data_block_id          d6f196c5-88d9-4ecd-b388-bcd92fd93a05
     
     # Forcefield details
+    _compchem.method                   "Forcefield"
     _compchem.calculation_type         "Optimisation"
     _ff.name                           "Psi_mol"
     _ff.intramolecular_term            "Isolated Molecule Energy"
@@ -612,6 +620,7 @@ data_pbe
     _csp.data_block_id          17ad684a-2337-4a96-9808-b8b8d3013dc3
     
     # DFT details
+    _compchem.method                          "pDFT"
     _compchem.calculation_type                "Optimisation"
     _dft.exchange_correlation_functional_type "GGA"
     _dft.exchange_correlation_functional_name "PBE"
@@ -631,6 +640,7 @@ data_pbe0
     _csp.data_block_id          a741eea0-d308-436a-916f-31964b86b649
     
     # DFT details
+    _compchem.method                          "pDFT"
     _compchem.calculation_type                "Single-Point"
     _dft.exchange_correlation_functional_type "Hybrid"
     _dft.exchange_correlation_functional_name "PBE0"
@@ -643,6 +653,7 @@ data_optb88
     _csp.data_block_id          2ba152e5-4690-4af4-be55-68789b38b166
 
     # DFT details
+    _compchem.method                          "pDFT"
     _compchem.calculation_type                "Single-Point"
     _dft.exchange_correlation_functional_type "Hybrid"
     _dft.exchange_correlation_functional_name "optb88"
@@ -661,6 +672,7 @@ data_pbe0_qha
     _dft.dispersion_correction                "MBD"
     
     # Free energy
+    _compchem.method                   "Free Energy"
     _compchem.calculation_type         "Dynamic Ensemble"
     _free_energy.method                "QHA"
     _free_energy.reference_temperature [100 200 300]
@@ -729,7 +741,7 @@ Categories:
 * **`_theoretical_structure.[]`**: Properties of the structure.
 * **`_theoretical_structure.csp_[]`**: Stage identifiers in a multistep ranking approach.
 
-| Top Category          | Category | Data Field                             | Type | Definition                                                                                                                                    | Constraints | Units               | Example         |
+| Group                 | Category | Data Field                             | Type | Definition                                                                                                                                    | Constraints | Units               | Example         |
 |-----------------------|----------|----------------------------------------|------|-----------------------------------------------------------------------------------------------------------------------------------------------|-------------|---------------------|-----------------|
 | Theoretical Structure | -        | `temperature`                          | numb | The temperature at which the energy and other properties of the theoretical structure were calculated.                                        | \>=0        | K                   | 298.15          |
 | Theoretical Structure | -        | `pressure`                             | numb | The pressure at which the energy and other properties of the theoretical structure were calculated.                                           | :           | Pa                  | 101325.0        |

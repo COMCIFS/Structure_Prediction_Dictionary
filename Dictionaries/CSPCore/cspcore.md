@@ -399,7 +399,7 @@ _csp.data_block_class                                                "Generation
     _csp.random_search_random_numbers_algorithm                          "Sobol"
     
     _csp.structure_generation_space_group_number_list                    [14 2 15 61 19 4 33 29 5 1]
-        _csp.structure_generation_stopping_criteria_description          "Max Structures"
+    _csp.structure_generation_stopping_criteria_description              "Max Structures"
     loop_
         _csp.structure_generation_stopping_criteria_space_group_number_list                      
         _csp.structure_generation_stopping_criteria_max_structures_evaluated  
@@ -476,7 +476,7 @@ Categories:
 
 * `_csp.structure_ranking_[]`: Category to define structure ranking stages in multistep approaches.
 * `_compchem.[]` : Details on calculation types and software citation.
-* `_compchem.geometry_optimistaion_[]`: Geometry optimisation details.
+* `_compchem.geometry_optimisation_[]`: Geometry optimisation details.
 
 | Group    | Category              | Data Field                | Type | Definition                                                                                                                                                                                                                                                                                                                                                                                   | Constraints                                                                                                                                            | Units                               | Example        |
 |----------|-----------------------|:--------------------------|:-----|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------|:------------------------------------|:---------------|

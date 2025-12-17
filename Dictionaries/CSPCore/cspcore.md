@@ -121,7 +121,7 @@ _csp.data_block_class       "Input"
 _csp.data_block_id          2a2611e3-2021-4b03-a7c6-0ef71239008f
 _csp.data_block_description input1
 
-_csp.input.name             Urea_Hydrate
+_csp.input_name             Urea_Hydrate
 
 # Molecules
 loop_
@@ -194,7 +194,7 @@ _csp.data_block_class       "Input"
 _csp.data_block_id          fbbe2b09-da53-4505-ba9c-d4952a096dbb
 _csp.data_block_description input1
 
-_csp.input.name "(mi-tricyanomethanide)-silver"
+_csp.input_name "(mi-tricyanomethanide)-silver"
 
 # Molecules
 loop_
@@ -280,8 +280,8 @@ to be used, the `_csp.structure_generation_method` must include "Evolutionary Al
 | CSP   | Evolutionary Algorithms | `population_size`             | numb | The number of candidate structures in each generation.                                                                                                         | \>0         |       | 100     |
 | CSP   | Evolutionary Algorithms | `initial_population_size`     | numb | The number of candidate structures in the first generation.                                                                                                    | \>0         |       | 50      |
 | CSP   | Evolutionary Algorithms | `number_of_generations`       | numb | The maximum number of evolutionary cycles the algorithm will run before termination (unless other stopping criteria are met).                                  | \>0         |       | 50      |
-| CSP   | Evolutionary Algorithms | `nextgen_structure_selection` | numb | The number of individuals that survives in the next generation.                                                                                                | \>1         |       | 5       |
 | CSP   | Evolutionary Algorithms | `parents_structure_fraction`  | numb | The fraction of individuals in the current population that is used to generate structures in the next cycle.                                                   | 0-1         |       | 0.75    |
+| CSP   | Evolutionary Algorithms | `nextgen_structure_selection` | numb | The number of individuals that survives (are kept) in the next generation.                                                                                     | \>1         |       | 5       |
 | CSP   | Evolutionary Algorithms | `mutation_fraction`           | numb | The fraction of individuals in the population that will undergo mutation in each generation.                                                                   | 0-1         |       | 0.2     |
 | CSP   | Evolutionary Algorithms | `heredity_fraction`           | numb | The fraction of individuals in the population that will be generated through heredity (crossover/recombination) operations between two or more parents.        | 0-1         |       | 0.6     |
 | CSP   | Evolutionary Algorithms | `permutation_fraction`        | numb | The fraction of individuals in the population that will undergo a permutation operation (e.g., swapping atom positions within a structure) in each generation. | 0-1         |       | 0.1     |
@@ -351,7 +351,7 @@ _csp.data_block_description                                          "ea"
 # Method Details
 _csp.structure_generation_method                                     "Evolutionary Algorithm"
 _csp.structure_generation_density_lower_limit                        750
-_csp.structure_generation_density_upper_limit                        1500
+_csp.structure_generation_density_upper_limit                        1600
 _csp.structure_generation_space_group_number_list                    "all"
 _csp.structure_generation_stopping_criteria_description              "Max Structures"
 _csp.structure_generation_stopping_criteria_max_structures_evaluated 10000
@@ -594,7 +594,6 @@ _dft.pseudopotential_type                 PAW
 _dft.dispersion_correction                XDM
 
 _dft.kinetic_energy_cutoff_wavefunctions 600
-_dft.atom_relax_force_conv               0.002
 _dft.BZ_integration.method               "Monkhorst-Pack"
 _dft.BZ_integration.grid_dens_X          0.5
 _dft.BZ_integration.grid_dens_Y          0.5
@@ -618,17 +617,17 @@ two possible workflow examples are described:
 # General Purpose FF
 data_gaff
     # Data blocks details
-    _csp.data_block_class       "Ranking Method"
-    _csp.data_block_description gaff
-    _csp.data_block_id          83f824d3-6d17-4e42-9952-31ed161ef811
+    _csp.data_block_class           "Ranking Method"
+    _csp.data_block_description     gaff
+    _csp.data_block_id              83f824d3-6d17-4e42-9952-31ed161ef811
     
     # Forcefield details
-    _compchem.method                   "Forcefield"
-    _compchem.calculation_type         "Optimisation"
-    _forcefield.name                           "GAFF"
-    _forcefield.intramolecular_term            "Bonded-Parameters"
-    _forcefield.electrostatic_term             "Point-Charges"
-    _forcefield.vdw_term                       "LJ(epsilon,sigma)"
+    _compchem.method                "Forcefield"
+    _compchem.calculation_type      "Optimisation"
+    _forcefield.name                "GAFF"
+    _forcefield.intramolecular_term "Bonded-Parameters"
+    _forcefield.electrostatic_term  "Point-Charges"
+    _forcefield.vdw_term            "LJ(epsilon,sigma)"
     
     loop_
         _forcefield.parameterization_term
@@ -649,17 +648,17 @@ data_gaff
 # Multipoles-based Approach
 data_psi_mol
     # Data blocks details
-    _csp.data_block_class       "Ranking Method"
-    _csp.data_block_description psi_mol
-    _csp.data_block_id          d6f196c5-88d9-4ecd-b388-bcd92fd93a05
+    _csp.data_block_class           "Ranking Method"
+    _csp.data_block_description     psi_mol
+    _csp.data_block_id              d6f196c5-88d9-4ecd-b388-bcd92fd93a05
     
     # Forcefield details
-    _compchem.method                           "Forcefield"
-    _compchem.calculation_type                 "Optimisation"
-    _forcefield.name                           "Psi_mol"
-    _forcefield.intramolecular_term            "Isolated Molecule Energy"
-    _forcefield.electrostatic_term             "Multipoles"
-    _forcefield.vdw_term                       "Buckingham"
+    _compchem.method                "Forcefield"
+    _compchem.calculation_type      "Optimisation"
+    _forcefield.name                "Psi_mol"
+    _forcefield.intramolecular_term "Isolated Molecule Energy"
+    _forcefield.electrostatic_term  "Multipoles"
+    _forcefield.vdw_term            "Buckingham"
     loop_
         _forcefield.parameterization_term
         _forcefield.parameterization_description        
@@ -678,9 +677,9 @@ data_psi_mol
 
 # GGA DFT
 data_pbe
-    _csp.data_block_class       "Ranking Method"
-    _csp.data_block_description pbe
-    _csp.data_block_id          17ad684a-2337-4a96-9808-b8b8d3013dc3
+    _csp.data_block_class                     "Ranking Method"
+    _csp.data_block_description               pbe
+    _csp.data_block_id                        17ad684a-2337-4a96-9808-b8b8d3013dc3
     
     # DFT details
     _compchem.method                          "pDFT"
@@ -698,9 +697,9 @@ data_pbe
 # Hybrid DFT
 data_pbe0
     # Data blocks details
-    _csp.data_block_class       "Ranking Method"
-    _csp.data_block_description pbe0
-    _csp.data_block_id          a741eea0-d308-436a-916f-31964b86b649
+    _csp.data_block_class                     "Ranking Method"
+    _csp.data_block_description               pbe0
+    _csp.data_block_id                        a741eea0-d308-436a-916f-31964b86b649
     
     # DFT details
     _compchem.method                          "pDFT"
@@ -711,9 +710,9 @@ data_pbe0
 
 data_optb88
     # Data blocks details
-    _csp.data_block_class       "Ranking Method"
-    _csp.data_block_description optb88
-    _csp.data_block_id          2ba152e5-4690-4af4-be55-68789b38b166
+    _csp.data_block_class                     "Ranking Method"
+    _csp.data_block_description               optb88
+    _csp.data_block_id                        2ba152e5-4690-4af4-be55-68789b38b166
 
     # DFT details
     _compchem.method                          "pDFT"
@@ -725,21 +724,28 @@ data_optb88
 # Free Energy
 data_pbe0_qha
     # Data blocks details
-    _csp.data_block_class       "Ranking Method"
-    _csp.data_block_description pbe0
-    _csp.data_block_id          11d2779e-6396-4c2c-91ff-d62dddaf9cc1
+    _csp.data_block_class                     "Ranking Method"
+    _csp.data_block_description               "pbe0_mbd_qha"
+    _csp.data_block_id                        2b9deed1-116f-454a-922e-be61c8d946c5
 
-    # DFT details
-    _dft.exchange_correlation_functional_type "Hybrid"
-    _dft.exchange_correlation_functional_name "PBE0"
-    _dft.dispersion_correction                "MBD"
-    
-    # Free energy
-    _compchem.method                   "Free Energy"
-    _compchem.calculation_type         "Dynamic Ensemble"
-    _free_energy.method                "QHA"
-    _free_energy.reference_temperature [100 200 300]
-    _free_energy.reference_pressure    100000.0
+    # Energy Method Details
+    _compchem.method                                        "pDFT"
+    _dft.exchange_correlation_functional_type               "Hybrid"
+    _dft.exchange_correlation_functional_name               "PBE0"
+    _dft.pseudopotential_type                               "PAW"
+    _dft.dispersion_correction                              "MBD"
+
+    _dft.kinetic_energy_cutoff_wavefunctions                600
+    _dft.BZ_integration_method                              "Monkhorst-Pack"
+    _dft.BZ_integration_grid_dens_X                         0.5
+    _dft.BZ_integration_grid_dens_Y                         0.5
+    _dft.BZ_integration_grid_dens_Z                         0.5
+
+    # Free Energy Calculation Details
+    _compchem.calculation_type                "Dynamic Ensemble"
+    _free_energy.method                       "QHA"
+    _free_energy.reference_temperature        [100 200 300]
+    _free_energy.reference_pressure           100000.0
 
 #
 # Workflows
@@ -1109,10 +1115,10 @@ _dft.exchange_correlation_functional_name PBE
 _dft.pseudopotential_type PAW
 _dft.dispersion_correction XDM
 _dft.kinetic_energy_cutoff_wavefunctions 600  # TCOD DFT Dictionary
-_dft.BZ_integration.method "Monkhorst-Pack"
-_dft.BZ_integration.grid_dens_X 0.5
-_dft.BZ_integration.grid_dens_Y 0.5
-_dft.BZ_integration.grid_dens_Z 0.5
+_dft.BZ_integration_method "Monkhorst-Pack"
+_dft.BZ_integration_grid_dens_X 0.5
+_dft.BZ_integration_grid_dens_Y 0.5
+_dft.BZ_integration_grid_dens_Z 0.5
 
 # Geometry Optimisation
 _compchem.geometry_optimisation_algorithm FIRE             

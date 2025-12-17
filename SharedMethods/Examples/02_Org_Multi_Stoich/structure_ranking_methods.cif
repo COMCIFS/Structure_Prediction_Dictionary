@@ -1,0 +1,204 @@
+# Forcefield
+data_gaff
+    # Datablock Details
+    _csp.data_block_class                "Ranking Method"
+    _csp.data_block_description          gaff
+    _csp.data_block_id                   6f36e2d3-a130-4cfc-81cd-7714fb92c3ca
+
+    # Energy Method Details
+    _compchem.method                     "Forcefield"
+    _forcefield.name                     "GAFF"
+    _forcefield.version                  2
+
+    _forcefield.intramolecular_term      "Bonded-Parameters"
+    _forcefield.bond_type                "Harmonic"
+    _forcefield.angle_type               "Harmonic"
+    _forcefield.improper_type            "Harmonic"
+    _forcefield.dihedral_type            "Periodic"
+    _forcefield.1-4_pairs                True
+    _forcefield.fudgeQQ                  0.8333
+    _forcefield.fudgeLJ                  0.5
+
+    _forcefield.electrostatic_term       "Point-Charges"
+    _forcefield.long_range_electrostatic "PME"
+
+    _forcefield.vdw_term                 "LJ(epsilon,sigma)"
+    _forcefield.long_range_electrostatic "LJ-PME"
+
+    _forcefield.combination_rule         "Lorentz-Berthelot"
+
+    loop_
+        _forcefield.parameterization_term
+        _forcefield.parameterization_description
+        _forcefield.parameterization_method
+        intra         "Initially fit to gas-phase QM data and updated to better correlate pDFT data" "MP2/6-31G(d,p)"
+        electrostatic "Fitting to gas-phase QM data"                                                 "MP2/6-31G(d,p)"
+        vdw           "Transferable parameters based on atom types"                                  "AMBER"
+
+    # Geometry Optimisation
+    _compchem.calculation_type                              "Optimisation"
+    _compchem.geometry_optimisation_algorithm               steep
+    _compchem.geometry_optimisation_cell                    anisotropic
+    _compchem.geometry_optimisation_atoms                   all
+    _compchem.geometry_optimisation_relax_force_convergence 0.01
+    _compchem.geometry_optimisation_max_steps               1000
+
+# Semi-empirical
+data_se
+    # Datablock Details
+    _csp.data_block_class                "Ranking Method"
+    _csp.data_block_description          "se"
+    _csp.data_block_id                   ed2bc09c-5914-400c-9107-1d58d92b93a6
+
+    # Energy Method Details
+    _compchem.method                        "Semi-Empirical"
+    _semiempirical.type                     "Self-Consistent Tight-Bonding"
+    _semiempirical.method                   "DFTB2"
+    _semiempirical.electronic_parameters    "mio"
+    _semiempirical.dispersion_correction    "D3"
+    _semiempirical.hydrogen_bond_correction "H4"
+
+    # Geometry Optimisation
+    _compchem.calculation_type                              "Optimisation"
+    _compchem.geometry_optimisation_algorithm               CG
+    _compchem.geometry_optimisation_cell                    anisotropic
+    _compchem.geometry_optimisation_atoms                   all
+    _compchem.geometry_optimisation_relax_force_convergence 0.01
+    _compchem.geometry_optimisation_max_steps               200
+
+# DFT
+data_pbe
+    # Datablock Details
+    _csp.data_block_class                                   "Ranking Method"
+    _csp.data_block_description                             "pbe"
+    _csp.data_block_id                                      97088479-72d3-4953-b858-503639748771
+
+    # Energy Method Details
+    _compchem.method                                        "pDFT"
+    _dft.exchange_correlation_functional_type               "GGA"
+    _dft.exchange_correlation_functional_name               "PBE"
+    _dft.pseudopotential_type                               "PAW"
+    _dft.dispersion_correction                              "XDM"
+
+    _dft.kinetic_energy_cutoff_wavefunctions                600
+    _dft.BZ_integration_method                              "Monkhorst-Pack"
+    _dft.BZ_integration_grid_dens_X                         0.5
+    _dft.BZ_integration_grid_dens_Y                         0.5
+    _dft.BZ_integration_grid_dens_Z                         0.5
+
+    # Geometry Optimisation
+    _compchem.calculation_type                              "Optimisation"
+    _compchem.geometry_optimisation_algorithm               "FIRE"
+    _compchem.geometry_optimisation_cell                    "anisotropic"
+    _compchem.geometry_optimisation_atoms                   "all"
+    _compchem.geometry_optimisation_relax_force_convergence 0.001
+    _compchem.geometry_optimisation_max_steps               50
+
+# Hybrid DFT
+data_pbe0_mbd
+    # Datablock Details
+    _csp.data_block_class                                   "Ranking Method"
+    _csp.data_block_description                             "pbe0_mbd"
+    _csp.data_block_id                                      8c2f765d-f13d-4673-91d5-33f162a8cdef
+
+    # Energy Method Details
+    _compchem.method                                        "pDFT"
+    _dft.exchange_correlation_functional_type               "Hybrid"
+    _dft.exchange_correlation_functional_name               "PBE0"
+    _dft.pseudopotential_type                               "PAW"
+    _dft.dispersion_correction                              "MBD"
+
+    _dft.kinetic_energy_cutoff_wavefunctions                600
+    _dft.BZ_integration_method                              "Monkhorst-Pack"
+    _dft.BZ_integration_grid_dens_X                         0.5
+    _dft.BZ_integration_grid_dens_Y                         0.5
+    _dft.BZ_integration_grid_dens_Z                         0.5
+
+    # Geometry Optimisation
+    _compchem.calculation_type                              "Single-Point"
+
+data_pbe0_d3
+    # Datablock Details
+    _csp.data_block_class                                   "Ranking Method"
+    _csp.data_block_description                             "pbe0_mbd"
+    _csp.data_block_id                                      a1b4936f-81d8-485d-a2d0-ba4723c84d2b
+
+    # Energy Method Details
+    _compchem.method                                        "pDFT"
+    _dft.exchange_correlation_functional_type               "Hybrid"
+    _dft.exchange_correlation_functional_name               "PBE0"
+    _dft.pseudopotential_type                               "PAW"
+    _dft.dispersion_correction                              "D3"
+
+    _dft.kinetic_energy_cutoff_wavefunctions                600
+    _dft.BZ_integration_method                              "Monkhorst-Pack"
+    _dft.BZ_integration_grid_dens_X                         0.5
+    _dft.BZ_integration_grid_dens_Y                         0.5
+    _dft.BZ_integration_grid_dens_Z                         0.5
+
+    # Geometry Optimisation
+    _compchem.calculation_type                              "Single-Point"
+
+# Meta DFT
+data_pbe0_d3
+    # Datablock Details
+    _csp.data_block_class                                   "Ranking Method"
+    _csp.data_block_description                             "r2scan"
+    _csp.data_block_id                                      c9348f31-32d2-4d46-8742-0e81a6e208dc
+
+    # Energy Method Details
+    _compchem.method                                        "pDFT"
+    _dft.exchange_correlation_functional_type               "meta-GGA"
+    _dft.exchange_correlation_functional_name               "r2scan"
+    _dft.pseudopotential_type                               "PAW"
+    _dft.dispersion_correction                              "D4"
+
+    _dft.kinetic_energy_cutoff_wavefunctions                600
+    _dft.BZ_integration_method                              "Monkhorst-Pack"
+    _dft.BZ_integration_grid_dens_X                         0.5
+    _dft.BZ_integration_grid_dens_Y                         0.5
+    _dft.BZ_integration_grid_dens_Z                         0.5
+
+    # Geometry Optimisation
+    _compchem.calculation_type                              "Single-Point"
+
+# Wavefunction
+data_mp2
+    # Datablock Details
+    _csp.data_block_class                                   "Ranking Method"
+    _csp.data_block_description                             "mp2"
+    _csp.data_block_id                                      5a1faac1-3136-4eca-967d-b9f4e194996d
+
+    # Energy Method Details
+    _compchem.method                                        "Wavefunction"
+    _wavefunction.exchange_correlation_functional           "MP2"
+    _wavefunction.basis_set_type                            "NAO"
+
+    # Geometry Optimisation
+    _compchem.calculation_type                              "Single-Point"
+
+# Free Energy
+data_pbe0_mbd_qha
+    # Data blocks details
+    _csp.data_block_class                     "Ranking Method"
+    _csp.data_block_description               "pbe0_mbd_qha"
+    _csp.data_block_id                        2b9deed1-116f-454a-922e-be61c8d946c5
+
+    # Energy Method Details
+    _compchem.method                                        "pDFT"
+    _dft.exchange_correlation_functional_type               "Hybrid"
+    _dft.exchange_correlation_functional_name               "PBE0"
+    _dft.pseudopotential_type                               "PAW"
+    _dft.dispersion_correction                              "MBD"
+
+    _dft.kinetic_energy_cutoff_wavefunctions                600
+    _dft.BZ_integration_method                              "Monkhorst-Pack"
+    _dft.BZ_integration_grid_dens_X                         0.5
+    _dft.BZ_integration_grid_dens_Y                         0.5
+    _dft.BZ_integration_grid_dens_Z                         0.5
+
+    # Free Energy Calculation Details
+    _compchem.calculation_type                "Dynamic Ensemble"
+    _free_energy.method                       "QHA"
+    _free_energy.reference_temperature        [100 200 300]
+    _free_energy.reference_pressure           100000.0

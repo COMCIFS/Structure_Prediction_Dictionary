@@ -1,0 +1,37 @@
+data_workflow
+    # Data blocks details
+    _csp.data_block_class            Workflow
+    _csp.data_block_description      wf
+    _csp.data_block_id               425a77e3-a2a4-40fb-acdb-1e25b2d00bbd
+    _csp.data_block_additional_files ["structure_generation_methods.cif" "structure_ranking_methods.cif"]
+
+    # Structure Generation Methods
+    loop_
+        _csp.structure_generation_stage
+        _csp.structure_generation_preceding_stage
+        _csp.structure_generation_data_block_description
+        _csp.structure_generation_method
+        _csp.structure_generation_data_block_id
+        0 . "rs"   "Random Sampling"                1d5b2b53-d70d-44e8-b5c3-3342b5a10c35
+        1 0 "mcpt" "Monte Carlo Parallel Tempering" 85417536-7d3e-4c4e-936d-b9eed914b7a1
+        2 0 "ea"   "Evolutionary Algorithm"         af534fed-8153-4af2-bd9f-29b0fef8d805
+        3 0 "pso"  "Particle Swarm Optimisation"    242618a7-89b6-40d1-a6c4-cc51fd107a13
+
+    # Structure Ranking Methods
+    loop_
+        _csp.structure_ranking_stage
+        _csp.structure_ranking_preceding_stage
+        _csp.structure_ranking_data_block_description
+        _compchem.calculation_type
+        _compchem.method
+        _csp.structure_ranking_relative_energy_cutoff
+        _csp.structure_ranking_max_structures_retained
+        _csp.structure_ranking_data_block_id
+        0 . "gaff"         "Optimisation"     "Forcefield"     30.0 20000 6f36e2d3-a130-4cfc-81cd-7714fb92c3ca
+        1 0 "se"           "Optimisation"     "Semi-Empirical" 20.0 10000 ed2bc09c-5914-400c-9107-1d58d92b93a6
+        2 1 "pbe"          "Optimisation"     "pDFT"           10.0  5000 97088479-72d3-4953-b858-503639748771
+        3 2 "pbe0_d3"      "Single-Point"     "pDFT"              .     . a1b4936f-81d8-485d-a2d0-ba4723c84d2b
+        4 2 "pbe0_mbd"     "Single-Point"     "pDFT"           10.0   100 8c2f765d-f13d-4673-91d5-33f162a8cdef
+        5 2 "r2scan"       "Single-Point"     "pDFT"              .     . c9348f31-32d2-4d46-8742-0e81a6e208dc
+        6 2 "mp2"          "Single-Point"     "Wavefunction"      .     . 5a1faac1-3136-4eca-967d-b9f4e194996d
+        7 4 "pbe0_mbd_qha" "Dynamic Ensemble" "pDFT"              .     . 2b9deed1-116f-454a-922e-be61c8d946c5

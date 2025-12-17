@@ -4,7 +4,8 @@ _csp.data_block_class       "Input"
 _csp.data_block_id          2a2611e3-2021-4b03-a7c6-0ef71239008f
 _csp.data_block_description input1
 
-_csp.input.name             cannabinol_tetramethylpyrazine_cocrystal
+_csp.input_name             cannabinol_tetramethylpyrazine_cocrystal
+_csp.input_identifier       BT-XXX
 
 # Molecules
 loop_
@@ -175,6 +176,7 @@ loop_
     68    69    sing
     68    70    sing 
     68    71    sing 
-   
+
+# Type of Composition Search
 _csp.input_composition_calculation  "fixed"
 _csp.input_composition_coefficients [[2 1] [1 1] [1 2]] # 2:1, 1:1, 1:2 stoichiometries considered

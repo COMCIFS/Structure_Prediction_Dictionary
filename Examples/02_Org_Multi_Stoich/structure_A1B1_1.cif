@@ -1,0 +1,462 @@
+data_structure_A1B1_1_step0
+    # Datablock Details
+    _csp.data_block_class                                              "Theoretical Structure"
+    _csp.data_block_description                                        structure_structure_A1B1_1_step0
+    _csp.data_block_id                                                 ae979cd7-5897-4d5b-b81a-2ca1804b5272
+
+    # Include files specifying input, methods and workflow data blocks
+    _csp.data_block_additional_files                                   [ "csp_input.cif" "csp_workflows.cif" ]
+
+    # Stage identifiers
+    _theoretical_structure.csp_input_system_description                BT-XXX
+    _theoretical_structure.csp_input_system_id                         2a2611e3-2021-4b03-a7c6-0ef71239008f
+
+    _theoretical_structure.csp_workflow_description                    csp_workflow_long
+    _theoretical_structure.csp_workflow_id                             425a77e3-a2a4-40fb-acdb-1e25b2d00bbd
+
+    _theoretical_structure.csp_generation_stage_description            ea
+    _theoretical_structure.csp_generation_stage_id                     af534fed-8153-4af2-bd9f-29b0fef8d805
+
+    _theoretical_structure.csp_ranking_stage_description               gaff
+    _theoretical_structure.csp_ranking_stage_id                        6f36e2d3-a130-4cfc-81cd-7714fb92c3ca
+
+    # Properties
+    _theoretical_structure.temperature                                 0
+    _theoretical_structure.relative_lattice_energy                     0.0
+    _theoretical_structure.rank                                        1
+
+    # Crystal
+    _symmetry_cell_setting           monoclinic
+    _symmetry_space_group_name_H-M   'P 21/n'
+    _symmetry_Int_Tables_number      14
+    _space_group_name_Hall           '-P 2yn'
+    loop_
+    _symmetry_equiv_pos_site_id
+    _symmetry_equiv_pos_as_xyz
+    1 x,y,z
+    2 1/2-x,1/2+y,1/2-z
+    3 -x,-y,-z
+    4 1/2+x,1/2-y,1/2+z
+
+    _cell_length_a                   14.8774
+    _cell_length_b                   10.1190
+    _cell_length_c                   17.5619
+    _cell_angle_alpha                90
+    _cell_angle_beta                 104.4280
+    _cell_angle_gamma                90
+    _cell_volume                     2560.46
+    _cell_formula_units_Z            4
+
+    loop_
+    _atom_site_label
+    _atom_site_type_symbol
+    _atom_site_fract_x
+    _atom_site_fract_y
+    _atom_site_fract_z
+    C1 C 0.47614 0.31731 0.45584
+    C2 C 0.4285 0.19023 0.46568
+    N1 N 0.39045 0.18045 0.52708
+    C3 C 0.34392 0.07016 0.53562
+    C4 C 0.30226 0.06249 0.60511
+    C5 C 0.33415 -0.03168 0.48033
+    C6 C 0.27644 -0.1518 0.48442
+    N2 N 0.37453 -0.02459 0.42013
+    C7 C 0.42229 0.08469 0.41279
+    C8 C 0.46715 0.09033 0.34518
+    C9 C 0.85843 0.78884 0.59818
+    C10 C 0.824 0.64687 0.58253
+    C11 C 0.78701 0.59149 0.6498
+    C12 C 0.75632 0.44769 0.63607
+    C13 C 0.72105 0.38384 0.70269
+    C14 C 0.62961 0.44002 0.71004
+    C15 C 0.54637 0.38506 0.66747
+    C16 C 0.4612 0.4405 0.66968
+    O1 O 0.38023 0.38944 0.62582
+    C17 C 0.4569 0.55193 0.71718
+    C18 C 0.54218 0.59884 0.763
+    O2 O 0.54544 0.70543 0.81229
+    C19 C 0.46717 0.71768 0.84765
+    C20 C 0.47053 0.60284 0.90503
+    C21 C 0.48489 0.84885 0.89101
+    C22 C 0.37815 0.71518 0.78283
+    C23 C 0.30219 0.79364 0.78551
+    C24 C 0.22015 0.78566 0.72718
+    C25 C 0.21283 0.699 0.66428
+    C26 C 0.12383 0.69034 0.60054
+    C27 C 0.28908 0.62147 0.66066
+    C28 C 0.3725 0.62694 0.71978
+    C29 C 0.62704 0.54715 0.75896
+    H1 H 0.394122 0.313083 0.595114
+    H2 H 0.547798 0.297351 0.631858
+    H3 H 0.283975 0.555137 0.610933
+    H4 H 0.691273 0.590127 0.793844
+    H5 H 0.307254 0.862338 0.834129
+    H6 H 0.161263 0.847303 0.730548
+    H7 H 0.713203 0.277947 0.692039
+    H8 H 0.772763 0.398064 0.75808
+    H9 H 0.460857 0.509971 0.872676
+    H10 H 0.415553 0.614747 0.935422
+    H11 H 0.537579 0.602113 0.947801
+    H12 H 0.110178 0.784949 0.570308
+    H13 H 0.0667401 0.66605 0.62664
+    H14 H 0.13032 0.613765 0.558666
+    H15 H 0.840966 0.598613 0.704418
+    H16 H 0.728344 0.65106 0.656136
+    H17 H 0.814653 0.389877 0.627284
+    H18 H 0.701359 0.442142 0.582022
+    H19 H 0.880772 0.584877 0.574517
+    H20 H 0.769116 0.643795 0.528348
+    H21 H 0.88349 0.824399 0.548673
+    H22 H 0.914675 0.791952 0.651436
+    H23 H 0.80167 0.85142 0.605602
+    H24 H 0.554658 0.849139 0.929586
+    H25 H 0.43445 0.862326 0.925887
+    H26 H 0.478243 0.929051 0.84862
+    H27 H 0.462092 0.390539 0.496829
+    H28 H 0.450279 0.353072 0.39588
+    H29 H 0.550657 0.300639 0.46765
+    H30 H 0.203784 -0.123347 0.473903
+    H31 H 0.299246 -0.196585 0.542424
+    H32 H 0.284407 -0.222678 0.4399
+    H33 H 0.470598 -0.00879661 0.32193
+    H34 H 0.537025 0.13026 0.36535
+    H35 H 0.426366 0.153621 0.299213
+    H36 H 0.326631 0.145515 0.644267
+    H37 H 0.323053 -0.0297334 0.636526
+    H38 H 0.226902 0.0661216 0.584913
+
+data_structure_A1B1_1_step1
+    # Datablock Details
+    _csp.data_block_class                                              "Theoretical Structure"
+    _csp.data_block_description                                        structure_structure_A1B1_1_step1
+    _csp.data_block_id                                                 9eeee84a-92e4-418a-9071-e74dd7344f0d
+
+    # Include files specifying input, methods and workflow data blocks
+    _csp.data_block_additional_files                                   [ "csp_input.cif" "csp_workflows.cif" ]
+
+    # Stage identifiers
+    _theoretical_structure.csp_input_system_description                BT-XXX
+    _theoretical_structure.csp_input_system_id                         2a2611e3-2021-4b03-a7c6-0ef71239008f
+
+    _theoretical_structure.csp_workflow_description                    csp_workflow_long
+    _theoretical_structure.csp_workflow_id                             425a77e3-a2a4-40fb-acdb-1e25b2d00bbd
+
+    _theoretical_structure.csp_generation_stage_description            ea
+    _theoretical_structure.csp_generation_stage_id                     af534fed-8153-4af2-bd9f-29b0fef8d805
+
+    _theoretical_structure.csp_ranking_stage_description               se
+    _theoretical_structure.csp_ranking_stage_id                        ed2bc09c-5914-400c-9107-1d58d92b93a6
+
+    _theoretical_structure.csp_previous_stage_structure_description    structure_structure_A1B1_1_step0
+    _theoretical_structure.csp_previous_stage_structure_id             ae979cd7-5897-4d5b-b81a-2ca1804b5272
+
+    # Properties
+    _theoretical_structure.temperature                                 0
+    _theoretical_structure.relative_lattice_energy                     0.233
+    _theoretical_structure.rank                                        3
+
+    # Crystal
+    ...
+
+data_structure_A1B1_1_step2
+    # Datablock Details
+    _csp.data_block_class                                              "Theoretical Structure"
+    _csp.data_block_description                                        structure_structure_A1B1_1_step2
+    _csp.data_block_id                                                 07d72f6b-99fe-4455-b157-0f169057130f
+
+    # Include files specifying input, methods and workflow data blocks
+    _csp.data_block_additional_files                                   [ "csp_input.cif" "csp_workflows.cif" ]
+
+    # Stage identifiers
+    _theoretical_structure.csp_input_system_description                BT-XXX
+    _theoretical_structure.csp_input_system_id                         2a2611e3-2021-4b03-a7c6-0ef71239008f
+
+    _theoretical_structure.csp_workflow_description                    csp_workflow_long
+    _theoretical_structure.csp_workflow_id                             425a77e3-a2a4-40fb-acdb-1e25b2d00bbd
+
+    _theoretical_structure.csp_generation_stage_description            ea
+    _theoretical_structure.csp_generation_stage_id                     af534fed-8153-4af2-bd9f-29b0fef8d805
+
+    _theoretical_structure.csp_ranking_stage_description               pbe
+    _theoretical_structure.csp_ranking_stage_id                        97088479-72d3-4953-b858-503639748771
+
+    _theoretical_structure.csp_previous_stage_structure_description    structure_structure_A1B1_1_step1
+    _theoretical_structure.csp_previous_stage_structure_id             9eeee84a-92e4-418a-9071-e74dd7344f0d
+
+    # Properties
+    _theoretical_structure.temperature                                 0
+    _theoretical_structure.relative_lattice_energy                     0.541
+    _theoretical_structure.rank                                        4
+
+    # Crystal
+    ...
+
+data_structure_A1B1_1_step3
+    # Datablock Details
+    _csp.data_block_class                                              "Theoretical Structure"
+    _csp.data_block_description                                        structure_structure_A1B1_1_step3
+    _csp.data_block_id                                                 683ab489-92a8-4b51-95fb-1a86b33a37de
+
+    # Include files specifying input, methods and workflow data blocks
+    _csp.data_block_additional_files                                   [ "csp_input.cif" "csp_workflows.cif" ]
+
+    # Stage identifiers
+    _theoretical_structure.csp_input_system_description                BT-XXX
+    _theoretical_structure.csp_input_system_id                         2a2611e3-2021-4b03-a7c6-0ef71239008f
+
+    _theoretical_structure.csp_workflow_description                    csp_workflow_long
+    _theoretical_structure.csp_workflow_id                             425a77e3-a2a4-40fb-acdb-1e25b2d00bbd
+
+    _theoretical_structure.csp_generation_stage_description            ea
+    _theoretical_structure.csp_generation_stage_id                     af534fed-8153-4af2-bd9f-29b0fef8d805
+
+    _theoretical_structure.csp_ranking_stage_description               pbe0_d3
+    _theoretical_structure.csp_ranking_stage_id                        a1b4936f-81d8-485d-a2d0-ba4723c84d2b
+
+    _theoretical_structure.csp_previous_stage_structure_description    structure_structure_A1B1_1_step2
+    _theoretical_structure.csp_previous_stage_structure_id             07d72f6b-99fe-4455-b157-0f169057130f
+
+    # Properties
+    _theoretical_structure.temperature                                 0
+    _theoretical_structure.relative_lattice_energy                     0.268
+    _theoretical_structure.rank                                        2
+
+    # Crystal
+    ...
+
+data_structure_A1B1_1_step4
+    # Datablock Details
+    _csp.data_block_class                                              "Theoretical Structure"
+    _csp.data_block_description                                        structure_structure_A1B1_1_step4
+    _csp.data_block_id                                                 e2c4b66c-5545-4a60-a9a8-90ef4e6bdfeb
+
+    # Include files specifying input, methods and workflow data blocks
+    _csp.data_block_additional_files                                   [ "csp_input.cif" "csp_workflows.cif" ]
+
+    # Stage identifiers
+    _theoretical_structure.csp_input_system_description                BT-XXX
+    _theoretical_structure.csp_input_system_id                         2a2611e3-2021-4b03-a7c6-0ef71239008f
+
+    _theoretical_structure.csp_workflow_description                    csp_workflow_long
+    _theoretical_structure.csp_workflow_id                             425a77e3-a2a4-40fb-acdb-1e25b2d00bbd
+
+    _theoretical_structure.csp_generation_stage_description            ea
+    _theoretical_structure.csp_generation_stage_id                     af534fed-8153-4af2-bd9f-29b0fef8d805
+
+    _theoretical_structure.csp_ranking_stage_description               pbe0_mbd
+    _theoretical_structure.csp_ranking_stage_id                        8c2f765d-f13d-4673-91d5-33f162a8cdef
+
+    _theoretical_structure.csp_previous_stage_structure_description    structure_structure_A1B1_1_step2
+    _theoretical_structure.csp_previous_stage_structure_id             07d72f6b-99fe-4455-b157-0f169057130f
+
+    # Properties
+    _theoretical_structure.temperature                                 0
+    _theoretical_structure.relative_lattice_energy                     0.788
+    _theoretical_structure.rank                                        6
+
+    # Crystal
+    ...
+
+data_structure_A1B1_1_step5
+    # Datablock Details
+    _csp.data_block_class                                              "Theoretical Structure"
+    _csp.data_block_description                                        structure_structure_A1B1_1_step5
+    _csp.data_block_id                                                 c72e0bb5-6f7a-45eb-aed0-a13693dc2943
+
+    # Include files specifying input, methods and workflow data blocks
+    _csp.data_block_additional_files                                   [ "csp_input.cif" "csp_workflows.cif" ]
+
+    # Stage identifiers
+    _theoretical_structure.csp_input_system_description                BT-XXX
+    _theoretical_structure.csp_input_system_id                         2a2611e3-2021-4b03-a7c6-0ef71239008f
+
+    _theoretical_structure.csp_workflow_description                    csp_workflow_long
+    _theoretical_structure.csp_workflow_id                             425a77e3-a2a4-40fb-acdb-1e25b2d00bbd
+
+    _theoretical_structure.csp_generation_stage_description            ea
+    _theoretical_structure.csp_generation_stage_id                     af534fed-8153-4af2-bd9f-29b0fef8d805
+
+    _theoretical_structure.csp_ranking_stage_description               r2scan
+    _theoretical_structure.csp_ranking_stage_id                        c9348f31-32d2-4d46-8742-0e81a6e208dc
+
+    _theoretical_structure.csp_previous_stage_structure_description    structure_structure_A1B1_1_step2
+    _theoretical_structure.csp_previous_stage_structure_id             07d72f6b-99fe-4455-b157-0f169057130f
+
+    # Properties
+    _theoretical_structure.temperature                                 0
+    _theoretical_structure.relative_lattice_energy                     0.689
+    _theoretical_structure.rank                                        4
+
+    # Crystal
+    ...
+
+data_structure_A1B1_1_step6
+    # Datablock Details
+    _csp.data_block_class                                              "Theoretical Structure"
+    _csp.data_block_description                                        structure_structure_A1B1_1_step6
+    _csp.data_block_id                                                 b5e95a88-8fa7-4e5f-97d9-c35300370aba
+
+    # Include files specifying input, methods and workflow data blocks
+    _csp.data_block_additional_files                                   [ "csp_input.cif" "csp_workflows.cif" ]
+
+    # Stage identifiers
+    _theoretical_structure.csp_input_system_description                BT-XXX
+    _theoretical_structure.csp_input_system_id                         2a2611e3-2021-4b03-a7c6-0ef71239008f
+
+    _theoretical_structure.csp_workflow_description                    csp_workflow_long
+    _theoretical_structure.csp_workflow_id                             425a77e3-a2a4-40fb-acdb-1e25b2d00bbd
+
+    _theoretical_structure.csp_generation_stage_description            ea
+    _theoretical_structure.csp_generation_stage_id                     af534fed-8153-4af2-bd9f-29b0fef8d805
+
+    _theoretical_structure.csp_ranking_stage_description               mp2
+    _theoretical_structure.csp_ranking_stage_id                        5a1faac1-3136-4eca-967d-b9f4e194996d
+
+    _theoretical_structure.csp_previous_stage_structure_description    structure_structure_A1B1_1_step2
+    _theoretical_structure.csp_previous_stage_structure_id             07d72f6b-99fe-4455-b157-0f169057130f
+
+    # Properties
+    _theoretical_structure.temperature                                 0
+    _theoretical_structure.relative_lattice_energy                     0.810
+    _theoretical_structure.rank                                        6
+
+    # Crystal
+    ...
+
+data_structure_A1B1_1_step7
+    # Datablock Details
+    _csp.data_block_class                                              "Theoretical Structure"
+    _csp.data_block_description                                        structure_structure_A1B1_1_step7
+    _csp.data_block_id                                                 094f5430-0785-4d8f-8aa4-3e31fb579ec4
+
+    # Include files specifying input, methods and workflow data blocks
+    _csp.data_block_additional_files                                   [ "csp_input.cif" "csp_workflows.cif" ]
+
+    # Stage identifiers
+    _theoretical_structure.csp_input_system_description                BT-XXX
+    _theoretical_structure.csp_input_system_id                         2a2611e3-2021-4b03-a7c6-0ef71239008f
+
+    _theoretical_structure.csp_workflow_description                    csp_workflow_long
+    _theoretical_structure.csp_workflow_id                             425a77e3-a2a4-40fb-acdb-1e25b2d00bbd
+
+    _theoretical_structure.csp_generation_stage_description            ea
+    _theoretical_structure.csp_generation_stage_id                     af534fed-8153-4af2-bd9f-29b0fef8d805
+
+    _theoretical_structure.csp_ranking_stage_description               pbe0_mbd_opt
+    _theoretical_structure.csp_ranking_stage_id                        97773a57-f2a2-4b93-9e8d-413f57189029
+
+    _theoretical_structure.csp_previous_stage_structure_description    structure_structure_A1B1_1_step4
+    _theoretical_structure.csp_previous_stage_structure_id             e2c4b66c-5545-4a60-a9a8-90ef4e6bdfeb
+
+    # Properties
+    _theoretical_structure.temperature                                 0
+    _theoretical_structure.relative_lattice_energy                     0.799
+    _theoretical_structure.rank                                        6
+
+    # Crystal
+    ...
+
+data_structure_A1B1_1_step8_t100
+    # Datablock Details
+    _csp.data_block_class                                              "Theoretical Structure"
+    _csp.data_block_description                                        structure_structure_A1B1_1_step8_t100
+    _csp.data_block_id                                                 ce690a0d-c123-4c07-9950-c7a1a47056e2
+
+    # Include files specifying input, methods and workflow data blocks
+    _csp.data_block_additional_files                                   [ "csp_input.cif" "csp_workflows.cif" ]
+
+    # Stage identifiers
+    _theoretical_structure.csp_input_system_description                BT-XXX
+    _theoretical_structure.csp_input_system_id                         2a2611e3-2021-4b03-a7c6-0ef71239008f
+
+    _theoretical_structure.csp_workflow_description                    csp_workflow_long
+    _theoretical_structure.csp_workflow_id                             425a77e3-a2a4-40fb-acdb-1e25b2d00bbd
+
+    _theoretical_structure.csp_generation_stage_description            ea
+    _theoretical_structure.csp_generation_stage_id                     af534fed-8153-4af2-bd9f-29b0fef8d805
+
+    _theoretical_structure.csp_ranking_stage_description               pbe0_mbd_qha
+    _theoretical_structure.csp_ranking_stage_id                        2b9deed1-116f-454a-922e-be61c8d946c5
+    _theoretical_structure.csp_reference_temperature                   100.0
+    _theoretical_structure.csp_reference_pressure                      100000.0
+
+    _theoretical_structure.csp_previous_stage_structure_description    structure_structure_A1B1_1_step7
+    _theoretical_structure.csp_previous_stage_structure_id             094f5430-0785-4d8f-8aa4-3e31fb579ec4
+
+    # Properties
+    _theoretical_structure.temperature                                 0
+    _theoretical_structure.relative_lattice_energy                     0.725
+    _theoretical_structure.rank                                        6
+
+    # Crystal
+    ...
+
+data_structure_A1B1_1_step8_t200
+    # Datablock Details
+    _csp.data_block_class                                              "Theoretical Structure"
+    _csp.data_block_description                                        structure_structure_A1B1_1_step8_t200
+    _csp.data_block_id                                                 e92da335-2704-4fe5-9e1f-1a82b4d022dc
+
+    # Include files specifying input, methods and workflow data blocks
+    _csp.data_block_additional_files                                   [ "csp_input.cif" "csp_workflows.cif" ]
+
+    # Stage identifiers
+    _theoretical_structure.csp_input_system_description                BT-XXX
+    _theoretical_structure.csp_input_system_id                         2a2611e3-2021-4b03-a7c6-0ef71239008f
+
+    _theoretical_structure.csp_workflow_description                    csp_workflow_long
+    _theoretical_structure.csp_workflow_id                             425a77e3-a2a4-40fb-acdb-1e25b2d00bbd
+
+    _theoretical_structure.csp_generation_stage_description            ea
+    _theoretical_structure.csp_generation_stage_id                     af534fed-8153-4af2-bd9f-29b0fef8d805
+
+    _theoretical_structure.csp_ranking_stage_description               pbe0_mbd_qha
+    _theoretical_structure.csp_ranking_stage_id                        2b9deed1-116f-454a-922e-be61c8d946c5
+    _theoretical_structure.csp_reference_temperature                   200.0
+    _theoretical_structure.csp_reference_pressure                      100000.0
+
+    _theoretical_structure.csp_previous_stage_structure_description    structure_structure_A1B1_1_step7
+    _theoretical_structure.csp_previous_stage_structure_id             094f5430-0785-4d8f-8aa4-3e31fb579ec4
+
+    # Properties
+    _theoretical_structure.temperature                                 0
+    _theoretical_structure.relative_lattice_energy                     0.493
+    _theoretical_structure.rank                                        7
+
+    # Crystal
+    ...
+
+data_structure_A1B1_1_step8_t300
+    # Datablock Details
+    _csp.data_block_class                                              "Theoretical Structure"
+    _csp.data_block_description                                        structure_structure_A1B1_1_step8_t300
+    _csp.data_block_id                                                 3b4de7b5-aed4-4358-a22d-3337937fdecb
+
+    # Include files specifying input, methods and workflow data blocks
+    _csp.data_block_additional_files                                   [ "csp_input.cif" "csp_workflows.cif" ]
+
+    # Stage identifiers
+    _theoretical_structure.csp_input_system_description                BT-XXX
+    _theoretical_structure.csp_input_system_id                         2a2611e3-2021-4b03-a7c6-0ef71239008f
+
+    _theoretical_structure.csp_workflow_description                    csp_workflow_long
+    _theoretical_structure.csp_workflow_id                             425a77e3-a2a4-40fb-acdb-1e25b2d00bbd
+
+    _theoretical_structure.csp_generation_stage_description            ea
+    _theoretical_structure.csp_generation_stage_id                     af534fed-8153-4af2-bd9f-29b0fef8d805
+
+    _theoretical_structure.csp_ranking_stage_description               pbe0_mbd_qha
+    _theoretical_structure.csp_ranking_stage_id                        2b9deed1-116f-454a-922e-be61c8d946c5
+    _theoretical_structure.csp_reference_temperature                   300.0
+    _theoretical_structure.csp_reference_pressure                      100000.0
+
+    _theoretical_structure.csp_previous_stage_structure_description    structure_structure_A1B1_1_step7
+    _theoretical_structure.csp_previous_stage_structure_id             094f5430-0785-4d8f-8aa4-3e31fb579ec4
+
+    # Properties
+    _theoretical_structure.temperature                                 0
+    _theoretical_structure.relative_lattice_energy                     0.284
+    _theoretical_structure.rank                                        7
+
+    # Crystal
+    ...

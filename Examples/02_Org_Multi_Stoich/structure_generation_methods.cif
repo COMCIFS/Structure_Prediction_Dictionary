@@ -1,21 +1,21 @@
 # Random Search
 data_rs
     # Datablock Details
-    _csp.data_block_class                                                "Generation Method"
-    _csp.data_block_description                                          rs
-    _csp.data_block_id                                                   1d5b2b53-d70d-44e8-b5c3-3342b5a10c35
+    _csp.data_block_class                                                      "Generation Method"
+    _csp.data_block_description                                                rs
+    _csp.data_block_id                                                         1d5b2b53-d70d-44e8-b5c3-3342b5a10c35
 
     # Method Details
-    _csp.structure_generation_method                                     "Random Search"
-    _csp.random_search_random_numbers_algorithm_type                     "Quasi-random"
-    _csp.random_search_random_numbers_algorithm                          "Sobol"
+    _csp.structure_generation_method                                           "Random Search"
+    _csp.random_search_random_numbers_algorithm_type                           "Quasi-random"
+    _csp.random_search_random_numbers_algorithm                                "Sobol"
 
     # Search Space & Stopping Criteria
-    _csp.structure_generation_density_lower_limit                        1000
-    _csp.structure_generation_density_upper_limit                        1500
+    _csp.structure_generation_density_lower_limit                              1000
+    _csp.structure_generation_density_upper_limit                              1500
 
-    _csp.structure_generation_space_group_number_list                    [14 2 15 61 19 4 33 29 5 1]
-    _csp.structure_generation_stopping_criteria_description              "Max Structures"
+    _csp.structure_generation_space_group_number_list                          [14 2 15 61 19 4 33 29 5 1]
+    _csp.structure_generation_stopping_criteria_description                    "Max Structures"
     loop_
         _csp.structure_generation_stopping_criteria_space_group_number_list
         _csp.structure_generation_stopping_criteria_max_structures_evaluated

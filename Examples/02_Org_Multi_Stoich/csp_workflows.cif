@@ -1,7 +1,7 @@
 data_workflow
     # Data blocks details
     _csp.data_block_class            Workflow
-    _csp.data_block_description      wf
+    _csp.data_block_description      csp_workflow_long
     _csp.data_block_id               425a77e3-a2a4-40fb-acdb-1e25b2d00bbd
     _csp.data_block_additional_files ["structure_generation_methods.cif" "structure_ranking_methods.cif"]
 
@@ -29,9 +29,10 @@ data_workflow
         _csp.structure_ranking_data_block_id
         0 . "gaff"         "Optimisation"     "Forcefield"     30.0 20000 6f36e2d3-a130-4cfc-81cd-7714fb92c3ca
         1 0 "se"           "Optimisation"     "Semi-Empirical" 20.0 10000 ed2bc09c-5914-400c-9107-1d58d92b93a6
-        2 1 "pbe"          "Optimisation"     "pDFT"           10.0  5000 97088479-72d3-4953-b858-503639748771
+        2 1 "pbe"          "Optimisation"     "pDFT"           10.0  2000 97088479-72d3-4953-b858-503639748771
         3 2 "pbe0_d3"      "Single-Point"     "pDFT"              .     . a1b4936f-81d8-485d-a2d0-ba4723c84d2b
-        4 2 "pbe0_mbd"     "Single-Point"     "pDFT"           10.0   100 8c2f765d-f13d-4673-91d5-33f162a8cdef
+        4 2 "pbe0_mbd"     "Single-Point"     "pDFT"           10.0  2000 8c2f765d-f13d-4673-91d5-33f162a8cdef
         5 2 "r2scan"       "Single-Point"     "pDFT"              .     . c9348f31-32d2-4d46-8742-0e81a6e208dc
         6 2 "mp2"          "Single-Point"     "Wavefunction"      .     . 5a1faac1-3136-4eca-967d-b9f4e194996d
-        7 4 "pbe0_mbd_qha" "Dynamic Ensemble" "pDFT"              .     . 2b9deed1-116f-454a-922e-be61c8d946c5
+        7 4 "pbe0_mbd_opt" "Optimisation"     "pDFT"           10.0    50 97773a57-f2a2-4b93-9e8d-413f57189029
+        8 7 "pbe0_mbd_qha" "Dynamic Ensemble" "pDFT"              .     . 2b9deed1-116f-454a-922e-be61c8d946c5

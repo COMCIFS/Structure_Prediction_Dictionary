@@ -4,11 +4,12 @@
 
 ## Summary
 
-In this example, we show a description of a hypothetical CSP method for the cannabinol:tetramethylpyrazine (CBN:TMP)
+In this example, we show a description of a hypothetical CSP workflow for the cannabinol:tetramethylpyrazine (CBN:TMP)
 cocrystal that intentionally uses many different methods.
 Three stoichiometries are researched (1:1, 2:1, 1:2) and multistep generation and ranking methods are implemented.
-Input molecules, output structures, workflows, generation and ranking methods are organised in separate files but this
-is not mandatory. As all these items are organised in separated datablocks, they could be merged into a single file.
+Input molecules, output structures, workflows, generation and ranking methods are organised in separate files. This
+is not mandatory, and they could be merged into a single file (as all these items are organised in separated 
+datablocks).
 
 ---
 
@@ -17,8 +18,8 @@ is not mandatory. As all these items are organised in separated datablocks, they
 The datablock (in file `csp_input.cif`) starts by introducing three identifiers of the target compound:
 
 - The (human-readable) chemical name `cannabinol_tetramethylpyrazine` of the two compounds
-- A unique identifier that can be used for an internal database (being target XXX of the 7th Blind Test, we used
-  `BT-XXX`)
+- A unique identifier that can be used for an internal storage or database (being target XXX of the 7th Blind Test, we
+  used `BT-XXX`)
 - A datablock unique ID (`2a2611e3-2021-4b03-a7c6-0ef71239008f`).
 
 Only the latter will be used to link output structures to the input datablock.
@@ -40,7 +41,7 @@ Carlo parallel tempering approach, an evolutionary algorithm and a particle swar
 
 In all these methods, the 10 most popular spacegroups for organic crystals are used.
 The random sampling generates 7500 structures which are then used by the other three methods as inputs to generated at
-most 100,000 structures each. Relationships between methods are instead described in the `csp_workflow.cif` file
+most 100,000 structures each. These relationships between methods are described in the `csp_workflow.cif` file.
 
 ---
 
@@ -50,8 +51,7 @@ In the same way as structure generation methods, in the file `structure_ranking_
 single method while the links between them are shown in the `csp_workflow.cif` file.
 
 The first three consists of geometry optimisations with energy methods of increasing computational cost: a classical
-forcefield (GAFF) with point charges generated from a gas-phase quantum mechanical method, a semi-empirical method (
-DFTB) and a dispersion-corrected DFT method (PBE-MBD).
+forcefield (GAFF) with point charges, a semi-empirical method (DFTB) and a dispersion-corrected DFT method (PBE-MBD).
 Two criteria are set for structures to pass to next stage, an energy cutoff and a maximum number of structures (as
 shown in `csp_workflow.cif`).
 
@@ -81,4 +81,4 @@ This would not be needed if methodology and output structures are all in a singl
 Next, we find structure properties such as energy and rank.
 
 Finally, cell and atomic coordinates are shown in the standard CIF format. Except for the first step, this section has
-been omitted in the othe datablocks.
+been omitted in the other datablocks to focus on the new data fields introduced with the CSP Dictionary.

@@ -598,7 +598,6 @@ _dft.BZ_integration.method               "Monkhorst-Pack"
 _dft.BZ_integration.grid_dens_X          0.5
 _dft.BZ_integration.grid_dens_Y          0.5
 _dft.BZ_integration.grid_dens_Z          0.5
-
 ```
 
 Multiple energy evaluation steps and different workflows can be described in a cif file. After specifying parameters for

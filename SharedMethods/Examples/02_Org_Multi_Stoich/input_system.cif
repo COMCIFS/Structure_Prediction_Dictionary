@@ -4,7 +4,7 @@ _csp.data_block_class       "Input"
 _csp.data_block_id          2a2611e3-2021-4b03-a7c6-0ef71239008f
 _csp.data_block_description input1
 
-_csp.input_name             cannabinol_tetramethylpyrazine_cocrystal
+_csp.input_name             cannabinol_tetramethylpyrazine
 _csp.input_identifier       BT-XXX
 
 # Molecules

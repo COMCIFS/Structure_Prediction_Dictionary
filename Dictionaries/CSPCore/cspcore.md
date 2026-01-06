@@ -318,8 +318,8 @@ be used, the `_csp.structure_generation_method` must include "Simulated Annealin
 ### 3.5 Monte Carlo Parallel Tempering
 
 Category `_csp.monte_carlo_parallel_tempering_[]`: Subgroup for CSP Structure Generation methods that use Monte Carlo
-Parallel tempering. For
-these fields to be used, the `_csp.structure_generation_method` must be set to "Monte Carlo Parallel Tempering".
+Parallel tempering. For these fields to be used, the `_csp.structure_generation_method` must be set to "Monte Carlo 
+Parallel Tempering".
 
 | Group | Category                       | Data Field           | Type | Definition                                                                                                              | Constraints | Units | Example         |
 |-------|:-------------------------------|:---------------------|:-----|:------------------------------------------------------------------------------------------------------------------------|:------------|:------|:----------------|
@@ -390,7 +390,7 @@ data_rs
 
 # Random Search 2
 data_rs2
-_csp.data_block_class                                                "Generation Method"
+    _csp.data_block_class                                                "Generation Method"
     _csp.data_block_description                                          rs2
     _csp.data_block_id                                                   6e0147be-0454-44a1-a3bb-de7b326dde1b
     

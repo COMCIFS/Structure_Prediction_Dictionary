@@ -2,7 +2,7 @@
 
 ## New Features
 
-- Single inputs systems, generation methods, ranking methods and output structures are now organised in separate datablocks and a unique identifier should be assigned to them. For this purpose, we introduced the datafield `_csp.data_block_class` ("Input", "Generation Method", "Ranking Method", "Workflow", "Theoretical Structure") to identify the content of the datablock and `_csp.data_block_id` to specify its related unique identifier. 
+- Single inputs systems, generation methods, ranking methods and output structures are now organised in separate datablocks and a unique identifier should be assigned to them. For this purpose, we introduced the data field `_csp.data_block_class` ("Input", "Generation Method", "Ranking Method", "Workflow", "Theoretical Structure") to identify the content of the datablock and `_csp.data_block_id` to specify its related unique identifier. 
 ```text
 data_cbn_tmp
 # Datablock Details
@@ -11,7 +11,7 @@ _csp.data_block_id          2a2611e3-2021-4b03-a7c6-0ef71239008f
 _csp.data_block_description input1
 ...
 ```
-- The Workflow datablock is meant to connect different generation and ranking methods in multistep approaches. The datablock describing the single methods are identified by their uniwue ID (`_csp.structure_generation_data_block_id` and `_csp.structure_ranking_data_block_id` for generation and ranking methods, respectively). The datafields `_csp.structure_ranking_relative_energy_cutoff` and `_csp.structure_ranking_max_structures_retained` have been added to specify which structures pass to the next ranking stage.
+- The Workflow datablock is meant to connect different generation and ranking methods in multistep approaches. The datablock describing the single methods are identified by their unique ID (`_csp.structure_generation_data_block_id` and `_csp.structure_ranking_data_block_id` for generation and ranking methods, respectively). The data fields `_csp.structure_ranking_relative_energy_cutoff` and `_csp.structure_ranking_max_structures_retained` have been added to specify which structures pass to the next ranking stage.
 ```text
 data_workflow
     # Data blocks details
@@ -44,7 +44,7 @@ data_workflow
         1 0 "se"           "Optimisation"     "Semi-Empirical" 20.0 10000 ed2bc09c-5914-400c-9107-1d58d92b93a6
         2 1 "pbe"          "Optimisation"     "pDFT"           .    .     97088479-72d3-4953-b858-503639748771
 ```
-- The output theoretical structures will have a link to the initial generation method, specific ranking stage and the previous structure. For free energy calculations in different conditions, reference temperature and pressure _must_ also be specified. A text description of the different stages can be added for human readability but it is not mandatory.
+- The output theoretical structures will have a link to the initial generation method, specific ranking stage and the previous structure. For free energy calculations in different conditions, reference temperature and pressure _must_ also be specified. A text description of the different stages can be added for human readability, but it is not mandatory.
 ```text
 data_structure_A1B1_1_step8_t300
     # Datablock Details
@@ -75,7 +75,7 @@ data_structure_A1B1_1_step8_t300
 ```
 - Datablocks can be stored in different files or in multiple files depending on the user. In the former case, the
   `_csp.data_block_additional_files` field should be used to retrieve relevant datablocks (check example above).
-- It is now possible to specify the maximum number of structures to be generated for each space group using the datafield `_csp.structure_generation_stopping_criteria_space_group_number_list`
+- It is now possible to specify the maximum number of structures to be generated for each space group using the data field `_csp.structure_generation_stopping_criteria_space_group_number_list`
 ```text
 # Random Search
 data_rs
@@ -103,7 +103,7 @@ data_rs
         5     500
         1     500      
 ```
-- The parametrisation of intramolecular, coulombic and van der Waals terms can now be described separately.
+- The parametrisation of intramolecular, coulomb and van der Waals terms can now be described separately.
 ```text
 ...
 loop_
@@ -115,10 +115,10 @@ loop_
     vdw           "Transferable parameters based on atom types" "AMBER"
 ...
 ```
-- The `_forcefield.multipole_max_rank` has now been added to the forcefield dictionary.
-- ML learning datafields `_ml_potential.method`, `_ml_potential.model` and `_ml_potential.precision` have been added to improve method description.
-- Many datafields related to computational chemistry settings have been relocated under the `_compchem.[]` dictionary group. This allows to use them more broadly for any computational chemistry puropose, not necesseraly related to CSP.
+- The data field `_forcefield.multipole_max_rank` has now been added to the forcefield dictionary.
+- ML learning data fields `_ml_potential.method`, `_ml_potential.model` and `_ml_potential.precision` have been added to improve method description.
+- Many data fields related to computational chemistry settings have been relocated under the `_compchem.[]` dictionary group. This allows to use them more broadly for any computational chemistry purpose, not necessarily related to CSP.
 
 ## Fixes
 - Documentation updated with relevant examples.
-- Labels of some datafields have been changed. In particular, `predicted_structure` was changed in the more appropriate `theoretical_structure` and `molecule` in `molecular_entity` so to include atoms, molecules, ions in the input definition.
+- Labels of some data fields have been changed. In particular, `predicted_structure` was changed in the more appropriate `theoretical_structure` and `molecule` in `molecular_entity` so to include atoms, molecules, ions in the input definition.

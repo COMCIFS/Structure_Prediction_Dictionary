@@ -1,0 +1,16 @@
+data_cbn_tmp
+# Datablock Details
+_csp.data_block_class       "Input"
+_csp.data_block_id          10628627-856c-4176-acf7-b18b0d98681d
+_csp.data_block_description input1
+
+_csp.input_name             ROY
+_csp.input_identifier       Beran_ROY
+
+# Molecules
+loop_
+    _csp.input_molecular_entity_number
+    _csp.input_molecular_entity_identifier
+    _csp.input_molecular_entity_smiles
+    _chemical.name_common
+    1 ROY CC1=CC(=C(Nc2ccccc2N(=O)=O)S1)C#N ROY

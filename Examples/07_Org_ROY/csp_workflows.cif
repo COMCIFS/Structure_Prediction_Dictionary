@@ -24,6 +24,6 @@ data_workflow
         _csp.structure_ranking_max_structures_retained
         _csp.structure_ranking_data_block_id
         0 . "PCLAMS"       "Optimisation"     "Forcefield"     20.0  1000 c44ea0a6-da01-4c51-9ef5-c6a5eaefae13
-        1 0 "MPLAMS"       "Optimisation"     "Forcefield"     20.0   300 8ff788cc-3a0f-4de5-a1ab-82623a06cae4
-        2 1 "B86bPBE-XDM"  "Optimisation"     "pDFT"           10.0     . c8e229a8-bd61-4105-91af-065b2081761f
+        1 0 "MPLAMS"       "Optimisation"     "Forcefield"     10.0   300 8ff788cc-3a0f-4de5-a1ab-82623a06cae4
+        2 1 "B86bPBE-XDM"  "Optimisation"     "pDFT"              .     . c8e229a8-bd61-4105-91af-065b2081761f
         3 2 "SCS-MP2D"     "Single-Point"     "pDFT"              .     . ec2ac04a-7781-44d1-a0bf-7a1535269b42

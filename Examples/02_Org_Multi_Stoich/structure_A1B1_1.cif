@@ -1,7 +1,7 @@
 data_structure_A1B1_1_step0
     # Datablock Details
     _csp.data_block_class                                              "Theoretical Structure"
-    _csp.data_block_description                                        structure_structure_A1B1_1_step0
+    _csp.data_block_description                                        structure_A1B1_1_step0
     _csp.data_block_id                                                 ae979cd7-5897-4d5b-b81a-2ca1804b5272
 
     # Include files specifying input, methods and workflow data blocks
@@ -128,7 +128,7 @@ data_structure_A1B1_1_step0
 data_structure_A1B1_1_step1
     # Datablock Details
     _csp.data_block_class                                              "Theoretical Structure"
-    _csp.data_block_description                                        structure_structure_A1B1_1_step1
+    _csp.data_block_description                                        structure_A1B1_1_step1
     _csp.data_block_id                                                 9eeee84a-92e4-418a-9071-e74dd7344f0d
 
     # Include files specifying input, methods and workflow data blocks
@@ -147,7 +147,7 @@ data_structure_A1B1_1_step1
     _theoretical_structure.csp_ranking_stage_description               se
     _theoretical_structure.csp_ranking_stage_id                        ed2bc09c-5914-400c-9107-1d58d92b93a6
 
-    _theoretical_structure.csp_previous_stage_structure_description    structure_structure_A1B1_1_step0
+    _theoretical_structure.csp_previous_stage_structure_description    structure_A1B1_1_step0
     _theoretical_structure.csp_previous_stage_structure_id             ae979cd7-5897-4d5b-b81a-2ca1804b5272
 
     # Properties
@@ -161,7 +161,7 @@ data_structure_A1B1_1_step1
 data_structure_A1B1_1_step2
     # Datablock Details
     _csp.data_block_class                                              "Theoretical Structure"
-    _csp.data_block_description                                        structure_structure_A1B1_1_step2
+    _csp.data_block_description                                        structure_A1B1_1_step2
     _csp.data_block_id                                                 07d72f6b-99fe-4455-b157-0f169057130f
 
     # Include files specifying input, methods and workflow data blocks
@@ -180,7 +180,7 @@ data_structure_A1B1_1_step2
     _theoretical_structure.csp_ranking_stage_description               pbe
     _theoretical_structure.csp_ranking_stage_id                        97088479-72d3-4953-b858-503639748771
 
-    _theoretical_structure.csp_previous_stage_structure_description    structure_structure_A1B1_1_step1
+    _theoretical_structure.csp_previous_stage_structure_description    structure_A1B1_1_step1
     _theoretical_structure.csp_previous_stage_structure_id             9eeee84a-92e4-418a-9071-e74dd7344f0d
 
     # Properties
@@ -194,7 +194,7 @@ data_structure_A1B1_1_step2
 data_structure_A1B1_1_step3
     # Datablock Details
     _csp.data_block_class                                              "Theoretical Structure"
-    _csp.data_block_description                                        structure_structure_A1B1_1_step3
+    _csp.data_block_description                                        structure_A1B1_1_step3
     _csp.data_block_id                                                 683ab489-92a8-4b51-95fb-1a86b33a37de
 
     # Include files specifying input, methods and workflow data blocks
@@ -213,7 +213,7 @@ data_structure_A1B1_1_step3
     _theoretical_structure.csp_ranking_stage_description               pbe0_d3
     _theoretical_structure.csp_ranking_stage_id                        a1b4936f-81d8-485d-a2d0-ba4723c84d2b
 
-    _theoretical_structure.csp_previous_stage_structure_description    structure_structure_A1B1_1_step2
+    _theoretical_structure.csp_previous_stage_structure_description    structure_A1B1_1_step2
     _theoretical_structure.csp_previous_stage_structure_id             07d72f6b-99fe-4455-b157-0f169057130f
 
     # Properties
@@ -227,7 +227,7 @@ data_structure_A1B1_1_step3
 data_structure_A1B1_1_step4
     # Datablock Details
     _csp.data_block_class                                              "Theoretical Structure"
-    _csp.data_block_description                                        structure_structure_A1B1_1_step4
+    _csp.data_block_description                                        structure_A1B1_1_step4
     _csp.data_block_id                                                 e2c4b66c-5545-4a60-a9a8-90ef4e6bdfeb
 
     # Include files specifying input, methods and workflow data blocks
@@ -246,7 +246,7 @@ data_structure_A1B1_1_step4
     _theoretical_structure.csp_ranking_stage_description               pbe0_mbd
     _theoretical_structure.csp_ranking_stage_id                        8c2f765d-f13d-4673-91d5-33f162a8cdef
 
-    _theoretical_structure.csp_previous_stage_structure_description    structure_structure_A1B1_1_step2
+    _theoretical_structure.csp_previous_stage_structure_description    structure_A1B1_1_step2
     _theoretical_structure.csp_previous_stage_structure_id             07d72f6b-99fe-4455-b157-0f169057130f
 
     # Properties
@@ -260,7 +260,7 @@ data_structure_A1B1_1_step4
 data_structure_A1B1_1_step5
     # Datablock Details
     _csp.data_block_class                                              "Theoretical Structure"
-    _csp.data_block_description                                        structure_structure_A1B1_1_step5
+    _csp.data_block_description                                        structure_A1B1_1_step5
     _csp.data_block_id                                                 c72e0bb5-6f7a-45eb-aed0-a13693dc2943
 
     # Include files specifying input, methods and workflow data blocks
@@ -279,7 +279,7 @@ data_structure_A1B1_1_step5
     _theoretical_structure.csp_ranking_stage_description               r2scan
     _theoretical_structure.csp_ranking_stage_id                        c9348f31-32d2-4d46-8742-0e81a6e208dc
 
-    _theoretical_structure.csp_previous_stage_structure_description    structure_structure_A1B1_1_step2
+    _theoretical_structure.csp_previous_stage_structure_description    structure_A1B1_1_step2
     _theoretical_structure.csp_previous_stage_structure_id             07d72f6b-99fe-4455-b157-0f169057130f
 
     # Properties
@@ -293,7 +293,7 @@ data_structure_A1B1_1_step5
 data_structure_A1B1_1_step6
     # Datablock Details
     _csp.data_block_class                                              "Theoretical Structure"
-    _csp.data_block_description                                        structure_structure_A1B1_1_step6
+    _csp.data_block_description                                        structure_A1B1_1_step6
     _csp.data_block_id                                                 b5e95a88-8fa7-4e5f-97d9-c35300370aba
 
     # Include files specifying input, methods and workflow data blocks
@@ -312,7 +312,7 @@ data_structure_A1B1_1_step6
     _theoretical_structure.csp_ranking_stage_description               mp2
     _theoretical_structure.csp_ranking_stage_id                        5a1faac1-3136-4eca-967d-b9f4e194996d
 
-    _theoretical_structure.csp_previous_stage_structure_description    structure_structure_A1B1_1_step2
+    _theoretical_structure.csp_previous_stage_structure_description    structure_A1B1_1_step2
     _theoretical_structure.csp_previous_stage_structure_id             07d72f6b-99fe-4455-b157-0f169057130f
 
     # Properties
@@ -326,7 +326,7 @@ data_structure_A1B1_1_step6
 data_structure_A1B1_1_step7
     # Datablock Details
     _csp.data_block_class                                              "Theoretical Structure"
-    _csp.data_block_description                                        structure_structure_A1B1_1_step7
+    _csp.data_block_description                                        structure_A1B1_1_step7
     _csp.data_block_id                                                 094f5430-0785-4d8f-8aa4-3e31fb579ec4
 
     # Include files specifying input, methods and workflow data blocks
@@ -345,7 +345,7 @@ data_structure_A1B1_1_step7
     _theoretical_structure.csp_ranking_stage_description               pbe0_mbd_opt
     _theoretical_structure.csp_ranking_stage_id                        97773a57-f2a2-4b93-9e8d-413f57189029
 
-    _theoretical_structure.csp_previous_stage_structure_description    structure_structure_A1B1_1_step4
+    _theoretical_structure.csp_previous_stage_structure_description    structure_A1B1_1_step4
     _theoretical_structure.csp_previous_stage_structure_id             e2c4b66c-5545-4a60-a9a8-90ef4e6bdfeb
 
     # Properties
@@ -359,7 +359,7 @@ data_structure_A1B1_1_step7
 data_structure_A1B1_1_step8_t100
     # Datablock Details
     _csp.data_block_class                                              "Theoretical Structure"
-    _csp.data_block_description                                        structure_structure_A1B1_1_step8_t100
+    _csp.data_block_description                                        structure_A1B1_1_step8_t100
     _csp.data_block_id                                                 ce690a0d-c123-4c07-9950-c7a1a47056e2
 
     # Include files specifying input, methods and workflow data blocks
@@ -380,7 +380,7 @@ data_structure_A1B1_1_step8_t100
     _theoretical_structure.csp_reference_temperature                   100.0
     _theoretical_structure.csp_reference_pressure                      100000.0
 
-    _theoretical_structure.csp_previous_stage_structure_description    structure_structure_A1B1_1_step7
+    _theoretical_structure.csp_previous_stage_structure_description    structure_A1B1_1_step7
     _theoretical_structure.csp_previous_stage_structure_id             094f5430-0785-4d8f-8aa4-3e31fb579ec4
 
     # Properties
@@ -394,7 +394,7 @@ data_structure_A1B1_1_step8_t100
 data_structure_A1B1_1_step8_t200
     # Datablock Details
     _csp.data_block_class                                              "Theoretical Structure"
-    _csp.data_block_description                                        structure_structure_A1B1_1_step8_t200
+    _csp.data_block_description                                        structure_A1B1_1_step8_t200
     _csp.data_block_id                                                 e92da335-2704-4fe5-9e1f-1a82b4d022dc
 
     # Include files specifying input, methods and workflow data blocks
@@ -415,7 +415,7 @@ data_structure_A1B1_1_step8_t200
     _theoretical_structure.csp_reference_temperature                   200.0
     _theoretical_structure.csp_reference_pressure                      100000.0
 
-    _theoretical_structure.csp_previous_stage_structure_description    structure_structure_A1B1_1_step7
+    _theoretical_structure.csp_previous_stage_structure_description    structure_A1B1_1_step7
     _theoretical_structure.csp_previous_stage_structure_id             094f5430-0785-4d8f-8aa4-3e31fb579ec4
 
     # Properties
@@ -429,7 +429,7 @@ data_structure_A1B1_1_step8_t200
 data_structure_A1B1_1_step8_t300
     # Datablock Details
     _csp.data_block_class                                              "Theoretical Structure"
-    _csp.data_block_description                                        structure_structure_A1B1_1_step8_t300
+    _csp.data_block_description                                        structure_A1B1_1_step8_t300
     _csp.data_block_id                                                 3b4de7b5-aed4-4358-a22d-3337937fdecb
 
     # Include files specifying input, methods and workflow data blocks
@@ -450,7 +450,7 @@ data_structure_A1B1_1_step8_t300
     _theoretical_structure.csp_reference_temperature                   300.0
     _theoretical_structure.csp_reference_pressure                      100000.0
 
-    _theoretical_structure.csp_previous_stage_structure_description    structure_structure_A1B1_1_step7
+    _theoretical_structure.csp_previous_stage_structure_description    structure_A1B1_1_step7
     _theoretical_structure.csp_previous_stage_structure_id             094f5430-0785-4d8f-8aa4-3e31fb579ec4
 
     # Properties

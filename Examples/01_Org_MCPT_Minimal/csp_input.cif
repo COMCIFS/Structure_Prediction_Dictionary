@@ -1,0 +1,73 @@
+data_cbn_tmp
+# Datablock Details
+_csp.data_block_class       "Input"
+_csp.data_block_id          0d430939-34a3-4fc1-bf49-d04e39580fbc
+_csp.data_block_description input1
+
+_csp.input_name             "methyl 2-aminobenzoate"
+_csp.input_identifier       BT-XXIX
+
+# Molecules
+loop_
+    _csp.input_molecular_entity_number
+    _csp.input_molecular_entity_identifier
+    _csp.input_molecular_entity_smiles
+    _chemical.name_common
+    1 B29 COC(=O)c1ccccc1N "methyl 2-aminobenzoate"
+
+# Atoms in molecules
+loop_
+    _csp.input_atom_molecular_entity_number
+    _csp.input_atom_molecular_entity_identifier
+    _chemical.conn_atom_number
+    _csp.input_atom_label
+    _chemical.conn_atom_type_symbol
+    _chemical.conn_atom_charge
+    1 B29  1 C1  C  0.0799
+    1 B29  2 O1  O -0.4751
+    1 B29  3 C2  C  0.2712
+    1 B29  4 O2  O -0.1497
+    1 B29  5 C3  C  0.0624
+    1 B29  6 C4  C -0.0473
+    1 B29  7 C5  C -0.0613
+    1 B29  8 C6  C -0.0606
+    1 B29  9 C7  C -0.0436
+    1 B29 10 C8  C  0.0252
+    1 B29 11 N1  N -0.3019
+    1 B29 12 H10 H  0.0669
+    1 B29 13 H11 H  0.0669
+    1 B29 14 H12 H  0.0669
+    1 B29 15 H13 H  0.0632
+    1 B29 16 H14 H  0.0623
+    1 B29 17 H15 H  0.0623
+    1 B29 18 H16 H  0.0639
+    1 B29 19 H17 H  0.1243
+    1 B29 20 H18 H  0.1243
+
+
+
+# Bonds
+loop_
+    _chemical.conn_bond_atom_1
+    _chemical.conn_bond_atom_2
+    _chemical.conn_bond_type
+     1     2    sing
+     2     3    sing
+     3     4    doub
+     3     5    sing
+     5     6    arom
+     6     7    arom
+     7     8    arom
+     8     9    arom
+     9    10    arom
+     5    10    arom
+    10    11    sing
+     1    12    sing
+     1    13    sing
+     1    14    sing
+     6    15    sing
+     7    16    sing
+     8    17    sing
+     9    18    sing
+    11    19    sing
+    11    20    sing

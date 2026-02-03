@@ -20,8 +20,8 @@ loop_
 loop_
     _csp.input_atom_molecular_entity_number
     _csp.input_atom_molecular_entity_identifier
-    _csp.input_atom_label
     _chemical.conn_atom_number
+    _csp.input_atom_label
     _chemical.conn_atom_type_symbol
     _chemical.conn_atom_charge
     1 CBN  1 O8   O -0.4823

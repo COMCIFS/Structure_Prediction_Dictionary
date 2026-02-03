@@ -1,0 +1,28 @@
+data_workflow
+    # Data blocks details
+    _csp.data_block_class            Workflow
+    _csp.data_block_description      csp_workflow_long
+    _csp.data_block_id               c061f9b0-134f-425f-92e9-4a819cbfbcaf
+    _csp.data_block_additional_files ["structure_generation_methods.cif" "structure_ranking_methods.cif"]
+
+    # Structure Generation Methods
+    loop_
+        _csp.structure_generation_stage
+        _csp.structure_generation_preceding_stage
+        _csp.structure_generation_data_block_description
+        _csp.structure_generation_method
+        _csp.structure_generation_data_block_id
+        0 . "mcpt" "Monte Carlo Parallel Tempering" f29782ea-0ca6-41ec-b764-81c786b50167
+
+    # Structure Ranking Methods
+    loop_
+        _csp.structure_ranking_stage
+        _csp.structure_ranking_preceding_stage
+        _csp.structure_ranking_data_block_description
+        _compchem.calculation_type
+        _compchem.method
+        _csp.structure_ranking_relative_energy_cutoff
+        _csp.structure_ranking_max_structures_retained
+        _csp.structure_ranking_data_block_id
+        0 . "psi_mol"  "Optimisation"     "Forcefield"     20.0  5000 0c95ca9a-a288-4c9a-8bcc-c66fa6153a47
+        1 0 "pbe"      "Optimisation"     "pDFT"              .     . 9db83274-ea84-4303-a202-5bbf83207f94

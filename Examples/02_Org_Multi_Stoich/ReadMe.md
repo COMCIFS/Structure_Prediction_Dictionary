@@ -8,7 +8,7 @@ In this example, we show a description of a hypothetical CSP workflow for the ca
 cocrystal that intentionally uses many different methods.
 Three stoichiometries are researched (1:1, 2:1, 1:2) and multistep generation and ranking methods are implemented.
 Input molecules, output structures, workflows, generation and ranking methods are organised in separate files. This
-is not mandatory, and they could be merged into a single file (as all these items are organised in separated 
+is not mandatory, and they could be merged into a single file (as all these items are organised in separated
 datablocks).
 
 ---

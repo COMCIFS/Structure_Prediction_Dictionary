@@ -23,6 +23,7 @@ Note, that the DDLm versions of the dictionaries were generated using an automat
 - Merkys, A., Mounet, N., Cepellotti, A., Marzari, N., Gražulis, S. & Pizzi, G. (2017). A posteriori metadata from automated provenance tracking: Integration of AiiDA and TCOD. *Journal of Cheminformatics*, 9. https://doi.org/10.1186/s13321-017-0242-y
 
 ## Additional Proposed Fields
-| Category | Data Field                             | Type | Definition                                                  | Constraints | Units | Example                                                                                               |
-|----------|----------------------------------------|------|-------------------------------------------------------------|-------------|-------|-------------------------------------------------------------------------------------------------------|
-| pDFT     | `dispersion_correction`                | char | The Van der Waals correction used.                          |             |       | - Grimme-D2<br/>- Grimme-D3<br/>- Tkatchenko-Scheffler<br/>- Many-body dipersion<br/>- XDM<br>- Other |
+| Category | Data Field              | Type | Definition                                              | Constraints | Units | Example                                                                                               |
+|----------|-------------------------|------|---------------------------------------------------------|-------------|-------|-------------------------------------------------------------------------------------------------------|
+| pDFT     | `dispersion_correction` | char | The Van der Waals correction used.                      |             |       | - Grimme-D2<br/>- Grimme-D3<br/>- Tkatchenko-Scheffler<br/>- Many-body dipersion<br/>- XDM<br>- Other |
+| pDFT     | `monomer_correction`    | char | Correction to the intramolecular conformational energy. | Free Text   |       | - MP2<br/>- SCS-MP2D<br/>- Other                                                                      |

@@ -13,4 +13,4 @@ loop_
     _csp.input_molecular_entity_identifier
     _csp.input_molecular_entity_smiles
     _chemical.name_common
-    1 ROY CC1=CC(=C(Nc2ccccc2N(=O)=O)S1)C#N ROY
+    1 5-Methyl-2-((2-nitrophenyl)amino)-3-thiophenecarbonitrile CC1=CC(=C(Nc2ccccc2N(=O)=O)S1)C#N ROY

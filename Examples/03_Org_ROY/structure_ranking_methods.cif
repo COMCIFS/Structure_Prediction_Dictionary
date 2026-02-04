@@ -1,4 +1,4 @@
-# Forcefield
+# Forcefields
 data_PCLAMS
     # Datablock Details
     _csp.data_block_class                "Ranking Method"
@@ -40,7 +40,6 @@ data_PCLAMS
     _compchem.geometry_optimisation_atoms                   all
 
 
-# Forceifeld
 data_MPLAMS
     # Datablock Details
     _csp.data_block_class                                   "Ranking Method"

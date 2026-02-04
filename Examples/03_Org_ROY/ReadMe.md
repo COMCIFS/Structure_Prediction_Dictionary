@@ -43,4 +43,4 @@ Finally, a monomer correction is applied to the lowest ranked structures from st
 
 ## Output structure
 
-In file `structures.cif` we show exampes of the structures from the final ranking stage, with structure properties such as energy and rank.
+In file `structures.cif` we show examples of the structures from the final ranking stage, with structure properties such as energy and rank.

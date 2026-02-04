@@ -1,0 +1,230 @@
+data_structure_1_step0
+    # Datablock Details
+    _csp.data_block_class                                              "Theoretical Structure"
+    _csp.data_block_description                                        structure_1_step0
+    _csp.data_block_id                                                 0bbc1442-7425-42cf-b803-6d9897c8172f
+
+    # Include files specifying input, methods and workflow data blocks
+    _csp.data_block_additional_files                                   [ "csp_input.cif" "csp_workflows.cif" ]
+
+    # Stage identifiers
+    _theoretical_structure.csp_input_system_description                BT-XXIX
+    _theoretical_structure.csp_input_system_id                         0d430939-34a3-4fc1-bf49-d04e39580fbc
+
+    _theoretical_structure.csp_workflow_description                    csp_workflow_short
+    _theoretical_structure.csp_workflow_id                             c061f9b0-134f-425f-92e9-4a819cbfbcaf
+
+    _theoretical_structure.csp_generation_stage_description            mcpt
+    _theoretical_structure.csp_generation_stage_id                     f29782ea-0ca6-41ec-b764-81c786b50167
+
+    _theoretical_structure.csp_ranking_stage_description               psi_mol
+    _theoretical_structure.csp_ranking_stage_id                        0c95ca9a-a288-4c9a-8bcc-c66fa6153a47
+
+    # Properties
+    _theoretical_structure.temperature                                 0
+    _theoretical_structure.relative_lattice_energy                     0.0
+    _theoretical_structure.rank                                        1
+
+    # Crystal
+    _symmetry_cell_setting           monoclinic
+    _symmetry_space_group_name_H-M   'P 21/c'
+    _symmetry_Int_Tables_number      14
+    _space_group_name_Hall           '-P 2ybc'
+    loop_
+    _symmetry_equiv_pos_site_id
+    _symmetry_equiv_pos_as_xyz
+    1 x,y,z
+    2 -x,1/2+y,1/2-z
+    3 -x,-y,-z
+    4 x,1/2-y,1/2+z
+    _cell_length_a                   24.3977
+    _cell_length_b                   9.81889
+    _cell_length_c                   9.38206
+    _cell_angle_alpha                90
+    _cell_angle_beta                 93.0421
+    _cell_angle_gamma                90
+    _cell_volume                     2244.39
+    loop_
+    _atom_site_label
+    _atom_site_type_symbol
+    _atom_site_fract_x
+    _atom_site_fract_y
+    _atom_site_fract_z
+    C00 C 0.19046 -0.109102 0.187213
+    C01 C 0.212332 -0.0948977 0.0548733
+    C03 C 0.207552 -0.0188426 0.297332
+    H01 H 0.160764 -0.189118 0.205583
+    C02 C 0.251299 0.00709909 0.0280512
+    H00 H 0.199458 -0.163279 -0.031878
+    C04 C 0.245647 0.0819694 0.274988
+    H02 H 0.190623 -0.027737 0.402159
+    C05 C 0.268543 0.0990555 0.140218
+    C06 C 0.273255 0.0200826 -0.113209
+    H03 H 0.259339 0.150191 0.361399
+    N00 N 0.305422 0.199543 0.121594
+    O00 O 0.254783 -0.0775522 -0.206409
+    O01 O 0.305709 0.10996 -0.14915
+    H07 H 0.317938 0.213264 0.0210175
+    H08 H 0.31442 0.269668 0.1997
+    C07 C 0.274661 -0.069642 -0.348144
+    H04 H 0.266787 0.0318692 -0.39358
+    H05 H 0.318876 -0.0918614 -0.345204
+    H06 H 0.251729 -0.147028 -0.409954
+    C20 C 0.360348 -0.14295 0.361542
+    C21 C 0.379388 -0.0146006 0.399963
+    C23 C 0.380162 -0.256265 0.440372
+    H21 H 0.330408 -0.155571 0.272282
+    C22 C 0.41785 0.00524284 0.516009
+    H20 H 0.364763 0.0742718 0.339937
+    C24 C 0.417724 -0.240658 0.554639
+    H22 H 0.365943 -0.358346 0.411463
+    C25 C 0.43806 -0.110285 0.595912
+    C26 C 0.437472 0.141985 0.553074
+    H23 H 0.432256 -0.328664 0.616622
+    N20 N 0.475169 -0.0986843 0.70762
+    O20 O 0.417766 0.239587 0.461443
+    O21 O 0.469083 0.170739 0.657136
+    H27 H 0.491133 -0.00453892 0.72723
+    H28 H 0.491838 -0.18274 0.757113
+    C27 C 0.435177 0.377071 0.493201
+    H24 H 0.480108 0.382422 0.50453
+    H25 H 0.417346 0.412385 0.591846
+    H26 H 0.419711 0.437836 0.402263
+    C30 C 0.141459 1.13809 0.645971
+    C31 C 0.120778 1.01228 0.603761
+    C33 C 0.123765 1.25459 0.5692
+    H31 H 0.171043 1.14632 0.736595
+    C32 C 0.0827265 0.998098 0.48589
+    H30 H 0.133753 0.921013 0.662155
+    C34 C 0.0866599 1.24453 0.453234
+    H32 H 0.139294 1.35476 0.601093
+    C35 C 0.0646792 1.11687 0.408084
+    C36 C 0.061336 0.863925 0.444813
+    H33 H 0.0737811 1.33495 0.392881
+    N30 N 0.0280676 1.11073 0.294788
+    O30 O 0.0806948 0.762143 0.531663
+    O31 O 0.0286089 0.840608 0.341473
+    H37 H 0.0108544 1.01845 0.272309
+    H38 H 0.012923 1.19714 0.246728
+    C37 C 0.0608508 0.627219 0.497118
+    H34 H 0.015832 0.626076 0.489674
+    H35 H 0.076818 0.593172 0.395664
+    H36 H 0.0765302 0.562619 0.584805
+
+
+data_structure_1_step1
+    # Datablock Details
+    _csp.data_block_class                                              "Theoretical Structure"
+    _csp.data_block_description                                        structure_1_step2
+    _csp.data_block_id                                                 d4d6eefd-9cf9-4215-a994-28cbc30f5bd8
+
+    # Include files specifying input, methods and workflow data blocks
+    _csp.data_block_additional_files                                   [ "csp_input.cif" "csp_workflows.cif" ]
+
+    # Stage identifiers
+    _theoretical_structure.csp_input_system_description                BT-XXIX
+    _theoretical_structure.csp_input_system_id                         0d430939-34a3-4fc1-bf49-d04e39580fbc
+
+    _theoretical_structure.csp_workflow_description                    csp_workflow_long
+    _theoretical_structure.csp_workflow_id                             c061f9b0-134f-425f-92e9-4a819cbfbcaf
+
+    _theoretical_structure.csp_generation_stage_description            mcpt
+    _theoretical_structure.csp_generation_stage_id                     f29782ea-0ca6-41ec-b764-81c786b50167
+
+    _theoretical_structure.csp_ranking_stage_description               pbe
+    _theoretical_structure.csp_ranking_stage_id                        9db83274-ea84-4303-a202-5bbf83207f94
+
+    _theoretical_structure.csp_previous_stage_structure_description    structure_1_step0
+    _theoretical_structure.csp_previous_stage_structure_id             0bbc1442-7425-42cf-b803-6d9897c8172f
+
+    # Properties
+    _theoretical_structure.temperature                                 0
+    _theoretical_structure.relative_lattice_energy                     0.119
+    _theoretical_structure.rank                                        2
+
+    # Crystal
+    _symmetry_cell_setting           monoclinic
+    _symmetry_space_group_name_H-M   'P 21/c'
+    _symmetry_Int_Tables_number      14
+    _space_group_name_Hall           '-P 2ybc'
+    loop_
+    _symmetry_equiv_pos_site_id
+    _symmetry_equiv_pos_as_xyz
+    1 x,y,z
+    2 -x,1/2+y,1/2-z
+    3 -x,-y,-z
+    4 x,1/2-y,1/2+z
+    _cell_length_a                   26.0179
+    _cell_length_b                   10.8744
+    _cell_length_c                   9.4011
+    _cell_angle_alpha                90
+    _cell_angle_beta                 95.9861
+    _cell_angle_gamma                90
+    _cell_volume                     2645.33
+    loop_
+    _atom_site_label
+    _atom_site_type_symbol
+    _atom_site_fract_x
+    _atom_site_fract_y
+    _atom_site_fract_z
+    C00 C 0.203009 -0.105068 1.15632
+    C01 C 0.226974 -0.0940835 1.03221
+    C03 C 0.213553 -0.016775 1.26492
+    H01 H 0.176668 -0.181059 1.16959
+    C02 C 0.261683 0.00279322 1.01231
+    H00 H 0.219146 -0.161128 0.946645
+    C04 C 0.247346 0.0790756 1.24922
+    H02 H 0.194901 -0.0232858 1.3631
+    C05 C 0.272268 0.092719 1.12287
+    C06 C 0.286015 0.0123383 0.879515
+    H03 H 0.255942 0.145979 1.33458
+    N00 N 0.30482 0.188233 1.11046
+    O00 O 0.273885 -0.0821353 0.787595
+    O01 O 0.31518 0.0969141 0.849234
+    H07 H 0.31908 0.198549 1.01471
+    H08 H 0.309174 0.255463 1.18565
+    C07 C 0.296409 -0.0775033 0.653957
+    H04 H 0.287684 0.0101057 0.600723
+    H05 H 0.338085 -0.0902213 0.672591
+    H06 H 0.278702 -0.153021 0.590428
+    C20 C 0.377227 -0.117979 0.378857
+    C21 C 0.388466 0.00514818 0.403074
+    C23 C 0.404663 -0.206635 0.465462
+    H21 H 0.347513 -0.14539 0.294624
+    C22 C 0.426459 0.043684 0.512302
+    H20 H 0.367837 0.075144 0.336796
+    C24 C 0.442019 -0.172287 0.573415
+    H22 H 0.396639 -0.304036 0.44775
+    C25 C 0.454425 -0.0467344 0.600131
+    C26 C 0.437698 0.174365 0.534322
+    H23 H 0.462538 -0.241278 0.641467
+    N20 N 0.491516 -0.0162856 0.705951
+    O20 O 0.410877 0.248129 0.436343
+    O21 O 0.468469 0.21775 0.631639
+    H27 H 0.501319 0.0739375 0.714878
+    H28 H 0.513275 -0.0817045 0.760644
+    C27 C 0.419865 0.378369 0.453274
+    H24 H 0.461041 0.398203 0.458278
+    H25 H 0.404632 0.411053 0.550027
+    H26 H 0.399194 0.420657 0.359055
+    C30 C 0.154593 1.13036 0.626989
+    C31 C 0.128931 1.01979 0.60132
+    C33 C 0.139791 1.23188 0.539283
+    H31 H 0.185797 1.13818 0.713197
+    C32 C 0.0886173 1.00641 0.489565
+    H30 H 0.139644 0.940301 0.668409
+    C34 C 0.100587 1.22209 0.428862
+    H32 H 0.159269 1.31992 0.558095
+    C35 C 0.0735355 1.10995 0.400613
+    C36 C 0.0620158 0.88867 0.466046
+    H33 H 0.0898715 1.3005 0.36001
+    N30 N 0.0350437 1.10377 0.292359
+    O30 O 0.07932 0.800765 0.561967
+    O31 O 0.0268356 0.867062 0.369221
+    H37 H 0.0146751 1.02409 0.282231
+    H38 H 0.0226051 1.18 0.236712
+    C37 C 0.0543722 0.682552 0.544875
+    H34 H 0.0126599 0.692825 0.542616
+    H35 H 0.063845 0.638929 0.446652
+    H36 H 0.0697074 0.629008 0.637624
+

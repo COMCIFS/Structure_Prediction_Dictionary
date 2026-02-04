@@ -1,0 +1,106 @@
+# Random Search
+data_rs
+    # Datablock Details
+    _csp.data_block_class                                                      "Generation Method"
+    _csp.data_block_description                                                rs
+    _csp.data_block_id                                                         1d5b2b53-d70d-44e8-b5c3-3342b5a10c35
+
+    # Method Details
+    _csp.structure_generation_method                                           "Random Search"
+    _csp.random_search_random_numbers_algorithm_type                           "Quasi-random"
+    _csp.random_search_random_numbers_algorithm                                "Sobol"
+
+    # Search Space & Stopping Criteria
+    _csp.structure_generation_density_lower_limit                              1000
+    _csp.structure_generation_density_upper_limit                              1500
+
+    _csp.structure_generation_space_group_number_list                          [14 2 15 61 19 4 33 29 5 1]
+    _csp.structure_generation_stopping_criteria_description                    "Max Structures"
+    loop_
+        _csp.structure_generation_stopping_criteria_space_group_number_list
+        _csp.structure_generation_stopping_criteria_max_structures_evaluated
+        14   1000  # 1000 structures for each spacegroup
+        2    1000
+        15   1000
+        61   1000
+        19   1000
+        4     500
+        33    500
+        29    500
+        5     500
+        1     500
+
+# Monte Carlo Parallel Tempering
+data_mcpt
+    # Datablock Details
+    _csp.data_block_class                                                      "Generation Method"
+    _csp.data_block_id                                                         85417536-7d3e-4c4e-936d-b9eed914b7a1
+    _csp.data_block_description                                                "mcpt"
+
+    # Method Details
+    _csp.structure_generation_method                                           "Monte Carlo Parallel Tempering"
+    _csp.monte_carlo_parallel_tempering_number_of_replicas                     8
+    _csp.monte_carlo_parallel_tempering_temperatures_list                      [400 350 300 250 200 150 100 50]
+    _csp.monte_carlo_parallel_tempering_number_of_steps                        100
+
+    # Search Space & Stopping Criteria
+    _csp.structure_generation_density_lower_limit                              1000
+    _csp.structure_generation_density_upper_limit                              1500
+    _csp.structure_generation_space_group_number_list                          [14 2 15 61 19 4 33 29 5 1]
+
+    _csp.structure_generation_stopping_criteria_description                    ["Max Structures", "Low-Energy Structures Unchanged"]
+    _csp.structure_generation_stopping_criteria_max_structures_evaluated       100000
+    _csp.structure_generation_stopping_criteria_iterations_without_improvement 20
+    _csp.structure_generation_stopping_criteria_energy_range                   10.0
+
+# Evolutionary Algorithm
+data_ea
+    # Datablock Details
+    _csp.data_block_class                                                      "Generation Method"
+    _csp.data_block_id                                                         af534fed-8153-4af2-bd9f-29b0fef8d805
+    _csp.data_block_description                                                "ea"
+
+    # Method Details
+    _csp.structure_generation_method                                           "Evolutionary Algorithm"
+    _csp.evolutionary_algorithm_initial_population_size                        50
+    _csp.evolutionary_algorithm_population_size                                50
+    _csp.evolutionary_algorithm_parents_structure_fraction                     0.6
+    _csp.evolutionary_algorithm_mutation_fraction                              0.5
+    _csp.evolutionary_algorithm_heredity_fraction                              0.5  # Crossover or recombination
+
+    # Search Space & Stopping Criteria
+    _csp.structure_generation_density_lower_limit                              1000
+    _csp.structure_generation_density_upper_limit                              1500
+    _csp.structure_generation_space_group_number_list                          [14 2 15 61 19 4 33 29 5 1]
+
+    _csp.structure_generation_stopping_criteria_description                    ["Max Structures", "Low-Energy Structures Unchanged"]
+    _csp.structure_generation_stopping_criteria_max_structures_evaluated       100000
+    _csp.structure_generation_stopping_criteria_iterations_without_improvement 20
+    _csp.structure_generation_stopping_criteria_energy_range                   10.0
+
+# Particle Swarm Optimisation
+data_pso
+    # Datablock Details
+    _csp.data_block_class                                                      "Generation Method"
+    _csp.data_block_id                                                         242618a7-89b6-40d1-a6c4-cc51fd107a13
+    _csp.data_block_description                                                "pso"
+
+    # Method Details
+    _csp.structure_generation_method                                           "Particle Swarm Optimisation"
+    _csp.particle_swarm_optimisation_population_size                           50
+    _csp.particle_swarm_optimisation_inertia_weight                            0.7
+    _csp.particle_swarm_optimisation_max_inertia_weight                        0.9
+    _csp.particle_swarm_optimisation_min_inertia_weight                        0.4
+    _csp.particle_swarm_optimisation_cognitive_coefficient                     2
+    _csp.particle_swarm_optimisation_social_coefficient                        2
+
+
+    # Search Space & Stopping Criteria
+    _csp.structure_generation_density_lower_limit                              1000
+    _csp.structure_generation_density_upper_limit                              1500
+    _csp.structure_generation_space_group_number_list                          [14 2 15 61 19 4 33 29 5 1]
+
+    _csp.structure_generation_stopping_criteria_description                    ["Max Structures", "Low-Energy Structures Unchanged"]
+    _csp.structure_generation_stopping_criteria_max_structures_evaluated       100000
+    _csp.structure_generation_stopping_criteria_iterations_without_improvement 20
+    _csp.structure_generation_stopping_criteria_energy_range                   10.0

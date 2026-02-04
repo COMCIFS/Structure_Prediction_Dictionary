@@ -1,0 +1,62 @@
+# Forcefield
+data_psi_mol
+    # Datablock Details
+    _csp.data_block_class                "Ranking Method"
+    _csp.data_block_description          gaff
+    _csp.data_block_id                   0c95ca9a-a288-4c9a-8bcc-c66fa6153a47
+
+    # Energy Method Details
+    _compchem.method                     "Forcefield"
+    _forcefield.name                     "Psi_Mol"
+
+    _forcefield.intramolecular_term      "Isolated Molecule Energy"
+
+    _forcefield.electrostatic_term       "Multipoles"
+    _forcefield.multipole_max_rank       "Hexadecapole"
+    _forcefield.multipoles_generation    "GDMA2"
+
+    _forcefield.vdw_term                 "Buckingham"
+
+    loop_
+        _forcefield.parameterization_term
+        _forcefield.parameterization_description
+        _forcefield.parameterization_method
+        intra         "Transferable parameters based on atom types" "PBE0/6-31G(d,p)"
+        electrostatic "Fitting to gas-phase QM data"                "PBE0/6-31G(d,p)"
+        vdw           "Transferable parameters based on atom types" "FIT"
+
+    # Geometry Optimisation
+    _compchem.calculation_type                              "Optimisation"
+    _compchem.geometry_optimisation_algorithm               "Conjugate Gradient"
+    _compchem.geometry_optimisation_cell                    anisotropic
+    _compchem.geometry_optimisation_atoms                   all
+    _compchem.geometry_optimisation_relax_force_convergence 0.01
+    _compchem.geometry_optimisation_max_steps               1000
+
+# DFT
+data_pbe
+    # Datablock Details
+    _csp.data_block_class                                   "Ranking Method"
+    _csp.data_block_description                             "pbe"
+    _csp.data_block_id                                      9db83274-ea84-4303-a202-5bbf83207f94
+
+    # Energy Method Details
+    _compchem.method                                        "pDFT"
+    _dft.exchange_correlation_functional_type               "GGA"
+    _dft.exchange_correlation_functional_name               "PBE"
+    _dft.pseudopotential_type                               "PAW"
+    _dft.dispersion_correction                              "MBD"
+
+    _dft.kinetic_energy_cutoff_wavefunctions                600
+    _dft.BZ_integration_method                              "Monkhorst-Pack"
+    _dft.BZ_integration_grid_dens_X                         0.5
+    _dft.BZ_integration_grid_dens_Y                         0.5
+    _dft.BZ_integration_grid_dens_Z                         0.5
+
+    # Geometry Optimisation
+    _compchem.calculation_type                              "Optimisation"
+    _compchem.geometry_optimisation_algorithm               "FIRE"
+    _compchem.geometry_optimisation_cell                    "anisotropic"
+    _compchem.geometry_optimisation_atoms                   "all"
+    _compchem.geometry_optimisation_relax_force_convergence 0.001
+    _compchem.geometry_optimisation_max_steps               50

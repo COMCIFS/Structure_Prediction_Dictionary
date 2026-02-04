@@ -1,0 +1,29 @@
+data_workflow
+    # Data blocks details
+    _csp.data_block_class            Workflow
+    _csp.data_block_description      csp_workflow_long
+    _csp.data_block_id               45c300ee-4d49-4bdf-b166-299ff20b484e
+    _csp.data_block_additional_files ["structure_generation_methods.cif" "structure_ranking_methods.cif"]
+
+    # Structure Generation Methods
+    loop_
+        _csp.structure_generation_stage
+        _csp.structure_generation_data_block_description
+        _csp.structure_generation_method
+        _csp.structure_generation_data_block_id
+        0 . "rs"   "Quasi-Random Sampling"                d515466d-f996-44d8-b52f-c22a6990de76
+
+    # Structure Ranking Methods
+    loop_
+        _csp.structure_ranking_stage
+        _csp.structure_ranking_preceding_stage
+        _csp.structure_ranking_data_block_description
+        _compchem.calculation_type
+        _compchem.method
+        _csp.structure_ranking_relative_energy_cutoff
+        _csp.structure_ranking_max_structures_retained
+        _csp.structure_ranking_data_block_id
+        0 . "PCLAMS"       "Optimisation"     "Forcefield"     20.0  1000 c44ea0a6-da01-4c51-9ef5-c6a5eaefae13
+        1 0 "MPLAMS"       "Optimisation"     "Forcefield"     10.0   300 8ff788cc-3a0f-4de5-a1ab-82623a06cae4
+        2 1 "B86bPBE-XDM"  "Optimisation"     "pDFT"              .     . c8e229a8-bd61-4105-91af-065b2081761f
+        3 2 "SCS-MP2D"     "Single-Point"     "pDFT"              .     . ec2ac04a-7781-44d1-a0bf-7a1535269b42

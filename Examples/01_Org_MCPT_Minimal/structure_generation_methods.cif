@@ -1,0 +1,22 @@
+# Monte Carlo Parallel Tempering
+data_mcpt
+    # Datablock Details
+    _csp.data_block_class                                                      "Generation Method"
+    _csp.data_block_id                                                         f29782ea-0ca6-41ec-b764-81c786b50167
+    _csp.data_block_description                                                "mcpt"
+
+    # Method Details
+    _csp.structure_generation_method                                           "Monte Carlo Parallel Tempering"
+    _csp.monte_carlo_parallel_tempering_number_of_replicas                     8
+    _csp.monte_carlo_parallel_tempering_temperatures_list                      [400 350 300 250 200 150 100 50]
+    _csp.monte_carlo_parallel_tempering_number_of_steps                        100
+
+    # Search Space & Stopping Criteria
+    _csp.structure_generation_density_lower_limit                              1000
+    _csp.structure_generation_density_upper_limit                              1750
+    _csp.structure_generation_space_group_number_list                          [14 2 15 61 19 4 33 29 5 1]
+
+    _csp.structure_generation_stopping_criteria_description                    ["Max Structures", "Low-Energy Structures Unchanged"]
+    _csp.structure_generation_stopping_criteria_max_structures_evaluated       100000
+    _csp.structure_generation_stopping_criteria_iterations_without_improvement 20
+    _csp.structure_generation_stopping_criteria_energy_range                   10.0

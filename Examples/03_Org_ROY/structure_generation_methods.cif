@@ -1,0 +1,15 @@
+# Random Search
+data_rs
+    # Datablock Details
+    _csp.data_block_class                                                      "Generation Method"
+    _csp.data_block_description                                                rs
+    _csp.data_block_id                                                         d515466d-f996-44d8-b52f-c22a6990de76
+
+    # Method Details
+    _csp.structure_generation_method                                           "Random Search"
+    _csp.random_search_random_numbers_algorithm_type                           "Quasi-random"
+    _csp.random_search_random_numbers_algorithm                                "Sobol"
+
+    _csp.structure_generation_space_group_list                                 [P1, P-1, P21, P21/c, P21212, P212121, Pna21, Pca21, Pbca, Pbcn, C2/c, Cc, C2, Pc, Cm, P21/m, C2/m, P2/c, C2221, Pmn21, Cmc21, Aba2, Fdd2, Iba2, Pnna, Pccn, Pbcm, Pnnm, Pmmn, Pnma, Fddd, Ibam, P41, P43, I-4, P4/n, P42/n, I4/m, I41/a, P41212, P43212, P-421c, I-42d, P31, P32, R3, P-3, R-3, P3121, P3221, R3c, R-3c, P61, P63, P63/m, P213, Pa-3, Cmcm, Cmca]
+    _csp.structure_generation_stopping_criteria_description                    "Max Structures"
+    _csp.structure_generation_stopping_criteria_max_structures_evaluated       2000000

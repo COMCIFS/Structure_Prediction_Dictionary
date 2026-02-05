@@ -1,4 +1,4 @@
-# Example 7 - ROY, using well-established methods, with a state of the art monomer correction at the final ranking stage
+# Example 3 - ROY, using well-established methods, with a state of the art monomer correction at the final ranking stage
 
 ## Summary
 

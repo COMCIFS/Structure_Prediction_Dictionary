@@ -506,12 +506,12 @@ Category `_dft.[]`: Subgroup for CSP Structure Ranking methods that use pDFT met
 `_dft` for consistency with the TCOD DFT Dictionary (https://wiki.crystallography.net/cif/dictionaries/ddl1/cif_dft/).
 For these fields to be used, the `_compchem.method` should be set to "pDFT".
 
-| Group | Data Field                             | Type | Definition                                                  | Constraints                                                                                             | Units | Example |
-|:------|:---------------------------------------|:-----|:------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------|:------|:--------|
-| pDFT  | `exchange_correlation_functional_type` | char | Specifies the type of exchange-correlation functional used. | - LDA<br/>- GGA<br/>- meta-GGA<br/>- Hybrid<br/>- Other                                                 |       | GGA     |
-| pDFT  | `exchange_correlation_functional_name` | char | Specifies the name of exchange-correlation functional used. | - PBE<br/>- PBE0<br/>- SCAN<br/>- ...                                                                   |       | PBE     |
-| pDFT  | `pseudopotential_type`                 | char | Defines the type of pseudopotentials used.                  | - Plane-waves<br/>- PAW<br/>- Norm-conserving<br/>- Ultrasoft                                           |       | PAW     |
-| pDFT  | `dispersion_correction`                | char | The Van der Waals correction used.                          | - Grimme-D2<br/>- Grimme-D3<br/>- Tkatchenko-Scheffler<br/>- Many-body dispersion<br/>- XDM<br/>- Other |       | XDM     |
+| Group | Data Field                             | Type | Definition                                                  | Constraints                                                                                                                                                     | Units | Example |
+|:------|:---------------------------------------|:-----|:------------------------------------------------------------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------|:------|:--------|
+| pDFT  | `exchange_correlation_functional_type` | char | Specifies the type of exchange-correlation functional used. | - LDA<br/>- GGA<br/>- meta-GGA<br/>- Hybrid<br/>- Other                                                                                                         |       | GGA     |
+| pDFT  | `exchange_correlation_functional_name` | char | Specifies the name of exchange-correlation functional used. | - PBE<br/>- PBE0<br/>- SCAN<br/>- ...                                                                                                                           |       | PBE     |
+| pDFT  | `pseudopotential_type`                 | char | Defines the type of pseudopotentials used.                  | - Plane-waves<br/>- PAW<br/>- Norm-conserving<br/>- Ultrasoft                                                                                                   |       | PAW     |
+| pDFT  | `dispersion_correction`                | char | The Van der Waals correction used.                          | - Grimme-D2<br/>- Grimme-D3<br/>- Tkatchenko-Scheffler<br/>- Many-body dispersion<br/>- Non-local many-body dispersion<br/>- Neumann-Perrin<br/>- XDM<br/>- ... |       | XDM     |
 
 ### 4.3 Forcefields
 

@@ -1,4 +1,4 @@
-# Example 2 - Multi-Stage Generation and Ranking Approaches
+# Example 1 - MCPT approach with multipoles and DFT-based ranking
 
 ![Example_1_diagram.jpg](Example_1_diagram.jpg)
 

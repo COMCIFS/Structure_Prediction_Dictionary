@@ -466,9 +466,9 @@ the use of `stopping_criteria_max_structures_evaluated` data fields:
    evaluated across all space groups combined. The search stops when this limit is reached regardless of how many
    structures were evaluated in any specific space group.
 
-## 4. Structure Ranking Methods (High-level)
+## 4. Structure Ranking Methods
 
-Within this section, you can define the workflow used to rank the different crystals and give high-level details of the
+Within this section, you can define the workflow used to rank the different crystals and give _high-level_ details of the
 methods used. To allow compatibility with other dictionaries and possible future works on computational chemistry
 calculations, single methods data fields don't have the `_csp` prefix.
 
@@ -803,7 +803,9 @@ Also in this example, mandatory data fields in the loop are `_csp.structure_rank
 `_csp.structure_ranking_preceding_stage` and `_csp.structure_ranking_data_block_id`. Additional data fields are for
 improving the human-readability of the CIF file.
 
-## 5. Theoretical Crystal Structure
+## 5. Output Structure Properties
+
+### 5.1 Theoretical Structure
 
 Describes the structure-specific outputs of CSP methods.
 Categories:
@@ -841,7 +843,7 @@ Categories:
 
 Details on composition, unit cell, symmetry, and atomic coordinates can be specified through the CIF Core dictionary.
 
-### Examples
+#### Examples
 
 Structure optimised using a multipoles approach:
 
@@ -1050,6 +1052,68 @@ _theoretical_structure.csp_previous_stage_structure_id             00d2779e-6396
 # Crystal properties and details
 ...
 
+```
+
+### 5.2 General Output
+Describes the general outputs of CSP methods.          
+Categories:
+
+* **`_csp.output_[]`**: Properties of the structure.   
+
+| Group | Category | Data Field                   | Type | Definition                                                                           | Constraints | Units          | Example |
+|-------|----------|------------------------------|------|--------------------------------------------------------------------------------------|-------------|----------------|---------|
+| CSP   | Output   | `input_system_description`   | char | Human-readable description of the input system data block.                           | Free Text   |                |         |
+| CSP   | Output   | `input_system_id`            | char | Identifier of the input system data block.                                           |             |                |         |
+| CSP   | Output   | `workflow_description`       | char | Human-readable description of the workflow data block.                               | Free Text   |                |         |
+| CSP   | Output   | `workflow_id`                | char | Identifier of the workflow data block.                                               |             |                |         |
+| CSP   | Output   | `stage`                      | char | Human-readable description of the structure generation or ranking method data block. | Free Text   |                |         |
+| CSP   | Output   | `stage_id`                   | char | Identifier of the structure generation or ranking method data block.                 |             |                |         |
+| CSP   | Output   | `global_minima`              | char | Human-readable label of the structure data block.                                    | Free Text   |                |         |
+| CSP   | Output   | `global_minima_id`           | char | Identifier of the structure data block.                                              |             |                |         |
+| CSP   | Output   | `number_of_structures`       | numb | Number of structures generated, optimised or evaluated in a single stage.            | \>=1        |                | 10000   |
+| CSP   | Output   | `average_computational_cost` | numb | Average computational cost per structure in a single stage.                          | \>=0.0      | CPU-Core Hours | 2.0     |
+| CSP   | Output   | `total_computational_cost`   | numb | Sum of the computational costs of all stages.                                        | \>=0.0      | CPU-Core Hours | 50000.0 |
+| CSP   | Output   | `hardware_description`       | char | Description of the hardware used to perform calculations.                            | Free Text   |                |         |
+
+
+#### Examples
+
+```text
+data_csp_output
+
+# Datablock Details
+_csp.data_block_class                 "Output"             
+_csp.data_block_description           csp_output                   
+_csp.data_block_id                    1d327ab0-3f84-4794-88a8-3c14b8f09999
+_csp.data_block_additional_files      [ "csp_input.cif" "workflow.cif" "structure_1.cif" "structure_105.cif"]
+
+# Input and workflow identifiers
+_csp.output_input_system_description  Urea_Hydrate                        
+_csp.output_input_system_id           2a2611e3-2021-4b03-a7c6-0ef71239008f
+                                    
+_csp.output_workflow_description      wf2                                 
+_csp.output_workflow_id               964fcd15-82e1-4c4d-a7cb-61b0b34c3421
+
+# Output Details and Computational Cost
+_csp.output_hardware_description      "AMD Zen 2 EPYC 7H12"
+_csp.output_total_computational_cost  185101.0
+
+loop_
+    _csp.output_stage 
+    _csp.output_stage_id
+    _csp.output_total_computational_cost
+    _csp.output_number_of_structures
+    _csp.output_average_computational_cost
+    _csp.output_global_minima
+    _csp.output_global_minima_id
+    # Generation Methods
+    "rs"      6e0147be-0454-44a1-a3bb-de7b326dde1b       1.0     7500  0.00013 .
+    "sa"      95f28b3c-d029-4840-a69a-3ced34219c28     100.0  2000000  0.00050 .
+    # Ranking Methods
+    "gaff"    83f824d3-6d17-4e42-9952-31ed161ef811  100000.0  2007500  0.04981 "structure_1_1"   63f70eef-cd02-4f73-b7a3-cda97adfe10e          
+    "psi_mol" d6f196c5-88d9-4ecd-b388-bcd92fd93a05   25000.0    50000  0.50000 "structure_105_2" 07457f98-a456-441e-bb36-1e650d799b93  
+    "pbe"     17ad684a-2337-4a96-9808-b8b8d3013dc3   60000.0    10000  7.50000 "structure_105_3" 756c1329-73a5-43e2-a359-54b01731ac42 
+           
 ```
 
 ## 6. Conventions

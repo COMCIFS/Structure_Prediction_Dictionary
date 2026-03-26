@@ -1,0 +1,1767 @@
+#\#CIF_2.0
+################################################################################
+#                                                                              #
+#       CIF CSP dictionary                                                     #
+#                                                                              #
+################################################################################
+
+data_CIF_CSP
+
+    _dictionary.title             CIF_CSP
+    _dictionary.class             Instance
+    _dictionary.version           0.1
+    _dictionary.date              2026-03-26
+    _dictionary.uri               https://github.com/COMCIFS/Structure_Prediction_Dictionary
+!    _dictionary.ddl_conformance   4.1.0  # ! https://www.iucr.org/__data/iucr/cifdic_html/3/DDL_DIC/index.html
+!    _dictionary.namespace         CifCore 
+    _description.text
+;
+    The CIF CSP dictionary provides data items for describing crystal structure prediction (CSP) methodologies and 
+    their resulting energy landscapes. By providing a common framework, we facilitate the sharing, comparison, and 
+    analysis of CSP results across different research groups and methods. This is a DRAFT version and data items in 
+    this dictionary should not be used until final approval by COMCIFS.
+;
+
+    loop_
+      _dictionary_author.id
+      _dictionary_author.id_ORCID
+      _dictionary_author.name
+      _dictionary_author.email
+!         1   0000-0000-0000-0000   'Francia, Nicholas'  nfrancia@ccdc.cam.ac.uk
+!         2   0000-0000-0000-0000   'Bruno, Ian'         !
+!         3   0000-0000-0000-0000   'Sugden, Isaac'      !
+!         4   0000-0000-0000-0000   'Hunnisett, Lily'    !
+!         5   0000-0000-0000-0000   'Nyman, Jonas'       !
+
+save_CIF_CSP_HEAD
+
+    _definition.id                CIF_CSP_HEAD
+    _definition.scope             Category
+!    _definition.class             Head
+    _definition.update            2026-03-26
+    _description.text
+;
+    This is the head category for the CSP dictionary.
+;
+    _name.category_id             CIF_CSP
+    _name.object_id               CIF_CSP_HEAD
+save_
+
+save_CSP
+
+    _definition.id                CSP
+    _definition.scope             Category
+!    _definition.class             Loop
+    _definition.update            2026-03-26
+    _description.text
+;
+    The CSP category covers data on CSP input definition, structure generation methods and data blocks organisation
+    (the CSP workflow). Single energy methods and output structures parameters are excluded as they could be used
+    for general computational chemistry calculations.
+;
+    _name.category_id             CIF_CSP_HEAD
+    _name.object_id               CSP
+    
+save_
+
+save_csp.data_block_class
+
+    _definition.id                'csp.data_block_class'
+    _alias.definition_id          'csp_data_block_class'
+    _definition.update            2026-03-26
+    _description.text
+    ;
+    Class type of the data block.
+
+    Examples:
+    "Input"
+    ;
+    _name.category_id             'csp'
+    _name.object_id               'data_block_class'
+    _type.purpose                 State
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Text
+    loop_                      
+        _enumeration_set.state 
+        _enumeration_set.detail
+        'Input'                                  '!'
+        'Generation Method'                      '!'
+        'Ranking Method'                         '!'
+        'Workflow'                               '!'
+        'Theoretical Structure'                  '!'
+        'Output'                                 '!'
+
+save_
+
+save_csp.data_block_id
+
+    _definition.id                'csp.data_block_id'
+    _alias.definition_id          'csp_data_block_id'
+    _definition.update            2026-03-26
+    _description.text
+    ;
+    Unique identifier of the data block. This will be used to link the different datablocks in a workflow or output structure.
+
+    Examples:
+    dd55207f-9649-435b-9708-c8154c33fc03
+    ;
+    _name.category_id             'csp'
+    _name.object_id               'data_block_id'
+    _type.purpose                 Encode
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Code
+
+save_
+
+save_csp.data_block_description
+
+    _definition.id                'csp.data_block_description'
+    _alias.definition_id          'csp_data_block_description'
+    _definition.update            2026-03-26
+    _description.text
+    ;
+    Text identifier of a datablock for human readability.
+
+    Examples:
+    "Molecule 1"
+    ;
+    _name.category_id             'csp'
+    _name.object_id               'data_block_description'
+    _type.purpose                 Describe
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Text
+
+save_
+
+save_csp.data_block_additional_files
+
+    _definition.id                'csp.data_block_additional_files'
+    _alias.definition_id          'csp_data_block_additional_files'
+    _definition.update            2026-03-26
+    _description.text
+    ;
+    If datablocks are specified in different files, add the position of these files.
+
+    Examples:
+    [ "generation_methods.cif" "ranking_methods.cif" "workflows.cif" ]
+    ;
+    _name.category_id             'csp'
+    _name.object_id               'data_block_additional_files'
+    _type.purpose                 Describe
+    _type.source                  Assigned
+    _type.container               Table
+    _type.contents                Text
+
+save_
+
+save_csp.input_name
+
+    _definition.id                'csp.input_name'
+    _alias.definition_id          'csp_input_name'
+    _definition.update            2026-03-26
+    _description.text
+    ;
+    See name_common and name_systematic from Core CIF dictionary.
+
+    Examples:
+    urea hydrate
+    ;
+    _name.category_id             'csp'
+    _name.object_id               'input_name'
+    _type.purpose                 Describe
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Text
+
+save_
+
+save_csp.input_identifier
+
+    _definition.id                'csp.input_identifier'
+    _alias.definition_id          'csp_input_identifier'
+    _definition.update            2026-03-26
+    _description.text
+    ;
+    An input identifier used for internal databases or classification.
+
+    Examples:
+    UREAXXH2O
+    ;
+    _name.category_id             'csp'
+    _name.object_id               'input_identifier'
+    _type.purpose                 Describe
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Text
+
+save_
+
+save_csp.input_composition_calculation
+
+    _definition.id                'csp.input_composition_calculation'
+    _alias.definition_id          'csp_input_composition_calculation'
+    _definition.update            2026-03-26
+    _description.text
+    ;
+    "fixed" or "variable" composition calculation.
+
+    Examples:
+    Fixed
+    ;
+    _name.category_id             'csp'
+    _name.object_id               'input_composition_calculation'
+    _type.purpose                 State
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Text
+    loop_                      
+        _enumeration_set.state 
+        _enumeration_set.detail
+        'Fixed'                                  '!'
+        'Variable'                               '!'
+
+save_
+
+save_csp.input_composition_coefficients
+
+    _definition.id                'csp.input_composition_coefficients'
+    _alias.definition_id          'csp_input_composition_coefficients'
+    _definition.update            2026-03-26
+    _description.text
+    ;
+    List of possible compositions for fixed-composition calculations or extremes for variable-composition simulations.
+
+    Examples:
+    [1 1] [2 1]
+    ;
+    _name.category_id             'csp'
+    _name.object_id               'input_composition_coefficients'
+    _type.purpose                 Number
+    _type.source                  Assigned
+    _type.container               Array
+    _type.contents                Integer
+
+save_
+
+save_csp.input_maximum_number_of_components
+
+    _definition.id                'csp.input_maximum_number_of_components'
+    _alias.definition_id          'csp_input_maximum_number_of_components'
+    _definition.update            2026-03-26
+    _description.text
+    ;
+    The maximum number of components (atoms or molecular entities) in the unit cell.
+
+    Examples:
+    4
+    ;
+    _name.category_id             'csp'
+    _name.object_id               'input_maximum_number_of_components'
+    _type.purpose                 Number
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Range
+    _enumeration.range            1:
+
+save_
+
+save_csp.input_minimum_number_of_components
+
+    _definition.id                'csp.input_minimum_number_of_components'
+    _alias.definition_id          'csp_input_minimum_number_of_components'
+    _definition.update            2026-03-26
+    _description.text
+    ;
+    The minimum number of components (atoms or molecular entities) in the unit cell.
+
+    Examples:
+    2
+    ;
+    _name.category_id             'csp'
+    _name.object_id               'input_minimum_number_of_components'
+    _type.purpose                 Number
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Range
+    _enumeration.range            1:
+
+save_
+
+save_csp.input_atom_types
+
+    _definition.id                'csp.input_atom_types'
+    _alias.definition_id          'csp_input_atom_types'
+    _definition.update            2026-03-26
+    _description.text
+    ;
+    List of atomic species defining the composition. This simplify the input definition in inorganic CSP, avoiding defining a separate molecular entity for each species.
+
+    Examples:
+    [Mg O] (atomic symbols), [12 8] (Atomic number)
+    ;
+    _name.category_id             'csp'
+    _name.object_id               'input_atom_types'
+    _type.purpose                 Describe
+    _type.source                  Assigned
+    _type.container               Table
+    _type.contents                Text
+
+save_
+
+save_csp.input_molecular_entity_number
+
+    _definition.id                'csp.input_molecular_entity_number'
+    _alias.definition_id          'csp_input_molecular_entity_number'
+    _definition.update            2026-03-26
+    _description.text
+    ;
+    Molecular entity component index.
+
+    Examples:
+    1
+    ;
+    _name.category_id             'csp'
+    _name.object_id               'input_molecular_entity_number'
+    _type.purpose                 Number
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Range
+    _enumeration.range            1:
+
+save_
+
+save_csp.input_molecular_entity_identifier
+
+    _definition.id                'csp.input_molecular_entity_identifier'
+    _alias.definition_id          'csp_input_molecular_entity_identifier'
+    _definition.update            2026-03-26
+    _description.text
+    ;
+    Label used to identify the molecular entity.
+
+    Examples:
+    urea, water, Ag
+    ;
+    _name.category_id             'csp'
+    _name.object_id               'input_molecular_entity_identifier'
+    _type.purpose                 Describe
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Text
+
+save_
+
+save_csp.input_molecular_entity_smiles
+
+    _definition.id                'csp.input_molecular_entity_smiles'
+    _alias.definition_id          'csp_input_molecular_entity_smiles'
+    _definition.update            2026-03-26
+    _description.text
+    ;
+    SMILES of the component.
+
+    Examples:
+    C(=O)(N)N
+    ;
+    _name.category_id             'csp'
+    _name.object_id               'input_molecular_entity_smiles'
+    _type.purpose                 Describe
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Text
+
+save_
+
+save_csp.input_atom_molecular_entity_number
+
+    _definition.id                'csp.input_atom_molecular_entity_number'
+    _alias.definition_id          'csp_input_atom_molecular_entity_number'
+    _definition.update            2026-03-26
+    _description.text
+    ;
+    In a loop describing the atoms in a molecular entity, the molecular entity component index of which the atom belongs.
+
+    Examples:
+    1
+    ;
+    _name.category_id             'csp'
+    _name.object_id               'input_atom_molecular_entity_number'
+    _type.purpose                 Number
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Range
+    _enumeration.range            1:
+
+save_
+
+save_csp.input_atom_molecular_entity_identifier
+
+    _definition.id                'csp.input_atom_molecular_entity_identifier'
+    _alias.definition_id          'csp_input_atom_molecular_entity_identifier'
+    _definition.update            2026-03-26
+    _description.text
+    ;
+    In a loop describing the atoms in a molecular entity, the label of the molecular entity of which the atom belongs.
+
+    Examples:
+    urea, water
+    ;
+    _name.category_id             'csp'
+    _name.object_id               'input_atom_molecular_entity_identifier'
+    _type.purpose                 Describe
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Text
+
+save_
+
+save_csp.input_atom_label
+
+    _definition.id                'csp.input_atom_label'
+    _alias.definition_id          'csp_input_atom_label'
+    _definition.update            2026-03-26
+    _description.text
+    ;
+    In a loop describing the atoms in a molecular entity, the label of the atom in the molecular entity.
+
+    Examples:
+    C1
+    ;
+    _name.category_id             'csp'
+    _name.object_id               'input_atom_label'
+    _type.purpose                 Describe
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Text
+
+save_
+
+save_csp.structure_generation_space_group_number_list
+
+    _definition.id                'csp.structure_generation_space_group_number_list'
+    _alias.definition_id          'csp_structure_generation_space_group_number_list'
+    _definition.update            2026-03-26
+    _description.text
+    ;
+    Space group selection: a subset (list) specifying which space group numbers were used.
+
+    Examples:
+    [14 2 15 61 19 4 33 29 5 1]
+    ;
+    _name.category_id             'csp'
+    _name.object_id               'structure_generation_space_group_number_list'
+    _type.purpose                 Number
+    _type.source                  Assigned
+    _type.container               Array
+    _type.contents                Range
+    _enumeration.range            1:230
+
+save_
+
+save_csp.structure_generation_space_group_list
+
+    _definition.id                'csp.structure_generation_space_group_list'
+    _alias.definition_id          'csp_structure_generation_space_group_list'
+    _definition.update            2026-03-26
+    _description.text
+    ;
+    Space group selection: it could be "all" or a subset (list) specifying which space groups were used.
+
+    Examples:
+    [P1, P-1, P21, P21/c, P21212, P212121, Pna21, Pca21, Pbca]
+    ;
+    _name.category_id             'csp'
+    _name.object_id               'structure_generation_space_group_list'
+    _type.purpose                 Describe
+    _type.source                  Assigned
+    _type.container               Table
+    _type.contents                Text
+
+save_
+
+save_csp.structure_generation_method
+
+    _definition.id                'csp.structure_generation_method'
+    _alias.definition_id          'csp_structure_generation_method'
+    _definition.update            2026-03-26
+    _description.text
+    ;
+    Structure generation method or list of methods.
+
+    Examples:
+    Simulated Annealing
+    ;
+    _name.category_id             'csp'
+    _name.object_id               'structure_generation_method'
+    _type.purpose                 State
+    _type.source                  Assigned
+    _type.container               Table
+    _type.contents                Text
+    loop_                      
+        _enumeration_set.state 
+        _enumeration_set.detail
+        'Evolutionary Algorithm'                 '!'
+        'Particle Swarm Optimisation'            '!'
+        'Simulated Annealing'                    '!'
+        'Monte Carlo Parallel tempering'         '!'
+        'Random Sampling'                        '!'
+        'Analogue Templates'                     '!'
+        'Other'                                  '!'
+
+save_
+
+save_csp.structure_generation_stage
+
+    _definition.id                'csp.structure_generation_stage'
+    _alias.definition_id          'csp_structure_generation_stage'
+    _definition.update            2026-03-26
+    _description.text
+    ;
+    To be used in the "Workflow" datablock, it specify the stage number of the generation method.
+    ;
+    _name.category_id             'csp'
+    _name.object_id               'structure_generation_stage'
+    _type.purpose                 Number
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Integer
+
+save_
+
+save_csp.structure_generation_preceding_stage
+
+    _definition.id                'csp.structure_generation_preceding_stage'
+    _alias.definition_id          'csp_structure_generation_preceding_stage'
+    _definition.update            2026-03-26
+    _description.text
+    ;
+    To be used in the "Workflow" datablock, it specify the stage number of the previous generation method.
+    ;
+    _name.category_id             'csp'
+    _name.object_id               'structure_generation_preceding_stage'
+    _type.purpose                 Number
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Integer
+
+save_
+
+save_csp.structure_generation_data_block_id
+
+    _definition.id                'csp.structure_generation_data_block_id'
+    _alias.definition_id          'csp_structure_generation_data_block_id'
+    _definition.update            2026-03-26
+    _description.text
+    ;
+    To be used in the "Workflow" datablock, it specify the identifier of the datablock in which the structure generation method is described.
+    ;
+    _name.category_id             'csp'
+    _name.object_id               'structure_generation_data_block_id'
+    _type.purpose                 Encode
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Code
+
+save_
+
+save_csp.structure_generation_data_block_description
+
+    _definition.id                'csp.structure_generation_data_block_description'
+    _alias.definition_id          'csp_structure_generation_data_block_description'
+    _definition.update            2026-03-26
+    _description.text
+    ;
+    To be used in the "Workflow" datablock, it is a short, human-readable description of the generation method.
+    ;
+    _name.category_id             'csp'
+    _name.object_id               'structure_generation_data_block_description'
+    _type.purpose                 Describe
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Text
+
+save_
+
+save_csp.structure_generation_software
+
+    _definition.id                'csp.structure_generation_software'
+    _alias.definition_id          'csp_structure_generation_software'
+    _definition.update            2026-03-26
+    _description.text
+    ;
+    Name of the software used for structure generation.
+    ;
+    _name.category_id             'csp'
+    _name.object_id               'structure_generation_software'
+    _type.purpose                 Describe
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Text
+
+save_
+
+save_csp.structure_generation_software_citation
+
+    _definition.id                'csp.structure_generation_software_citation'
+    _alias.definition_id          'csp_structure_generation_software_citation'
+    _definition.update            2026-03-26
+    _description.text
+    ;
+    Details of the software used for structure generation. Either URL to webpage or DOI of the related publication.
+    ;
+    _name.category_id             'csp'
+    _name.object_id               'structure_generation_software_citation'
+    _type.purpose                 Describe
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Text
+
+save_
+
+save_csp.structure_generation_software_version
+
+    _definition.id                'csp.structure_generation_software_version'
+    _alias.definition_id          'csp_structure_generation_software_version'
+    _definition.update            2026-03-26
+    _description.text
+    ;
+    Version of software used for structure generation.
+    ;
+    _name.category_id             'csp'
+    _name.object_id               'structure_generation_software_version'
+    _type.purpose                 Describe
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Text
+
+save_
+
+save_csp.structure_generation_density_lower_limit
+
+    _definition.id                'csp.structure_generation_density_lower_limit'
+    _alias.definition_id          'csp_structure_generation_density_lower_limit'
+    _definition.update            2026-03-26
+    _description.text
+    ;
+    Minimum Cell Density.
+
+    Examples:
+    800
+    ;
+    _name.category_id             'csp'
+    _name.object_id               'structure_generation_density_lower_limit'
+    _type.purpose                 Number
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Range
+    _units.code                   'kg m^-3'
+    _enumeration.range            0.:
+
+save_
+
+save_csp.structure_generation_density_upper_limit
+
+    _definition.id                'csp.structure_generation_density_upper_limit'
+    _alias.definition_id          'csp_structure_generation_density_upper_limit'
+    _definition.update            2026-03-26
+    _description.text
+    ;
+    Maximum Cell Density.
+
+    Examples:
+    1400
+    ;
+    _name.category_id             'csp'
+    _name.object_id               'structure_generation_density_upper_limit'
+    _type.purpose                 Number
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Range
+    _units.code                   'kg m^-3'
+    _enumeration.range            0.:
+
+save_
+
+save_csp.structure_generation_reference_temperature
+
+    _definition.id                'csp.structure_generation_reference_temperature'
+    _alias.definition_id          'csp_structure_generation_reference_temperature'
+    _definition.update            2026-03-26
+    _description.text
+    ;
+    Reference temperature for finite-temperature simulations.
+
+    Examples:
+    0
+    ;
+    _name.category_id             'csp'
+    _name.object_id               'structure_generation_reference_temperature'
+    _type.purpose                 Number
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Range
+    _units.code                   'K'
+    _enumeration.range            0.:
+
+save_
+
+save_csp.structure_generation_reference_pressure
+
+    _definition.id                'csp.structure_generation_reference_pressure'
+    _alias.definition_id          'csp_structure_generation_reference_pressure'
+    _definition.update            2026-03-26
+    _description.text
+    ;
+    Reference pressure for variable cell calculations.
+
+    Examples:
+    100000
+    ;
+    _name.category_id             'csp'
+    _name.object_id               'structure_generation_reference_pressure'
+    _type.purpose                 Number
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Range
+    _units.code                   'Pa'
+    _enumeration.range            0.:
+
+save_
+
+save_csp.structure_generation_stopping_criteria_description
+
+    _definition.id                'csp.structure_generation_stopping_criteria_description'
+    _alias.definition_id          'csp_structure_generation_stopping_criteria_description'
+    _definition.update            2026-03-26
+    _description.text
+    ;
+    List of rules for stopping the generation of new structures. This can be a single or a list of criteria. Additional datafields are present for two popular approaches (max structures and no new low-energy structures added).
+
+    Examples:
+    "Max Structures", ["Max Structures", "Low-Energy Structures Unchanged"]
+    ;
+    _name.category_id             'csp'
+    _name.object_id               'structure_generation_stopping_criteria_description'
+    _type.purpose                 Describe
+    _type.source                  Assigned
+    _type.container               Table
+    _type.contents                Text
+
+save_
+
+save_csp.structure_generation_stopping_criteria_space_group_number_list
+
+    _definition.id                'csp.structure_generation_stopping_criteria_space_group_number_list'
+    _alias.definition_id          'csp_structure_generation_stopping_criteria_space_group_number_list'
+    _definition.update            2026-03-26
+    _description.text
+    ;
+    If different stopping criteria are used for each space group, it allows specify a single or a subset of space groups numbers in a loop.
+    ;
+    _name.category_id             'csp'
+    _name.object_id               'structure_generation_stopping_criteria_space_group_number_list'
+    _type.purpose                 Number
+    _type.source                  Assigned
+    _type.container               Array
+    _type.contents                Range
+    _enumeration.range            1:230
+
+save_
+
+save_csp.structure_generation_stopping_criteria_space_group_list
+
+    _definition.id                'csp.structure_generation_stopping_criteria_space_group_list'
+    _alias.definition_id          'csp_structure_generation_stopping_criteria_space_group_list'
+    _definition.update            2026-03-26
+    _description.text
+    ;
+    If different stopping criteria are used for each space group, it allows specify a single or a subset of space groups names in a loop.
+    ;
+    _name.category_id             'csp'
+    _name.object_id               'structure_generation_stopping_criteria_space_group_list'
+    _type.purpose                 Describe
+    _type.source                  Assigned
+    _type.container               Table
+    _type.contents                Text
+
+save_
+
+save_csp.structure_generation_stopping_criteria_max_structures_evaluated
+
+    _definition.id                'csp.structure_generation_stopping_criteria_max_structures_evaluated'
+    _alias.definition_id          'csp_structure_generation_stopping_criteria_max_structures_evaluated'
+    _definition.update            2026-03-26
+    _description.text
+    ;
+    The maximum total number of unique crystal structures that will be generated and evaluated during the search. If it relates to a list of spacegroups in `stopping_criteria_space_group_number_list`, the value applies to all spacegroups in total (see the Examples section below).
+
+    Examples:
+    10000
+    ;
+    _name.category_id             'csp'
+    _name.object_id               'structure_generation_stopping_criteria_max_structures_evaluated'
+    _type.purpose                 Number
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Range
+    _enumeration.range            0:
+
+save_
+
+save_csp.structure_generation_stopping_criteria_iterations_without_improvement
+
+    _definition.id                'csp.structure_generation_stopping_criteria_iterations_without_improvement'
+    _alias.definition_id          'csp_structure_generation_stopping_criteria_iterations_without_improvement'
+    _definition.update            2026-03-26
+    _description.text
+    ;
+    The maximum number of consecutive iterations (generations, MC steps, etc.) where the global minimum (or the lowest few structures) does not change.
+
+    Examples:
+    50
+    ;
+    _name.category_id             'csp'
+    _name.object_id               'structure_generation_stopping_criteria_iterations_without_improvement'
+    _type.purpose                 Number
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Range
+    _enumeration.range            0:
+
+save_
+
+save_csp.structure_generation_stopping_criteria_energy_range
+
+    _definition.id                'csp.structure_generation_stopping_criteria_energy_range'
+    _alias.definition_id          'csp_structure_generation_stopping_criteria_energy_range'
+    _definition.update            2026-03-26
+    _description.text
+    ;
+    An energy threshold for the selection of low-energy structures to be considered in the convergence criteria.
+
+    Examples:
+    5
+    ;
+    _name.category_id             'csp'
+    _name.object_id               'structure_generation_stopping_criteria_energy_range'
+    _type.purpose                 Number
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Range
+    _units.code                   'kJ mol^-1'
+    _enumeration.range            0.:
+
+save_
+
+save_csp.structure_generation_stopping_criteria_structures_range
+
+    _definition.id                'csp.structure_generation_stopping_criteria_structures_range'
+    _alias.definition_id          'csp_structure_generation_stopping_criteria_structures_range'
+    _definition.update            2026-03-26
+    _description.text
+    ;
+    The number of low-energy structures to be considered in the convergence criteria.
+
+    Examples:
+    1000
+    ;
+    _name.category_id             'csp'
+    _name.object_id               'structure_generation_stopping_criteria_structures_range'
+    _type.purpose                 Number
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Range
+    _enumeration.range            0:
+
+save_
+
+save_csp.evolutionary_algorithms_population_size
+
+    _definition.id                'csp.evolutionary_algorithms_population_size'
+    _alias.definition_id          'csp_evolutionary_algorithms_population_size'
+    _definition.update            2026-03-26
+    _description.text
+    ;
+    The number of candidate structures in each generation.
+
+    Examples:
+    100
+    ;
+    _name.category_id             'csp'
+    _name.object_id               'evolutionary_algorithms_population_size'
+    _type.purpose                 Number
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Range
+    _enumeration.range            0:
+
+save_
+
+save_csp.evolutionary_algorithms_initial_population_size
+
+    _definition.id                'csp.evolutionary_algorithms_initial_population_size'
+    _alias.definition_id          'csp_evolutionary_algorithms_initial_population_size'
+    _definition.update            2026-03-26
+    _description.text
+    ;
+    The number of candidate structures in the first generation.
+
+    Examples:
+    50
+    ;
+    _name.category_id             'csp'
+    _name.object_id               'evolutionary_algorithms_initial_population_size'
+    _type.purpose                 Number
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Range
+    _enumeration.range            0:
+
+save_
+
+save_csp.evolutionary_algorithms_number_of_generations
+
+    _definition.id                'csp.evolutionary_algorithms_number_of_generations'
+    _alias.definition_id          'csp_evolutionary_algorithms_number_of_generations'
+    _definition.update            2026-03-26
+    _description.text
+    ;
+    The maximum number of evolutionary cycles the algorithm will run before termination (unless other stopping criteria are met).
+
+    Examples:
+    50
+    ;
+    _name.category_id             'csp'
+    _name.object_id               'evolutionary_algorithms_number_of_generations'
+    _type.purpose                 Number
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Range
+    _enumeration.range            0:
+
+save_
+
+save_csp.evolutionary_algorithms_parents_structure_fraction
+
+    _definition.id                'csp.evolutionary_algorithms_parents_structure_fraction'
+    _alias.definition_id          'csp_evolutionary_algorithms_parents_structure_fraction'
+    _definition.update            2026-03-26
+    _description.text
+    ;
+    The fraction of individuals in the current population that is used to generate structures in the next cycle.
+
+    Examples:
+    0.75
+    ;
+    _name.category_id             'csp'
+    _name.object_id               'evolutionary_algorithms_parents_structure_fraction'
+    _type.purpose                 Number
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Range
+    _enumeration.range            0.:1.
+
+save_
+
+save_csp.evolutionary_algorithms_nextgen_structure_selection
+
+    _definition.id                'csp.evolutionary_algorithms_nextgen_structure_selection'
+    _alias.definition_id          'csp_evolutionary_algorithms_nextgen_structure_selection'
+    _definition.update            2026-03-26
+    _description.text
+    ;
+    The number of individuals that survives (are kept) in the next generation.
+
+    Examples:
+    5
+    ;
+    _name.category_id             'csp'
+    _name.object_id               'evolutionary_algorithms_nextgen_structure_selection'
+    _type.purpose                 Number
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Range
+    _enumeration.range            1:
+
+save_
+
+save_csp.evolutionary_algorithms_mutation_fraction
+
+    _definition.id                'csp.evolutionary_algorithms_mutation_fraction'
+    _alias.definition_id          'csp_evolutionary_algorithms_mutation_fraction'
+    _definition.update            2026-03-26
+    _description.text
+    ;
+    The fraction of individuals in the population that will undergo mutation in each generation.
+
+    Examples:
+    0.2
+    ;
+    _name.category_id             'csp'
+    _name.object_id               'evolutionary_algorithms_mutation_fraction'
+    _type.purpose                 Number
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Range
+    _enumeration.range            0.:1.
+
+save_
+
+save_csp.evolutionary_algorithms_heredity_fraction
+
+    _definition.id                'csp.evolutionary_algorithms_heredity_fraction'
+    _alias.definition_id          'csp_evolutionary_algorithms_heredity_fraction'
+    _definition.update            2026-03-26
+    _description.text
+    ;
+    The fraction of individuals in the population that will be generated through heredity (crossover/recombination) operations between two or more parents.
+
+    Examples:
+    0.6
+    ;
+    _name.category_id             'csp'
+    _name.object_id               'evolutionary_algorithms_heredity_fraction'
+    _type.purpose                 Number
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Range
+    _enumeration.range            0.:1.
+
+save_
+
+save_csp.evolutionary_algorithms_permutation_fraction
+
+    _definition.id                'csp.evolutionary_algorithms_permutation_fraction'
+    _alias.definition_id          'csp_evolutionary_algorithms_permutation_fraction'
+    _definition.update            2026-03-26
+    _description.text
+    ;
+    The fraction of individuals in the population that will undergo a permutation operation (e.g., swapping atom positions within a structure) in each generation.
+
+    Examples:
+    0.1
+    ;
+    _name.category_id             'csp'
+    _name.object_id               'evolutionary_algorithms_permutation_fraction'
+    _type.purpose                 Number
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Range
+    _enumeration.range            0.:1.
+
+save_
+
+save_csp.particle_swarm_optimisation_population_size
+
+    _definition.id                'csp.particle_swarm_optimisation_population_size'
+    _alias.definition_id          'csp_particle_swarm_optimisation_population_size'
+    _definition.update            2026-03-26
+    _description.text
+    ;
+    The number of candidate crystal structures (particles) in the swarm.
+
+    Examples:
+    50
+    ;
+    _name.category_id             'csp'
+    _name.object_id               'particle_swarm_optimisation_population_size'
+    _type.purpose                 Number
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Range
+    _enumeration.range            0:
+
+save_
+
+save_csp.particle_swarm_optimisation_number_of_generations
+
+    _definition.id                'csp.particle_swarm_optimisation_number_of_generations'
+    _alias.definition_id          'csp_particle_swarm_optimisation_number_of_generations'
+    _definition.update            2026-03-26
+    _description.text
+    ;
+    The maximum number of optimization cycles (generations or iterations) the PSO algorithm will run.
+
+    Examples:
+    100
+    ;
+    _name.category_id             'csp'
+    _name.object_id               'particle_swarm_optimisation_number_of_generations'
+    _type.purpose                 Number
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Range
+    _enumeration.range            0:
+
+save_
+
+save_csp.particle_swarm_optimisation_inertia_weight
+
+    _definition.id                'csp.particle_swarm_optimisation_inertia_weight'
+    _alias.definition_id          'csp_particle_swarm_optimisation_inertia_weight'
+    _definition.update            2026-03-26
+    _description.text
+    ;
+    A parameter controlling the contribution of the previous velocity of the particle to its current velocity.
+
+    Examples:
+    0.7
+    ;
+    _name.category_id             'csp'
+    _name.object_id               'particle_swarm_optimisation_inertia_weight'
+    _type.purpose                 Number
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Range
+    _enumeration.range            0.:1.
+
+save_
+
+save_csp.particle_swarm_optimisation_max_inertia_weight
+
+    _definition.id                'csp.particle_swarm_optimisation_max_inertia_weight'
+    _alias.definition_id          'csp_particle_swarm_optimisation_max_inertia_weight'
+    _definition.update            2026-03-26
+    _description.text
+    ;
+    If the inertia weight changes with each iteration, this parameter specify the maximum value it can have.
+
+    Examples:
+    0.9
+    ;
+    _name.category_id             'csp'
+    _name.object_id               'particle_swarm_optimisation_max_inertia_weight'
+    _type.purpose                 Number
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Range
+    _enumeration.range            0.:1.
+
+save_
+
+save_csp.particle_swarm_optimisation_min_inertia_weight
+
+    _definition.id                'csp.particle_swarm_optimisation_min_inertia_weight'
+    _alias.definition_id          'csp_particle_swarm_optimisation_min_inertia_weight'
+    _definition.update            2026-03-26
+    _description.text
+    ;
+    If the inertia weight changes with each iteration, this parameter specify the minimum value it can have.
+
+    Examples:
+    0.4
+    ;
+    _name.category_id             'csp'
+    _name.object_id               'particle_swarm_optimisation_min_inertia_weight'
+    _type.purpose                 Number
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Range
+    _enumeration.range            0.:1.
+
+save_
+
+save_csp.particle_swarm_optimisation_cognitive_coefficient
+
+    _definition.id                'csp.particle_swarm_optimisation_cognitive_coefficient'
+    _alias.definition_id          'csp_particle_swarm_optimisation_cognitive_coefficient'
+    _definition.update            2026-03-26
+    _description.text
+    ;
+    A parameter (also called self-confidence factor) controlling the influence of the particle's own best position found so far on its movement.
+
+    Examples:
+    2
+    ;
+    _name.category_id             'csp'
+    _name.object_id               'particle_swarm_optimisation_cognitive_coefficient'
+    _type.purpose                 Number
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Range
+    _enumeration.range            0.:
+
+save_
+
+save_csp.particle_swarm_optimisation_social_coefficient
+
+    _definition.id                'csp.particle_swarm_optimisation_social_coefficient'
+    _alias.definition_id          'csp_particle_swarm_optimisation_social_coefficient'
+    _definition.update            2026-03-26
+    _description.text
+    ;
+    A parameter (also called swarm confidence factor) controlling the influence of the swarm's best position found so far on the particle's movement.
+
+    Examples:
+    2
+    ;
+    _name.category_id             'csp'
+    _name.object_id               'particle_swarm_optimisation_social_coefficient'
+    _type.purpose                 Number
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Range
+    _enumeration.range            0.:
+
+save_
+
+save_csp.particle_swarm_optimisation_velocity_clamp_max
+
+    _definition.id                'csp.particle_swarm_optimisation_velocity_clamp_max'
+    _alias.definition_id          'csp_particle_swarm_optimisation_velocity_clamp_max'
+    _definition.update            2026-03-26
+    _description.text
+    ;
+    The maximum allowed velocity for each dimension if velocity clamping is enabled.
+
+    Examples:
+    0.2
+    ;
+    _name.category_id             'csp'
+    _name.object_id               'particle_swarm_optimisation_velocity_clamp_max'
+    _type.purpose                 Number
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Range
+    _enumeration.range            0.:
+
+save_
+
+save_csp.simulated_annealing_initial_temperature
+
+    _definition.id                'csp.simulated_annealing_initial_temperature'
+    _alias.definition_id          'csp_simulated_annealing_initial_temperature'
+    _definition.update            2026-03-26
+    _description.text
+    ;
+    The starting temperature of the simulated annealing process.
+
+    Examples:
+    500.
+    ;
+    _name.category_id             'csp'
+    _name.object_id               'simulated_annealing_initial_temperature'
+    _type.purpose                 Number
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Range
+    _units.code                   'K'
+    _enumeration.range            0.:
+
+save_
+
+save_csp.simulated_annealing_cooling_rate
+
+    _definition.id                'csp.simulated_annealing_cooling_rate'
+    _alias.definition_id          'csp_simulated_annealing_cooling_rate'
+    _definition.update            2026-03-26
+    _description.text
+    ;
+    The parameter that determine how the temperature is decreased over the course of the simulation.
+
+    Examples:
+    0.95
+    ;
+    _name.category_id             'csp'
+    _name.object_id               'simulated_annealing_cooling_rate'
+    _type.purpose                 Number
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Range
+    _enumeration.range            0.:1.
+
+save_
+
+save_csp.simulated_annealing_number_of_steps
+
+    _definition.id                'csp.simulated_annealing_number_of_steps'
+    _alias.definition_id          'csp_simulated_annealing_number_of_steps'
+    _definition.update            2026-03-26
+    _description.text
+    ;
+    The number of attempted structure generation and acceptance steps performed at each temperature.
+
+    Examples:
+    10
+    ;
+    _name.category_id             'csp'
+    _name.object_id               'simulated_annealing_number_of_steps'
+    _type.purpose                 Number
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Range
+    _enumeration.range            0:
+
+save_
+
+save_csp.monte_carlo_parallel_tempering_number_of_replicas
+
+    _definition.id                'csp.monte_carlo_parallel_tempering_number_of_replicas'
+    _alias.definition_id          'csp_monte_carlo_parallel_tempering_number_of_replicas'
+    _definition.update            2026-03-26
+    _description.text
+    ;
+    The number of independent Monte Carlo simulations (replicas) running in parallel at different temperatures.
+
+    Examples:
+    3
+    ;
+    _name.category_id             'csp'
+    _name.object_id               'monte_carlo_parallel_tempering_number_of_replicas'
+    _type.purpose                 Number
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Range
+    _enumeration.range            >1:
+
+save_
+
+save_csp.monte_carlo_parallel_tempering_temperatures_list
+
+    _definition.id                'csp.monte_carlo_parallel_tempering_temperatures_list'
+    _alias.definition_id          'csp_monte_carlo_parallel_tempering_temperatures_list'
+    _definition.update            2026-03-26
+    _description.text
+    ;
+    The list of temperatures at which the replicas are run.
+
+    Examples:
+    [0., 300., 600.]
+    ;
+    _name.category_id             'csp'
+    _name.object_id               'monte_carlo_parallel_tempering_temperatures_list'
+    _type.purpose                 Number
+    _type.source                  Assigned
+    _type.container               Array
+    _type.contents                Range
+    _units.code                   'K'
+    _enumeration.range            0.:
+
+save_
+
+save_csp.monte_carlo_parallel_tempering_number_of_steps
+
+    _definition.id                'csp.monte_carlo_parallel_tempering_number_of_steps'
+    _alias.definition_id          'csp_monte_carlo_parallel_tempering_number_of_steps'
+    _definition.update            2026-03-26
+    _description.text
+    ;
+    The number of Monte Carlo steps performed by each replica at its assigned temperature in each parallel tempering cycle.
+
+    Examples:
+    100
+    ;
+    _name.category_id             'csp'
+    _name.object_id               'monte_carlo_parallel_tempering_number_of_steps'
+    _type.purpose                 Number
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Range
+    _enumeration.range            0:
+
+save_
+
+save_csp.random_search_random_numbers_algorithm_type
+
+    _definition.id                'csp.random_search_random_numbers_algorithm_type'
+    _alias.definition_id          'csp_random_search_random_numbers_algorithm_type'
+    _definition.update            2026-03-26
+    _description.text
+    ;
+    Specifies the type of random algorithm used.
+
+    Examples:
+    "Pseudorandom"
+    ;
+    _name.category_id             'csp'
+    _name.object_id               'random_search_random_numbers_algorithm_type'
+    _type.purpose                 State
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Text
+    loop_                      
+        _enumeration_set.state 
+        _enumeration_set.detail
+        'Pseudorandom'                           '!'
+        'Quasirandom'                            '!'
+        'Other'                                  '!'
+
+save_
+
+save_csp.random_search_random_numbers_algorithm
+
+    _definition.id                'csp.random_search_random_numbers_algorithm'
+    _alias.definition_id          'csp_random_search_random_numbers_algorithm'
+    _definition.update            2026-03-26
+    _description.text
+    ;
+    Specifies the type of random algorithm used.
+
+    Examples:
+    "Sobol"
+    ;
+    _name.category_id             'csp'
+    _name.object_id               'random_search_random_numbers_algorithm'
+    _type.purpose                 Describe
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Text
+
+save_
+
+save_csp.structure_ranking_stage
+
+    _definition.id                'csp.structure_ranking_stage'
+    _alias.definition_id          'csp_structure_ranking_stage'
+    _definition.update            2026-03-26
+    _description.text
+    ;
+    To be used in the "Workflow" datablock, it specifies the stage number of the ranking method.
+
+    Examples:
+    0
+    ;
+    _name.category_id             'csp'
+    _name.object_id               'structure_ranking_stage'
+    _type.purpose                 Number
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Range
+    _enumeration.range            0:
+
+save_
+
+save_csp.structure_ranking_preceding_stage
+
+    _definition.id                'csp.structure_ranking_preceding_stage'
+    _alias.definition_id          'csp_structure_ranking_preceding_stage'
+    _definition.update            2026-03-26
+    _description.text
+    ;
+    To be used in the "Workflow" datablock, it specifies the stage number of the previous ranking method.
+    ;
+    _name.category_id             'csp'
+    _name.object_id               'structure_ranking_preceding_stage'
+    _type.purpose                 Number
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Integer
+
+save_
+
+save_csp.structure_ranking_data_block_description
+
+    _definition.id                'csp.structure_ranking_data_block_description'
+    _alias.definition_id          'csp_structure_ranking_data_block_description'
+    _definition.update            2026-03-26
+    _description.text
+    ;
+    To be used in the "Workflow" datablock, it specifies the identifier of the datablock in which the structure ranking method is described.
+
+    Examples:
+    FF, PBE, PBE0
+    ;
+    _name.category_id             'csp'
+    _name.object_id               'structure_ranking_data_block_description'
+    _type.purpose                 Describe
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Text
+
+save_
+
+save_csp.structure_ranking_data_block_id
+
+    _definition.id                'csp.structure_ranking_data_block_id'
+    _alias.definition_id          'csp_structure_ranking_data_block_id'
+    _definition.update            2026-03-26
+    _description.text
+    ;
+    To be used in the "Workflow" datablock, it is a short, human-readable description of the ranking method.
+    ;
+    _name.category_id             'csp'
+    _name.object_id               'structure_ranking_data_block_id'
+    _type.purpose                 Encode
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Code
+
+save_
+
+save_csp.structure_ranking_relative_energy_cutoff
+
+    _definition.id                'csp.structure_ranking_relative_energy_cutoff'
+    _alias.definition_id          'csp_structure_ranking_relative_energy_cutoff'
+    _definition.update            2026-03-26
+    _description.text
+    ;
+    To be used in the "Workflow" datablock, in case of multi-step ranking of structures, it specifies the structures that will be used in the next step by selecting those below a certain relative energy difference from the global minima.
+
+    Examples:
+    10.0
+    ;
+    _name.category_id             'csp'
+    _name.object_id               'structure_ranking_relative_energy_cutoff'
+    _type.purpose                 Number
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Range
+    _units.code                   'kJ mol^-1'
+    _enumeration.range            0.:
+
+save_
+
+save_csp.structure_ranking_max_structures_retained
+
+    _definition.id                'csp.structure_ranking_max_structures_retained'
+    _alias.definition_id          'csp_structure_ranking_max_structures_retained'
+    _definition.update            2026-03-26
+    _description.text
+    ;
+    To be used in the "Workflow" datablock, in case of multi-step ranking of structures, it specifies the structures that will be used in the next step by selecting the top N structures in the ranking.
+
+    Examples:
+    250
+    ;
+    _name.category_id             'csp'
+    _name.object_id               'structure_ranking_max_structures_retained'
+    _type.purpose                 Number
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Range
+    _enumeration.range            0:
+
+save_
+
+save_csp.output_input_system_description
+
+    _definition.id                'csp.output_input_system_description'
+    _alias.definition_id          'csp_output_input_system_description'
+    _definition.update            2026-03-26
+    _description.text
+    ;
+    Human-readable description of the input system data block.
+    ;
+    _name.category_id             'csp'
+    _name.object_id               'output_input_system_description'
+    _type.purpose                 Describe
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Text
+
+save_
+
+save_csp.output_input_system_id
+
+    _definition.id                'csp.output_input_system_id'
+    _alias.definition_id          'csp_output_input_system_id'
+    _definition.update            2026-03-26
+    _description.text
+    ;
+    Identifier of the input system data block.
+    ;
+    _name.category_id             'csp'
+    _name.object_id               'output_input_system_id'
+    _type.purpose                 Encode
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Code
+
+save_
+
+save_csp.output_workflow_description
+
+    _definition.id                'csp.output_workflow_description'
+    _alias.definition_id          'csp_output_workflow_description'
+    _definition.update            2026-03-26
+    _description.text
+    ;
+    Human-readable description of the workflow data block.
+    ;
+    _name.category_id             'csp'
+    _name.object_id               'output_workflow_description'
+    _type.purpose                 Describe
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Text
+
+save_
+
+save_csp.output_workflow_id
+
+    _definition.id                'csp.output_workflow_id'
+    _alias.definition_id          'csp_output_workflow_id'
+    _definition.update            2026-03-26
+    _description.text
+    ;
+    Identifier of the workflow data block.
+    ;
+    _name.category_id             'csp'
+    _name.object_id               'output_workflow_id'
+    _type.purpose                 Encode
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Code
+
+save_
+
+save_csp.output_stage
+
+    _definition.id                'csp.output_stage'
+    _alias.definition_id          'csp_output_stage'
+    _definition.update            2026-03-26
+    _description.text
+    ;
+    Human-readable description of the structure generation or ranking method data block.
+    ;
+    _name.category_id             'csp'
+    _name.object_id               'output_stage'
+    _type.purpose                 Describe
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Text
+
+save_
+
+save_csp.output_stage_id
+
+    _definition.id                'csp.output_stage_id'
+    _alias.definition_id          'csp_output_stage_id'
+    _definition.update            2026-03-26
+    _description.text
+    ;
+    Identifier of the structure generation or ranking method data block.
+    ;
+    _name.category_id             'csp'
+    _name.object_id               'output_stage_id'
+    _type.purpose                 Encode
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Code
+
+save_
+
+save_csp.output_global_minima
+
+    _definition.id                'csp.output_global_minima'
+    _alias.definition_id          'csp_output_global_minima'
+    _definition.update            2026-03-26
+    _description.text
+    ;
+    Human-readable label of the structure data block.
+    ;
+    _name.category_id             'csp'
+    _name.object_id               'output_global_minima'
+    _type.purpose                 Describe
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Text
+
+save_
+
+save_csp.output_global_minima_id
+
+    _definition.id                'csp.output_global_minima_id'
+    _alias.definition_id          'csp_output_global_minima_id'
+    _definition.update            2026-03-26
+    _description.text
+    ;
+    Identifier of the structure data block.
+    ;
+    _name.category_id             'csp'
+    _name.object_id               'output_global_minima_id'
+    _type.purpose                 Encode
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Code
+
+save_
+
+save_csp.output_number_of_structures
+
+    _definition.id                'csp.output_number_of_structures'
+    _alias.definition_id          'csp_output_number_of_structures'
+    _definition.update            2026-03-26
+    _description.text
+    ;
+    Number of structures generated, optimised or evaluated in a single stage.
+
+    Examples:
+    10000
+    ;
+    _name.category_id             'csp'
+    _name.object_id               'output_number_of_structures'
+    _type.purpose                 Number
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Range
+    _enumeration.range            1:
+
+save_
+
+save_csp.output_average_computational_cost
+
+    _definition.id                'csp.output_average_computational_cost'
+    _alias.definition_id          'csp_output_average_computational_cost'
+    _definition.update            2026-03-26
+    _description.text
+    ;
+    Average computational cost per structure in a single stage.
+
+    Examples:
+    2.0
+    ;
+    _name.category_id             'csp'
+    _name.object_id               'output_average_computational_cost'
+    _type.purpose                 Number
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Range
+    _units.code                   'CPU-Core Hours'
+    _enumeration.range            0.:
+
+save_
+
+save_csp.output_total_computational_cost
+
+    _definition.id                'csp.output_total_computational_cost'
+    _alias.definition_id          'csp_output_total_computational_cost'
+    _definition.update            2026-03-26
+    _description.text
+    ;
+    Sum of the computational costs of all stages.
+
+    Examples:
+    50000.0
+    ;
+    _name.category_id             'csp'
+    _name.object_id               'output_total_computational_cost'
+    _type.purpose                 Number
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Range
+    _units.code                   'CPU-Core Hours'
+    _enumeration.range            0.:
+
+save_
+
+save_csp.output_hardware_description
+
+    _definition.id                'csp.output_hardware_description'
+    _alias.definition_id          'csp_output_hardware_description'
+    _definition.update            2026-03-26
+    _description.text
+    ;
+    Description of the hardware used to perform calculations.
+    ;
+    _name.category_id             'csp'
+    _name.object_id               'output_hardware_description'
+    _type.purpose                 Describe
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Text
+
+save_

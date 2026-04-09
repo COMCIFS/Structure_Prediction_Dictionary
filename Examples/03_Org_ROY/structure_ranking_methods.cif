@@ -115,7 +115,7 @@ data_SCS-MP2D
     _csp.data_block_id                                      ec2ac04a-7781-44d1-a0bf-7a1535269b42
 
     # Energy Method Details
-    _compchem.monomer_correction                            "SCS-MP2D"
+    _dft.monomer_correction                                 "SCS-MP2D"
     _dft.exchange_correlation_functional_type               "HF"
     _dft.exchange_correlation_functional_name               "SCS-MP2D"
 

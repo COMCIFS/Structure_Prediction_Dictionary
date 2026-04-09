@@ -65,6 +65,10 @@ entities for organic or organometallic crystal generation.
 | CSP   | Input Atom             | `molecular_entity_number`      | numb       | In a loop describing the atoms in a molecular entity, the molecular entity component index of which the atom belongs.                                                 | \>1                                |       | 1                                                   |
 | CSP   | Input Atom             | `molecular_entity_identifier`  | char       | In a loop describing the atoms in a molecular entity, the label of the molecular entity of which the atom belongs.                                                    | Free Text                          |       | urea, water                                         |
 | CSP   | Input Atom             | `label`                        | char       | In a loop describing the atoms in a molecular entity, the label of the atom in the molecular entity.                                                                  | Free Text                          |       | C1                                                  |
+| CSP   | Conformer              | `generation_method`            | char       | The method used to generate conformers for a CSP study of a flexible molecule.                                                                                        | Free text                          |       |                                                     |
+| CSP   | Conformer              | `generation_software`          | char       | Software used to generate conformers.                                                                                                                                 | Free text                          |       |                                                     |
+| CSP   | Conformer              | `generation_software_version`  | char       | Version of the software used to generate conformers.                                                                                                                  | Free text                          |       |                                                     |
+| CSP   | Conformer              | `optimisation_method`          | char       | The method used to geometry optimise generated conformers.                                                                                                            | Free text                          |       |                                                     |
 
 Additional details on atoms in molecule ad their connectivity can be specified through the CIF Chemical dictionary,
 available at: https://www.iucr.org/__data/iucr/cifdic_html/1/cif_core.dic/index.html
@@ -562,11 +566,14 @@ Category `_ml_potential.[]`: Subgroup for CSP Structure Ranking methods that use
 For
 these fields to be used, the `_compchem.method` should be set to "ML Potentials".
 
-| Group        | Data Field  | Type | Definition                                                                                                                                  | Constraints | Units | Example                     |
-|:-------------|:------------|:-----|:--------------------------------------------------------------------------------------------------------------------------------------------|:------------|:------|:----------------------------|
-| ML Potential | `method`    | char | Specifies the name of the ML Potential used. In case of ML parametrisation of classical forcefields, refer to the Forcefields dictionaries. | Free Text   |       | - ANI<br/>- MACE<br/>- ...  |
-| ML Potential | `model`     | char | The specific model used to rank structures.                                                                                                 | Free Text   |       | - 2x<br/>- OFF24<br/>- ...  |
-| ML Potential | `precision` | char | Float precision in calculations.                                                                                                            | Free Text   |       | - `float32`<br/>- `float64` |
+| Group        | Data Field             | Type | Definition                                                                                                                                  | Constraints | Units | Example                     |
+|:-------------|:-----------------------|:-----|:--------------------------------------------------------------------------------------------------------------------------------------------|:------------|:------|:----------------------------|
+| ML Potential | `method`               | char | Specifies the name of the ML Potential used. In case of ML parametrisation of classical forcefields, refer to the Forcefields dictionaries. | Free Text   |       | - ANI<br/>- MACE<br/>- ...  |
+| ML Potential | `model`                | char | The specific model used to rank structures.                                                                                                 | Free Text   |       | - 2x<br/>- OFF24<br/>- ...  |
+| ML Potential | `precision`            | char | Float precision in calculations.                                                                                                            | Free Text   |       | - `float32`<br/>- `float64` |
+| ML Potential | `training_set`         | char | Dataset used for the training of the ML potential.                                                                                          | Free Text   |       |                             |
+| ML Potential | `training_set_method`  | char | Either a short description of the methods used to obtain ground values (`PBE`) or a datablock ID describing the method in detail.           | Free Text   |       |                             |
+| ML Potential | `number_of_parameters` | char | Number of model parameters.                                                                                                                 | Free Text   |       |                             |
 
 ### 4.7 Free Energy
 

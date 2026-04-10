@@ -561,11 +561,14 @@ Category `_ml_potential.[]`: Subgroup for CSP Structure Ranking methods that use
 For
 these fields to be used, the `_compchem.method` should be set to "ML Potentials".
 
-| Group        | Data Field  | Type | Definition                                                                                                                                  | Constraints                 | Units | Example |
-|:-------------|:------------|:-----|:--------------------------------------------------------------------------------------------------------------------------------------------|:----------------------------|:------|:--------|
-| ML Potential | `method`    | char | Specifies the name of the ML Potential used. In case of ML parametrisation of classical forcefields, refer to the Forcefields dictionaries. | - ANI<br/>- MACE<br/>- ...  |       |         |
-| ML Potential | `model`     | char | The specific model used to rank structures.                                                                                                 | - 2x<br/>- OFF24<br/>- ...  |       |         |
-| ML Potential | `precision` | char | Float precision in calculations.                                                                                                            | - `float32`<br/>- `float64` |       |         |
+| Group        | Data Field             | Type | Definition                                                                                                                                  | Constraints                 | Units | Example |
+|:-------------|:-----------------------|:-----|:--------------------------------------------------------------------------------------------------------------------------------------------|:----------------------------|:------|:--------|
+| ML Potential | `method`               | char | Specifies the name of the ML Potential used. In case of ML parametrisation of classical forcefields, refer to the Forcefields dictionaries. | - ANI<br/>- MACE<br/>- ...  |       |         |
+| ML Potential | `model`                | char | The specific model used to rank structures.                                                                                                 | - 2x<br/>- OFF24<br/>- ...  |       |         |
+| ML Potential | `precision`            | char | Float precision in calculations.                                                                                                            | - `float32`<br/>- `float64` |       |         |
+| ML Potential | `training_set`         | char | Dataset used for the training of the ML potential.                                                                                          | Free Text                   |       |         |
+| ML Potential | `training_set_method`  | char | Either a short description of the methods used to obtain ground values (`PBE`) or a datablock ID describing the method in detail.           | Free Text                   |       |         |
+| ML Potential | `number_of_parameters` | char | Number of model parameters.                                                                                                                 | Free Text                   |       |         |
 
 ### 4.7 Free Energy
 

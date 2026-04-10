@@ -10,10 +10,10 @@ data_CIF_COMPCHEM
     _dictionary.title             CIF_COMPCHEM
     _dictionary.class             Instance
     _dictionary.version           0.1
-    _dictionary.date              2026-03-26
+    _dictionary.date              2026-04-10
     _dictionary.uri               https://github.com/COMCIFS/Structure_Prediction_Dictionary
-!    _dictionary.ddl_conformance   4.1.0  # ! https://www.iucr.org/__data/iucr/cifdic_html/3/DDL_DIC/index.html
-!    _dictionary.namespace         CifCore 
+    _dictionary.ddl_conformance   4.1.0  # ! https://www.iucr.org/__data/iucr/cifdic_html/3/DDL_DIC/index.html
+    _dictionary.namespace         CifCore 
     _description.text
 ;
     The CIF COMPCHEM dictionary provides data items for describing solid-state computational chemistry methods and 
@@ -25,18 +25,18 @@ data_CIF_COMPCHEM
       _dictionary_author.id_ORCID
       _dictionary_author.name
       _dictionary_author.email
-!         1   0000-0000-0000-0000   'Francia, Nicholas'  nfrancia@ccdc.cam.ac.uk
-!         2   0000-0000-0000-0000   'Bruno, Ian'         !
-!         3   0000-0000-0000-0000   'Sugden, Isaac'      !
-!         4   0000-0000-0000-0000   'Hunnisett, Lily'    !
-!         5   0000-0000-0000-0000   'Nyman, Jonas'       !
+        1   0000-0003-0936-2342   'Francia, Nicholas'  nfrancia@ccdc.cam.ac.uk
+        2   0000-0003-4901-9936   'Bruno, Ian'         .                      
+        3   0000-0002-4612-9163   'Sugden, Isaac'      .                      
+        4   0000-0002-5097-8416   'Hunnisett, Lily'    .                      
+        5   0000-0001-9011-3962   'Nyman, Jonas'       .                      
 
 save_CIF_COMPCHEM_HEAD
 
     _definition.id                CIF_COMPCHEM_HEAD
     _definition.scope             Category
-!    _definition.class             Head
-    _definition.update            2026-03-26
+    _definition.class             Head
+    _definition.update            2026-04-10
     _description.text
 ;
     This is the head category for the COMPCHEM dictionary.
@@ -49,8 +49,8 @@ save_COMPCHEM
 
     _definition.id                COMPCHEM
     _definition.scope             Category
-!    _definition.class             Loop
-    _definition.update            2026-03-26
+    _definition.class             Loop
+    _definition.update            2026-04-10
     _description.text
 ;
     The COMPCHEM category covers data on energy methods and type of calculation (i.e. geometry optimisation parameters).
@@ -64,8 +64,8 @@ save_DFT
 
     _definition.id                DFT
     _definition.scope             Category
-!    _definition.class             Loop
-    _definition.update            2026-03-26
+    _definition.class             Loop
+    _definition.update            2026-04-10
     _description.text
 ;
     The DFT category describes DFT input parameters.
@@ -79,8 +79,8 @@ save_FORCEFIELD
 
     _definition.id                FORCEFIELD
     _definition.scope             Category
-!    _definition.class             Loop
-    _definition.update            2026-03-26
+    _definition.class             Loop
+    _definition.update            2026-04-10
     _description.text
 ;
     The FORCEFIELD category describes forcefields input parameters.
@@ -94,8 +94,8 @@ save_SEMIEMPIRICAL
 
     _definition.id                SEMIEMPIRICAL
     _definition.scope             Category
-!    _definition.class             Loop
-    _definition.update            2026-03-26
+    _definition.class             Loop
+    _definition.update            2026-04-10
     _description.text
 ;
     The SEMIEMPIRICAL category describes semi-empirical input parameters.
@@ -109,8 +109,8 @@ save_WAVEFUNCTION
 
     _definition.id                WAVEFUNCTION
     _definition.scope             Category
-!    _definition.class             Loop
-    _definition.update            2026-03-26
+    _definition.class             Loop
+    _definition.update            2026-04-10
     _description.text
 ;
     The WAVEFUNCTION category describes wavefunction input parameters.
@@ -124,8 +124,8 @@ save_ML_POTENTIALS
 
     _definition.id                ML_POTENTIALS
     _definition.scope             Category
-!    _definition.class             Loop
-    _definition.update            2026-03-26
+    _definition.class             Loop
+    _definition.update            2026-04-10
     _description.text
 ;
     The ML_POTENTIALS category describes ML potentials (such as MLIP) input parameters.
@@ -139,8 +139,8 @@ save_FREE_ENERGY
 
     _definition.id                FREE_ENERGY
     _definition.scope             Category
-!    _definition.class             Loop
-    _definition.update            2026-03-26
+    _definition.class             Loop
+    _definition.update            2026-04-10
     _description.text
 ;
     The FREE_ENERGY category describes free energy approaches parameters.
@@ -154,8 +154,8 @@ save_THEORETICAL_STRUCTURE
 
     _definition.id                THEORETICAL_STRUCTURE
     _definition.scope             Category
-!    _definition.class             Loop
-    _definition.update            2026-03-26
+    _definition.class             Loop
+    _definition.update            2026-04-10
     _description.text
 ;
     The THEORETICAL_STRUCTURE category describes the output structure of a computational chemistry calculation.
@@ -169,7 +169,7 @@ save_compchem.method
 
     _definition.id                'compchem.method'
     _alias.definition_id          'compchem_method'
-    _definition.update            2026-03-26
+    _definition.update            2026-04-10
     _description.text
     ;
     The energy or scoring model used to rank structures.
@@ -199,7 +199,7 @@ save_compchem.calculation_type
 
     _definition.id                'compchem.calculation_type'
     _alias.definition_id          'compchem_calculation_type'
-    _definition.update            2026-03-26
+    _definition.update            2026-04-10
     _description.text
     ;
     Indicates how atomic positions are changed.
@@ -226,7 +226,7 @@ save_compchem.software
 
     _definition.id                'compchem.software'
     _alias.definition_id          'compchem_software'
-    _definition.update            2026-03-26
+    _definition.update            2026-04-10
     _description.text
     ;
     Name of the software used for structure ranking.
@@ -244,7 +244,7 @@ save_compchem.software_citation
 
     _definition.id                'compchem.software_citation'
     _alias.definition_id          'compchem_software_citation'
-    _definition.update            2026-03-26
+    _definition.update            2026-04-10
     _description.text
     ;
     Details of the software used for structure ranking.
@@ -262,7 +262,7 @@ save_compchem.software_version
 
     _definition.id                'compchem.software_version'
     _alias.definition_id          'compchem_software_version'
-    _definition.update            2026-03-26
+    _definition.update            2026-04-10
     _description.text
     ;
     Version of software used for structure ranking.
@@ -280,7 +280,7 @@ save_compchem.geometry_optimisation_algorithm
 
     _definition.id                'compchem.geometry_optimisation_algorithm'
     _alias.definition_id          'compchem_geometry_optimisation_algorithm'
-    _definition.update            2026-03-26
+    _definition.update            2026-04-10
     _description.text
     ;
     Geometry optimisation algorithm.
@@ -308,7 +308,7 @@ save_compchem.geometry_optimisation_cell
 
     _definition.id                'compchem.geometry_optimisation_cell'
     _alias.definition_id          'compchem_geometry_optimisation_cell'
-    _definition.update            2026-03-26
+    _definition.update            2026-04-10
     _description.text
     ;
     It can be "fixed" for no cell optimisation, "isotropic" or "anisotropic" for cell relaxation calculations.
@@ -332,7 +332,7 @@ save_compchem.geometry_optimisation_atoms
 
     _definition.id                'compchem.geometry_optimisation_atoms'
     _alias.definition_id          'compchem_geometry_optimisation_atoms'
-    _definition.update            2026-03-26
+    _definition.update            2026-04-10
     _description.text
     ;
     It can be: 
@@ -358,8 +358,7 @@ save_compchem.geometry_optimisation_atoms
         'fixed'                                  '!'
         'all'                                    '!'
         'hydrogens'                              '!'
-        'non'                                    '!'
-        'hydrogens'                              '!'
+        'non hydrogens'                          '!'
         'List of _chemical.conn_atom.number'     '!'
 
 save_
@@ -368,7 +367,7 @@ save_compchem.geometry_optimisation_relax_force_convergence
 
     _definition.id                'compchem.geometry_optimisation_relax_force_convergence'
     _alias.definition_id          'compchem_geometry_optimisation_relax_force_convergence'
-    _definition.update            2026-03-26
+    _definition.update            2026-04-10
     _description.text
     ;
     Convergence criteria for stopping the geometry optimisation. Present in the TCOD DFT Dictionary as `_dft_atom_relax_force_conv`.
@@ -391,7 +390,7 @@ save_compchem.geometry_optimisation_max_steps
 
     _definition.id                'compchem.geometry_optimisation_max_steps'
     _alias.definition_id          'compchem_geometry_optimisation_max_steps'
-    _definition.update            2026-03-26
+    _definition.update            2026-04-10
     _description.text
     ;
     Maximum number of steps in the geometry optimisation.
@@ -410,7 +409,7 @@ save_compchem.geometry_optimisation_constrained_symmetry
 
     _definition.id                'compchem.geometry_optimisation_constrained_symmetry'
     _alias.definition_id          'compchem_geometry_optimisation_constrained_symmetry'
-    _definition.update            2026-03-26
+    _definition.update            2026-04-10
     _description.text
     ;
     Preserve (True) or not (False) the spacegroup symmetry during optimisation
@@ -436,7 +435,7 @@ save_dft.exchange_correlation_functional_type
 
     _definition.id                'dft.exchange_correlation_functional_type'
     _alias.definition_id          'dft_exchange_correlation_functional_type'
-    _definition.update            2026-03-26
+    _definition.update            2026-04-10
     _description.text
     ;
     Specifies the type of exchange-correlation functional used.
@@ -465,7 +464,7 @@ save_dft.exchange_correlation_functional_name
 
     _definition.id                'dft.exchange_correlation_functional_name'
     _alias.definition_id          'dft_exchange_correlation_functional_name'
-    _definition.update            2026-03-26
+    _definition.update            2026-04-10
     _description.text
     ;
     Specifies the name of exchange-correlation functional used.
@@ -489,7 +488,7 @@ save_dft.pseudopotential_type
 
     _definition.id                'dft.pseudopotential_type'
     _alias.definition_id          'dft_pseudopotential_type'
-    _definition.update            2026-03-26
+    _definition.update            2026-04-10
     _description.text
     ;
     Defines the type of pseudopotentials used.
@@ -513,7 +512,7 @@ save_dft.dispersion_correction
 
     _definition.id                'dft.dispersion_correction'
     _alias.definition_id          'dft_dispersion_correction'
-    _definition.update            2026-03-26
+    _definition.update            2026-04-10
     _description.text
     ;
     The Van der Waals correction used.
@@ -541,7 +540,7 @@ save_forcefield.name
 
     _definition.id                'forcefield.name'
     _alias.definition_id          'forcefield_name'
-    _definition.update            2026-03-26
+    _definition.update            2026-04-10
     _description.text
     ;
     Name of the force field.
@@ -562,7 +561,7 @@ save_forcefield.intramolecular_term
 
     _definition.id                'forcefield.intramolecular_term'
     _alias.definition_id          'forcefield_intramolecular_term'
-    _definition.update            2026-03-26
+    _definition.update            2026-04-10
     _description.text
     ;
     The energy evaluation method for intramolecular interactions.
@@ -587,7 +586,7 @@ save_forcefield.electrostatic_term
 
     _definition.id                'forcefield.electrostatic_term'
     _alias.definition_id          'forcefield_electrostatic_term'
-    _definition.update            2026-03-26
+    _definition.update            2026-04-10
     _description.text
     ;
     Functional form of electrostatic interactions.
@@ -611,7 +610,7 @@ save_forcefield.vdw_term
 
     _definition.id                'forcefield.vdw_term'
     _alias.definition_id          'forcefield_vdw_term'
-    _definition.update            2026-03-26
+    _definition.update            2026-04-10
     _description.text
     ;
     Functional form of van der Waals interactions.
@@ -636,7 +635,7 @@ save_forcefield.parameterization_term
 
     _definition.id                'forcefield.parameterization_term'
     _alias.definition_id          'forcefield_parameterization_term'
-    _definition.update            2026-03-26
+    _definition.update            2026-04-10
     _description.text
     ;
     In a loop, describe which term is parametrised with which approach. It can be "intramolecular", "electrostatic" or "vdw".
@@ -663,7 +662,7 @@ save_forcefield.parameterization_description
 
     _definition.id                'forcefield.parameterization_description'
     _alias.definition_id          'forcefield_parameterization_description'
-    _definition.update            2026-03-26
+    _definition.update            2026-04-10
     _description.text
     ;
     Briefly describes the primary method used to derive the intramolecular, electrostatic, dispersion/repulsion force field parameters.
@@ -684,7 +683,7 @@ save_forcefield.parameterization_method
 
     _definition.id                'forcefield.parameterization_method'
     _alias.definition_id          'forcefield_parameterization_method'
-    _definition.update            2026-03-26
+    _definition.update            2026-04-10
     _description.text
     ;
     The parametrisation method used (for example the exchange-correlation functional and basis set used in the gas-phase quantum mechanical calculations when fitting force field parameters) or database from which parameters are taken if no calculation is performed.
@@ -707,7 +706,7 @@ save_semiempirical.type
 
     _definition.id                'semiempirical.type'
     _alias.definition_id          'semiempirical_type'
-    _definition.update            2026-03-26
+    _definition.update            2026-04-10
     _description.text
     ;
     Type of semi-empirical method.
@@ -731,7 +730,7 @@ save_semiempirical.method
 
     _definition.id                'semiempirical.method'
     _alias.definition_id          'semiempirical_method'
-    _definition.update            2026-03-26
+    _definition.update            2026-04-10
     _description.text
     ;
     Specifies the name of the Semi-Empirical method used.
@@ -756,7 +755,7 @@ save_semiempirical.electronic_parameters
 
     _definition.id                'semiempirical.electronic_parameters'
     _alias.definition_id          'semiempirical_electronic_parameters'
-    _definition.update            2026-03-26
+    _definition.update            2026-04-10
     _description.text
     ;
     The Slater-Koster tables or equivalent defining the atomic orbitals and pairwise element-element interactions.
@@ -779,7 +778,7 @@ save_semiempirical.repulsive_potential
 
     _definition.id                'semiempirical.repulsive_potential'
     _alias.definition_id          'semiempirical_repulsive_potential'
-    _definition.update            2026-03-26
+    _definition.update            2026-04-10
     _description.text
     ;
     When not included in the SK files, the repulsive potential term used.
@@ -797,7 +796,7 @@ save_semiempirical.dispersion_correction
 
     _definition.id                'semiempirical.dispersion_correction'
     _alias.definition_id          'semiempirical_dispersion_correction'
-    _definition.update            2026-03-26
+    _definition.update            2026-04-10
     _description.text
     ;
     Dispersion corrections for semi-empirical methods.
@@ -822,7 +821,7 @@ save_semiempirical.hydrogen_bond_correction
 
     _definition.id                'semiempirical.hydrogen_bond_correction'
     _alias.definition_id          'semiempirical_hydrogen_bond_correction'
-    _definition.update            2026-03-26
+    _definition.update            2026-04-10
     _description.text
     ;
     H-bond corrections for semi-empirical methods.
@@ -845,7 +844,7 @@ save_semiempirical.halogen_bond_correction
 
     _definition.id                'semiempirical.halogen_bond_correction'
     _alias.definition_id          'semiempirical_halogen_bond_correction'
-    _definition.update            2026-03-26
+    _definition.update            2026-04-10
     _description.text
     ;
     Correction term for halogen bonds interactions.
@@ -866,7 +865,7 @@ save_wavefunction.exchange_correlation_functional
 
     _definition.id                'wavefunction.exchange_correlation_functional'
     _alias.definition_id          'wavefunction_exchange_correlation_functional'
-    _definition.update            2026-03-26
+    _definition.update            2026-04-10
     _description.text
     ;
     Specifies the name of functional used.
@@ -890,7 +889,7 @@ save_wavefunction.basis_set_type
 
     _definition.id                'wavefunction.basis_set_type'
     _alias.definition_id          'wavefunction_basis_set_type'
-    _definition.update            2026-03-26
+    _definition.update            2026-04-10
     _description.text
     ;
     Defines the type of basis used.
@@ -913,7 +912,7 @@ save_ml_potential.method
 
     _definition.id                'ml_potential.method'
     _alias.definition_id          'ml_potential_method'
-    _definition.update            2026-03-26
+    _definition.update            2026-04-10
     _description.text
     ;
     Specifies the name of the ML Potential used. In case of ML parametrisation of classical forcefields, refer to the Forcefields dictionaries.
@@ -936,7 +935,7 @@ save_ml_potential.model
 
     _definition.id                'ml_potential.model'
     _alias.definition_id          'ml_potential_model'
-    _definition.update            2026-03-26
+    _definition.update            2026-04-10
     _description.text
     ;
     The specific model used to rank structures.
@@ -959,7 +958,7 @@ save_ml_potential.precision
 
     _definition.id                'ml_potential.precision'
     _alias.definition_id          'ml_potential_precision'
-    _definition.update            2026-03-26
+    _definition.update            2026-04-10
     _description.text
     ;
     Float precision in calculations.
@@ -977,11 +976,65 @@ save_ml_potential.precision
 
 save_
 
+save_ml_potential.training_set
+
+    _definition.id                'ml_potential.training_set'
+    _alias.definition_id          'ml_potential_training_set'
+    _definition.update            2026-04-10
+    _description.text
+    ;
+    Dataset used for the training of the ML potential.
+    ;
+    _name.category_id             'ml_potential'
+    _name.object_id               'training_set'
+    _type.purpose                 Describe
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Text
+
+save_
+
+save_ml_potential.training_set_method
+
+    _definition.id                'ml_potential.training_set_method'
+    _alias.definition_id          'ml_potential_training_set_method'
+    _definition.update            2026-04-10
+    _description.text
+    ;
+    Either a short description of the methods used to obtain ground values (`PBE`) or a datablock ID describing the method in detail.
+    ;
+    _name.category_id             'ml_potential'
+    _name.object_id               'training_set_method'
+    _type.purpose                 Describe
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Text
+
+save_
+
+save_ml_potential.number_of_parameters
+
+    _definition.id                'ml_potential.number_of_parameters'
+    _alias.definition_id          'ml_potential_number_of_parameters'
+    _definition.update            2026-04-10
+    _description.text
+    ;
+    Number of model parameters.
+    ;
+    _name.category_id             'ml_potential'
+    _name.object_id               'number_of_parameters'
+    _type.purpose                 Describe
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Text
+
+save_
+
 save_free_energy.method
 
     _definition.id                'free_energy.method'
     _alias.definition_id          'free_energy_method'
-    _definition.update            2026-03-26
+    _definition.update            2026-04-10
     _description.text
     ;
     Specifies the name of the approach used to calculate free energies.
@@ -1006,7 +1059,7 @@ save_free_energy.reference_temperature
 
     _definition.id                'free_energy.reference_temperature'
     _alias.definition_id          'free_energy_reference_temperature'
-    _definition.update            2026-03-26
+    _definition.update            2026-04-10
     _description.text
     ;
     The temperature or list of temperatures at which free energies are calculated.
@@ -1029,7 +1082,7 @@ save_free_energy.reference_pressure
 
     _definition.id                'free_energy.reference_pressure'
     _alias.definition_id          'free_energy_reference_pressure'
-    _definition.update            2026-03-26
+    _definition.update            2026-04-10
     _description.text
     ;
     The pressure or list of pressures at which free energies are calculated.
@@ -1052,7 +1105,7 @@ save_theoretical_structure.temperature
 
     _definition.id                'theoretical_structure.temperature'
     _alias.definition_id          'theoretical_structure_temperature'
-    _definition.update            2026-03-26
+    _definition.update            2026-04-10
     _description.text
     ;
     The temperature at which the energy and other properties of the theoretical structure were calculated.
@@ -1075,7 +1128,7 @@ save_theoretical_structure.pressure
 
     _definition.id                'theoretical_structure.pressure'
     _alias.definition_id          'theoretical_structure_pressure'
-    _definition.update            2026-03-26
+    _definition.update            2026-04-10
     _description.text
     ;
     The pressure at which the energy and other properties of the theoretical structure were calculated.
@@ -1097,7 +1150,7 @@ save_theoretical_structure.calculated_density
 
     _definition.id                'theoretical_structure.calculated_density'
     _alias.definition_id          'theoretical_structure_calculated_density'
-    _definition.update            2026-03-26
+    _definition.update            2026-04-10
     _description.text
     ;
     The calculated density of the crystal.
@@ -1120,7 +1173,7 @@ save_theoretical_structure.total_energy
 
     _definition.id                'theoretical_structure.total_energy'
     _alias.definition_id          'theoretical_structure_total_energy'
-    _definition.update            2026-03-26
+    _definition.update            2026-04-10
     _description.text
     ;
     The total energy of the theoretical structure, i.e. energy relative to all of the nuclei and electrons separated to an infinite distance.
@@ -1142,7 +1195,7 @@ save_theoretical_structure.absolute_lattice_energy
 
     _definition.id                'theoretical_structure.absolute_lattice_energy'
     _alias.definition_id          'theoretical_structure_absolute_lattice_energy'
-    _definition.update            2026-03-26
+    _definition.update            2026-04-10
     _description.text
     ;
     The absolute lattice energy of the crystal, i.e. energy relative to all the molecules separated to an infinite distance.
@@ -1164,7 +1217,7 @@ save_theoretical_structure.absolute_free_energy
 
     _definition.id                'theoretical_structure.absolute_free_energy'
     _alias.definition_id          'theoretical_structure_absolute_free_energy'
-    _definition.update            2026-03-26
+    _definition.update            2026-04-10
     _description.text
     ;
     The absolute free energy of the crystal.
@@ -1186,7 +1239,7 @@ save_theoretical_structure.free_energy_correction
 
     _definition.id                'theoretical_structure.free_energy_correction'
     _alias.definition_id          'theoretical_structure_free_energy_correction'
-    _definition.update            2026-03-26
+    _definition.update            2026-04-10
     _description.text
     ;
     The correction applied to the lattice energy to obtain the free energy, accounting for vibrational and other thermal effects.
@@ -1208,7 +1261,7 @@ save_theoretical_structure.relative_lattice_energy
 
     _definition.id                'theoretical_structure.relative_lattice_energy'
     _alias.definition_id          'theoretical_structure_relative_lattice_energy'
-    _definition.update            2026-03-26
+    _definition.update            2026-04-10
     _description.text
     ;
     The lattice energy of the theoretical structure relative to the lowest energy structure found in the CSP.
@@ -1231,7 +1284,7 @@ save_theoretical_structure.relative_free_energy
 
     _definition.id                'theoretical_structure.relative_free_energy'
     _alias.definition_id          'theoretical_structure_relative_free_energy'
-    _definition.update            2026-03-26
+    _definition.update            2026-04-10
     _description.text
     ;
     The free energy of the theoretical structure relative to the lowest energy structure found in the CSP.
@@ -1254,7 +1307,7 @@ save_theoretical_structure.energy_uncertainty
 
     _definition.id                'theoretical_structure.energy_uncertainty'
     _alias.definition_id          'theoretical_structure_energy_uncertainty'
-    _definition.update            2026-03-26
+    _definition.update            2026-04-10
     _description.text
     ;
     An estimate of the uncertainty associated with the calculated energy of the theoretical structure.
@@ -1277,7 +1330,7 @@ save_theoretical_structure.score
 
     _definition.id                'theoretical_structure.score'
     _alias.definition_id          'theoretical_structure_score'
-    _definition.update            2026-03-26
+    _definition.update            2026-04-10
     _description.text
     ;
     To allow for methods that may rank by criteria other than energies (e.g., based on stability or other desired properties).
@@ -1298,7 +1351,7 @@ save_theoretical_structure.rank
 
     _definition.id                'theoretical_structure.rank'
     _alias.definition_id          'theoretical_structure_rank'
-    _definition.update            2026-03-26
+    _definition.update            2026-04-10
     _description.text
     ;
     The rank of the structure when ordered by chosen criteria where 1 is considered to be the most favorable or likely structure.
@@ -1320,7 +1373,7 @@ save_theoretical_structure.csp_reference_temperature
 
     _definition.id                'theoretical_structure.csp_reference_temperature'
     _alias.definition_id          'theoretical_structure_csp_reference_temperature'
-    _definition.update            2026-03-26
+    _definition.update            2026-04-10
     _description.text
     ;
     In case of free-energy calculations, specify the reference temperature.
@@ -1340,7 +1393,7 @@ save_theoretical_structure.csp_reference_pressure
 
     _definition.id                'theoretical_structure.csp_reference_pressure'
     _alias.definition_id          'theoretical_structure_csp_reference_pressure'
-    _definition.update            2026-03-26
+    _definition.update            2026-04-10
     _description.text
     ;
     In case of free-energy calculations, specify the reference pressure.
@@ -1360,7 +1413,7 @@ save_theoretical_structure.csp_input_system_description
 
     _definition.id                'theoretical_structure.csp_input_system_description'
     _alias.definition_id          'theoretical_structure_csp_input_system_description'
-    _definition.update            2026-03-26
+    _definition.update            2026-04-10
     _description.text
     ;
     Human-readable description of the input system data block.
@@ -1378,7 +1431,7 @@ save_theoretical_structure.csp_input_system_id
 
     _definition.id                'theoretical_structure.csp_input_system_id'
     _alias.definition_id          'theoretical_structure_csp_input_system_id'
-    _definition.update            2026-03-26
+    _definition.update            2026-04-10
     _description.text
     ;
     Identifier of the input system data block.
@@ -1396,7 +1449,7 @@ save_theoretical_structure.csp_workflow_description
 
     _definition.id                'theoretical_structure.csp_workflow_description'
     _alias.definition_id          'theoretical_structure_csp_workflow_description'
-    _definition.update            2026-03-26
+    _definition.update            2026-04-10
     _description.text
     ;
     Human-readable description of the workflow data block.
@@ -1414,7 +1467,7 @@ save_theoretical_structure.csp_workflow_id
 
     _definition.id                'theoretical_structure.csp_workflow_id'
     _alias.definition_id          'theoretical_structure_csp_workflow_id'
-    _definition.update            2026-03-26
+    _definition.update            2026-04-10
     _description.text
     ;
     Identifier of the workflow data block.
@@ -1432,7 +1485,7 @@ save_theoretical_structure.csp_generation_stage_description
 
     _definition.id                'theoretical_structure.csp_generation_stage_description'
     _alias.definition_id          'theoretical_structure_csp_generation_stage_description'
-    _definition.update            2026-03-26
+    _definition.update            2026-04-10
     _description.text
     ;
     Human-readable description of the structure generation method data block.
@@ -1450,7 +1503,7 @@ save_theoretical_structure.csp_generation_stage_id
 
     _definition.id                'theoretical_structure.csp_generation_stage_id'
     _alias.definition_id          'theoretical_structure_csp_generation_stage_id'
-    _definition.update            2026-03-26
+    _definition.update            2026-04-10
     _description.text
     ;
     Identifier of the structure generation method data block.
@@ -1468,7 +1521,7 @@ save_theoretical_structure.csp_ranking_stage_description
 
     _definition.id                'theoretical_structure.csp_ranking_stage_description'
     _alias.definition_id          'theoretical_structure_csp_ranking_stage_description'
-    _definition.update            2026-03-26
+    _definition.update            2026-04-10
     _description.text
     ;
     Human-readable description of the structure ranking method data block.
@@ -1486,7 +1539,7 @@ save_theoretical_structure.csp_ranking_stage_id
 
     _definition.id                'theoretical_structure.csp_ranking_stage_id'
     _alias.definition_id          'theoretical_structure_csp_ranking_stage_id'
-    _definition.update            2026-03-26
+    _definition.update            2026-04-10
     _description.text
     ;
     Identifier of the structure ranking method data block.
@@ -1504,7 +1557,7 @@ save_theoretical_structure.csp_previous_stage_structure_description
 
     _definition.id                'theoretical_structure.csp_previous_stage_structure_description'
     _alias.definition_id          'theoretical_structure_csp_previous_stage_structure_description'
-    _definition.update            2026-03-26
+    _definition.update            2026-04-10
     _description.text
     ;
     Human-readable description of the data block of the structure from previous stage. This is the structure used as input for the current stage.
@@ -1522,7 +1575,7 @@ save_theoretical_structure.csp_previous_stage_structure_id
 
     _definition.id                'theoretical_structure.csp_previous_stage_structure_id'
     _alias.definition_id          'theoretical_structure_csp_previous_stage_structure_id'
-    _definition.update            2026-03-26
+    _definition.update            2026-04-10
     _description.text
     ;
     Identifier of the data block of the structure from previous stage.
@@ -1540,7 +1593,7 @@ save_theoretical_structure.csp_initial_spacegroup_number
 
     _definition.id                'theoretical_structure.csp_initial_spacegroup_number'
     _alias.definition_id          'theoretical_structure_csp_initial_spacegroup_number'
-    _definition.update            2026-03-26
+    _definition.update            2026-04-10
     _description.text
     ;
     The spacegroup of the structure at the initial CSP stage, before any geometry optimisation.

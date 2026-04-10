@@ -320,7 +320,7 @@ be used, the `_csp.structure_generation_method` must include "Simulated Annealin
 ### 3.5 Monte Carlo Parallel Tempering
 
 Category `_csp.monte_carlo_parallel_tempering_[]`: Subgroup for CSP Structure Generation methods that use Monte Carlo
-Parallel tempering. For these fields to be used, the `_csp.structure_generation_method` must be set to "Monte Carlo 
+Parallel tempering. For these fields to be used, the `_csp.structure_generation_method` must be set to "Monte Carlo
 Parallel Tempering".
 
 | Group | Category                       | Data Field           | Type | Definition                                                                                                              | Constraints | Units | Example         |
@@ -452,7 +452,7 @@ For the last section, the mandatory data fields to identify and link the differe
 `_csp.structure_generation_data_block_id`. Other data fields are included to make the file more human-readable.
 
 The data field `stopping_criteria_max_structures_evaluated` indicates the _total_ number of structures generated across
-the different space groups specified into the `structure_generation_space_group_number_list` or 
+the different space groups specified into the `structure_generation_space_group_number_list` or
 `structure_generation_stopping_criteria_space_group_number_list`. In the three `Generation Method` datablocks, we show
 the use of `stopping_criteria_max_structures_evaluated` data fields:
 
@@ -460,7 +460,7 @@ the use of `stopping_criteria_max_structures_evaluated` data fields:
    set to 1000 structures each, while for **4, 33, 29, 5 and 1**, it is set to 500 structures each, resulting in a total
    of 7500 structures.
 2. In the second `Random Search` approach (Datablock 2), 5000 and 2500 structures are generated in total for subsets
-   [14, 2, 15, 61, 19] and [4, 33, 29, 5, 1], respectively, for a total of 7500 structures. Contrary to the previous 
+   [14, 2, 15, 61, 19] and [4, 33, 29, 5, 1], respectively, for a total of 7500 structures. Contrary to the previous
    example, these are not necessarily equally distributed among the spacegroups of the subset.
 3. In the `Simulated Annealing` approach (Datablock 3), the value represents the maximum total number of structures
    evaluated across all space groups combined. The search stops when this limit is reached regardless of how many
@@ -468,7 +468,8 @@ the use of `stopping_criteria_max_structures_evaluated` data fields:
 
 ## 4. Structure Ranking Methods
 
-Within this section, you can define the workflow used to rank the different crystals and give _high-level_ details of the
+Within this section, you can define the workflow used to rank the different crystals and give _high-level_ details of
+the
 methods used. To allow compatibility with other dictionaries and possible future works on computational chemistry
 calculations, single methods data fields don't have the `_csp` prefix.
 
@@ -561,14 +562,14 @@ Category `_ml_potential.[]`: Subgroup for CSP Structure Ranking methods that use
 For
 these fields to be used, the `_compchem.method` should be set to "ML Potentials".
 
-| Group        | Data Field             | Type | Definition                                                                                                                                  | Constraints                 | Units | Example |
-|:-------------|:-----------------------|:-----|:--------------------------------------------------------------------------------------------------------------------------------------------|:----------------------------|:------|:--------|
-| ML Potential | `method`               | char | Specifies the name of the ML Potential used. In case of ML parametrisation of classical forcefields, refer to the Forcefields dictionaries. | - ANI<br/>- MACE<br/>- ...  |       |         |
-| ML Potential | `model`                | char | The specific model used to rank structures.                                                                                                 | - 2x<br/>- OFF24<br/>- ...  |       |         |
-| ML Potential | `precision`            | char | Float precision in calculations.                                                                                                            | - `float32`<br/>- `float64` |       |         |
-| ML Potential | `training_set`         | char | Dataset used for the training of the ML potential.                                                                                          | Free Text                   |       |         |
-| ML Potential | `training_set_method`  | char | Either a short description of the methods used to obtain ground values (`PBE`) or a datablock ID describing the method in detail.           | Free Text                   |       |         |
-| ML Potential | `number_of_parameters` | char | Number of model parameters.                                                                                                                 | Free Text                   |       |         |
+| Group        | Data Field             | Type | Definition                                                                                                                                  | Constraints | Units | Example                                |
+|:-------------|:-----------------------|:-----|:--------------------------------------------------------------------------------------------------------------------------------------------|:------------|:------|:---------------------------------------|
+| ML Potential | `method`               | char | Specifies the name of the ML Potential used. In case of ML parametrisation of classical forcefields, refer to the Forcefields dictionaries. |             |       | - ANI<br/>- MACE<br/>- UMA<br/>- ...   |
+| ML Potential | `model`                | char | The specific model used to rank structures.                                                                                                 |             |       | - 2x<br/>- OFF24<br/>- m-1p1<br/>- ... |
+| ML Potential | `precision`            | char | Float precision in calculations.                                                                                                            |             |       | - `float32`<br/>- `float64`            |
+| ML Potential | `training_set`         | char | Dataset used for the training of the ML potential.                                                                                          | Free Text   |       |                                        |
+| ML Potential | `training_set_method`  | char | Either a short description of the methods used to obtain ground values (`PBE`) or a datablock ID describing the method in detail.           | Free Text   |       |                                        |
+| ML Potential | `number_of_parameters` | char | Number of model parameters.                                                                                                                 | Free Text   |       |                                        |
 
 ### 4.7 Free Energy
 
@@ -1058,10 +1059,11 @@ _theoretical_structure.csp_previous_stage_structure_id             00d2779e-6396
 ```
 
 ### 5.2 General Output
+
 Describes the general outputs of CSP methods.          
 Categories:
 
-* **`_csp.output_[]`**: Properties of the structure.   
+* **`_csp.output_[]`**: Properties of the structure.
 
 | Group | Category | Data Field                   | Type | Definition                                                                           | Constraints | Units          | Example |
 |-------|----------|------------------------------|------|--------------------------------------------------------------------------------------|-------------|----------------|---------|
@@ -1077,7 +1079,6 @@ Categories:
 | CSP   | Output   | `average_computational_cost` | numb | Average computational cost per structure in a single stage.                          | \>=0.0      | CPU-Core Hours | 2.0     |
 | CSP   | Output   | `total_computational_cost`   | numb | Sum of the computational costs of all stages.                                        | \>=0.0      | CPU-Core Hours | 50000.0 |
 | CSP   | Output   | `hardware_description`       | char | Description of the hardware used to perform calculations.                            | Free Text   |                |         |
-
 
 #### Examples
 
@@ -1138,7 +1139,9 @@ On the other hand, ML models used to parameterise models constants should be cla
 For example, forcefield constants parametrised with a deep neural network should be classified as "Forcefield".
 
 ## 7. Future Developments
+
 ### 7.1 Improvements to the CSP Core Dictionary
+
 A few areas relevant to CSP have not been explored yet and might be included in later updates of the dictionary.
 In general, new or specific methods can use the "Other" option and specify possible publications describing the
 workflow.

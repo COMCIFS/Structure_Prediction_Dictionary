@@ -1,0 +1,2298 @@
+#\#CIF_2.0
+################################################################################
+#                                                                              #
+#       CIF Computational Chemistry Dictionary                                 #
+#                                                                              #
+################################################################################
+
+data_CIF_COMPCHEM
+
+    _dictionary.title             CIF_COMPCHEM
+    _dictionary.class             Instance
+    _dictionary.version           0.1
+    _dictionary.date              2026-04-24
+    _dictionary.uri               https://github.com/COMCIFS/Structure_Prediction_Dictionary
+    _dictionary.ddl_conformance   4.1.0  # https://www.iucr.org/__data/iucr/cifdic_html/3/DDL_DIC/index.html
+    _dictionary.namespace         CifCore 
+    _description.text
+;
+    The CIF COMPCHEM dictionary provides data items for describing solid-state computational chemistry methods and 
+    output structures.
+;
+
+    loop_
+      _dictionary_author.id
+      _dictionary_author.id_ORCID
+      _dictionary_author.name
+      _dictionary_author.email
+        1   0000-0003-0936-2342   'Francia, Nicholas'  nfrancia@ccdc.cam.ac.uk
+        2   0000-0003-4901-9936   'Bruno, Ian'         .                      
+        3   0000-0002-4612-9163   'Sugden, Isaac'      .                      
+        4   0000-0002-5097-8416   'Hunnisett, Lily'    .                      
+        5   0000-0001-9011-3962   'Nyman, Jonas'       .                      
+
+save_CIF_COMPCHEM_HEAD
+
+    _definition.id                CIF_COMPCHEM_HEAD
+    _definition.scope             Category
+    _definition.class             Head
+    _definition.update            2026-04-24
+    _description.text
+;
+    This is the head category for the COMPCHEM dictionary.
+;
+    _name.category_id             CIF_COMPCHEM
+    _name.object_id               CIF_COMPCHEM_HEAD
+save_
+
+save_COMPCHEM
+
+    _definition.id                COMPCHEM
+    _definition.scope             Category
+    _definition.class             Loop
+    _definition.update            2026-04-24
+    _description.text
+;
+    The COMPCHEM category covers data on energy methods and type of calculation (i.e. geometry optimisation parameters).
+;
+    _name.category_id             CIF_COMPCHEM_HEAD
+    _name.object_id               COMPCHEM
+    
+save_
+
+save_DFT
+
+    _definition.id                DFT
+    _definition.scope             Category
+    _definition.class             Loop
+    _definition.update            2026-04-24
+    _description.text
+;
+    The DFT category describes DFT input parameters.
+;
+    _name.category_id             CIF_COMPCHEM_HEAD
+    _name.object_id               DFT
+    
+save_
+
+save_FORCEFIELD
+
+    _definition.id                FORCEFIELD
+    _definition.scope             Category
+    _definition.class             Loop
+    _definition.update            2026-04-24
+    _description.text
+;
+    The FORCEFIELD category describes forcefields input parameters.
+;
+    _name.category_id             CIF_COMPCHEM_HEAD
+    _name.object_id               FORCEFIELD
+    
+save_
+
+save_SEMIEMPIRICAL
+
+    _definition.id                SEMIEMPIRICAL
+    _definition.scope             Category
+    _definition.class             Loop
+    _definition.update            2026-04-24
+    _description.text
+;
+    The SEMIEMPIRICAL category describes semi-empirical input parameters.
+;
+    _name.category_id             CIF_COMPCHEM_HEAD
+    _name.object_id               SEMIEMPIRICAL
+    
+save_
+
+save_WAVEFUNCTION
+
+    _definition.id                WAVEFUNCTION
+    _definition.scope             Category
+    _definition.class             Loop
+    _definition.update            2026-04-24
+    _description.text
+;
+    The WAVEFUNCTION category describes wavefunction input parameters.
+;
+    _name.category_id             CIF_COMPCHEM_HEAD
+    _name.object_id               WAVEFUNCTION
+    
+save_
+
+save_ML_POTENTIALS
+
+    _definition.id                ML_POTENTIALS
+    _definition.scope             Category
+    _definition.class             Loop
+    _definition.update            2026-04-24
+    _description.text
+;
+    The ML_POTENTIALS category describes ML potentials (such as MLIP) input parameters.
+;
+    _name.category_id             CIF_COMPCHEM_HEAD
+    _name.object_id               ML_POTENTIALS
+    
+save_
+
+save_FREE_ENERGY
+
+    _definition.id                FREE_ENERGY
+    _definition.scope             Category
+    _definition.class             Loop
+    _definition.update            2026-04-24
+    _description.text
+;
+    The FREE_ENERGY category describes free energy approaches parameters.
+;
+    _name.category_id             CIF_COMPCHEM_HEAD
+    _name.object_id               FREE_ENERGY
+    
+save_
+
+save_THEORETICAL_STRUCTURE
+
+    _definition.id                THEORETICAL_STRUCTURE
+    _definition.scope             Category
+    _definition.class             Loop
+    _definition.update            2026-04-24
+    _description.text
+;
+    The THEORETICAL_STRUCTURE category describes the output structure of a computational chemistry calculation.
+;
+    _name.category_id             CIF_COMPCHEM_HEAD
+    _name.object_id               THEORETICAL_STRUCTURE
+    
+save_
+
+save_compchem.method
+
+    _definition.id                '_compchem.method'
+    _alias.definition_id          '_compchem_method'
+    _definition.update            2026-04-24
+    _description.text
+    ;
+    The energy or scoring model used to rank structures.
+
+    Examples:
+    Forcefield
+    ;
+    _name.category_id             '_compchem'
+    _name.object_id               'method'
+    _type.purpose                 State
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Text
+    loop_                      
+        _enumeration_set.state 
+        _enumeration_set.detail
+        'pDFT (Sec. 4.2)'                        ' Ranking methods based on periodic Density Functional'
+        'Forcefield (Sec. 4.3)'                  ' Ranking methods based on'
+        'Semi Empirical (Sec. 4.4)'              ' Ranking methods based on semi'
+        'Wavefunction (Sec. 4.5)'                ' Ranking methods based on'
+        'ML Potentials (Sec. 4.6)'               ' Ranking methods based on Ml potentials. Forcefields parametrised with ML, should be under the'
+        'Other'                                  ' Any other method.'
+
+save_
+
+save_compchem.method_description
+
+    _definition.id                '_compchem.method_description'
+    _alias.definition_id          '_compchem_method_description'
+    _definition.update            2026-04-24
+    _description.text
+    ;
+    Short description of the energy or scoring model used to rank structures.
+    ;
+    _name.category_id             '_compchem'
+    _name.object_id               'method_description'
+    _type.purpose                 Describe
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Text
+
+save_
+
+save_compchem.method_other
+
+    _definition.id                '_compchem.method_other'
+    _alias.definition_id          '_compchem_method_other'
+    _definition.update            2026-04-24
+    _description.text
+    ;
+    If `compchem.method` is "Other", specify the label of the method used.
+    ;
+    _name.category_id             '_compchem'
+    _name.object_id               'method_other'
+    _type.purpose                 Describe
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Text
+
+save_
+
+save_compchem.calculation_type
+
+    _definition.id                '_compchem.calculation_type'
+    _alias.definition_id          '_compchem_calculation_type'
+    _definition.update            2026-04-24
+    _description.text
+    ;
+    Indicates how atomic positions are changed.
+
+    Examples:
+    "Single point"
+    ;
+    _name.category_id             '_compchem'
+    _name.object_id               'calculation_type'
+    _type.purpose                 State
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Text
+    loop_                      
+        _enumeration_set.state 
+        _enumeration_set.detail
+        'Optimisation'                           ' Geometry is optimised to minimise the energy.'
+        'Dynamic Ensemble'                       ' Include any calculation of a thermodynamic ensemble (e.g. microstates from MD simulations or an ensemble of phonons from lattice dynamics).'
+        'Single point'                           ' No change in atomic coordinates or cell parameters.'
+
+save_
+
+save_compchem.software
+
+    _definition.id                '_compchem.software'
+    _alias.definition_id          '_compchem_software'
+    _definition.update            2026-04-24
+    _description.text
+    ;
+    Name of the software used for structure ranking.
+    ;
+    _name.category_id             '_compchem'
+    _name.object_id               'software'
+    _type.purpose                 Describe
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Text
+
+save_
+
+save_compchem.software_citation
+
+    _definition.id                '_compchem.software_citation'
+    _alias.definition_id          '_compchem_software_citation'
+    _definition.update            2026-04-24
+    _description.text
+    ;
+    Details of the software used for structure ranking.
+    ;
+    _name.category_id             '_compchem'
+    _name.object_id               'software_citation'
+    _type.purpose                 Describe
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Text
+
+save_
+
+save_compchem.software_version
+
+    _definition.id                '_compchem.software_version'
+    _alias.definition_id          '_compchem_software_version'
+    _definition.update            2026-04-24
+    _description.text
+    ;
+    Version of software used for structure ranking.
+    ;
+    _name.category_id             '_compchem'
+    _name.object_id               'software_version'
+    _type.purpose                 Describe
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Text
+
+save_
+
+save_compchem.geometry_optimisation_algorithm
+
+    _definition.id                '_compchem.geometry_optimisation_algorithm'
+    _alias.definition_id          '_compchem_geometry_optimisation_algorithm'
+    _definition.update            2026-04-24
+    _description.text
+    ;
+    Geometry optimisation algorithm.
+    ;
+    _name.category_id             '_compchem'
+    _name.object_id               'geometry_optimisation_algorithm'
+    _type.purpose                 State
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Text
+    loop_                      
+        _enumeration_set.state 
+        _enumeration_set.detail
+        'BFGS'                                   ' Broyden Fletcher Goldfarb Shanno Quasi Newton algorithm.'
+        'LBFGS'                                  ' the limited memory version of BFGS.'
+        'FIRE'                                   ' Fast Inertial Relaxation Engine algorithm.'
+        'Steepest Descent'                       ' Gradient Descent algorithm.'
+        'Conjugate Gradient'                     ' Conjugate Gradient Method.'
+        'Other'                                  ' Any other method.'
+
+save_
+
+save_compchem.geometry_optimisation_algorithm_other
+
+    _definition.id                '_compchem.geometry_optimisation_algorithm_other'
+    _alias.definition_id          '_compchem_geometry_optimisation_algorithm_other'
+    _definition.update            2026-04-24
+    _description.text
+    ;
+    If `_compchem.geometry_optimisation_algorithm` is "Other", specify the algorithm used.
+    ;
+    _name.category_id             '_compchem'
+    _name.object_id               'geometry_optimisation_algorithm_other'
+    _type.purpose                 Describe
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Text
+
+save_
+
+save_compchem.geometry_optimisation_cell
+
+    _definition.id                '_compchem.geometry_optimisation_cell'
+    _alias.definition_id          '_compchem_geometry_optimisation_cell'
+    _definition.update            2026-04-24
+    _description.text
+    ;
+    It can be "fixed" for no cell optimisation, "isotropic" or "anisotropic" for cell relaxation calculations.
+    ;
+    _name.category_id             '_compchem'
+    _name.object_id               'geometry_optimisation_cell'
+    _type.purpose                 State
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Text
+    loop_                      
+        _enumeration_set.state 
+        _enumeration_set.detail
+        'fixed'                                  ' no cell optimisation'
+        'isotropic'                              ' Isotropic cell relaxation.'
+        'anisotropic'                            ' Anisotropic cell relaxation'
+
+save_
+
+save_compchem.geometry_optimisation_atoms
+
+    _definition.id                '_compchem.geometry_optimisation_atoms'
+    _alias.definition_id          '_compchem_geometry_optimisation_atoms'
+    _definition.update            2026-04-24
+    _description.text
+    ;
+    It can be "fixed", "all", "intermolecular only", "hydrogens" or "non hydrogens"
+
+    Examples:
+    "all"
+    ;
+    _name.category_id             '_compchem'
+    _name.object_id               'geometry_optimisation_atoms'
+    _type.purpose                 State
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Text
+    loop_                      
+        _enumeration_set.state 
+        _enumeration_set.detail
+        'fixed'                                  ' no atoms position optimisation (only cell dimesions are optimised)'
+        'all'                                    ' an all atoms geometry optimization.'
+        'intermolecular only'                    ' molecules are kept rigid and only optimise their position and orientation.'
+        'hydrogens'                              ' optimisation of only H atoms'
+        'non hydrogens'                          ' non H atoms are optimised while H atoms are kept at fixed positions/orientation from the bonded atom.'
+
+save_
+
+save_compchem.geometry_optimisation_atoms_list
+
+    _definition.id                '_compchem.geometry_optimisation_atoms_list'
+    _alias.definition_id          '_compchem_geometry_optimisation_atoms_list'
+    _definition.update            2026-04-24
+    _description.text
+    ;
+    A list of atoms for custom relaxation of a subset of atoms.
+
+    Examples:
+    [1 2 3 4]
+    ;
+    _name.category_id             '_compchem'
+    _name.object_id               'geometry_optimisation_atoms_list'
+    _type.purpose                 Number
+    _type.source                  Assigned
+    _type.container               Array
+    _type.contents                Integer
+
+save_
+
+save_compchem.geometry_optimisation_relax_force_convergence
+
+    _definition.id                '_compchem.geometry_optimisation_relax_force_convergence'
+    _alias.definition_id          '_compchem_geometry_optimisation_relax_force_convergence'
+    _definition.update            2026-04-24
+    _description.text
+    ;
+    Convergence criteria for stopping the geometry optimisation. Present in the TCOD DFT Dictionary as `_dft_atom_relax_force_conv`.
+
+    Examples:
+    0.1
+    ;
+    _name.category_id             '_compchem'
+    _name.object_id               'geometry_optimisation_relax_force_convergence'
+    _type.purpose                 Number
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Range
+    _units.code                   'kJ mol^-1 nm^-1'
+    _enumeration.range            0.:
+
+save_
+
+save_compchem.geometry_optimisation_max_steps
+
+    _definition.id                '_compchem.geometry_optimisation_max_steps'
+    _alias.definition_id          '_compchem_geometry_optimisation_max_steps'
+    _definition.update            2026-04-24
+    _description.text
+    ;
+    Maximum number of steps in the geometry optimisation.
+    ;
+    _name.category_id             '_compchem'
+    _name.object_id               'geometry_optimisation_max_steps'
+    _type.purpose                 Number
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Range
+    _enumeration.range            0:
+
+save_
+
+save_compchem.geometry_optimisation_constrained_symmetry
+
+    _definition.id                '_compchem.geometry_optimisation_constrained_symmetry'
+    _alias.definition_id          '_compchem_geometry_optimisation_constrained_symmetry'
+    _definition.update            2026-04-24
+    _description.text
+    ;
+    Preserve (True) or not (False) the spacegroup symmetry during optimisation
+
+    Examples:
+    True
+    ;
+    _name.category_id             '_compchem'
+    _name.object_id               'geometry_optimisation_constrained_symmetry'
+    _type.purpose                 State
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Text
+    loop_                      
+        _enumeration_set.state 
+        _enumeration_set.detail
+        'True'                                   ' .'
+        'False'                                  ' .'
+
+save_
+
+save_dft.exchange_correlation_functional_type
+
+    _definition.id                '_dft.exchange_correlation_functional_type'
+    _alias.definition_id          '_dft_exchange_correlation_functional_type'
+    _definition.update            2026-04-24
+    _description.text
+    ;
+    Specifies the type of exchange-correlation functional used.
+
+    Examples:
+    GGA
+    ;
+    _name.category_id             '_dft'
+    _name.object_id               'exchange_correlation_functional_type'
+    _type.purpose                 State
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Text
+    loop_                      
+        _enumeration_set.state 
+        _enumeration_set.detail
+        'LDA'                                    ' Local Density Approximation'
+        'GGA'                                    ' Generalized Gradient Approximation.'
+        'metaGGA'                                ' Meta GGA Approximation.'
+        'Hybrid'                                 ' Mix of exact exchange from Hartree Fock with GGA or metaGGA.'
+        'Other'                                  ' Any other type of exchange correlation approximation.'
+
+save_
+
+save_dft.exchange_correlation_functional_type_other
+
+    _definition.id                '_dft.exchange_correlation_functional_type_other'
+    _alias.definition_id          '_dft_exchange_correlation_functional_type_other'
+    _definition.update            2026-04-24
+    _description.text
+    ;
+    Specifies the type of exchange-correlation functional used if not in the given list.
+    ;
+    _name.category_id             '_dft'
+    _name.object_id               'exchange_correlation_functional_type_other'
+    _type.purpose                 Describe
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Text
+
+save_
+
+save_dft.exchange_correlation_functional_name
+
+    _definition.id                '_dft.exchange_correlation_functional_name'
+    _alias.definition_id          '_dft_exchange_correlation_functional_name'
+    _definition.update            2026-04-24
+    _description.text
+    ;
+    Specifies the name of exchange-correlation functional used.
+
+    Examples:
+    - PBE
+    - PBE0
+    - SCAN
+    - ...
+    ;
+    _name.category_id             '_dft'
+    _name.object_id               'exchange_correlation_functional_name'
+    _type.purpose                 Describe
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Text
+
+save_
+
+save_dft.pseudopotential_type
+
+    _definition.id                '_dft.pseudopotential_type'
+    _alias.definition_id          '_dft_pseudopotential_type'
+    _definition.update            2026-04-24
+    _description.text
+    ;
+    Defines the type of pseudopotentials used.
+
+    Examples:
+    - Plane-waves
+    - PAW
+    - Norm-conserving
+    - Ultrasoft
+    ;
+    _name.category_id             '_dft'
+    _name.object_id               'pseudopotential_type'
+    _type.purpose                 Describe
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Text
+
+save_
+
+save_dft.dispersion_correction
+
+    _definition.id                '_dft.dispersion_correction'
+    _alias.definition_id          '_dft_dispersion_correction'
+    _definition.update            2026-04-24
+    _description.text
+    ;
+    The Van der Waals correction used.
+
+    Examples:
+    - Grimme-D2
+    - Grimme-D3
+    - Tkatchenko-Scheffler
+    - Many-body dispersion
+    - Non-local many-body dispersion
+    - Neumann-Perrin
+    - XDM
+    - ...
+    ;
+    _name.category_id             '_dft'
+    _name.object_id               'dispersion_correction'
+    _type.purpose                 Describe
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Text
+
+save_
+
+save_forcefield.name
+
+    _definition.id                '_forcefield.name'
+    _alias.definition_id          '_forcefield_name'
+    _definition.update            2026-04-24
+    _description.text
+    ;
+    Name of the force field.
+
+    Examples:
+    OPLS, GAFF
+    ;
+    _name.category_id             '_forcefield'
+    _name.object_id               'name'
+    _type.purpose                 Describe
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Text
+
+save_
+
+save_forcefield.intramolecular_term
+
+    _definition.id                '_forcefield.intramolecular_term'
+    _alias.definition_id          '_forcefield_intramolecular_term'
+    _definition.update            2026-04-24
+    _description.text
+    ;
+    The energy evaluation method for intramolecular interactions.
+    ;
+    _name.category_id             '_forcefield'
+    _name.object_id               'intramolecular_term'
+    _type.purpose                 State
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Text
+    loop_                      
+        _enumeration_set.state 
+        _enumeration_set.detail
+        'Bonded Parameters'                      ' Set of parameters defining bond stretching, angles bending and dihedrals potentials.'
+        'Isolated Molecule Energy'               ' The enrgy of the molecule in the gas phase.'
+        'None'                                   ' Only intermolecular interactions are calculated.'
+        'Other'                                  ' Any other method.'
+
+save_
+
+save_forcefield.intramolecular_term_other
+
+    _definition.id                '_forcefield.intramolecular_term_other'
+    _alias.definition_id          '_forcefield_intramolecular_term_other'
+    _definition.update            2026-04-24
+    _description.text
+    ;
+    If `_forcefield.intramolecular_term` is "Other", the energy evaluation method for intramolecular interactions.
+    ;
+    _name.category_id             '_forcefield'
+    _name.object_id               'intramolecular_term_other'
+    _type.purpose                 Describe
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Text
+
+save_
+
+save_forcefield.electrostatic_term
+
+    _definition.id                '_forcefield.electrostatic_term'
+    _alias.definition_id          '_forcefield_electrostatic_term'
+    _definition.update            2026-04-24
+    _description.text
+    ;
+    Functional form of electrostatic interactions.
+    ;
+    _name.category_id             '_forcefield'
+    _name.object_id               'electrostatic_term'
+    _type.purpose                 State
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Text
+    loop_                      
+        _enumeration_set.state 
+        _enumeration_set.detail
+        'Point Charges'                          ' Fixed charge located at the atom centre.'
+        'Multipoles'                             ' Inclusion of higher order moments to better represent the charge distribution.'
+        'Other'                                  ' Any other method.'
+
+save_
+
+save_forcefield.electrostatic_term_other
+
+    _definition.id                '_forcefield.electrostatic_term_other'
+    _alias.definition_id          '_forcefield_electrostatic_term_other'
+    _definition.update            2026-04-24
+    _description.text
+    ;
+    If `_forcefield.electrostatic_term` is "Other", the functional form of electrostatic interactions.
+    ;
+    _name.category_id             '_forcefield'
+    _name.object_id               'electrostatic_term_other'
+    _type.purpose                 Describe
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Text
+
+save_
+
+save_forcefield.vdw_term
+
+    _definition.id                '_forcefield.vdw_term'
+    _alias.definition_id          '_forcefield_vdw_term'
+    _definition.update            2026-04-24
+    _description.text
+    ;
+    Functional form of van der Waals interactions.
+
+    Examples:
+    - LJ(C6-C12)
+    - LJ(epsilon-sigma)
+    - Buckingham
+    - ReaxFF Morse-Potential
+    - 14-7 function
+    ;
+    _name.category_id             '_forcefield'
+    _name.object_id               'vdw_term'
+    _type.purpose                 Describe
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Text
+
+save_
+
+save_forcefield.parameterization_term
+
+    _definition.id                '_forcefield.parameterization_term'
+    _alias.definition_id          '_forcefield_parameterization_term'
+    _definition.update            2026-04-24
+    _description.text
+    ;
+    In a loop, describe which term is parametrised with which approach. It can be "intramolecular", "electrostatic" or "vdw".
+
+    Examples:
+    "electrostatic"
+    ;
+    _name.category_id             '_forcefield'
+    _name.object_id               'parameterization_term'
+    _type.purpose                 State
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Text
+    loop_                      
+        _enumeration_set.state 
+        _enumeration_set.detail
+        'intramolecular'                         ' used to describe the parametrisation of the intramolecular term in a forcefield.'
+        'electrostatic'                          ' used to describe the parametrisation of the electrostatic term in a forcefield.'
+        'vdw'                                    ' '
+
+save_
+
+save_forcefield.parameterization_description
+
+    _definition.id                '_forcefield.parameterization_description'
+    _alias.definition_id          '_forcefield_parameterization_description'
+    _definition.update            2026-04-24
+    _description.text
+    ;
+    Briefly describes the primary method used to derive the intramolecular, electrostatic, dispersion/repulsion force field parameters.
+
+    Examples:
+    "Fitting to gas-phase QM data", "Transferable parameters based on atom types"
+    ;
+    _name.category_id             '_forcefield'
+    _name.object_id               'parameterization_description'
+    _type.purpose                 Describe
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Text
+
+save_
+
+save_forcefield.parameterization_method
+
+    _definition.id                '_forcefield.parameterization_method'
+    _alias.definition_id          '_forcefield_parameterization_method'
+    _definition.update            2026-04-24
+    _description.text
+    ;
+    The parametrisation method used (for example the exchange-correlation functional and basis set used in the gas-phase quantum mechanical calculations when fitting force field parameters) or database from which parameters are taken if no calculation is performed. As a rule of thumb, quantum mechanical methods should be described as <Functional>-<dispersion correction>/<basis set> (e.g. PBE-D3/cc-pvtz).
+
+    Examples:
+    - "MP2/6-31G(d,p)"
+    - "B3LYP/aug-cc-pVTZ"
+    - ...
+    ;
+    _name.category_id             '_forcefield'
+    _name.object_id               'parameterization_method'
+    _type.purpose                 Describe
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Text
+
+save_
+
+save_semiempirical.type
+
+    _definition.id                '_semiempirical.type'
+    _alias.definition_id          '_semiempirical_type'
+    _definition.update            2026-04-24
+    _description.text
+    ;
+    Type of semi-empirical method.
+    ;
+    _name.category_id             '_semiempirical'
+    _name.object_id               'type'
+    _type.purpose                 State
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Text
+    loop_                      
+        _enumeration_set.state 
+        _enumeration_set.detail
+        'Tight Binding'                          ' Methods using the tight binding approximation.'
+        'Self Consistent Tight Binding'          ' Methods using a self consistent tight binding formalism.'
+        'NDDO'                                   ' Mathods based on the Neglect of Differential Diatomic Overlap integral approximation.'
+        'Other'                                  ' Any other type.'
+
+save_
+
+save_semiempirical.method
+
+    _definition.id                '_semiempirical.method'
+    _alias.definition_id          '_semiempirical_method'
+    _definition.update            2026-04-24
+    _description.text
+    ;
+    Specifies the name of the Semi-Empirical method used.
+
+    Examples:
+    - AM1
+    - PM3
+    - PM6
+    - xTB
+    - ...
+    ;
+    _name.category_id             '_semiempirical'
+    _name.object_id               'method'
+    _type.purpose                 Describe
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Text
+
+save_
+
+save_semiempirical.electronic_parameters
+
+    _definition.id                '_semiempirical.electronic_parameters'
+    _alias.definition_id          '_semiempirical_electronic_parameters'
+    _definition.update            2026-04-24
+    _description.text
+    ;
+    The Slater-Koster tables or equivalent defining the atomic orbitals and pairwise element-element interactions.
+
+    Examples:
+    - mio
+    - 3ob
+    - ...
+    ;
+    _name.category_id             '_semiempirical'
+    _name.object_id               'electronic_parameters'
+    _type.purpose                 Describe
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Text
+
+save_
+
+save_semiempirical.repulsive_potential
+
+    _definition.id                '_semiempirical.repulsive_potential'
+    _alias.definition_id          '_semiempirical_repulsive_potential'
+    _definition.update            2026-04-24
+    _description.text
+    ;
+    When not included in the SK files, the repulsive potential term used.
+    ;
+    _name.category_id             '_semiempirical'
+    _name.object_id               'repulsive_potential'
+    _type.purpose                 Describe
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Text
+
+save_
+
+save_semiempirical.dispersion_correction
+
+    _definition.id                '_semiempirical.dispersion_correction'
+    _alias.definition_id          '_semiempirical_dispersion_correction'
+    _definition.update            2026-04-24
+    _description.text
+    ;
+    Dispersion corrections for semi-empirical methods.
+
+    Examples:
+    - Grimme-D2
+    - Grimme-D3
+    - Tkatchenko-Scheffler
+    - Many-body dispersion
+    - ...
+    ;
+    _name.category_id             '_semiempirical'
+    _name.object_id               'dispersion_correction'
+    _type.purpose                 Describe
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Text
+
+save_
+
+save_semiempirical.hydrogen_bond_correction
+
+    _definition.id                '_semiempirical.hydrogen_bond_correction'
+    _alias.definition_id          '_semiempirical_hydrogen_bond_correction'
+    _definition.update            2026-04-24
+    _description.text
+    ;
+    H-bond corrections for semi-empirical methods.
+
+    Examples:
+    - H+
+    - H4
+    - ...
+    ;
+    _name.category_id             '_semiempirical'
+    _name.object_id               'hydrogen_bond_correction'
+    _type.purpose                 Describe
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Text
+
+save_
+
+save_semiempirical.halogen_bond_correction
+
+    _definition.id                '_semiempirical.halogen_bond_correction'
+    _alias.definition_id          '_semiempirical_halogen_bond_correction'
+    _definition.update            2026-04-24
+    _description.text
+    ;
+    Correction term for halogen bonds interactions.
+
+    Examples:
+    - X
+    ;
+    _name.category_id             '_semiempirical'
+    _name.object_id               'halogen_bond_correction'
+    _type.purpose                 Describe
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Text
+
+save_
+
+save_wavefunction.exchange_correlation_functional
+
+    _definition.id                '_wavefunction.exchange_correlation_functional'
+    _alias.definition_id          '_wavefunction_exchange_correlation_functional'
+    _definition.update            2026-04-24
+    _description.text
+    ;
+    Specifies the name of functional used.
+
+    Examples:
+    - HF
+    - MP2
+    - CC
+    - ...
+    ;
+    _name.category_id             '_wavefunction'
+    _name.object_id               'exchange_correlation_functional'
+    _type.purpose                 Describe
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Text
+
+save_
+
+save_wavefunction.basis_set_type
+
+    _definition.id                '_wavefunction.basis_set_type'
+    _alias.definition_id          '_wavefunction_basis_set_type'
+    _definition.update            2026-04-24
+    _description.text
+    ;
+    Defines the type of basis used.
+
+    Examples:
+    - GTH
+    - NAO
+    - ...
+    ;
+    _name.category_id             '_wavefunction'
+    _name.object_id               'basis_set_type'
+    _type.purpose                 Describe
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Text
+
+save_
+
+save_ml_potential.method
+
+    _definition.id                '_ml_potential.method'
+    _alias.definition_id          '_ml_potential_method'
+    _definition.update            2026-04-24
+    _description.text
+    ;
+    Specifies the name of the ML Potential used. In case of ML parametrisation of classical forcefields, refer to the Forcefields dictionaries.
+
+    Examples:
+    - ANI
+    - MACE
+    - UMA
+    - ...
+    ;
+    _name.category_id             '_ml_potential'
+    _name.object_id               'method'
+    _type.purpose                 Describe
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Text
+
+save_
+
+save_ml_potential.model
+
+    _definition.id                '_ml_potential.model'
+    _alias.definition_id          '_ml_potential_model'
+    _definition.update            2026-04-24
+    _description.text
+    ;
+    The specific model used to rank structures.
+
+    Examples:
+    - 2x
+    - OFF24
+    - m-1p1
+    - ...
+    ;
+    _name.category_id             '_ml_potential'
+    _name.object_id               'model'
+    _type.purpose                 Describe
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Text
+
+save_
+
+save_ml_potential.precision
+
+    _definition.id                '_ml_potential.precision'
+    _alias.definition_id          '_ml_potential_precision'
+    _definition.update            2026-04-24
+    _description.text
+    ;
+    Float precision in calculations.
+
+    Examples:
+    - float32
+    - float64
+    ;
+    _name.category_id             '_ml_potential'
+    _name.object_id               'precision'
+    _type.purpose                 Describe
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Text
+
+save_
+
+save_ml_potential.training_set
+
+    _definition.id                '_ml_potential.training_set'
+    _alias.definition_id          '_ml_potential_training_set'
+    _definition.update            2026-04-24
+    _description.text
+    ;
+    Dataset used for the training of the ML potential.
+    ;
+    _name.category_id             '_ml_potential'
+    _name.object_id               'training_set'
+    _type.purpose                 Describe
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Text
+
+save_
+
+save_ml_potential.training_set_method
+
+    _definition.id                '_ml_potential.training_set_method'
+    _alias.definition_id          '_ml_potential_training_set_method'
+    _definition.update            2026-04-24
+    _description.text
+    ;
+    Either a short description of the methods used to obtain ground values (`PBE`) or a datablock ID describing the method in detail.
+    ;
+    _name.category_id             '_ml_potential'
+    _name.object_id               'training_set_method'
+    _type.purpose                 Describe
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Text
+
+save_
+
+save_ml_potential.number_of_parameters
+
+    _definition.id                '_ml_potential.number_of_parameters'
+    _alias.definition_id          '_ml_potential_number_of_parameters'
+    _definition.update            2026-04-24
+    _description.text
+    ;
+    Number of model parameters.
+    ;
+    _name.category_id             '_ml_potential'
+    _name.object_id               'number_of_parameters'
+    _type.purpose                 Describe
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Text
+
+save_
+
+save_free_energy.method
+
+    _definition.id                '_free_energy.method'
+    _alias.definition_id          '_free_energy_method'
+    _definition.update            2026-04-24
+    _description.text
+    ;
+    Specifies the name of the approach used to calculate free energies.
+
+    Examples:
+    - HA
+    - QHA
+    - PSCP
+    - EC
+    - ...
+    ;
+    _name.category_id             '_free_energy'
+    _name.object_id               'method'
+    _type.purpose                 Describe
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Text
+
+save_
+
+save_free_energy.reference_temperature
+
+    _definition.id                '_free_energy.reference_temperature'
+    _alias.definition_id          '_free_energy_reference_temperature'
+    _definition.update            2026-04-24
+    _description.text
+    ;
+    The temperature or list of temperatures at which free energies are calculated.
+
+    Examples:
+    [ 100.0, 200.0, 300.0 ]
+    ;
+    _name.category_id             '_free_energy'
+    _name.object_id               'reference_temperature'
+    _type.purpose                 Number
+    _type.source                  Assigned
+    _type.container               Array
+    _type.contents                Range
+    _units.code                   'K'
+    _enumeration.range            0.:
+
+save_
+
+save_free_energy.reference_pressure
+
+    _definition.id                '_free_energy.reference_pressure'
+    _alias.definition_id          '_free_energy_reference_pressure'
+    _definition.update            2026-04-24
+    _description.text
+    ;
+    The pressure or list of pressures at which free energies are calculated.
+
+    Examples:
+    [ 100000.0, 200000.0 ]
+    ;
+    _name.category_id             '_free_energy'
+    _name.object_id               'reference_pressure'
+    _type.purpose                 Number
+    _type.source                  Assigned
+    _type.container               Array
+    _type.contents                Range
+    _units.code                   'Pa'
+    _enumeration.range            0.:
+
+save_
+
+save_theoretical_structure.temperature
+
+    _definition.id                '_theoretical_structure.temperature'
+    _alias.definition_id          '_theoretical_structure_temperature'
+    _definition.update            2026-04-24
+    _description.text
+    ;
+    The temperature at which the energy and other properties of the theoretical structure were calculated.
+
+    Examples:
+    298.15
+    ;
+    _name.category_id             '_theoretical_structure'
+    _name.object_id               'temperature'
+    _type.purpose                 Number
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Range
+    _units.code                   'K'
+    _enumeration.range            0.:
+
+save_
+
+save_theoretical_structure.pressure
+
+    _definition.id                '_theoretical_structure.pressure'
+    _alias.definition_id          '_theoretical_structure_pressure'
+    _definition.update            2026-04-24
+    _description.text
+    ;
+    The pressure at which the energy and other properties of the theoretical structure were calculated.
+
+    Examples:
+    101325.0
+    ;
+    _name.category_id             '_theoretical_structure'
+    _name.object_id               'pressure'
+    _type.purpose                 Number
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Real
+    _units.code                   'Pa'
+
+save_
+
+save_theoretical_structure.calculated_density
+
+    _definition.id                '_theoretical_structure.calculated_density'
+    _alias.definition_id          '_theoretical_structure_calculated_density'
+    _definition.update            2026-04-24
+    _description.text
+    ;
+    The calculated density of the crystal.
+
+    Examples:
+    1.420
+    ;
+    _name.category_id             '_theoretical_structure'
+    _name.object_id               'calculated_density'
+    _type.purpose                 Number
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Range
+    _units.code                   'g cm^-3'
+    _enumeration.range            0.:
+
+save_
+
+save_theoretical_structure.total_energy
+
+    _definition.id                '_theoretical_structure.total_energy'
+    _alias.definition_id          '_theoretical_structure_total_energy'
+    _definition.update            2026-04-24
+    _description.text
+    ;
+    The total energy of the theoretical structure, i.e. energy relative to all of the nuclei and electrons separated to an infinite distance.
+
+    Examples:
+    -1500.5
+    ;
+    _name.category_id             '_theoretical_structure'
+    _name.object_id               'total_energy'
+    _type.purpose                 Number
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Real
+    _units.code                   'kJ mol^-1'
+
+save_
+
+save_theoretical_structure.absolute_lattice_energy
+
+    _definition.id                '_theoretical_structure.absolute_lattice_energy'
+    _alias.definition_id          '_theoretical_structure_absolute_lattice_energy'
+    _definition.update            2026-04-24
+    _description.text
+    ;
+    The absolute lattice energy of the crystal, i.e. energy relative to all the molecules separated to an infinite distance.
+
+    Examples:
+    -1600.8
+    ;
+    _name.category_id             '_theoretical_structure'
+    _name.object_id               'absolute_lattice_energy'
+    _type.purpose                 Number
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Real
+    _units.code                   'kJ mol^-1'
+
+save_
+
+save_theoretical_structure.absolute_free_energy
+
+    _definition.id                '_theoretical_structure.absolute_free_energy'
+    _alias.definition_id          '_theoretical_structure_absolute_free_energy'
+    _definition.update            2026-04-24
+    _description.text
+    ;
+    The absolute free energy of the crystal.
+
+    Examples:
+    -1450.2
+    ;
+    _name.category_id             '_theoretical_structure'
+    _name.object_id               'absolute_free_energy'
+    _type.purpose                 Number
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Real
+    _units.code                   'kJ mol^-1'
+
+save_
+
+save_theoretical_structure.free_energy_correction
+
+    _definition.id                '_theoretical_structure.free_energy_correction'
+    _alias.definition_id          '_theoretical_structure_free_energy_correction'
+    _definition.update            2026-04-24
+    _description.text
+    ;
+    The correction applied to the lattice energy to obtain the free energy, accounting for vibrational and other thermal effects.
+
+    Examples:
+    50.6
+    ;
+    _name.category_id             '_theoretical_structure'
+    _name.object_id               'free_energy_correction'
+    _type.purpose                 Number
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Real
+    _units.code                   'kJ mol^-1'
+
+save_
+
+save_theoretical_structure.relative_lattice_energy
+
+    _definition.id                '_theoretical_structure.relative_lattice_energy'
+    _alias.definition_id          '_theoretical_structure_relative_lattice_energy'
+    _definition.update            2026-04-24
+    _description.text
+    ;
+    The lattice energy of the theoretical structure relative to the lowest energy structure found in the CSP.
+
+    Examples:
+    0.0, 5.2
+    ;
+    _name.category_id             '_theoretical_structure'
+    _name.object_id               'relative_lattice_energy'
+    _type.purpose                 Number
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Range
+    _units.code                   'kJ mol^-1'
+    _enumeration.range            0.:
+
+save_
+
+save_theoretical_structure.relative_free_energy
+
+    _definition.id                '_theoretical_structure.relative_free_energy'
+    _alias.definition_id          '_theoretical_structure_relative_free_energy'
+    _definition.update            2026-04-24
+    _description.text
+    ;
+    The free energy of the theoretical structure relative to the lowest energy structure found in the CSP.
+
+    Examples:
+    0.0, 5.2
+    ;
+    _name.category_id             '_theoretical_structure'
+    _name.object_id               'relative_free_energy'
+    _type.purpose                 Number
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Range
+    _units.code                   'kJ mol^-1'
+    _enumeration.range            0.:
+
+save_
+
+save_theoretical_structure.energy_uncertainty
+
+    _definition.id                '_theoretical_structure.energy_uncertainty'
+    _alias.definition_id          '_theoretical_structure_energy_uncertainty'
+    _definition.update            2026-04-24
+    _description.text
+    ;
+    An estimate of the uncertainty associated with the calculated energy of the theoretical structure.
+
+    Examples:
+    0.1
+    ;
+    _name.category_id             '_theoretical_structure'
+    _name.object_id               'energy_uncertainty'
+    _type.purpose                 Number
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Range
+    _units.code                   'kJ mol^-1'
+    _enumeration.range            0.:
+
+save_
+
+save_theoretical_structure.score
+
+    _definition.id                '_theoretical_structure.score'
+    _alias.definition_id          '_theoretical_structure_score'
+    _definition.update            2026-04-24
+    _description.text
+    ;
+    To allow for methods that may rank by criteria other than energies (e.g., based on stability or other desired properties).
+
+    Examples:
+    1., 0.3333, 0.01
+    ;
+    _name.category_id             '_theoretical_structure'
+    _name.object_id               'score'
+    _type.purpose                 Number
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Real
+
+save_
+
+save_theoretical_structure.rank
+
+    _definition.id                '_theoretical_structure.rank'
+    _alias.definition_id          '_theoretical_structure_rank'
+    _definition.update            2026-04-24
+    _description.text
+    ;
+    The rank of the structure when ordered by chosen criteria where 1 is considered to be the most favorable or likely structure.
+
+    Examples:
+    2, 7, 12
+    ;
+    _name.category_id             '_theoretical_structure'
+    _name.object_id               'rank'
+    _type.purpose                 Number
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Range
+    _enumeration.range            1:
+
+save_
+
+save_theoretical_structure.cluster_centre_id
+
+    _definition.id                '_theoretical_structure.cluster_centre_id'
+    _alias.definition_id          '_theoretical_structure_cluster_centre_id'
+    _definition.update            2026-04-24
+    _description.text
+    ;
+    If the structure has been identified as duplicate in a group, the uniqueidentifier of the structure that is the cluster centre of that group.
+    ;
+    _name.category_id             '_theoretical_structure'
+    _name.object_id               'cluster_centre_id'
+    _type.purpose                 Encode
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Code
+
+save_
+
+save_theoretical_structure.cluster_centre_description
+
+    _definition.id                '_theoretical_structure.cluster_centre_description'
+    _alias.definition_id          '_theoretical_structure_cluster_centre_description'
+    _definition.update            2026-04-24
+    _description.text
+    ;
+    If the structure has been identified as duplicate in a group, the label of the structure that is the cluster centre of that group.
+    ;
+    _name.category_id             '_theoretical_structure'
+    _name.object_id               'cluster_centre_description'
+    _type.purpose                 Describe
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Text
+
+save_
+
+save_theoretical_structure.experimental_match_id
+
+    _definition.id                '_theoretical_structure.experimental_match_id'
+    _alias.definition_id          '_theoretical_structure_experimental_match_id'
+    _definition.update            2026-04-24
+    _description.text
+    ;
+    If the theoretical structure matches an experimental structure, specify the (possibly unique) identifier of the latter.
+    ;
+    _name.category_id             '_theoretical_structure'
+    _name.object_id               'experimental_match_id'
+    _type.purpose                 Encode
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Code
+
+save_
+
+save_theoretical_structure.experimental_match_database
+
+    _definition.id                '_theoretical_structure.experimental_match_database'
+    _alias.definition_id          '_theoretical_structure_experimental_match_database'
+    _definition.update            2026-04-24
+    _description.text
+    ;
+    If the theoretical structure matches an experimental structure, specify the database or location the latter.
+    ;
+    _name.category_id             '_theoretical_structure'
+    _name.object_id               'experimental_match_database'
+    _type.purpose                 Describe
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Text
+
+save_
+
+save_theoretical_structure.experimental_match_description
+
+    _definition.id                '_theoretical_structure.experimental_match_description'
+    _alias.definition_id          '_theoretical_structure_experimental_match_description'
+    _definition.update            2026-04-24
+    _description.text
+    ;
+    If the theoretical structure matches an experimental structure, this data field allows to include any additional information.
+    ;
+    _name.category_id             '_theoretical_structure'
+    _name.object_id               'experimental_match_description'
+    _type.purpose                 Describe
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Text
+
+save_
+
+save_theoretical_structure.reference_temperature
+
+    _definition.id                '_theoretical_structure.reference_temperature'
+    _alias.definition_id          '_theoretical_structure_reference_temperature'
+    _definition.update            2026-04-24
+    _description.text
+    ;
+    In case of free-energy calculations, specify the reference temperature.
+    ;
+    _name.category_id             '_theoretical_structure'
+    _name.object_id               'reference_temperature'
+    _type.purpose                 Number
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Range
+    _units.code                   'K'
+    _enumeration.range            0.:
+
+save_
+
+save_theoretical_structure.reference_pressure
+
+    _definition.id                '_theoretical_structure.reference_pressure'
+    _alias.definition_id          '_theoretical_structure_reference_pressure'
+    _definition.update            2026-04-24
+    _description.text
+    ;
+    In case of free-energy calculations, specify the reference pressure.
+    ;
+    _name.category_id             '_theoretical_structure'
+    _name.object_id               'reference_pressure'
+    _type.purpose                 Number
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Range
+    _units.code                   'Pa'
+    _enumeration.range            0.:
+
+save_
+
+save_theoretical_structure.csp_input_system_description
+
+    _definition.id                '_theoretical_structure.csp_input_system_description'
+    _alias.definition_id          '_theoretical_structure_csp_input_system_description'
+    _definition.update            2026-04-24
+    _description.text
+    ;
+    Human-readable description of the input system data block.
+    ;
+    _name.category_id             '_theoretical_structure'
+    _name.object_id               'csp_input_system_description'
+    _type.purpose                 Describe
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Text
+
+save_
+
+save_theoretical_structure.csp_input_system_id
+
+    _definition.id                '_theoretical_structure.csp_input_system_id'
+    _alias.definition_id          '_theoretical_structure_csp_input_system_id'
+    _definition.update            2026-04-24
+    _description.text
+    ;
+    Identifier of the input system data block.
+    ;
+    _name.category_id             '_theoretical_structure'
+    _name.object_id               'csp_input_system_id'
+    _type.purpose                 Encode
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Code
+
+save_
+
+save_theoretical_structure.csp_workflow_description
+
+    _definition.id                '_theoretical_structure.csp_workflow_description'
+    _alias.definition_id          '_theoretical_structure_csp_workflow_description'
+    _definition.update            2026-04-24
+    _description.text
+    ;
+    Human-readable description of the workflow data block.
+    ;
+    _name.category_id             '_theoretical_structure'
+    _name.object_id               'csp_workflow_description'
+    _type.purpose                 Describe
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Text
+
+save_
+
+save_theoretical_structure.csp_workflow_id
+
+    _definition.id                '_theoretical_structure.csp_workflow_id'
+    _alias.definition_id          '_theoretical_structure_csp_workflow_id'
+    _definition.update            2026-04-24
+    _description.text
+    ;
+    Identifier of the workflow data block.
+    ;
+    _name.category_id             '_theoretical_structure'
+    _name.object_id               'csp_workflow_id'
+    _type.purpose                 Encode
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Code
+
+save_
+
+save_theoretical_structure.csp_generation_stage_description
+
+    _definition.id                '_theoretical_structure.csp_generation_stage_description'
+    _alias.definition_id          '_theoretical_structure_csp_generation_stage_description'
+    _definition.update            2026-04-24
+    _description.text
+    ;
+    Human-readable description of the structure generation method data block.
+    ;
+    _name.category_id             '_theoretical_structure'
+    _name.object_id               'csp_generation_stage_description'
+    _type.purpose                 Describe
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Text
+
+save_
+
+save_theoretical_structure.csp_generation_stage_id
+
+    _definition.id                '_theoretical_structure.csp_generation_stage_id'
+    _alias.definition_id          '_theoretical_structure_csp_generation_stage_id'
+    _definition.update            2026-04-24
+    _description.text
+    ;
+    Identifier of the structure generation method data block.
+    ;
+    _name.category_id             '_theoretical_structure'
+    _name.object_id               'csp_generation_stage_id'
+    _type.purpose                 Encode
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Code
+
+save_
+
+save_theoretical_structure.csp_ranking_stage_description
+
+    _definition.id                '_theoretical_structure.csp_ranking_stage_description'
+    _alias.definition_id          '_theoretical_structure_csp_ranking_stage_description'
+    _definition.update            2026-04-24
+    _description.text
+    ;
+    Human-readable description of the structure ranking method data block.
+    ;
+    _name.category_id             '_theoretical_structure'
+    _name.object_id               'csp_ranking_stage_description'
+    _type.purpose                 Describe
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Text
+
+save_
+
+save_theoretical_structure.csp_ranking_stage_id
+
+    _definition.id                '_theoretical_structure.csp_ranking_stage_id'
+    _alias.definition_id          '_theoretical_structure_csp_ranking_stage_id'
+    _definition.update            2026-04-24
+    _description.text
+    ;
+    Identifier of the structure ranking method data block.
+    ;
+    _name.category_id             '_theoretical_structure'
+    _name.object_id               'csp_ranking_stage_id'
+    _type.purpose                 Encode
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Code
+
+save_
+
+save_theoretical_structure.csp_step_description
+
+    _definition.id                '_theoretical_structure.csp_step_description'
+    _alias.definition_id          '_theoretical_structure_csp_step_description'
+    _definition.update            2026-04-24
+    _description.text
+    ;
+    Human-readable description of the intermediate step (e.g. a clustering algorithm) data block that was applied to this structure.
+    ;
+    _name.category_id             '_theoretical_structure'
+    _name.object_id               'csp_step_description'
+    _type.purpose                 Describe
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Text
+
+save_
+
+save_theoretical_structure.csp_step_id
+
+    _definition.id                '_theoretical_structure.csp_step_id'
+    _alias.definition_id          '_theoretical_structure_csp_step_id'
+    _definition.update            2026-04-24
+    _description.text
+    ;
+    Identifier of the intermediate step data block that was applied to this structure.
+    ;
+    _name.category_id             '_theoretical_structure'
+    _name.object_id               'csp_step_id'
+    _type.purpose                 Encode
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Code
+
+save_
+
+save_theoretical_structure.csp_previous_stage_structure_description
+
+    _definition.id                '_theoretical_structure.csp_previous_stage_structure_description'
+    _alias.definition_id          '_theoretical_structure_csp_previous_stage_structure_description'
+    _definition.update            2026-04-24
+    _description.text
+    ;
+    Human-readable description of the data block of the structure from previous stage. This is the structure used as input for the current stage.
+    ;
+    _name.category_id             '_theoretical_structure'
+    _name.object_id               'csp_previous_stage_structure_description'
+    _type.purpose                 Describe
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Text
+
+save_
+
+save_theoretical_structure.csp_previous_stage_structure_id
+
+    _definition.id                '_theoretical_structure.csp_previous_stage_structure_id'
+    _alias.definition_id          '_theoretical_structure_csp_previous_stage_structure_id'
+    _definition.update            2026-04-24
+    _description.text
+    ;
+    Identifier of the data block of the structure from previous stage.
+    ;
+    _name.category_id             '_theoretical_structure'
+    _name.object_id               'csp_previous_stage_structure_id'
+    _type.purpose                 Encode
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Code
+
+save_
+
+save_theoretical_structure.csp_initial_spacegroup_number
+
+    _definition.id                '_theoretical_structure.csp_initial_spacegroup_number'
+    _alias.definition_id          '_theoretical_structure_csp_initial_spacegroup_number'
+    _definition.update            2026-04-24
+    _description.text
+    ;
+    The spacegroup of the structure at the initial CSP stage, before any geometry optimisation.
+
+    Examples:
+    14
+    ;
+    _name.category_id             '_theoretical_structure'
+    _name.object_id               'csp_initial_spacegroup_number'
+    _type.purpose                 Describe
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Text
+
+save_
+
+save_dft.monomer_correction_functional
+
+    _definition.id                '_dft.monomer_correction_functional'
+    _alias.definition_id          '_dft_monomer_correction_functional'
+    _definition.update            2026-04-24
+    _description.text
+    ;
+    Functional used for the correction to the intramolecular conformational energy.
+
+    Examples:
+    MP2
+    ;
+    _name.category_id             '_dft'
+    _name.object_id               'monomer_correction_functional'
+    _type.purpose                 Describe
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Text
+
+save_
+
+save_dft.monomer_correction_basis_set
+
+    _definition.id                '_dft.monomer_correction_basis_set'
+    _alias.definition_id          '_dft_monomer_correction_basis_set'
+    _definition.update            2026-04-24
+    _description.text
+    ;
+    Basis set used for the correction to the intramolecular conformational energy.
+
+    Examples:
+    cc-pvdz
+    ;
+    _name.category_id             '_dft'
+    _name.object_id               'monomer_correction_basis_set'
+    _type.purpose                 Describe
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Text
+
+save_
+
+save_dft.monomer_correction_dispersion
+
+    _definition.id                '_dft.monomer_correction_dispersion'
+    _alias.definition_id          '_dft_monomer_correction_dispersion'
+    _definition.update            2026-04-24
+    _description.text
+    ;
+    Dispersion correction used for the correction to the intramolecular conformational energy.
+
+    Examples:
+    D3
+    ;
+    _name.category_id             '_dft'
+    _name.object_id               'monomer_correction_dispersion'
+    _type.purpose                 Describe
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Text
+
+save_
+
+save_forcefield.version
+
+    _definition.id                '_forcefield.version'
+    _alias.definition_id          '_forcefield_version'
+    _definition.update            2026-04-24
+    _description.text
+    ;
+    Version of the force field
+    ;
+    _name.category_id             '_forcefield'
+    _name.object_id               'version'
+    _type.purpose                 Describe
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Text
+
+save_
+
+save_forcefield.bond_type
+
+    _definition.id                '_forcefield.bond_type'
+    _alias.definition_id          '_forcefield_bond_type'
+    _definition.update            2026-04-24
+    _description.text
+    ;
+    Functional form of the bond stretching potential
+
+    Examples:
+    Harmonic, Morse, Cubic bond stretching potential, ReaxFF Bond Term etc
+    ;
+    _name.category_id             '_forcefield'
+    _name.object_id               'bond_type'
+    _type.purpose                 Describe
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Text
+
+save_
+
+save_forcefield.angle_type
+
+    _definition.id                '_forcefield.angle_type'
+    _alias.definition_id          '_forcefield_angle_type'
+    _definition.update            2026-04-24
+    _description.text
+    ;
+    Functional form of the angle bending potential
+
+    Examples:
+    Harmonic, Cosine, Restricted bending, Linear, ReaxFF Angle Term, etc
+    ;
+    _name.category_id             '_forcefield'
+    _name.object_id               'angle_type'
+    _type.purpose                 Describe
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Text
+
+save_
+
+save_forcefield.improper_type
+
+    _definition.id                '_forcefield.improper_type'
+    _alias.definition_id          '_forcefield_improper_type'
+    _definition.update            2026-04-24
+    _description.text
+    ;
+    Functional form of the improper dihedral potential
+
+    Examples:
+    Harmonic
+    ;
+    _name.category_id             '_forcefield'
+    _name.object_id               'improper_type'
+    _type.purpose                 Describe
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Text
+
+save_
+
+save_forcefield.dihedral_type
+
+    _definition.id                '_forcefield.dihedral_type'
+    _alias.definition_id          '_forcefield_dihedral_type'
+    _definition.update            2026-04-24
+    _description.text
+    ;
+    Functional form of the dihedral torsional potential
+
+    Examples:
+    Periodic, Ryckaert-Bellemans, Fourier, ReaxFF Torsion Term
+    ;
+    _name.category_id             '_forcefield'
+    _name.object_id               'dihedral_type'
+    _type.purpose                 Describe
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Text
+
+save_
+
+save_forcefield.cross_terms
+
+    _definition.id                '_forcefield.cross_terms'
+    _alias.definition_id          '_forcefield_cross_terms'
+    _definition.update            2026-04-24
+    _description.text
+    ;
+    Specifies the inclusion and functional form of cross terms (e.g., bond-angle, Urey-Bradley)
+    ;
+    _name.category_id             '_forcefield'
+    _name.object_id               'cross_terms'
+    _type.purpose                 Describe
+    _type.source                  Assigned
+    _type.container               Table
+    _type.contents                Text
+
+save_
+
+save_forcefield.1-4_pairs
+
+    _definition.id                '_forcefield.1-4_pairs'
+    _alias.definition_id          '_forcefield_1-4_pairs'
+    _definition.update            2026-04-24
+    _description.text
+    ;
+    Indicates whether 1-4 interactions (Lennard-Jones and electrostatic) are scaled
+
+    Examples:
+    True/False
+    ;
+    _name.category_id             '_forcefield'
+    _name.object_id               '1-4_pairs'
+    _type.purpose                 State
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Text
+    loop_                      
+        _enumeration_set.state 
+        _enumeration_set.detail
+        'True'                                   ' .'
+        'False'                                  ' .'
+
+save_
+
+save_forcefield.fudgeLJ
+
+    _definition.id                '_forcefield.fudgeLJ'
+    _alias.definition_id          '_forcefield_fudgeLJ'
+    _definition.update            2026-04-24
+    _description.text
+    ;
+    Scaling factor applied to 1-4 Lennard-Jones interactions
+
+    Examples:
+    0.5
+    ;
+    _name.category_id             '_forcefield'
+    _name.object_id               'fudgeLJ'
+    _type.purpose                 Number
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Range
+    _enumeration.range            0.:1.
+
+save_
+
+save_forcefield.fudgeQQ
+
+    _definition.id                '_forcefield.fudgeQQ'
+    _alias.definition_id          '_forcefield_fudgeQQ'
+    _definition.update            2026-04-24
+    _description.text
+    ;
+    Scaling factor applied to 1-4 electrostatic interactions
+
+    Examples:
+    0.5
+    ;
+    _name.category_id             '_forcefield'
+    _name.object_id               'fudgeQQ'
+    _type.purpose                 Number
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Range
+    _enumeration.range            0.:1.
+
+save_
+
+save_forcefield.charges_generation
+
+    _definition.id                '_forcefield.charges_generation'
+    _alias.definition_id          '_forcefield_charges_generation'
+    _definition.update            2026-04-24
+    _description.text
+    ;
+    Description of the method used to generate atomic partial charges
+
+    Examples:
+    BCC-AM1, Mulliken-AM1, etc.
+    ;
+    _name.category_id             '_forcefield'
+    _name.object_id               'charges_generation'
+    _type.purpose                 Describe
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Text
+
+save_
+
+save_forcefield.multipoles_generation
+
+    _definition.id                '_forcefield.multipoles_generation'
+    _alias.definition_id          '_forcefield_multipoles_generation'
+    _definition.update            2026-04-24
+    _description.text
+    ;
+    Description of the method used to generate atomic multipoles
+
+    Examples:
+    DMA
+    ;
+    _name.category_id             '_forcefield'
+    _name.object_id               'multipoles_generation'
+    _type.purpose                 Describe
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Text
+
+save_
+
+save_forcefield.multipole_max_rank
+
+    _definition.id                '_forcefield.multipole_max_rank'
+    _alias.definition_id          '_forcefield_multipole_max_rank'
+    _definition.update            2026-04-24
+    _description.text
+    ;
+    The rank of the multipoles
+
+    Examples:
+    Hexadecapole
+    ;
+    _name.category_id             '_forcefield'
+    _name.object_id               'multipole_max_rank'
+    _type.purpose                 Describe
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Text
+
+save_
+
+save_forcefield.long_range_electrostatic
+
+    _definition.id                '_forcefield.long_range_electrostatic'
+    _alias.definition_id          '_forcefield_long_range_electrostatic'
+    _definition.update            2026-04-24
+    _description.text
+    ;
+    Method used to treat long-range electrostatic interactions
+
+    Examples:
+    Ewald, PME, etc.
+    ;
+    _name.category_id             '_forcefield'
+    _name.object_id               'long_range_electrostatic'
+    _type.purpose                 Describe
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Text
+
+save_
+
+save_forcefield.polarization
+
+    _definition.id                '_forcefield.polarization'
+    _alias.definition_id          '_forcefield_polarization'
+    _definition.update            2026-04-24
+    _description.text
+    ;
+    Method used to model electronic polarization
+
+    Examples:
+    Thole, Anharmonic
+    ;
+    _name.category_id             '_forcefield'
+    _name.object_id               'polarization'
+    _type.purpose                 Describe
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Text
+
+save_
+
+save_forcefield.hb_correction
+
+    _definition.id                '_forcefield.hb_correction'
+    _alias.definition_id          '_forcefield_hb_correction'
+    _definition.update            2026-04-24
+    _description.text
+    ;
+    Hydrogen bond correction term.
+    ;
+    _name.category_id             '_forcefield'
+    _name.object_id               'hb_correction'
+    _type.purpose                 Describe
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Text
+
+save_
+
+save_forcefield.lone_pair_correction
+
+    _definition.id                '_forcefield.lone_pair_correction'
+    _alias.definition_id          '_forcefield_lone_pair_correction'
+    _definition.update            2026-04-24
+    _description.text
+    ;
+    Lone pair correction term.
+    ;
+    _name.category_id             '_forcefield'
+    _name.object_id               'lone_pair_correction'
+    _type.purpose                 Describe
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Text
+
+save_
+
+save_forcefield.long_range_vdw
+
+    _definition.id                '_forcefield.long_range_vdw'
+    _alias.definition_id          '_forcefield_long_range_vdw'
+    _definition.update            2026-04-24
+    _description.text
+    ;
+    Method used to treat long-range van der Waals interactions
+
+    Examples:
+    Energy, Pressure, EnergyPressure dispersion correction, LJ PME
+    ;
+    _name.category_id             '_forcefield'
+    _name.object_id               'long_range_vdw'
+    _type.purpose                 Describe
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Text
+
+save_
+
+save_forcefield.combination_rule
+
+    _definition.id                '_forcefield.combination_rule'
+    _alias.definition_id          '_forcefield_combination_rule'
+    _definition.update            2026-04-24
+    _description.text
+    ;
+    Rule used to calculate Lennard-Jones cross-interaction parameters
+
+    Examples:
+    Geometric, Arithmetic, Lorentz-Berthelot
+    ;
+    _name.category_id             '_forcefield'
+    _name.object_id               'combination_rule'
+    _type.purpose                 Describe
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Text
+
+save_

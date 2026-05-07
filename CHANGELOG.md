@@ -111,13 +111,13 @@ loop_
   Old version:
 
   | Group | Category   | Data Field         |
-        |-------|------------|--------------------|
+  |-------|------------|--------------------|
   | CSP   | Data Block | `class`            |
 
   New version:
 
   | Group  | Data Field                    |
-        |--------|-------------------------------|
+  |--------|-------------------------------|
   | `_csp` | `data_block_class`            |
 
 - "Definition", "Constraints" and "Examples" columns changed to improved clarity.

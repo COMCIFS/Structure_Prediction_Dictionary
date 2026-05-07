@@ -589,7 +589,7 @@ save_dft.dispersion_correction
     _definition.update            2026-05-07
     _description.text
 ;
-The Van der Waals correction used.
+The van der Waals correction used.
 ;
     _name.category_id             'dft'
     _name.object_id               'dispersion_correction'

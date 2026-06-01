@@ -40,3 +40,4 @@ as work-in-progress.
 | `_dft` | `monomer_correction_functional` | char | Functional used for the correction to the intramolecular conformational energy.            | Free Text   |       | "MP2"     |
 | `_dft` | `monomer_correction_basis_set`  | char | Basis set used for the correction to the intramolecular conformational energy.             | Free Text   |       | "cc-pvdz" |
 | `_dft` | `monomer_correction_dispersion` | char | Dispersion correction used for the correction to the intramolecular conformational energy. | Free Text   |       | "D3"      |
+| `_dft` | `zero_point_energy`             | bool | It defines if the total energy includes the zero point energy (ZPE) correction.            |             |       |           |

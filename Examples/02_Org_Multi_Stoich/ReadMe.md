@@ -26,7 +26,7 @@ Only the latter will be used to link output structures to the input datablock.
 
 The input then describe the two molecules (smiles, atoms and bonds) and finally defines the three stoichiometries
 analysed in the search.
-As stoichiometries are not variables in the optimisation (the `_csp.input_composition_calculation` is set to `"fixed"`),
+As stoichiometries are not variables in the optimisation (the `_csp_input.composition_calculation` is set to `"fixed"`),
 this is equivalent to have three different input files each one with a single stoichiometry.
 
 ---
@@ -75,7 +75,7 @@ Please note that only the unique ID is mandatory for this purpose, the descripti
 humans.
 For free energy calculations, also reference temperature and pressure must be specified.
 As different files have been used to describe the input and workflow, the path to this is added with the data field
-`_csp.data_block_additional_files`.
+`_csp_data_block.additional_files`.
 This would not be needed if methodology and output structures are all in a single file.
 
 Next, we find structure properties such as energy and rank.

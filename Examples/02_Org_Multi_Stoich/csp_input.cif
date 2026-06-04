@@ -1,27 +1,27 @@
 data_cbn_tmp
 # Datablock Details
-_csp.data_block_class       "Input"
-_csp.data_block_id          2a2611e3-2021-4b03-a7c6-0ef71239008f
-_csp.data_block_description input1
+_csp_data_block.class       "Input"
+_csp_data_block.id          2a2611e3-2021-4b03-a7c6-0ef71239008f
+_csp_data_block.description input1
 
-_csp.input_name             cannabinol_tetramethylpyrazine
-_csp.input_identifier       BT-XXX
+_csp_input.name             cannabinol_tetramethylpyrazine
+_csp_input.identifier       BT-XXX
 
 # Molecules
 loop_
-    _csp.input_molecular_entity_number
-    _csp.input_molecular_entity_identifier
-    _csp.input_molecular_entity_smiles
+    _csp_input_molecular_entity.number
+    _csp_input_molecular_entity.identifier
+    _csp_input_molecular_entity.smiles
     _chemical.name_common
     1 CBN CCCCCc1cc(O)c2c(OC(C)(C)c3ccc([CH6])cc23)c1 cannabinol
     2 TMP Cc1nc(C)c(C)nc1C                            tetramethylpyrazine
 
 # Atoms in molecules
 loop_
-    _csp.input_atom_molecular_entity_number
-    _csp.input_atom_molecular_entity_identifier
+    _csp_input_atom.molecular_entity_number
+    _csp_input_atom.molecular_entity_identifier
     _chemical.conn_atom_number
-    _csp.input_atom_label
+    _csp_input_atom.label
     _chemical.conn_atom_type_symbol
     _chemical.conn_atom_charge
     1 CBN  1 O8   O -0.4823
@@ -178,5 +178,5 @@ loop_
     68    71    sing 
 
 # Type of Composition Search
-_csp.input_composition_calculation  "fixed"
-_csp.input_composition_coefficients [[2 1] [1 1] [1 2]] # 2:1, 1:1, 1:2 stoichiometries considered
+_csp_input.composition_calculation  "fixed"
+_csp_input.composition_coefficients [[2 1] [1 1] [1 2]] # 2:1, 1:1, 1:2 stoichiometries considered

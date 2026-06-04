@@ -1,9 +1,9 @@
 # Forcefields
 data_PCLAMS
     # Datablock Details
-    _csp.data_block_class                "Ranking Method"
-    _csp.data_block_description          PCLAMS
-    _csp.data_block_id                   c44ea0a6-da01-4c51-9ef5-c6a5eaefae13
+    _csp_data_block.class                "Ranking Method"
+    _csp_data_block.description          PCLAMS
+    _csp_data_block.id                   c44ea0a6-da01-4c51-9ef5-c6a5eaefae13
 
     # Energy Method Details
     _compchem.method                     "Forcefield"
@@ -26,25 +26,25 @@ data_PCLAMS
     _forcefield.combination_rule         "Lorentz-Berthelot"
 
     loop_
-        _forcefield.parameterization_term
-        _forcefield.parameterization_description
-        _forcefield.parameterization_method
+        _forcefield_parameterization.term
+        _forcefield_parameterization.description
+        _forcefield_parameterization.method
         intra         "Local Approximate Models fit to QM data"     "CrystPredLAMs"
         electrostatic "Fitting to gas-phase QM data"                "B3LYP/6-31G(d,p)"
         vdw           "Transferable parameters based on atom types" "FIT"
 
     # Geometry Optimisation
     _compchem.calculation_type                              "Optimisation"
-    _compchem.geometry_optimisation_algorithm               steep
-    _compchem.geometry_optimisation_cell                    anisotropic
-    _compchem.geometry_optimisation_atoms                   all
+    _compchem_geometry_optimisation.algorithm               steep
+    _compchem_geometry_optimisation.cell                    anisotropic
+    _compchem_geometry_optimisation.atoms                   all
 
 
 data_MPLAMS
     # Datablock Details
-    _csp.data_block_class                                   "Ranking Method"
-    _csp.data_block_description                             "MPLAMS"
-    _csp.data_block_id                                      8ff788cc-3a0f-4de5-a1ab-82623a06cae4
+    _csp_data_block.class                                   "Ranking Method"
+    _csp_data_block.description                             "MPLAMS"
+    _csp_data_block.id                                      8ff788cc-3a0f-4de5-a1ab-82623a06cae4
 
     # Energy Method Details
     _compchem.method                     "Forcefield"
@@ -67,25 +67,25 @@ data_MPLAMS
     _forcefield.combination_rule         "Lorentz-Berthelot"
 
     loop_
-        _forcefield.parameterization_term
-        _forcefield.parameterization_description
-        _forcefield.parameterization_method
+        _forcefield_parameterization.term
+        _forcefield_parameterization.description
+        _forcefield_parameterization.method
         intra         "Local Approximate Models fit to QM data"     "CrystOptLAMs"
         electrostatic "Fitting to gas-phase QM data"                "B3LYP/6-31G(d,p)"
         vdw           "Transferable parameters based on atom types" "FIT"
 
     # Geometry Optimisation
     _compchem.calculation_type                              "Optimisation"
-    _compchem.geometry_optimisation_algorithm               steep
-    _compchem.geometry_optimisation_cell                    anisotropic
-    _compchem.geometry_optimisation_atoms                   all
+    _compchem_geometry_optimisation.algorithm               steep
+    _compchem_geometry_optimisation.cell                    anisotropic
+    _compchem_geometry_optimisation.atoms                   all
 
 # DFT
 data_B86bPBE-XDM
     # Datablock Details
-    _csp.data_block_class                                   "Ranking Method"
-    _csp.data_block_description                             "B86bPBE-XDM"
-    _csp.data_block_id                                      c8e229a8-bd61-4105-91af-065b2081761f
+    _csp_data_block.class                                   "Ranking Method"
+    _csp_data_block.description                             "B86bPBE-XDM"
+    _csp_data_block.id                                      c8e229a8-bd61-4105-91af-065b2081761f
 
     # Energy Method Details
     _compchem.method                                        "pDFT"
@@ -102,17 +102,17 @@ data_B86bPBE-XDM
 
     # Geometry Optimisation
     _compchem.calculation_type                              "Optimisation"
-    _compchem.geometry_optimisation_algorithm               "CG"
-    _compchem.geometry_optimisation_cell                    "anisotropic"
-    _compchem.geometry_optimisation_atoms                   "all"
+    _compchem_geometry_optimisation.algorithm               "CG"
+    _compchem_geometry_optimisation.cell                    "anisotropic"
+    _compchem_geometry_optimisation.atoms                   "all"
 
 
 # Hybrid DFT
 data_SCS-MP2D
     # Datablock Details
-    _csp.data_block_class                                   "Ranking Method"
-    _csp.data_block_description                             "SCS-MP2D"
-    _csp.data_block_id                                      ec2ac04a-7781-44d1-a0bf-7a1535269b42
+    _csp_data_block.class                                   "Ranking Method"
+    _csp_data_block.description                             "SCS-MP2D"
+    _csp_data_block.id                                      ec2ac04a-7781-44d1-a0bf-7a1535269b42
 
     # Energy Method Details
     _dft.monomer_correction                                 "SCS-MP2D"
@@ -121,4 +121,3 @@ data_SCS-MP2D
 
     # Geometry Optimisation
     _compchem.calculation_type                              "Single-Point"
-

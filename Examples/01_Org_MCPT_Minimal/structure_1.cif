@@ -1,11 +1,11 @@
 data_structure_1_step0
     # Datablock Details
-    _csp.data_block_class                                              "Theoretical Structure"
-    _csp.data_block_description                                        structure_1_step0
-    _csp.data_block_id                                                 0bbc1442-7425-42cf-b803-6d9897c8172f
+    _csp_data_block.class                                              "Theoretical Structure"
+    _csp_data_block.description                                        structure_1_step0
+    _csp_data_block.id                                                 0bbc1442-7425-42cf-b803-6d9897c8172f
 
     # Include files specifying input, methods and workflow data blocks
-    _csp.data_block_additional_files                                   [ "csp_input.cif" "csp_workflows.cif" ]
+    _csp_data_block.additional_files                                   [ "csp_input.cif" "csp_workflows.cif" ]
 
     # Stage identifiers
     _theoretical_structure.csp_input_system_description                BT-XXIX
@@ -114,12 +114,12 @@ data_structure_1_step0
 
 data_structure_1_step1
     # Datablock Details
-    _csp.data_block_class                                              "Theoretical Structure"
-    _csp.data_block_description                                        structure_1_step2
-    _csp.data_block_id                                                 d4d6eefd-9cf9-4215-a994-28cbc30f5bd8
+    _csp_data_block.class                                              "Theoretical Structure"
+    _csp_data_block.description                                        structure_1_step2
+    _csp_data_block.id                                                 d4d6eefd-9cf9-4215-a994-28cbc30f5bd8
 
     # Include files specifying input, methods and workflow data blocks
-    _csp.data_block_additional_files                                   [ "csp_input.cif" "csp_workflows.cif" ]
+    _csp_data_block.additional_files                                   [ "csp_input.cif" "csp_workflows.cif" ]
 
     # Stage identifiers
     _theoretical_structure.csp_input_system_description                BT-XXIX

@@ -1,9 +1,9 @@
 # Forcefield
 data_psi_mol
     # Datablock Details
-    _csp.data_block_class                "Ranking Method"
-    _csp.data_block_description          gaff
-    _csp.data_block_id                   0c95ca9a-a288-4c9a-8bcc-c66fa6153a47
+    _csp_data_block.class                "Ranking Method"
+    _csp_data_block.description          gaff
+    _csp_data_block.id                   0c95ca9a-a288-4c9a-8bcc-c66fa6153a47
 
     # Energy Method Details
     _compchem.method                     "Forcefield"
@@ -18,27 +18,27 @@ data_psi_mol
     _forcefield.vdw_term                 "Buckingham"
 
     loop_
-        _forcefield.parameterization_term
-        _forcefield.parameterization_description
-        _forcefield.parameterization_method
+        _forcefield_parameterization.term
+        _forcefield_parameterization.description
+        _forcefield_parameterization.method
         intra         "Transferable parameters based on atom types" "PBE0/6-31G(d,p)"
         electrostatic "Fitting to gas-phase QM data"                "PBE0/6-31G(d,p)"
         vdw           "Transferable parameters based on atom types" "FIT"
 
     # Geometry Optimisation
     _compchem.calculation_type                              "Optimisation"
-    _compchem.geometry_optimisation_algorithm               "Conjugate Gradient"
-    _compchem.geometry_optimisation_cell                    anisotropic
-    _compchem.geometry_optimisation_atoms                   all
-    _compchem.geometry_optimisation_relax_force_convergence 0.01
-    _compchem.geometry_optimisation_max_steps               1000
+    _compchem_geometry_optimisation.algorithm               "Conjugate Gradient"
+    _compchem_geometry_optimisation.cell                    anisotropic
+    _compchem_geometry_optimisation.atoms                   all
+    _compchem_geometry_optimisation.relax_force_convergence 0.01
+    _compchem_geometry_optimisation.max_steps               1000
 
 # DFT
 data_pbe
     # Datablock Details
-    _csp.data_block_class                                   "Ranking Method"
-    _csp.data_block_description                             "pbe"
-    _csp.data_block_id                                      9db83274-ea84-4303-a202-5bbf83207f94
+    _csp_data_block.class                                   "Ranking Method"
+    _csp_data_block.description                             "pbe"
+    _csp_data_block.id                                      9db83274-ea84-4303-a202-5bbf83207f94
 
     # Energy Method Details
     _compchem.method                                        "pDFT"
@@ -55,8 +55,8 @@ data_pbe
 
     # Geometry Optimisation
     _compchem.calculation_type                              "Optimisation"
-    _compchem.geometry_optimisation_algorithm               "FIRE"
-    _compchem.geometry_optimisation_cell                    "anisotropic"
-    _compchem.geometry_optimisation_atoms                   "all"
-    _compchem.geometry_optimisation_relax_force_convergence 0.001
-    _compchem.geometry_optimisation_max_steps               50
+    _compchem_geometry_optimisation.algorithm               "FIRE"
+    _compchem_geometry_optimisation.cell                    "anisotropic"
+    _compchem_geometry_optimisation.atoms                   "all"
+    _compchem_geometry_optimisation.relax_force_convergence 0.001
+    _compchem_geometry_optimisation.max_steps               50

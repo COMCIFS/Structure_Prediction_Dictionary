@@ -1,11 +1,11 @@
 data_structure_A1B1_1_step0
     # Datablock Details
-    _csp.data_block_class                                              "Theoretical Structure"
-    _csp.data_block_description                                        structure_A1B1_1_step0
-    _csp.data_block_id                                                 ae979cd7-5897-4d5b-b81a-2ca1804b5272
+    _csp_data_block.class                                              "Theoretical Structure"
+    _csp_data_block.description                                        structure_A1B1_1_step0
+    _csp_data_block.id                                                 ae979cd7-5897-4d5b-b81a-2ca1804b5272
 
     # Include files specifying input, methods and workflow data blocks
-    _csp.data_block_additional_files                                   [ "csp_input.cif" "csp_workflows.cif" ]
+    _csp_data_block.additional_files                                   [ "csp_input.cif" "csp_workflows.cif" ]
 
     # Stage identifiers
     _theoretical_structure.csp_input_system_description                BT-XXX
@@ -127,12 +127,12 @@ data_structure_A1B1_1_step0
 
 data_structure_A1B1_1_step1
     # Datablock Details
-    _csp.data_block_class                                              "Theoretical Structure"
-    _csp.data_block_description                                        structure_A1B1_1_step1
-    _csp.data_block_id                                                 9eeee84a-92e4-418a-9071-e74dd7344f0d
+    _csp_data_block.class                                              "Theoretical Structure"
+    _csp_data_block.description                                        structure_A1B1_1_step1
+    _csp_data_block.id                                                 9eeee84a-92e4-418a-9071-e74dd7344f0d
 
     # Include files specifying input, methods and workflow data blocks
-    _csp.data_block_additional_files                                   [ "csp_input.cif" "csp_workflows.cif" ]
+    _csp_data_block.additional_files                                   [ "csp_input.cif" "csp_workflows.cif" ]
 
     # Stage identifiers
     _theoretical_structure.csp_input_system_description                BT-XXX
@@ -160,12 +160,12 @@ data_structure_A1B1_1_step1
 
 data_structure_A1B1_1_step2
     # Datablock Details
-    _csp.data_block_class                                              "Theoretical Structure"
-    _csp.data_block_description                                        structure_A1B1_1_step2
-    _csp.data_block_id                                                 07d72f6b-99fe-4455-b157-0f169057130f
+    _csp_data_block.class                                              "Theoretical Structure"
+    _csp_data_block.description                                        structure_A1B1_1_step2
+    _csp_data_block.id                                                 07d72f6b-99fe-4455-b157-0f169057130f
 
     # Include files specifying input, methods and workflow data blocks
-    _csp.data_block_additional_files                                   [ "csp_input.cif" "csp_workflows.cif" ]
+    _csp_data_block.additional_files                                   [ "csp_input.cif" "csp_workflows.cif" ]
 
     # Stage identifiers
     _theoretical_structure.csp_input_system_description                BT-XXX
@@ -193,12 +193,12 @@ data_structure_A1B1_1_step2
 
 data_structure_A1B1_1_step3
     # Datablock Details
-    _csp.data_block_class                                              "Theoretical Structure"
-    _csp.data_block_description                                        structure_A1B1_1_step3
-    _csp.data_block_id                                                 683ab489-92a8-4b51-95fb-1a86b33a37de
+    _csp_data_block.class                                              "Theoretical Structure"
+    _csp_data_block.description                                        structure_A1B1_1_step3
+    _csp_data_block.id                                                 683ab489-92a8-4b51-95fb-1a86b33a37de
 
     # Include files specifying input, methods and workflow data blocks
-    _csp.data_block_additional_files                                   [ "csp_input.cif" "csp_workflows.cif" ]
+    _csp_data_block.additional_files                                   [ "csp_input.cif" "csp_workflows.cif" ]
 
     # Stage identifiers
     _theoretical_structure.csp_input_system_description                BT-XXX
@@ -226,12 +226,12 @@ data_structure_A1B1_1_step3
 
 data_structure_A1B1_1_step4
     # Datablock Details
-    _csp.data_block_class                                              "Theoretical Structure"
-    _csp.data_block_description                                        structure_A1B1_1_step4
-    _csp.data_block_id                                                 e2c4b66c-5545-4a60-a9a8-90ef4e6bdfeb
+    _csp_data_block.class                                              "Theoretical Structure"
+    _csp_data_block.description                                        structure_A1B1_1_step4
+    _csp_data_block.id                                                 e2c4b66c-5545-4a60-a9a8-90ef4e6bdfeb
 
     # Include files specifying input, methods and workflow data blocks
-    _csp.data_block_additional_files                                   [ "csp_input.cif" "csp_workflows.cif" ]
+    _csp_data_block.additional_files                                   [ "csp_input.cif" "csp_workflows.cif" ]
 
     # Stage identifiers
     _theoretical_structure.csp_input_system_description                BT-XXX
@@ -259,12 +259,12 @@ data_structure_A1B1_1_step4
 
 data_structure_A1B1_1_step5
     # Datablock Details
-    _csp.data_block_class                                              "Theoretical Structure"
-    _csp.data_block_description                                        structure_A1B1_1_step5
-    _csp.data_block_id                                                 c72e0bb5-6f7a-45eb-aed0-a13693dc2943
+    _csp_data_block.class                                              "Theoretical Structure"
+    _csp_data_block.description                                        structure_A1B1_1_step5
+    _csp_data_block.id                                                 c72e0bb5-6f7a-45eb-aed0-a13693dc2943
 
     # Include files specifying input, methods and workflow data blocks
-    _csp.data_block_additional_files                                   [ "csp_input.cif" "csp_workflows.cif" ]
+    _csp_data_block.additional_files                                   [ "csp_input.cif" "csp_workflows.cif" ]
 
     # Stage identifiers
     _theoretical_structure.csp_input_system_description                BT-XXX
@@ -292,12 +292,12 @@ data_structure_A1B1_1_step5
 
 data_structure_A1B1_1_step6
     # Datablock Details
-    _csp.data_block_class                                              "Theoretical Structure"
-    _csp.data_block_description                                        structure_A1B1_1_step6
-    _csp.data_block_id                                                 b5e95a88-8fa7-4e5f-97d9-c35300370aba
+    _csp_data_block.class                                              "Theoretical Structure"
+    _csp_data_block.description                                        structure_A1B1_1_step6
+    _csp_data_block.id                                                 b5e95a88-8fa7-4e5f-97d9-c35300370aba
 
     # Include files specifying input, methods and workflow data blocks
-    _csp.data_block_additional_files                                   [ "csp_input.cif" "csp_workflows.cif" ]
+    _csp_data_block.additional_files                                   [ "csp_input.cif" "csp_workflows.cif" ]
 
     # Stage identifiers
     _theoretical_structure.csp_input_system_description                BT-XXX
@@ -325,12 +325,12 @@ data_structure_A1B1_1_step6
 
 data_structure_A1B1_1_step7
     # Datablock Details
-    _csp.data_block_class                                              "Theoretical Structure"
-    _csp.data_block_description                                        structure_A1B1_1_step7
-    _csp.data_block_id                                                 094f5430-0785-4d8f-8aa4-3e31fb579ec4
+    _csp_data_block.class                                              "Theoretical Structure"
+    _csp_data_block.description                                        structure_A1B1_1_step7
+    _csp_data_block.id                                                 094f5430-0785-4d8f-8aa4-3e31fb579ec4
 
     # Include files specifying input, methods and workflow data blocks
-    _csp.data_block_additional_files                                   [ "csp_input.cif" "csp_workflows.cif" ]
+    _csp_data_block.additional_files                                   [ "csp_input.cif" "csp_workflows.cif" ]
 
     # Stage identifiers
     _theoretical_structure.csp_input_system_description                BT-XXX
@@ -358,12 +358,12 @@ data_structure_A1B1_1_step7
 
 data_structure_A1B1_1_step8_t100
     # Datablock Details
-    _csp.data_block_class                                              "Theoretical Structure"
-    _csp.data_block_description                                        structure_A1B1_1_step8_t100
-    _csp.data_block_id                                                 ce690a0d-c123-4c07-9950-c7a1a47056e2
+    _csp_data_block.class                                              "Theoretical Structure"
+    _csp_data_block.description                                        structure_A1B1_1_step8_t100
+    _csp_data_block.id                                                 ce690a0d-c123-4c07-9950-c7a1a47056e2
 
     # Include files specifying input, methods and workflow data blocks
-    _csp.data_block_additional_files                                   [ "csp_input.cif" "csp_workflows.cif" ]
+    _csp_data_block.additional_files                                   [ "csp_input.cif" "csp_workflows.cif" ]
 
     # Stage identifiers
     _theoretical_structure.csp_input_system_description                BT-XXX
@@ -393,12 +393,12 @@ data_structure_A1B1_1_step8_t100
 
 data_structure_A1B1_1_step8_t200
     # Datablock Details
-    _csp.data_block_class                                              "Theoretical Structure"
-    _csp.data_block_description                                        structure_A1B1_1_step8_t200
-    _csp.data_block_id                                                 e92da335-2704-4fe5-9e1f-1a82b4d022dc
+    _csp_data_block.class                                              "Theoretical Structure"
+    _csp_data_block.description                                        structure_A1B1_1_step8_t200
+    _csp_data_block.id                                                 e92da335-2704-4fe5-9e1f-1a82b4d022dc
 
     # Include files specifying input, methods and workflow data blocks
-    _csp.data_block_additional_files                                   [ "csp_input.cif" "csp_workflows.cif" ]
+    _csp_data_block.additional_files                                   [ "csp_input.cif" "csp_workflows.cif" ]
 
     # Stage identifiers
     _theoretical_structure.csp_input_system_description                BT-XXX
@@ -428,12 +428,12 @@ data_structure_A1B1_1_step8_t200
 
 data_structure_A1B1_1_step8_t300
     # Datablock Details
-    _csp.data_block_class                                              "Theoretical Structure"
-    _csp.data_block_description                                        structure_A1B1_1_step8_t300
-    _csp.data_block_id                                                 3b4de7b5-aed4-4358-a22d-3337937fdecb
+    _csp_data_block.class                                              "Theoretical Structure"
+    _csp_data_block.description                                        structure_A1B1_1_step8_t300
+    _csp_data_block.id                                                 3b4de7b5-aed4-4358-a22d-3337937fdecb
 
     # Include files specifying input, methods and workflow data blocks
-    _csp.data_block_additional_files                                   [ "csp_input.cif" "csp_workflows.cif" ]
+    _csp_data_block.additional_files                                   [ "csp_input.cif" "csp_workflows.cif" ]
 
     # Stage identifiers
     _theoretical_structure.csp_input_system_description                BT-XXX

@@ -14,7 +14,7 @@ loop_
     _csp_input_molecular_entity.identifier
     _csp_input_molecular_entity.smiles
     _chemical.name_common
-    1 CBN CCCCCc1cc(O)c2c(OC(C)(C)c3ccc([CH6])cc23)c1 cannabinol
+    1 CBN 'CCCCCc1cc(O)c2c(OC(C)(C)c3ccc([CH6])cc23)c1' cannabinol
     2 TMP Cc1nc(C)c(C)nc1C                            tetramethylpyrazine
 
 # Atoms in molecules

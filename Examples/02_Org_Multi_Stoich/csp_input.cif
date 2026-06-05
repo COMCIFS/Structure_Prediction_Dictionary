@@ -21,10 +21,10 @@ loop_
 loop_
     _csp_input_atom.molecular_entity_number
     _csp_input_atom.molecular_entity_identifier
-    _chemical.conn_atom_number
+    _chemical_conn_atom.number
     _csp_input_atom.label
-    _chemical.conn_atom_type_symbol
-    _chemical.conn_atom_charge
+    _chemical_conn_atom.type_symbol
+    _chemical_conn_atom.charge
     1 CBN  1 O8   O -0.4823
     1 CBN  2 O1   O -0.5071
     1 CBN  3 H1   H  0.2931
@@ -101,9 +101,9 @@ loop_
 
 # Bonds
 loop_
-    _chemical.conn_bond_atom_1
-    _chemical.conn_bond_atom_2
-    _chemical.conn_bond_type
+    _chemical_conn_bond.atom_1
+    _chemical_conn_bond.atom_2
+    _chemical_conn_bond.type
      1    10    sing 
      1    14    sing 
      2     3    sing 

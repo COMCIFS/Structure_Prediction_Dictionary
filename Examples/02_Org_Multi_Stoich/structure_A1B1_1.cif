@@ -157,7 +157,7 @@ data_structure_A1B1_1_step1
     _theoretical_structure.rank                                        3
 
     # Crystal
-    ...
+    # ...
 
 data_structure_A1B1_1_step2
     # Datablock Details
@@ -190,7 +190,7 @@ data_structure_A1B1_1_step2
     _theoretical_structure.rank                                        4
 
     # Crystal
-    ...
+    # ...
 
 data_structure_A1B1_1_step3
     # Datablock Details
@@ -223,7 +223,7 @@ data_structure_A1B1_1_step3
     _theoretical_structure.rank                                        2
 
     # Crystal
-    ...
+    # ...
 
 data_structure_A1B1_1_step4
     # Datablock Details
@@ -256,7 +256,7 @@ data_structure_A1B1_1_step4
     _theoretical_structure.rank                                        6
 
     # Crystal
-    ...
+    # ...
 
 data_structure_A1B1_1_step5
     # Datablock Details
@@ -289,7 +289,7 @@ data_structure_A1B1_1_step5
     _theoretical_structure.rank                                        4
 
     # Crystal
-    ...
+    # ...
 
 data_structure_A1B1_1_step6
     # Datablock Details
@@ -322,7 +322,7 @@ data_structure_A1B1_1_step6
     _theoretical_structure.rank                                        6
 
     # Crystal
-    ...
+    # ...
 
 data_structure_A1B1_1_step7
     # Datablock Details
@@ -355,7 +355,7 @@ data_structure_A1B1_1_step7
     _theoretical_structure.rank                                        6
 
     # Crystal
-    ...
+    # ...
 
 data_structure_A1B1_1_step8_t100
     # Datablock Details
@@ -390,7 +390,7 @@ data_structure_A1B1_1_step8_t100
     _theoretical_structure.rank                                        6
 
     # Crystal
-    ...
+    # ...
 
 data_structure_A1B1_1_step8_t200
     # Datablock Details
@@ -425,7 +425,7 @@ data_structure_A1B1_1_step8_t200
     _theoretical_structure.rank                                        7
 
     # Crystal
-    ...
+    # ...
 
 data_structure_A1B1_1_step8_t300
     # Datablock Details
@@ -460,4 +460,4 @@ data_structure_A1B1_1_step8_t300
     _theoretical_structure.rank                                        7
 
     # Crystal
-    ...
+    # ...

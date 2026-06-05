@@ -378,8 +378,8 @@ data_structure_A1B1_1_step8_t100
 
     _theoretical_structure.csp_ranking_stage_description               pbe0_mbd_qha
     _theoretical_structure.csp_ranking_stage_id                        2b9deed1-116f-454a-922e-be61c8d946c5
-    _theoretical_structure.csp_reference_temperature                   100.0
-    _theoretical_structure.csp_reference_pressure                      100000.0
+    _theoretical_structure.reference_temperature                       100.0
+    _theoretical_structure.reference_pressure                          100000.0
 
     _theoretical_structure.csp_previous_stage_structure_description    structure_A1B1_1_step7
     _theoretical_structure.csp_previous_stage_structure_id             094f5430-0785-4d8f-8aa4-3e31fb579ec4
@@ -413,8 +413,8 @@ data_structure_A1B1_1_step8_t200
 
     _theoretical_structure.csp_ranking_stage_description               pbe0_mbd_qha
     _theoretical_structure.csp_ranking_stage_id                        2b9deed1-116f-454a-922e-be61c8d946c5
-    _theoretical_structure.csp_reference_temperature                   200.0
-    _theoretical_structure.csp_reference_pressure                      100000.0
+    _theoretical_structure.reference_temperature                       200.0
+    _theoretical_structure.reference_pressure                          100000.0
 
     _theoretical_structure.csp_previous_stage_structure_description    structure_A1B1_1_step7
     _theoretical_structure.csp_previous_stage_structure_id             094f5430-0785-4d8f-8aa4-3e31fb579ec4
@@ -448,8 +448,8 @@ data_structure_A1B1_1_step8_t300
 
     _theoretical_structure.csp_ranking_stage_description               pbe0_mbd_qha
     _theoretical_structure.csp_ranking_stage_id                        2b9deed1-116f-454a-922e-be61c8d946c5
-    _theoretical_structure.csp_reference_temperature                   300.0
-    _theoretical_structure.csp_reference_pressure                      100000.0
+    _theoretical_structure.reference_temperature                       300.0
+    _theoretical_structure.reference_pressure                          100000.0
 
     _theoretical_structure.csp_previous_stage_structure_description    structure_A1B1_1_step7
     _theoretical_structure.csp_previous_stage_structure_id             094f5430-0785-4d8f-8aa4-3e31fb579ec4

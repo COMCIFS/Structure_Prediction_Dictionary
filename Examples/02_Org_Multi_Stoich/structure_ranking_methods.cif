@@ -16,7 +16,7 @@ data_gaff
     _forcefield.angle_type               "Harmonic"
     _forcefield.improper_type            "Harmonic"
     _forcefield.dihedral_type            "Periodic"
-    _forcefield.1-4_pairs                True
+    _forcefield.1_4_pairs                True
     _forcefield.fudgeQQ                  0.8333
     _forcefield.fudgeLJ                  0.5
 
@@ -29,9 +29,9 @@ data_gaff
     _forcefield.combination_rule         "Lorentz-Berthelot"
 
     loop_
-        _forcefield_parameterization.term
-        _forcefield_parameterization.description
-        _forcefield_parameterization.method
+        _forcefield_parameterisation.term
+        _forcefield_parameterisation.description
+        _forcefield_parameterisation.method
         intra         "Transferable parameters based on atom types" "GAFF2"
         electrostatic "Fitting to gas-phase QM data"                "MP2/6-31G(d,p)"
         vdw           "Transferable parameters based on atom types" "AMBER"

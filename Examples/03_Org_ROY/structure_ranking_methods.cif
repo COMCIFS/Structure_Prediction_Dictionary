@@ -15,7 +15,7 @@ data_PCLAMS
     _forcefield.angle_type               "Quadratic"
     _forcefield.improper_type            "Quadratic"
     _forcefield.dihedral_type            "Periodic"
-    _forcefield.1-4_pairs                False
+    _forcefield.1_4_pairs                False
 
     _forcefield.electrostatic_term       "Point-Charges"
     _forcefield.long_range_electrostatic "PME"
@@ -26,9 +26,9 @@ data_PCLAMS
     _forcefield.combination_rule         "Lorentz-Berthelot"
 
     loop_
-        _forcefield_parameterization.term
-        _forcefield_parameterization.description
-        _forcefield_parameterization.method
+        _forcefield_parameterisation.term
+        _forcefield_parameterisation.description
+        _forcefield_parameterisation.method
         intra         "Local Approximate Models fit to QM data"     "CrystPredLAMs"
         electrostatic "Fitting to gas-phase QM data"                "B3LYP/6-31G(d,p)"
         vdw           "Transferable parameters based on atom types" "FIT"
@@ -56,7 +56,7 @@ data_MPLAMS
     _forcefield.angle_type               "Quadratic"
     _forcefield.improper_type            "Quadratic"
     _forcefield.dihedral_type            "Periodic"
-    _forcefield.1-4_pairs                False
+    _forcefield.1_4_pairs                False
 
     _forcefield.electrostatic_term       "Multipoles"
     _forcefield.long_range_electrostatic "PME"
@@ -67,9 +67,9 @@ data_MPLAMS
     _forcefield.combination_rule         "Lorentz-Berthelot"
 
     loop_
-        _forcefield_parameterization.term
-        _forcefield_parameterization.description
-        _forcefield_parameterization.method
+        _forcefield_parameterisation.term
+        _forcefield_parameterisation.description
+        _forcefield_parameterisation.method
         intra         "Local Approximate Models fit to QM data"     "CrystOptLAMs"
         electrostatic "Fitting to gas-phase QM data"                "B3LYP/6-31G(d,p)"
         vdw           "Transferable parameters based on atom types" "FIT"

@@ -17,7 +17,7 @@ data_mcpt
     _csp.structure_generation_density_upper_limit                              1750
     _csp.structure_generation_space_group_number_list                          [14 2 15 61 19 4 33 29 5 1]
 
-    _csp_structure_generation_stopping_criteria.description                    ["Max Structures", "Low-Energy Structures Unchanged"]
+    _csp_structure_generation_stopping_criteria.description                    ["Max Structures" "Low-Energy Structures Unchanged"]
     _csp_structure_generation_stopping_criteria.max_structures_evaluated       100000
     _csp_structure_generation_stopping_criteria.iterations_without_improvement 20
     _csp_structure_generation_stopping_criteria.energy_range                   10.0

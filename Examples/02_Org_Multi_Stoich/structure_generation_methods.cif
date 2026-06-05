@@ -1,3 +1,4 @@
+#\#CIF_2.0
 # Random Search
 data_rs
     # Datablock Details

@@ -1,3 +1,4 @@
+#\#CIF_2.0
 data_cbn_tmp
 # Datablock Details
 _csp_data_block.class       "Input"

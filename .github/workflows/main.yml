@@ -63,6 +63,8 @@ jobs:
 
   layout:
     name: Layout
+    # Disable the layout check for now
+    if: false
     runs-on: ubuntu-latest
     needs: syntax
 

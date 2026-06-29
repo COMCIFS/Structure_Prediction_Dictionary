@@ -56,7 +56,8 @@ jobs:
       - name: Check out enumeration templates
         uses: actions/checkout@v6
         with:
-          repository: COMCIFS/Enumeration_Templates
+          repository: vaitkus/Enumeration_Templates
+          ref: add-units-from-structure-prediction-dictionaries
           path: cif-dictionaries/Enumeration_Templates
 
       - name: Run dictionary validity checks

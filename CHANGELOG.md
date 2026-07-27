@@ -1,3 +1,18 @@
+# 2026.07.27
+
+## New Features
+- Multiple data fields have been added to describe the output crystal properties. These can be classified into:
+  - Energy data fields related to variable compositions calculations.
+  - Per atom properties (forces, partial charges)
+  - Band structure, density of states and related propeties
+  - Phonons
+  - Magnetic, Mechanical and transport properties
+
+
+## Fixes
+
+- Updates and minor corrections to Markdown and CIF dictionary files.
+
 # 2026.04.24
 
 ## New Features
@@ -117,8 +132,8 @@ loop_
 
   New version:
 
-  | Group             | Data Field                    |
-  |-------------------|-------------------------------|
+  | Group             | Data Field         |
+  |-------------------|--------------------|
   | `_csp_data_block` | `class`            |
 
 - "Definition", "Constraints" and "Examples" columns changed to improved clarity.

@@ -33,18 +33,16 @@ to it.
 | `_csp_data_block` | `additional_files` | list[char] | If datablocks are specified in different files, add the position of these files.                                           | `List[str]`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |       | `[ "generation_methods.cif" "ranking_methods.cif" "workflows.cif" ]` |
 
 Single inputs systems, generation methods and ranking methods must be described in separate datablocks and a unique
-identifier should be assigned to them.
-We recommend the use of Universally Unique Identifiers (UUIDs), described
-in [here](https://www.rfc-editor.org/rfc/rfc9562) and naturally implemented in most programming languages.
-The Workflow datablock is meant to connect different generation and ranking methods in multistep approaches.
-Finally, the output theoretical structures will have a link to the specific stage in the workflow and the previous
-structure.
-Examples of each one of these data blocks are available below.
+identifier should be assigned to them. We recommend the use of Universally Unique Identifiers (UUIDs), described
+in [here](https://www.rfc-editor.org/rfc/rfc9562) and naturally implemented in most programming languages. The Workflow
+datablock is meant to connect different generation and ranking methods in multistep approaches. Finally, the output
+theoretical structures will have a link to the specific stage in the workflow and the previous structure. Examples of
+each one of these data blocks are available below.
 
 Datablocks can be stored in different files or in multiple files depending on the user. In the former case, the
-`_csp_data_block.additional_files` field should be used.
-In practice, one can have a set of default settings for the generation, ranking methods and workflows, with the
-different landscapes differing only in the input and output structure's data blocks.
+`_csp_data_block.additional_files` field should be used. In practice, one can have a set of default settings for the
+generation, ranking methods and workflows, with the different landscapes differing only in the input and output
+structure's data blocks.
 
 ## 2. Input Chemical System
 
@@ -71,8 +69,8 @@ Additional details on atoms in molecule ad their connectivity can be specified t
 available at: https://www.iucr.org/__data/iucr/cifdic_html/1/cif_core.dic/index.html
 
 The term "Molecular Entity" is used to describe any separately distinguishable entity as described in the IUPAC
-Compendium of Chemical Terminology at: https://doi.org/10.1351/goldbook.M03986. Data fields in this category can be
-used to describe both metals and ligands in a MOF.
+Compendium of Chemical Terminology at: https://doi.org/10.1351/goldbook.M03986. Data fields in this category can be used
+to describe both metals and ligands in a MOF.
 
 ### Examples
 
@@ -110,8 +108,8 @@ _csp_input.minimum_number_of_components 2
 _csp_input.maximum_number_of_components 10
 ```
 
-This implies that resulting structures will have formula *x*(FeSiO3)+*y*(MgSiO3) with *2<x+y<10*.
-Worth noticing that the string following `data_` is not used in the linking of datablocks.
+This implies that resulting structures will have formula *x*(FeSiO3)+ *y*(MgSiO3) with *2<x+y<10*. Worth noticing that
+the string following `data_` is not used in the linking of datablocks.
 
 Multi-component molecular crystal CSP with fixed stoichiometry:
 
@@ -185,8 +183,8 @@ _csp_input.maximum_number_of_components 4
 _csp_input.minimum_number_of_components 2
 ```
 
-For metal-organic systems, the `_csp.input_molecular_entity` and `Chemical` dictionaries can be used specifying
-metallic atoms and ligands:
+For metal-organic systems, the `_csp.input_molecular_entity` and `Chemical` dictionaries can be used specifying metallic
+atoms and ligands:
 
 ```text
 data_mo
@@ -279,8 +277,7 @@ Category `_csp.structure_generation_[]`: Category for structure generation metho
 ### 3.2 Evolutionary Algorithms
 
 Category `_csp.evolutionary_algorithm_[]`: Subgroup for CSP Structure Generation methods that use Evolutionary
-Algorithms. For these fields
-to be used, the `_csp.structure_generation_method` must include "Evolutionary Algorithm".
+Algorithms. For these fields to be used, the `_csp.structure_generation_method` must include "Evolutionary Algorithm".
 
 | Group                          | Data Field                    | Type | Definition                                                                                                                                                     | Constraints | Units | Example |
 |--------------------------------|:------------------------------|:-----|:---------------------------------------------------------------------------------------------------------------------------------------------------------------|:------------|:------|:--------|
@@ -296,8 +293,8 @@ to be used, the `_csp.structure_generation_method` must include "Evolutionary Al
 ### 3.3 Particle Swarm Optimisation Algorithms
 
 Category `_csp.particle_swarm_optimisation_[]`: Subgroup for CSP Structure Generation methods that use Particle Swarm
-Optimisation. For these
-fields to be used, the `_csp.structure_generation_method` must include "Particle Swarm Optimisation".
+Optimisation. For these fields to be used, the `_csp.structure_generation_method` must include "Particle Swarm
+Optimisation".
 
 | Group                              | Data Field              | Type | Definition                                                                                                                                        | Constraints | Units | Example |
 |------------------------------------|:------------------------|:-----|:--------------------------------------------------------------------------------------------------------------------------------------------------|:------------|:------|:--------|
@@ -313,8 +310,7 @@ fields to be used, the `_csp.structure_generation_method` must include "Particle
 ### 3.4 Simulated Annealing
 
 Category `_csp.simulated_annealing_[]`: Subgroup for CSP Structure Generation methods that use Simulated Annealing. For
-these fields to
-be used, the `_csp.structure_generation_method` must include "Simulated Annealing".
+these fields to be used, the `_csp.structure_generation_method` must include "Simulated Annealing".
 
 | Group                      | Data Field            | Type | Definition                                                                                        | Constraints | Units | Example |
 |----------------------------|:----------------------|:-----|:--------------------------------------------------------------------------------------------------|:------------|:------|:--------|
@@ -364,8 +360,7 @@ _csp.structure_generation_stopping_criteria_description              "Max Struct
 _csp.structure_generation_stopping_criteria_max_structures_evaluated 10000
 ```
 
-Combination of different structure generation methods, search limited on most popular space groups for organic
-crystals.
+Combination of different structure generation methods, search limited on most popular space groups for organic crystals.
 
 ```text
 # Random Search 1
@@ -463,8 +458,8 @@ For the last section, the mandatory data fields to identify and link the differe
 The data field `_csp_structure_generation_stopping_criteria.max_structures_evaluated` indicates the _total_ number of
 structures generated across the different space groups specified into the
 `_csp_structure_generation_space_group_number_list` or
-`_csp_structure_generation_stopping_criteria.space_group_number_list`.
-In the three `Generation Method` datablocks, we show the use of
+`_csp_structure_generation_stopping_criteria.space_group_number_list`. In the three `Generation Method` datablocks, we
+show the use of
 `_csp_structure_generation_stopping_criteria.max_structures_evaluated` data fields:
 
 1. In the first `Random Search` approach (Datablock 1), for the space groups **14, 2, 15, 61 and 19**, the criterion is
@@ -533,8 +528,7 @@ For these fields to be used, the `_compchem.method` should be set to "pDFT".
 ### 4.3 Forcefields
 
 Category `_forcefield.[]`:  Subgroup for Computational Chemistry methods that use forcefield or mixed inter/intra
-molecular
-methods. For these fields to be used, the `_compchem.method` should be set to "Forcefield".
+molecular methods. For these fields to be used, the `_compchem.method` should be set to "Forcefield".
 
 | Group                          | Data Field                  | Type | Definition                                                                                                                                                                                                                                                                                                                                                                                                           | Constraints                                                                                                                                                                                                                                                                                                     | Units | Example                                                                                                          |
 |--------------------------------|:----------------------------|:-----|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:------|:-----------------------------------------------------------------------------------------------------------------|
@@ -551,8 +545,7 @@ methods. For these fields to be used, the `_compchem.method` should be set to "F
 ### 4.4 Semi-Empirical
 
 Category `_semiempirical.[]`:  Subgroup for Computational Chemistry methods that use Semi-Empirical methods. For these
-fields to
-be used, the `_compchem.method` should be set to "Semi Empirical".
+fields to be used, the `_compchem.method` should be set to "Semi Empirical".
 
 | Group            | Data Field                 | Type | Definition                                                                                                     | Constraints                                                                                                                                                                                                                                                                                            | Units | Example                                                                                   |
 |:-----------------|:---------------------------|:-----|:---------------------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:------|:------------------------------------------------------------------------------------------|
@@ -577,8 +570,7 @@ fields to be used, the `_compchem.method` should be set to "Wavefunction".
 ### 4.6 ML Potentials
 
 Category `_ml_potential.[]`:  Subgroup for Computational Chemistry methods that use machine learning potentials methods.
-For
-these fields to be used, the `_compchem.method` should be set to "ML Potentials".
+For these fields to be used, the `_compchem.method` should be set to "ML Potentials".
 
 | Group           | Data Field             | Type | Definition                                                                                                                                       | Constraints | Units | Example                            |
 |:----------------|:-----------------------|:-----|:-------------------------------------------------------------------------------------------------------------------------------------------------|:------------|:------|:-----------------------------------|
@@ -625,8 +617,7 @@ _dft.BZ_integration.grid_dens_Z          0.5
 ```
 
 Multiple energy evaluation steps and different workflows can be described in a cif file. After specifying parameters for
-each ranking method,
-two possible workflow examples are described:
+each ranking method, two possible workflow examples are described:
 
 * **wf1**: Different methods of increasing computational cost are used. Two single-point hybrid functionals are then
   used on the PBE optimised structures.
@@ -823,49 +814,90 @@ improving the human-readability of the CIF file.
 
 ### 5.1 Theoretical Structure
 
-Describes the structure-specific outputs of CSP methods.
-Categories:
+Describes the structure-specific outputs of CSP methods. Categories:
 
 * **`_theoretical_structure.[]`**: Properties of the structure.
 * **`_theoretical_structure.csp_[]`**: Stage identifiers in a multistep ranking approach.
 
-| Group                    | Data Field                                 | Type | Definition                                                                                                                                    | Constraints | Units               | Example  |
-|--------------------------|--------------------------------------------|------|-----------------------------------------------------------------------------------------------------------------------------------------------|-------------|---------------------|----------|
-| `_theoretical_structure` | `temperature`                              | numb | The temperature at which the energy and other properties of the theoretical structure were calculated.                                        | \>=0.       | K                   | 298.15   |
-| `_theoretical_structure` | `pressure`                                 | numb | The pressure at which the energy and other properties of the theoretical structure were calculated.                                           |             | Pa                  | 101325.0 |
-| `_theoretical_structure` | `calculated_density`                       | numb | The calculated density of the crystal.                                                                                                        | \>=0.       | kg m<sup>-3</sup>   | 1420.0   |
-| `_theoretical_structure` | `total_energy`                             | numb | The total energy of the theoretical structure, i.e. energy relative to all of the nuclei and electrons separated to an infinite distance.     |             | kJ mol<sup>-1</sup> | -1500.5  |
-| `_theoretical_structure` | `absolute_lattice_energy`                  | numb | The absolute lattice energy of the crystal, i.e. energy relative to all the molecules separated to an infinite distance.                      |             | kJ mol<sup>-1</sup> | -1600.8  |
-| `_theoretical_structure` | `absolute_free_energy`                     | numb | The absolute free energy of the crystal.                                                                                                      |             | kJ mol<sup>-1</sup> | -1450.2  |
-| `_theoretical_structure` | `free_energy_correction`                   | numb | The correction applied to the lattice energy to obtain the free energy, accounting for vibrational and other thermal effects.                 |             | kJ mol<sup>-1</sup> | 50.6     |
-| `_theoretical_structure` | `relative_lattice_energy`                  | numb | The lattice energy of the theoretical structure relative to the lowest energy structure found in the CSP.                                     | \>=0.       | kJ mol<sup>-1</sup> | 8.7      |
-| `_theoretical_structure` | `relative_free_energy`                     | numb | The free energy of the theoretical structure relative to the lowest energy structure found in the CSP.                                        | \>=0.       | kJ mol<sup>-1</sup> | 2.3      |
-| `_theoretical_structure` | `zero_point_energy_correction`             | numb | The ZPE correction included in the energy value.                                                                                              | \>=0.       | kJ mol<sup>-1</sup> | 0.5      |
-| `_theoretical_structure` | `dispersion_energy_correction`             | numb | The dispersion energy correction included in the energy value.                                                                                |             | kJ mol<sup>-1</sup> | -4.6     |
-| `_theoretical_structure` | `relative_free_energy`                     | numb | The free energy of the theoretical structure relative to the lowest energy structure found in the CSP.                                        | \>=0.       | kJ mol<sup>-1</sup> | 2.3      |
-| `_theoretical_structure` | `energy_uncertainty`                       | numb | An estimate of the uncertainty associated with the calculated energy of the theoretical structure.                                            | \>=0.       | kJ mol<sup>-1</sup> | 2.0      |
-| `_theoretical_structure` | `score`                                    | numb | To allow for methods that may rank by criteria other than energies (e.g., based on stability or other desired properties).                    |             | unspecified         | 0.3333   |
-| `_theoretical_structure` | `rank`                                     | numb | The rank of the structure when ordered by chosen criteria where 1 is considered to be the most favorable or likely structure.                 | \>=1        |                     | 1        |
-| `_theoretical_structure` | `cluster_centre_id`                        | char | If the structure has been identified as duplicate in a group, the uniqueidentifier of the structure that is the cluster centre of that group. | Free Text   |                     |          |
-| `_theoretical_structure` | `cluster_centre_description`               | char | If the structure has been identified as duplicate in a group, the label of the structure that is the cluster centre of that group.            | Free Text   |                     |          |
-| `_theoretical_structure` | `experimental_match_id`                    | char | If the theoretical structure matches an experimental structure, specify the (possibly unique) identifier of the latter.                       | Free Text   |                     |          |
-| `_theoretical_structure` | `experimental_match_database`              | char | If the theoretical structure matches an experimental structure, specify the database or location the latter.                                  | Free Text   |                     |          |
-| `_theoretical_structure` | `experimental_match_description`           | char | If the theoretical structure matches an experimental structure, this data field allows to include any additional information.                 | Free Text   |                     |          |
-| `_theoretical_structure` | `reference_temperature`                    | numb | In the case of free-energy calculations, specify the reference temperature.                                                                   | \>=0.       | K                   |          |
-| `_theoretical_structure` | `reference_pressure`                       | numb | In the case of free-energy calculations, specify the reference pressure.                                                                      | \>=0.       | Pa                  |          |
-| `_theoretical_structure` | `csp_input_system_description`             | char | Human-readable description of the input system data block.                                                                                    |             |                     |          |
-| `_theoretical_structure` | `csp_input_system_id`                      | char | Identifier of the input system data block.                                                                                                    |             |                     |          |
-| `_theoretical_structure` | `csp_workflow_description`                 | char | Human-readable description of the workflow data block.                                                                                        |             |                     |          |
-| `_theoretical_structure` | `csp_workflow_id`                          | char | Identifier of the workflow data block.                                                                                                        |             |                     |          |
-| `_theoretical_structure` | `csp_generation_stage_description`         | char | Human-readable description of the structure generation method data block.                                                                     |             |                     |          |
-| `_theoretical_structure` | `csp_generation_stage_id`                  | char | Identifier of the structure generation method data block.                                                                                     |             |                     |          |
-| `_theoretical_structure` | `csp_ranking_stage_description`            | char | Human-readable description of the structure ranking method data block.                                                                        |             |                     |          |
-| `_theoretical_structure` | `csp_ranking_stage_id`                     | char | Identifier of the structure ranking method data block.                                                                                        |             |                     |          |
-| `_theoretical_structure` | `csp_step_description`                     | char | Human-readable description of the intermediate step (e.g. a clustering algorithm) data block that was applied to this structure.              |             |                     |          |
-| `_theoretical_structure` | `csp_step_id`                              | char | Identifier of the intermediate step data block that was applied to this structure.                                                            |             |                     |          |
-| `_theoretical_structure` | `csp_previous_stage_structure_description` | char | Human-readable description of the data block of the structure from previous stage. This is the structure used as input for the current stage. |             |                     |          |
-| `_theoretical_structure` | `csp_previous_stage_structure_id`          | char | Identifier of the data block of the structure from previous stage.                                                                            |             |                     |          |
-| `_theoretical_structure` | `csp_initial_spacegroup_number`            | char | The spacegroup of the structure at the initial CSP stage, before any geometry optimisation.                                                   | 1-232       |                     | 14       |
+| Group                               | Data Field                                 | Type       | Definition                                                                                                                                    | Constraints | Units                               | Example  |
+|-------------------------------------|--------------------------------------------|------------|-----------------------------------------------------------------------------------------------------------------------------------------------|-------------|-------------------------------------|----------|
+| `_theoretical_structure`            | `temperature`                              | numb       | The temperature at which the energy and other properties of the theoretical structure were calculated.                                        | \>=0.       | K                                   | 298.15   |
+| `_theoretical_structure`            | `pressure`                                 | numb       | The pressure at which the energy and other properties of the theoretical structure were calculated.                                           |             | Pa                                  | 101325.0 |
+| `_theoretical_structure`            | `reference_temperature`                    | numb       | In the case of free-energy calculations, specify the reference temperature.                                                                   | \>=0.       | K                                   |          |
+| `_theoretical_structure`            | `reference_pressure`                       | numb       | In the case of free-energy calculations, specify the reference pressure.                                                                      | \>=0.       | Pa                                  |          |
+| `_theoretical_structure`            | `calculated_density`                       | numb       | The calculated density of the crystal.                                                                                                        | \>=0.       | kg m<sup>-3</sup>                   | 1420.0   |
+| `_theoretical_structure`            | `total_energy`                             | numb       | The total energy of the theoretical structure, i.e. energy relative to all of the nuclei and electrons separated to an infinite distance.     |             | kJ mol<sup>-1</sup>                 | -1500.5  |
+| `_theoretical_structure`            | `absolute_lattice_energy`                  | numb       | The absolute lattice energy of the crystal, i.e. energy relative to all the molecules separated to an infinite distance.                      |             | kJ mol<sup>-1</sup>                 | -1600.8  |
+| `_theoretical_structure`            | `absolute_free_energy`                     | numb       | The absolute free energy of the crystal.                                                                                                      |             | kJ mol<sup>-1</sup>                 | -1450.2  |
+| `_theoretical_structure`            | `free_energy_correction`                   | numb       | The correction applied to the lattice energy to obtain the free energy, accounting for vibrational and other thermal effects.                 |             | kJ mol<sup>-1</sup>                 | 50.6     |
+| `_theoretical_structure`            | `relative_lattice_energy`                  | numb       | The lattice energy of the theoretical structure relative to the lowest energy structure found in the CSP.                                     | \>=0.       | kJ mol<sup>-1</sup>                 | 8.7      |
+| `_theoretical_structure`            | `relative_free_energy`                     | numb       | The free energy of the theoretical structure relative to the lowest energy structure found in the CSP.                                        | \>=0.       | kJ mol<sup>-1</sup>                 | 2.3      |
+| `_theoretical_structure`            | `zero_point_energy_correction`             | numb       | The ZPE correction included in the energy value.                                                                                              | \>=0.       | kJ mol<sup>-1</sup>                 | 0.5      |
+| `_theoretical_structure`            | `dispersion_energy_correction`             | numb       | The dispersion energy correction included in the energy value.                                                                                |             | kJ mol<sup>-1</sup>                 | -4.6     |
+| `_theoretical_structure`            | `formation_energy`                         | numb       | In convex hull phase diagram, it indicates the energy of formation (or mixing energy).                                                        |             | kJ mol<sup>-1</sup>                 | -60.6    |
+| `_theoretical_structure`            | `decomposition_energy`                     | numb       | In convex hull phase diagram, it indicates the decomposition energy.                                                                          |             | kJ mol<sup>-1</sup>                 | -2.5     |
+| `_theoretical_structure`            | `energy_above_hull`                        | numb       | In convex hull phase diagram, it indicates the energy energy above the convex hull.                                                           | \>=0.       | kJ mol<sup>-1</sup>                 | 6.0      |
+| `_theoretical_structure`            | `energy_uncertainty`                       | numb       | An estimate of the uncertainty associated with the calculated energy of the theoretical structure.                                            | \>=0.       | kJ mol<sup>-1</sup>                 | 2.0      |
+| `_theoretical_structure`            | `score`                                    | numb       | To allow for methods that may rank by criteria other than energies (e.g., based on stability or other desired properties).                    |             | unspecified                         | 0.3333   |
+| `_theoretical_structure`            | `rank`                                     | numb       | The rank of the structure when ordered by chosen criteria where 1 is considered to be the most favorable or likely structure.                 | \>=1        |                                     | 1        |
+| `_theoretical_structure`            | `cluster_centre_id`                        | char       | If the structure has been identified as duplicate in a group, the uniqueidentifier of the structure that is the cluster centre of that group. | Free Text   |                                     |          |
+| `_theoretical_structure`            | `cluster_centre_description`               | char       | If the structure has been identified as duplicate in a group, the label of the structure that is the cluster centre of that group.            | Free Text   |                                     |          |
+| `_theoretical_structure`            | `experimental_match_id`                    | char       | If the theoretical structure matches an experimental structure, specify the (possibly unique) identifier of the latter.                       | Free Text   |                                     |          |
+| `_theoretical_structure`            | `experimental_match_database`              | char       | If the theoretical structure matches an experimental structure, specify the database or location the latter.                                  | Free Text   |                                     |          |
+| `_theoretical_structure`            | `experimental_match_description`           | char       | If the theoretical structure matches an experimental structure, this data field allows to include any additional information.                 | Free Text   |                                     |          |
+| `_theoretical_structure`            | `stress_tensor`                            | Mat[numb]  | A 3x3 stress tensor.                                                                                                                          | \>=0.       | Pa                                  |          |
+| `_theoretical_structure_atom`       | `force_x`                                  | numb       | Cartesian component of the forces acting on atoms along the x-axis.                                                                           |             | kJ mol<sup>-1</sup> nm<sup>-1</sup> |          |
+| `_theoretical_structure_atom`       | `force_y`                                  | numb       | Cartesian component of the forces acting on atoms along the y-axis.                                                                           |             | kJ mol<sup>-1</sup> nm<sup>-1</sup> |          |
+| `_theoretical_structure_atom`       | `force_z`                                  | numb       | Cartesian component of the forces acting on atoms along the z-axis.                                                                           |             | kJ mol<sup>-1</sup> nm<sup>-1</sup> |          |
+| `_theoretical_structure_atom`       | `hessian`                                  | Mat[numb]  | A 3x3 per-atom Hessian matrix.                                                                                                                |             | kJ mol<sup>-1</sup> nm<sup>-2</sup> |          |
+| `_theoretical_structure_atom`       | `charge`                                   | numb       | Per-atom partial charge.                                                                                                                      |             | e                                   |          |
+| `_theoretical_structure_property`   | `bandgap`                                  | numb       | The energy difference between the valence band maximum and the conduction band minimum.                                                       |             | kJ mol<sup>-1</sup>                 |          |
+| `_theoretical_structure_property`   | `bandgap_is_direct`                        | bool       | Indicates whether the valence band maximum and conduction band minimum occur at the same k-point in reciprocal space.                         |             |                                     |          |
+| `_theoretical_structure_property`   | `fermi_energy`                             | numb       | The Fermi energy of the theoretical structure.                                                                                                |             | kJ mol<sup>-1</sup>                 |          |
+| `_theoretical_structure_property`   | `valence_band_maximum_energy`              | numb       | The energy of the highest occupied electronic state in the valence band.                                                                      |             | kJ mol<sup>-1</sup>                 |          |
+| `_theoretical_structure_property`   | `conduction_band_minimum_energy`           | numb       | The energy of the lowest unoccupied electronic state in the conduction band.                                                                  |             | kJ mol<sup>-1</sup>                 |          |
+| `_theoretical_structure_property`   | `electron_effective_mass`                  | numb       | The effective mass of electrons.                                                                                                              |             | m<sub>e</sub>                       |          |
+| `_theoretical_structure_property`   | `hole_effective_mass`                      | numb       | The effective mass of holes.                                                                                                                  |             | m<sub>e</sub>                       |          |
+| `_theoretical_structure_property`   | `total_magnetic_moment`                    | numb       | The total magnetic moment of the structure.                                                                                                   |             | &mu;B                               |          |
+| `_theoretical_structure_property`   | `magnetic_ordering`                        | char       | The magnetic ordering state of the structure: ferromagnetic, antiferromagnetic, ferrimagnetic or non-magnetic.                                |             |                                     |          |
+| `_theoretical_structure_property`   | `magnetic_anisotropy_energy`               | numb       | The energy difference associated with aligning the magnetisation along different crystallographic directions.                                 |             | kJ mol<sup>-1</sup>                 |          |
+| `_theoretical_structure_property`   | `elastic_tensor`                           | Mat[numb]  | The 6x6 matrix of the independent components of the stifness tensor.                                                                          |             | Pa                                  |          |
+| `_theoretical_structure_property`   | `bulk_modulus`                             | numb       | A measure of the resistance of the structure to uniform compression.                                                                          |             | Pa                                  |          |
+| `_theoretical_structure_property`   | `shear_modulus`                            | numb       | A measure of the resistance of the structure to shear deformation.                                                                            |             | Pa                                  |          |
+| `_theoretical_structure_property`   | `young_modulus`                            | numb       | The ratio of uniaxial stress to uniaxial strain describing the stiffness of the material.                                                     |             | Pa                                  |          |
+| `_theoretical_structure_property`   | `poisson_ratio`                            | numb       | The ratio of transverse strain to axial strain under uniaxial loading.                                                                        |             |                                     |          |
+| `_theoretical_structure_property`   | `constant_volume_heat_capacity`            | numb       | The heat capacity arising from lattice vibrations under conditions of constant volume.                                                        |             | J mol<sup>-1</sup> K<sup>-1</sup>   |          |
+| `_theoretical_structure_property`   | `constant_pressure_heat_capacity`          | numb       | The heat capacity arising from lattice vibrations under conditions of constant pressure.                                                      |             | J mol<sup>-1</sup> K<sup>-1</sup>   |          |
+| `_theoretical_structure_property`   | `thermal_expansion_tensor`                 | Mat[numb]  | The 3x3 matrix with thermal expansion coefficients.                                                                                           |             | K<sup>-1</sup>                      |          |
+| `_theoretical_structure_property`   | `electrical_conductivity_tensor`           | Mat[numb]  | The 3x3 matrix with electrical conductivity coefficients.                                                                                     |             | S m<sup>-1</sup>                    |          |
+| `_theoretical_structure_property`   | `seebeck_coefficient_tensor`               | Mat[numb]  | The 3x3 matrix with Seebeck coefficients.                                                                                                     |             | V K<sup>-1</sup>                    |          |
+| `_theoretical_structure_property`   | `electronic_thermal_conductivity_tensor`   | Mat[numb]  | The 3x3 matrix with electronic thermal conductivity coefficients.                                                                             |             | W  m<sup>-1</sup> K<sup>-1</sup>    |          |
+| `_theoretical_structure_property`   | `lattice_thermal_conductivity_tensor`      | Mat[numb]  | The 3x3 matrix with lattice thermal conductivity coefficients.                                                                                |             | W  m<sup>-1</sup> K<sup>-1</sup>    |          |
+| `_theoretical_structure_band`       | `kpoint_id`                                | char       | To be used in a loop, optional label ("gamma", X, L, K, etc.) of the kpoint.                                                                  |             |                                     |          |
+| `_theoretical_structure_band`       | `kpoint_coord`                             | List[numb] | To be used in a loop, fractional reciprocal-space coordinates of the kpoint.                                                                  |             |                                     |          |
+| `_theoretical_structure_band`       | `spin_component`                           | char       | To be used in a loop, the spin component ("up" or "down").                                                                                    |             |                                     |          |
+| `_theoretical_structure_band`       | `eigenvalues`                              | List[numb] | To be used in a loop, Band energies at the specified kpoint.                                                                                  |             | kJ mol<sup>-1</sup                  |          |
+| `_theoretical_structure_dos`        | `energy`                                   | List[numb] | To be used in a loop, the energy value for a DOS analysis                                                                                     |             | kJ mol<sup>-1</sup                  |          |
+| `_theoretical_structure_dos`        | `density`                                  | List[numb] | To be used in a loop, the density of states at the specified energy.                                                                          |             |                                     |          |
+| `_theoretical_structure_dos`        | `spin_component`                           | List[numb] | To be used in a loop, the spin component ("up" or "down").                                                                                    |             |                                     |          |
+| `_theoretical_structure_phonon`     | `qpoint_id`                                | char       | To be used in a loop, optional label ("gamma", X, L, K, etc.) of the qpoint.                                                                  |             |                                     |          |
+| `_theoretical_structure_phonon`     | `qpoint_coord`                             | List[numb] | To be used in a loop, fractional reciprocal-space coordinates of the qpoint.                                                                  |             |                                     |          |
+| `_theoretical_structure_phonon`     | `frequencies`                              | List[numb] | To be used in a loop, phonon frequencies of all branches at the specified q-point.                                                            |             | cm<sup>-1</sup>                     |          |
+| `_theoretical_structure_phonon_dos` | `frequency`                                | List[numb] | To be used in a loop, the frequency value for a phonon DOS analysis.                                                                          |             | cm<sup>-1</sup>                     |          |
+| `_theoretical_structure_phonon_dos` | `density`                                  | List[numb] | To be used in a loop, the density of states at the specified frequency.                                                                       |             |                                     |          |
+| `_theoretical_structure`            | `csp_input_system_description`             | char       | Human-readable description of the input system data block.                                                                                    |             |                                     |          |
+| `_theoretical_structure`            | `csp_input_system_id`                      | char       | Identifier of the input system data block.                                                                                                    |             |                                     |          |
+| `_theoretical_structure`            | `csp_workflow_description`                 | char       | Human-readable description of the workflow data block.                                                                                        |             |                                     |          |
+| `_theoretical_structure`            | `csp_workflow_id`                          | char       | Identifier of the workflow data block.                                                                                                        |             |                                     |          |
+| `_theoretical_structure`            | `csp_generation_stage_description`         | char       | Human-readable description of the structure generation method data block.                                                                     |             |                                     |          |
+| `_theoretical_structure`            | `csp_generation_stage_id`                  | char       | Identifier of the structure generation method data block.                                                                                     |             |                                     |          |
+| `_theoretical_structure`            | `csp_ranking_stage_description`            | char       | Human-readable description of the structure ranking method data block.                                                                        |             |                                     |          |
+| `_theoretical_structure`            | `csp_ranking_stage_id`                     | char       | Identifier of the structure ranking method data block.                                                                                        |             |                                     |          |
+| `_theoretical_structure`            | `csp_step_description`                     | char       | Human-readable description of the intermediate step (e.g. a clustering algorithm) data block that was applied to this structure.              |             |                                     |          |
+| `_theoretical_structure`            | `csp_step_id`                              | char       | Identifier of the intermediate step data block that was applied to this structure.                                                            |             |                                     |          |
+| `_theoretical_structure`            | `csp_previous_stage_structure_description` | char       | Human-readable description of the data block of the structure from previous stage. This is the structure used as input for the current stage. |             |                                     |          |
+| `_theoretical_structure`            | `csp_previous_stage_structure_id`          | char       | Identifier of the data block of the structure from previous stage.                                                                            |             |                                     |          |
+| `_theoretical_structure`            | `csp_initial_spacegroup_number`            | char       | The spacegroup of the structure at the initial CSP stage, before any geometry optimisation.                                                   | 1-232       |                                     | 14       |
 
 Details on composition, unit cell, symmetry, and atomic coordinates can be specified through the CIF Core dictionary.
 
@@ -1289,8 +1321,7 @@ _csp_conformer.clustering_rmsd_cutoff           0.4
 
 As there are currently no data fields describing gas-phase simulations, additional details can be added using the
 general `_csp_step_variable.label` and `_csp_step_variable.value` data fields. As a rule of thumb, parameters label
-should be the ones
-specified in programs input files.
+should be the ones specified in programs input files.
 
 Cluster structures using the Crystal Packing Similarity tool:
 
@@ -1380,17 +1411,16 @@ A few guidelines are adopted in the description of specific data fields as highl
 | CompChem             | `method`   | Semi-Empirical         | Semi Empirical                                              |
 
 In addition, the Structure Ranking `method` "ML Potential" refers to methods using *ad hoc* descriptors for neural
-network training to directly compute energy and forces.
-On the other hand, ML models used to parameterise models constants should be classified in the related method.
-For example, forcefield constants parameterised with a deep neural network should be classified as "Forcefield".
+network training to directly compute energy and forces. On the other hand, ML models used to parameterise models
+constants should be classified in the related method. For example, forcefield constants parameterised with a deep neural
+network should be classified as "Forcefield".
 
 ## 8. Future Developments
 
 ### 8.1 Improvements to the CSP Core Dictionary
 
-A few areas relevant to CSP have not been explored yet and might be included in later updates of the dictionary.
-In general, new or specific methods can use the "Other" option and specify possible publications describing the
-workflow.
+A few areas relevant to CSP have not been explored yet and might be included in later updates of the dictionary. In
+general, new or specific methods can use the "Other" option and specify possible publications describing the workflow.
 
 A list of missing sections is shown below:
 
@@ -1410,9 +1440,9 @@ A list of missing sections is shown below:
 ### 8.2 A Computational Chemistry Dictionary
 
 The `_csp` prefix in energy/scoring methods and output structures have been intentionally left out so that the present
-data fields could be used as the basis for the development of a more general computational chemistry dictionary.
-While this is currently limited to a selection of data fields relevant to CSP application, below is an example of how
-these can be used to describe a single geometry optimisation on a known structure:
+data fields could be used as the basis for the development of a more general computational chemistry dictionary. While
+this is currently limited to a selection of data fields relevant to CSP application, below is an example of how these
+can be used to describe a single geometry optimisation on a known structure:
 
 ```text
 data_optimised_structure

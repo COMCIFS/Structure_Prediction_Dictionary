@@ -1,4 +1,5 @@
 #\#CIF_2.0
+# SPDX-License-Identifier: CC-BY-SA-4.0
 ################################################################################
 #                                                                              #
 #       CIF Computational Chemistry Dictionary                                 #
@@ -9,10 +10,11 @@ data_CIF_COMPCHEM
 
     _dictionary.title             CIF_COMPCHEM
     _dictionary.class             Instance
-    _dictionary.version           0.1.0
+    _dictionary.version           0.1.1-dev
     _dictionary.date              2026-07-27
     _dictionary.uri               https://github.com/COMCIFS/Structure_Prediction_Dictionary
     _dictionary.ddl_conformance   4.1.0  # https://www.iucr.org/__data/iucr/cifdic_html/3/DDL_DIC/index.html
+    _dictionary.licensing_SPDX    CC-BY-SA-4.0 
     _dictionary.namespace         CifCore 
     _description.text
 ;
@@ -3303,3 +3305,16 @@ Rule used to calculate Lennard-Jones cross-interaction parameters
         "Lorentz Berthelot"
 
 save_
+
+    loop_
+      _dictionary_audit.version
+      _dictionary_audit.date
+      _dictionary_audit.revision
+        0.1.1-dev 2026-07-27  
+;
+        New data fields for theoretical structure properties and minor fixes.
+; 
+        0.1.0-dev 2026-04-24  
+;
+        In development dictionary for CSP and computational chemistry related data fields.
+;

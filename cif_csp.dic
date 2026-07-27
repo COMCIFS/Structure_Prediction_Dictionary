@@ -64,9 +64,9 @@ save_CSP
     
 save_
 
-save_CSP_DATABLOCK
+save_CSP_DATA_BLOCK
 
-    _definition.id                CSP_DATABLOCK
+    _definition.id                CSP_DATA_BLOCK
     _definition.scope             Category
     _definition.class             Set
     _definition.update            2026-07-27
@@ -75,7 +75,7 @@ save_CSP_DATABLOCK
 It defines the datablock function, identifier and possible links to other files.
 ;
     _name.category_id             CSP
-    _name.object_id               CSP_DATABLOCK
+    _name.object_id               CSP_DATA_BLOCK
     
 save_
 
@@ -191,9 +191,9 @@ It includes data fields that describes search space settings and limitations.
     _name.object_id               CSP_STRUCTURE_GENERATION_SEARCH_SPACE
     loop_
         _category_key.name
-        'csp_structure_generation_search_space.space_group_number_list'
-        'csp_structure_generation_search_space.space_group_list'
-        'csp_structure_generation_search_space.z_prime'
+        '_csp_structure_generation_search_space.space_group_number_list'
+        '_csp_structure_generation_search_space.space_group_list'
+        '_csp_structure_generation_search_space.z_prime'
         
 save_
 
@@ -467,7 +467,8 @@ If datablocks are specified in different files, add the position of these files.
     _type.source                  Assigned
     _type.container               List
     _type.contents                Text
-    _description_example.case     [ "generation_methods.cif" "ranking_methods.cif" "workflows.cif" ]
+    _description_example.case     [ "generation_methods.cif", "ranking_methods.cif", "workflows.cif" ]
+    _type.dimension               '[]'
 
 save_
 
@@ -619,6 +620,7 @@ List of atomic species defining the composition. This simplifies the input defin
         _description_example.detail 
         [Mg O]                    'Atomic symbols'
         [12 8]                    'Atomic numbers'
+    _type.dimension               '[]'
 
 save_
 
@@ -784,6 +786,7 @@ Space group selection: it could be "all" or a subset (list) specifying which spa
     _type.container               List
     _type.contents                Text
     _description_example.case     ["P1" "P-1" "P21" "P21/c" "P21212" "P212121" "Pna21" "Pca21" "Pbca"]
+    _type.dimension               '[]'
 
 save_
 
@@ -1006,6 +1009,7 @@ List of rules for stopping the generation of new structures. This can be a singl
     _type.container               List
     _type.contents                Text
     _description_example.case     ["Max Structures" "Low-Energy Structures Unchanged"]
+    _type.dimension               '[]'
 
 save_
 
@@ -1129,6 +1133,7 @@ If different stopping criteria are used for each space group, it allows a user t
     _type.source                  Assigned
     _type.container               List
     _type.contents                Text
+    _type.dimension               '[]'
 
 save_
 
@@ -1224,7 +1229,7 @@ To be used in the "Workflow" datablock, it is a short, human-readable label of t
     _type.source                  Assigned
     _type.container               Single
     _type.contents                Text
-    _description_example.case     "ea", "rs"
+    _description_example.case     "ea"
 
 save_
 
@@ -1243,7 +1248,7 @@ To be used in the "Workflow" datablock, it is a short, human-readable descriptio
     _type.source                  Assigned
     _type.container               Single
     _type.contents                Text
-    _description_example.case     "Evolutionary Algorithm", "Random Search"
+    _description_example.case     "Evolutionary Algorithm"
 
 save_
 

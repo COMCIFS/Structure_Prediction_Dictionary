@@ -213,7 +213,13 @@ save_THEORETICAL_STRUCTURE_ATOM
 ;
     _name.category_id             THEORETICAL_STRUCTURE
     _name.object_id               THEORETICAL_STRUCTURE_ATOM
-    
+    loop_
+        _category_key.name
+        "_theoretical_structure_atom.force_x"
+        "_theoretical_structure_atom.force_y"
+        "_theoretical_structure_atom.force_z"
+        "_theoretical_structure_atom.hessian"
+        "_theoretical_structure_atom.charge"
 save_
 
 save_THEORETICAL_STRUCTURE_PROPERTY
@@ -243,7 +249,12 @@ save_THEORETICAL_STRUCTURE_BAND
 ;
     _name.category_id             THEORETICAL_STRUCTURE
     _name.object_id               THEORETICAL_STRUCTURE_BAND
-    
+    loop_
+        _category_key.name
+        "_theoretical_structure_band.kpoint_id"
+        "_theoretical_structure_band.kpoint_coord"
+        "_theoretical_structure_band.spin_component"
+        "_theoretical_structure_band.eigenvalues"
 save_
 
 
@@ -259,7 +270,11 @@ save_THEORETICAL_STRUCTURE_DOS
 ;
     _name.category_id             THEORETICAL_STRUCTURE
     _name.object_id               THEORETICAL_STRUCTURE_DOS
-    
+    loop_
+        _category_key.name
+        "_theoretical_structure_dos.energy"   
+        "_theoretical_structure_dos.density"   
+        "_theoretical_structure_dos.spin_component"    
 save_
 
 save_THEORETICAL_STRUCTURE_PHONON
@@ -275,6 +290,11 @@ save_THEORETICAL_STRUCTURE_PHONON
     _name.category_id             THEORETICAL_STRUCTURE
     _name.object_id               THEORETICAL_STRUCTURE_PHONON
     
+    loop_
+        _category_key.name
+        "_theoretical_structure_phonon.qpoint_id"   
+        "_theoretical_structure_phonon.qpoint_coord"  
+        "_theoretical_structure_phonon.frequencies"  
 save_
 
 
@@ -290,7 +310,11 @@ save_THEORETICAL_STRUCTURE_PHONON_DOS
 ;
     _name.category_id             THEORETICAL_STRUCTURE
     _name.object_id               THEORETICAL_STRUCTURE_PHONON_DOS
-    
+   
+    loop_
+        _category_key.name
+        "_theoretical_structure_phonon_dos.frequency"   
+        "_theoretical_structure_phonon_dos.density"  
 save_
 
 
@@ -1824,10 +1848,10 @@ A 3x3 stress tensor.
     _name.object_id               'stress_tensor'
     _type.purpose                 Number
     _type.source                  Recorded
-    _type.container               Array
+    _type.container               Matrix
     _type.contents                Real
     _units.code                   'pascals'
-    _type.dimension               '[]'
+    _type.dimension               '[3,3]'
     _enumeration.range            0.:
 
 save_
@@ -1902,10 +1926,10 @@ A 3x3 per-atom Hessian matrix.
     _name.object_id               'hessian'
     _type.purpose                 Number
     _type.source                  Assigned
-    _type.container               Array
+    _type.container               Matrix
     _type.contents                Integer
     _units.code                   'kilojoules_per_mole_per_nanometre_squared'
-    _type.dimension               '[]'
+    _type.dimension               '[3,3]'
 
 save_
 
@@ -2134,10 +2158,10 @@ The 6x6 matrix of the independent components of the stifness tensor.
     _name.object_id               'elastic_tensor'
     _type.purpose                 Number
     _type.source                  Assigned
-    _type.container               Array
+    _type.container               Matrix
     _type.contents                Integer
     _units.code                   'pascals'
-    _type.dimension               '[]'
+    _type.dimension               '[6,6]'
 
 save_
 
@@ -2268,10 +2292,10 @@ The 3x3 matrix with thermal expansion coefficients.
     _name.object_id               'thermal_expansion_tensor'
     _type.purpose                 Number
     _type.source                  Assigned
-    _type.container               Array
+    _type.container               Matrix
     _type.contents                Integer
     _units.code                   'per_kelvins'
-    _type.dimension               '[]'
+    _type.dimension               '[3,3]'
 
 save_
 
@@ -2288,10 +2312,10 @@ The 3x3 matrix with electrical conductivity coefficients.
     _name.object_id               'electrical_conductivity_tensor'
     _type.purpose                 Number
     _type.source                  Assigned
-    _type.container               Array
+    _type.container               Matrix
     _type.contents                Integer
     _units.code                   'siemens_per_metre'
-    _type.dimension               '[]'
+    _type.dimension               '[3,3]'
 
 save_
 
@@ -2308,10 +2332,10 @@ The 3x3 matrix with Seebeck coefficients.
     _name.object_id               'seebeck_coefficient_tensor'
     _type.purpose                 Number
     _type.source                  Assigned
-    _type.container               Array
+    _type.container               Matrix
     _type.contents                Integer
     _units.code                   'volts_per_kelvin'
-    _type.dimension               '[]'
+    _type.dimension               '[3,3]'
 
 save_
 
@@ -2328,10 +2352,10 @@ The 3x3 matrix with electronic thermal conductivity coefficients.
     _name.object_id               'electronic_thermal_conductivity_tensor'
     _type.purpose                 Number
     _type.source                  Assigned
-    _type.container               Array
+    _type.container               Matrix
     _type.contents                Integer
     _units.code                   'watts_per_metre_per_kelvin'
-    _type.dimension               '[]'
+    _type.dimension               '[3,3]'
 
 save_
 
@@ -2348,10 +2372,10 @@ The 3x3 matrix with lattice thermal conductivity coefficients.
     _name.object_id               'lattice_thermal_conductivity_tensor'
     _type.purpose                 Number
     _type.source                  Assigned
-    _type.container               Array
+    _type.container               Matrix
     _type.contents                Integer
     _units.code                   'watts_per_metre_per_kelvin'
-    _type.dimension               '[]'
+    _type.dimension               '[3,3]'
 
 save_
 
@@ -2444,10 +2468,9 @@ To be used in a loop, the energy value for a DOS analysis
     _name.object_id               'energy'
     _type.purpose                 Number
     _type.source                  Assigned
-    _type.container               Array
+    _type.container               Single
     _type.contents                Integer
     _units.code                   'kilojoules_per_mole'
-    _type.dimension               '[]'
 
 save_
 
@@ -2464,10 +2487,9 @@ To be used in a loop, the density of states at the specified energy.
     _name.object_id               'density'
     _type.purpose                 Number
     _type.source                  Assigned
-    _type.container               Array
+    _type.container               Single
     _type.contents                Integer
     _units.code                   'none'
-    _type.dimension               '[]'
 
 save_
 
@@ -2482,12 +2504,10 @@ To be used in a loop, the spin component ("up" or "down").
 ;
     _name.category_id             'theoretical_structure_dos'
     _name.object_id               'spin_component'
-    _type.purpose                 Number
+    _type.purpose                 Describe
     _type.source                  Assigned
-    _type.container               Array
-    _type.contents                Integer
-    _units.code                   'none'
-    _type.dimension               '[]'
+    _type.container               Single
+    _type.contents                Text
 
 save_
 
@@ -2562,10 +2582,9 @@ To be used in a loop, the frequency value for a phonon DOS analysis.
     _name.object_id               'frequency'
     _type.purpose                 Number
     _type.source                  Assigned
-    _type.container               Array
+    _type.container               Single
     _type.contents                Integer
     _units.code                   'per_centimetre'
-    _type.dimension               '[]'
 
 save_
 
@@ -2582,10 +2601,9 @@ To be used in a loop, the density of states at the specified frequency.
     _name.object_id               'density'
     _type.purpose                 Number
     _type.source                  Assigned
-    _type.container               Array
+    _type.container               Single
     _type.contents                Integer
     _units.code                   'none'
-    _type.dimension               '[]'
 
 save_
 
@@ -3029,6 +3047,7 @@ Specifies the inclusion and functional form of cross terms (e.g., bond-angle, Ur
     _type.source                  Assigned
     _type.container               List
     _type.contents                Text
+    _type.dimension               '[]'
 
 save_
 

@@ -320,7 +320,7 @@ these fields to be used, the `_csp.structure_generation_method` must include "Si
 
 ### 3.5 Monte Carlo Parallel Tempering
 
-Category `_csp.monte_carlo_parallel_tempering_[]`: Subgroup for CSP Structure Generation methods that use Monte Carlo
+Category `_csp_monte_carlo_parallel_tempering.[]`: Subgroup for CSP Structure Generation methods that use Monte Carlo
 Parallel tempering. For these fields to be used, the `_csp.structure_generation_method` must be set to "Monte Carlo
 Parallel Tempering".
 
@@ -332,7 +332,7 @@ Parallel Tempering".
 
 ### 3.6 Random Search
 
-Category `_csp.random_search_[]`: Subgroup for CSP Structure Generation methods that use Random algorithms. For these
+Category `_csp_random_search.[]`: Subgroup for CSP Structure Generation methods that use Random algorithms. For these
 fields to be used, the `_csp.structure_generation_method` should be set to "Random Search".
 
 | Group                | Data Field       | Type | Definition                                                            | Constraints                                                                                                                                                                                                                                        | Units | Example        |

@@ -19,7 +19,7 @@ The datablock (in file `csp_input.cif`) starts by introducing three identifiers 
 
 - The (human-readable) chemical name `"methyl 2-aminobenzoate"` of the compound
 - A unique identifier that can be used for an internal storage or database (being target XXIX of the 7th Blind Test, we
-  used `BT-XXX`)
+  used `BT-XXIX`)
 - A datablock unique ID (`0d430939-34a3-4fc1-bf49-d04e39580fbc`).
 
 Only the latter will be used to link output structures to the input datablock.

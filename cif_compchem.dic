@@ -2106,7 +2106,7 @@ The total magnetic moment of the structure.
     _type.source                  Assigned
     _type.container               Single
     _type.contents                Integer
-    _units.code                   'bohr_magneton'
+    _units.code                   'Bohr_magnetons'
 
 save_
 
@@ -2258,7 +2258,7 @@ The heat capacity arising from lattice vibrations under conditions of constant v
     _type.source                  Assigned
     _type.container               Single
     _type.contents                Integer
-    _units.code                   'joules_per_mole_per_kelvins'
+    _units.code                   'joules_per_mole_per_kelvin'
 
 save_
 
@@ -2277,7 +2277,7 @@ The heat capacity arising from lattice vibrations under conditions of constant p
     _type.source                  Assigned
     _type.container               Single
     _type.contents                Integer
-    _units.code                   'joules_per_mole_per_kelvins'
+    _units.code                   'joules_per_mole_per_kelvin'
 
 save_
 
@@ -2296,7 +2296,7 @@ The 3x3 matrix with thermal expansion coefficients.
     _type.source                  Assigned
     _type.container               Matrix
     _type.contents                Integer
-    _units.code                   'per_kelvins'
+    _units.code                   'reciprocal_kelvins'
     _type.dimension               '[3,3]'
 
 save_
@@ -2566,7 +2566,7 @@ To be used in a loop, phonon frequencies of all branches at the specified q-poin
     _type.source                  Assigned
     _type.container               Array
     _type.contents                Integer
-    _units.code                   'per_centimetre'
+    _units.code                   'reciprocal_centimetres'
     _type.dimension               '[]'
 
 save_
@@ -2586,7 +2586,7 @@ To be used in a loop, the frequency value for a phonon DOS analysis.
     _type.source                  Assigned
     _type.container               Single
     _type.contents                Integer
-    _units.code                   'per_centimetre'
+    _units.code                   'reciprocal_centimetres'
 
 save_
 

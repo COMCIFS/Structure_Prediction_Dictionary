@@ -1,3 +1,4 @@
+#\#CIF_2.0
 # Random Search
 data_rs
     # Datablock Details
@@ -49,7 +50,7 @@ data_mcpt
     _csp.structure_generation_density_upper_limit                              1500
     _csp.structure_generation_space_group_number_list                          [14 2 15 61 19 4 33 29 5 1]
 
-    _csp_structure_generation_stopping_criteria.description                    ["Max Structures", "Low-Energy Structures Unchanged"]
+    _csp_structure_generation_stopping_criteria.description                    ["Max Structures" "Low-Energy Structures Unchanged"]
     _csp_structure_generation_stopping_criteria.max_structures_evaluated       100000
     _csp_structure_generation_stopping_criteria.iterations_without_improvement 20
     _csp_structure_generation_stopping_criteria.energy_range                   10.0
@@ -63,18 +64,18 @@ data_ea
 
     # Method Details
     _csp.structure_generation_method                                           "Evolutionary Algorithm"
-    _csp_evolutionary_algorithm.initial_population_size                        50
-    _csp_evolutionary_algorithm.population_size                                50
-    _csp_evolutionary_algorithm.parents_structure_fraction                     0.6
-    _csp_evolutionary_algorithm.mutation_fraction                              0.5
-    _csp_evolutionary_algorithm.heredity_fraction                              0.5  # Crossover or recombination
+    _csp_evolutionary_algorithms.initial_population_size                        50
+    _csp_evolutionary_algorithms.population_size                                50
+    _csp_evolutionary_algorithms.parents_structure_fraction                     0.6
+    _csp_evolutionary_algorithms.mutation_fraction                              0.5
+    _csp_evolutionary_algorithms.heredity_fraction                              0.5  # Crossover or recombination
 
     # Search Space & Stopping Criteria
     _csp.structure_generation_density_lower_limit                              1000
     _csp.structure_generation_density_upper_limit                              1500
     _csp.structure_generation_space_group_number_list                          [14 2 15 61 19 4 33 29 5 1]
 
-    _csp_structure_generation_stopping_criteria.description                    ["Max Structures", "Low-Energy Structures Unchanged"]
+    _csp_structure_generation_stopping_criteria.description                    ["Max Structures" "Low-Energy Structures Unchanged"]
     _csp_structure_generation_stopping_criteria.max_structures_evaluated       100000
     _csp_structure_generation_stopping_criteria.iterations_without_improvement 20
     _csp_structure_generation_stopping_criteria.energy_range                   10.0
@@ -101,7 +102,7 @@ data_pso
     _csp.structure_generation_density_upper_limit                              1500
     _csp.structure_generation_space_group_number_list                          [14 2 15 61 19 4 33 29 5 1]
 
-    _csp_structure_generation_stopping_criteria.description                    ["Max Structures", "Low-Energy Structures Unchanged"]
+    _csp_structure_generation_stopping_criteria.description                    ["Max Structures" "Low-Energy Structures Unchanged"]
     _csp_structure_generation_stopping_criteria.max_structures_evaluated       100000
     _csp_structure_generation_stopping_criteria.iterations_without_improvement 20
     _csp_structure_generation_stopping_criteria.energy_range                   10.0

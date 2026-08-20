@@ -469,7 +469,7 @@ If datablocks are specified in different files, add the position of these files.
     _type.source                  Assigned
     _type.container               List
     _type.contents                Text
-    _description_example.case     [ "generation_methods.cif", "ranking_methods.cif", "workflows.cif" ]
+    _description_example.case     ["generation_methods.cif" "ranking_methods.cif" "workflows.cif"]
     _type.dimension               '[]'
 
 save_

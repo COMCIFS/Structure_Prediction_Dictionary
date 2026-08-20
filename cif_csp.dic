@@ -3064,11 +3064,11 @@ save_
       _dictionary_audit.version
       _dictionary_audit.date
       _dictionary_audit.revision
-        0.1.1-dev 2026-07-27  
-;
-        New data fields for theoretical structure properties and minor fixes.
-; 
         0.1.0-dev 2026-04-24  
 ;
         In development dictionary for CSP and computational chemistry related data fields.
 ;
+        0.1.1-dev 2026-07-27  
+;
+        New data fields for theoretical structure properties and minor fixes.
+; 

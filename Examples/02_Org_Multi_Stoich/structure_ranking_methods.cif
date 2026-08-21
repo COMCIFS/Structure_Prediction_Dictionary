@@ -24,7 +24,7 @@ data_gaff
     _forcefield.long_range_electrostatic "PME"
 
     _forcefield.vdw_term                 "LJ(epsilon,sigma)"
-    _forcefield.long_range_electrostatic "LJ-PME"
+    _forcefield.long_range_vdw           "LJ-PME"
 
     _forcefield.combination_rule         "Lorentz-Berthelot"
 

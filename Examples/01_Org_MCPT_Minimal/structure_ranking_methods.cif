@@ -2,7 +2,7 @@
 data_psi_mol
     # Datablock Details
     _csp_data_block.class                "Ranking Method"
-    _csp_data_block.description          gaff
+    _csp_data_block.description          psi_mol
     _csp_data_block.id                   0c95ca9a-a288-4c9a-8bcc-c66fa6153a47
 
     # Energy Method Details

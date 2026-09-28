@@ -193,7 +193,7 @@ _csp_data_block.class       "Input"
 _csp_data_block.id          fbbe2b09-da53-4505-ba9c-d4952a096dbb
 _csp_data_block.description input1
 
-_csp.input_name "(mi-tricyanomethanide)-silver"
+_csp_input.name "(mi-tricyanomethanide)-silver"
 
 # Molecules
 loop_
@@ -356,8 +356,8 @@ _csp.structure_generation_method                                     "Evolutiona
 _csp.structure_generation_density_lower_limit                        750
 _csp.structure_generation_density_upper_limit                        1600
 _csp.structure_generation_space_group_number_list                    "all"
-_csp.structure_generation_stopping_criteria_description              "Max Structures"
-_csp.structure_generation_stopping_criteria_max_structures_evaluated 10000
+_csp_structure_generation_stopping_criteria.description              "Max Structures"
+_csp_structure_generation_stopping_criteria.max_structures_evaluated 10000
 ```
 
 Combination of different structure generation methods, search limited on most popular space groups for organic crystals.

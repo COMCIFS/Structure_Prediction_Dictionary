@@ -15,7 +15,7 @@ The goal of these examples is to illustrate:
 
 ## Index
 
-The table below summarizes the core concept, domain, and specific dictionary fields highlighted in each self-contained
+The table below summarises the core concept, domain, and specific dictionary fields highlighted in each self-contained
 example folder.
 
 | Folder Name                                           | Primary Domain | Input Description                        | Key Input/Methodology                                                                   | Core Concepts & Dictionary Fields Highlighted                                                                                                            |

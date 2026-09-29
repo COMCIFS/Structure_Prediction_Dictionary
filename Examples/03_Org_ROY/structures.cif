@@ -13,7 +13,7 @@
 #
 #######################################################################
 
-data_0001_Y_Energy_0.000_Density_1.5366 New: P21/n
+data_0001_Y_Energy_0.000_Density_1.5366 # New:P21/n
 _csp_data_block.class                          "Theoretical Structure"
 _csp_data_block.id     8ce7a694-7e65-4970-abd3-68b3ec430b58
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
@@ -124,7 +124,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0002_YT04_Energy_0.642_Density_1.5573 New: P21/n
+data_0002_YT04_Energy_0.642_Density_1.5573 # New:P21/n
 _csp_data_block.class                          "Theoretical Structure"
 _csp_data_block.id     8882892f-bd95-4e55-bac5-280d141d411b
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
@@ -235,7 +235,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0003_R_Energy_0.825_Density_1.5196 New: P-1
+data_0003_R_Energy_0.825_Density_1.5196 # New:P-1
 _csp_data_block.class                          "Theoretical Structure"
 _csp_data_block.id     2d665cab-aaee-4219-aeec-636e37ccfcd1
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
@@ -344,7 +344,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0004_OP_Energy_1.607_Density_1.5392 New: P21/n
+data_0004_OP_Energy_1.607_Density_1.5392 # New:P21/n
 _csp_data_block.class                          "Theoretical Structure"
 _csp_data_block.id     88e6cb8f-5557-4a76-8d35-5c6285b5a0a5
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
@@ -455,7 +455,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0005_YN_Energy_2.313_Density_1.5183 New: P-1
+data_0005_YN_Energy_2.313_Density_1.5183 # New:P-1
 _csp_data_block.class                          "Theoretical Structure"
 _csp_data_block.id     9d22b82d-9603-449a-98d7-9aa049c4d1bd
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
@@ -564,7 +564,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0006_Y04_Energy_2.417_Density_1.5386 New: P-1
+data_0006_Y04_Energy_2.417_Density_1.5386 # New:P-1
 _csp_data_block.class                          "Theoretical Structure"
 _csp_data_block.id     db60063a-8e74-405c-935f-17b7506bac0c
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
@@ -673,7 +673,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0007_R05_Energy_2.607_Density_1.5222 New: P21
+data_0007_R05_Energy_2.607_Density_1.5222 # New:P21
 _csp_data_block.class                          "Theoretical Structure"
 _csp_data_block.id     201e9951-b7e6-45a2-a1a3-dbb4da82c577
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
@@ -837,7 +837,7 @@ C24 H18 1_555 1_555
 #
 #######################################################################
 
-data_0008_Energy_2.682_Density_1.5038 New: Pbca
+data_0008_Energy_2.682_Density_1.5038 # New:Pbca
 _csp_data_block.class                          "Theoretical Structure"
 _csp_data_block.id     c664bcce-3b68-4c4e-ae72-b9c90d61830e
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
@@ -952,7 +952,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0009_Energy_2.706_Density_1.5330 New: P-1
+data_0009_Energy_2.706_Density_1.5330 # New:P-1
 _csp_data_block.class                          "Theoretical Structure"
 _csp_data_block.id     5a8b1010-5af2-4ba7-92ff-2f7f762f5f0e
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
@@ -1061,7 +1061,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0010_PO13_Energy_2.799_Density_1.5686 New: P21/c
+data_0010_PO13_Energy_2.799_Density_1.5686 # New:P21/c
 _csp_data_block.class                          "Theoretical Structure"
 _csp_data_block.id     9eb4c8d4-649f-49e5-a4d9-befa34a03682
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
@@ -1172,7 +1172,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0011_Energy_2.972_Density_1.5307 New: P21/c
+data_0011_Energy_2.972_Density_1.5307 # New:P21/c
 _csp_data_block.class                          "Theoretical Structure"
 _csp_data_block.id     1452cefb-502e-47fa-9d84-9e53e94e25f6
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
@@ -1283,7 +1283,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0012_ON_Energy_3.016_Density_1.5208 New: P21/c
+data_0012_ON_Energy_3.016_Density_1.5208 # New:P21/c
 _csp_data_block.class                          "Theoretical Structure"
 _csp_data_block.id     a730ff1e-b761-4010-b2e3-143c8e760ac3
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
@@ -1394,7 +1394,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0013_Energy_3.045_Density_1.5247 New: P-1
+data_0013_Energy_3.045_Density_1.5247 # New:P-1
 _csp_data_block.class                          "Theoretical Structure"
 _csp_data_block.id     b4751438-55c8-4a29-881d-c7d0ac3a2c66
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
@@ -1503,7 +1503,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0014_Energy_3.392_Density_1.5376 New: P21/c
+data_0014_Energy_3.392_Density_1.5376 # New:P21/c
 _csp_data_block.class                          "Theoretical Structure"
 _csp_data_block.id     c8090805-7f8f-49f2-bdd2-4339b6663c90
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
@@ -1614,7 +1614,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0015_Energy_3.644_Density_1.5502 New: P21/n
+data_0015_Energy_3.644_Density_1.5502 # New:P21/n
 _csp_data_block.class                          "Theoretical Structure"
 _csp_data_block.id     58b19ddf-23cf-4f82-8a23-8e83018a11a0
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
@@ -1725,7 +1725,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0016_Energy_3.747_Density_1.5045 New: P212121
+data_0016_Energy_3.747_Density_1.5045 # New:P212121
 _csp_data_block.class                          "Theoretical Structure"
 _csp_data_block.id     977340cb-e7be-451e-9b0b-729e89f1b935
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
@@ -1836,7 +1836,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0017_Energy_3.785_Density_1.5449 New: P212121
+data_0017_Energy_3.785_Density_1.5449 # New:P212121
 _csp_data_block.class                          "Theoretical Structure"
 _csp_data_block.id     2425b36d-c581-41f5-89bd-ec43c6fe63c2
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
@@ -1947,7 +1947,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0018_Energy_4.124_Density_1.5404 New: C2/c
+data_0018_Energy_4.124_Density_1.5404 # New:C2/c
 _csp_data_block.class                          "Theoretical Structure"
 _csp_data_block.id     6aa592a8-fa7f-45c3-b955-f8124c163293
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
@@ -2062,7 +2062,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0019_Energy_4.167_Density_1.5226 New: P21/c
+data_0019_Energy_4.167_Density_1.5226 # New:P21/c
 _csp_data_block.class                          "Theoretical Structure"
 _csp_data_block.id     ce66120e-3095-4f16-b4e7-b0e3f16e3e2d
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
@@ -2173,7 +2173,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0020_Energy_4.239_Density_1.4907 New: P21/n
+data_0020_Energy_4.239_Density_1.4907 # New:P21/n
 _csp_data_block.class                          "Theoretical Structure"
 _csp_data_block.id     8ac21b01-b10d-4600-a3ff-b47c9289b26d
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
@@ -2284,7 +2284,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0021_Energy_4.241_Density_1.5430 New: P21/c
+data_0021_Energy_4.241_Density_1.5430 # New:P21/c
 _csp_data_block.class                          "Theoretical Structure"
 _csp_data_block.id     db09d27b-54bc-4f1a-a1e9-7409780cfbe2
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
@@ -2395,7 +2395,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0022_Energy_4.258_Density_1.5541 New: P21/c
+data_0022_Energy_4.258_Density_1.5541 # New:P21/c
 _csp_data_block.class                          "Theoretical Structure"
 _csp_data_block.id     d4509118-1e98-4cde-9005-0a573edc4f65
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
@@ -2506,7 +2506,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0023_ORP_Energy_4.290_Density_1.5081 New: Pbca
+data_0023_ORP_Energy_4.290_Density_1.5081 # New:Pbca
 _csp_data_block.class                          "Theoretical Structure"
 _csp_data_block.id     8deb4157-85ca-4ac4-a55d-b282e8e1494f
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
@@ -2621,7 +2621,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0024_Energy_4.371_Density_1.5176 New: P21/c
+data_0024_Energy_4.371_Density_1.5176 # New:P21/c
 _csp_data_block.class                          "Theoretical Structure"
 _csp_data_block.id     8cc9a9e1-775c-4546-b49e-763e0027b7bd
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
@@ -2732,7 +2732,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0025_Energy_4.460_Density_1.5689 New: P-1
+data_0025_Energy_4.460_Density_1.5689 # New:P-1
 _csp_data_block.class                          "Theoretical Structure"
 _csp_data_block.id     85cef1e9-9361-4411-92c2-0252b79c302f
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
@@ -2841,7 +2841,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0026_Energy_4.469_Density_1.5269 New: P21/c
+data_0026_Energy_4.469_Density_1.5269 # New:P21/c
 _csp_data_block.class                          "Theoretical Structure"
 _csp_data_block.id     47f10a24-060f-4f9e-971d-6f21d04164cc
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
@@ -2952,7 +2952,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0027_Energy_4.516_Density_1.5169 New: P21/c
+data_0027_Energy_4.516_Density_1.5169 # New:P21/c
 _csp_data_block.class                          "Theoretical Structure"
 _csp_data_block.id     7272bd01-4a66-4eef-abb0-aa7092b3e057
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
@@ -3063,7 +3063,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0028_Energy_4.593_Density_1.5479 New: P21/n
+data_0028_Energy_4.593_Density_1.5479 # New:P21/n
 _csp_data_block.class                          "Theoretical Structure"
 _csp_data_block.id     4842cdc8-ab27-4816-b22e-d4cd389abaa5
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
@@ -3174,7 +3174,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0029_Energy_4.723_Density_1.5638 New: P21/c
+data_0029_Energy_4.723_Density_1.5638 # New:P21/c
 _csp_data_block.class                          "Theoretical Structure"
 _csp_data_block.id     c4f13d82-cf0e-413a-a4a6-50e6ad0ce8ee
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
@@ -3285,7 +3285,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0030_Energy_4.749_Density_1.5642 New: P21/n
+data_0030_Energy_4.749_Density_1.5642 # New:P21/n
 _csp_data_block.class                          "Theoretical Structure"
 _csp_data_block.id     d1399b86-594a-4c7c-93d0-a31b98928831
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
@@ -3396,7 +3396,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0031_Energy_4.751_Density_1.5197 New: C2/c
+data_0031_Energy_4.751_Density_1.5197 # New:C2/c
 _csp_data_block.class                          "Theoretical Structure"
 _csp_data_block.id     a36e5377-d3ba-4cb5-bf0b-851eee5b9e56
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
@@ -3511,7 +3511,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0032_R18_Energy_4.860_Density_1.5207 New: P-1
+data_0032_R18_Energy_4.860_Density_1.5207 # New:P-1
 _csp_data_block.class                          "Theoretical Structure"
 _csp_data_block.id     77dab43f-307d-4f3d-9982-311f9d13a14b
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
@@ -3675,7 +3675,7 @@ C24 H18 1_555 1_555
 #
 #######################################################################
 
-data_0033_Energy_4.868_Density_1.5199 New: P21/c
+data_0033_Energy_4.868_Density_1.5199 # New:P21/c
 _csp_data_block.class                          "Theoretical Structure"
 _csp_data_block.id     a3818a4d-49d8-4d7d-b5ef-7a01d1389aa2
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
@@ -3786,7 +3786,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0034_Energy_4.992_Density_1.4742 New: P21/c
+data_0034_Energy_4.992_Density_1.4742 # New:P21/c
 _csp_data_block.class                          "Theoretical Structure"
 _csp_data_block.id     322745e6-a048-4fbd-85a5-0e25e2236447
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
@@ -3897,7 +3897,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0035_Energy_5.055_Density_1.5572 New: P21/c
+data_0035_Energy_5.055_Density_1.5572 # New:P21/c
 _csp_data_block.class                          "Theoretical Structure"
 _csp_data_block.id     09fa35f4-3c42-47f4-b27b-9960edeec9f2
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
@@ -4008,7 +4008,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0036_Energy_5.142_Density_1.5193 New: P21/c
+data_0036_Energy_5.142_Density_1.5193 # New:P21/c
 _csp_data_block.class                          "Theoretical Structure"
 _csp_data_block.id     fd92fa9f-3bbf-4d54-9b8a-dec8effcaee2
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
@@ -4119,7 +4119,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0037_RPL_Energy_5.160_Density_1.5026 New: Pbca
+data_0037_RPL_Energy_5.160_Density_1.5026 # New:Pbca
 _csp_data_block.class                          "Theoretical Structure"
 _csp_data_block.id     dc817f89-5f9d-4747-a578-b4d1386f562f
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
@@ -4289,7 +4289,7 @@ C24 H18 1_555 1_555
 #
 #######################################################################
 
-data_0038_Energy_5.236_Density_1.5015 New: P21/c
+data_0038_Energy_5.236_Density_1.5015 # New:P21/c
 _csp_data_block.class                          "Theoretical Structure"
 _csp_data_block.id     9cb52117-0197-4b2c-bcf2-7585dc7c3a97
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
@@ -4400,7 +4400,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0039_Energy_5.252_Density_1.5349 New: Fdd2
+data_0039_Energy_5.252_Density_1.5349 # New:Fdd2
 _csp_data_block.class                          "Theoretical Structure"
 _csp_data_block.id     f42a928f-1369-4117-b1a8-85d621fd3923
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
@@ -4523,7 +4523,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0040_Energy_5.269_Density_1.4867 New: P212121
+data_0040_Energy_5.269_Density_1.4867 # New:P212121
 _csp_data_block.class                          "Theoretical Structure"
 _csp_data_block.id     e9098496-9866-47ac-99e6-3bc1fa374c80
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
@@ -4634,7 +4634,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0041_Energy_5.309_Density_1.5464 New: P21/c
+data_0041_Energy_5.309_Density_1.5464 # New:P21/c
 _csp_data_block.class                          "Theoretical Structure"
 _csp_data_block.id     1967816a-ca86-4c65-8ba1-df3aee27be27
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
@@ -4745,7 +4745,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0042_Energy_5.436_Density_1.5260 New: P21/n
+data_0042_Energy_5.436_Density_1.5260 # New:P21/n
 _csp_data_block.class                          "Theoretical Structure"
 _csp_data_block.id     d19b7353-eeb8-477c-b77e-ddc0e0af3f8b
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
@@ -4856,7 +4856,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0043_Energy_5.465_Density_1.4976 New: P21/n
+data_0043_Energy_5.465_Density_1.4976 # New:P21/n
 _csp_data_block.class                          "Theoretical Structure"
 _csp_data_block.id     8c498c61-ca73-4f17-b49b-ddbebdfa2227
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
@@ -4967,7 +4967,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0044_Energy_5.610_Density_1.5129 New: P21/c
+data_0044_Energy_5.610_Density_1.5129 # New:P21/c
 _csp_data_block.class                          "Theoretical Structure"
 _csp_data_block.id     b0d0fb4b-c83b-4167-9193-7f8b310ca9e3
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
@@ -5078,7 +5078,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0045_Energy_5.615_Density_1.5277 New: P212121
+data_0045_Energy_5.615_Density_1.5277 # New:P212121
 _csp_data_block.class                          "Theoretical Structure"
 _csp_data_block.id     e1ad8897-9209-4b3f-9dfb-1ec2604c9b87
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
@@ -5189,7 +5189,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0046_Energy_5.650_Density_1.5372 New: P21/c
+data_0046_Energy_5.650_Density_1.5372 # New:P21/c
 _csp_data_block.class                          "Theoretical Structure"
 _csp_data_block.id     ad78c840-3e8a-43e7-8d00-c8f90767da06
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
@@ -5300,7 +5300,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0047_Energy_5.658_Density_1.5057 New: P21/c
+data_0047_Energy_5.658_Density_1.5057 # New:P21/c
 _csp_data_block.class                          "Theoretical Structure"
 _csp_data_block.id     58d7d36f-69bf-499e-8a3d-665c6a110e1b
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
@@ -5411,7 +5411,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0048_Energy_5.693_Density_1.5271 New: P-1
+data_0048_Energy_5.693_Density_1.5271 # New:P-1
 _csp_data_block.class                          "Theoretical Structure"
 _csp_data_block.id     5a1ca1ee-bb4e-45d1-a27a-f21167b0818e
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
@@ -5520,7 +5520,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0049_Energy_5.737_Density_1.5071 New: P21/c
+data_0049_Energy_5.737_Density_1.5071 # New:P21/c
 _csp_data_block.class                          "Theoretical Structure"
 _csp_data_block.id     87faf4ae-93bb-438f-8bfd-673ba32e9bd4
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
@@ -5631,7 +5631,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0050_Energy_5.753_Density_1.5283 New: P-1
+data_0050_Energy_5.753_Density_1.5283 # New:P-1
 _csp_data_block.class                          "Theoretical Structure"
 _csp_data_block.id     d81b204d-076c-47c8-b47c-eb720c258c72
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
@@ -5740,7 +5740,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0051_Energy_5.766_Density_1.5055 New: I2
+data_0051_Energy_5.766_Density_1.5055 # New:I2
 _csp_data_block.class                          "Theoretical Structure"
 _csp_data_block.id     ab513748-eb22-4371-8513-a1b513c78f33
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
@@ -5851,7 +5851,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0052_Energy_5.791_Density_1.4859 New: P21/n
+data_0052_Energy_5.791_Density_1.4859 # New:P21/n
 _csp_data_block.class                          "Theoretical Structure"
 _csp_data_block.id     85400a2a-d511-4fd8-ac4b-3d5d46bd221d
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
@@ -5962,7 +5962,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0053_Energy_5.800_Density_1.4957 New: P-1
+data_0053_Energy_5.800_Density_1.4957 # New:P-1
 _csp_data_block.class                          "Theoretical Structure"
 _csp_data_block.id     e2973463-9b1f-4c59-ba07-1cb7d465ef23
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
@@ -6071,7 +6071,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0054_Energy_5.802_Density_1.5349 New: P21212
+data_0054_Energy_5.802_Density_1.5349 # New:P21212
 _csp_data_block.class                          "Theoretical Structure"
 _csp_data_block.id     93464b41-2d49-4594-8788-3f052f913ac2
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
@@ -6182,7 +6182,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0055_Energy_5.829_Density_1.4847 New: Pbca
+data_0055_Energy_5.829_Density_1.4847 # New:Pbca
 _csp_data_block.class                          "Theoretical Structure"
 _csp_data_block.id     9f624da0-b630-4ff7-8620-d4c6c01630a0
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
@@ -6297,7 +6297,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0056_Energy_5.965_Density_1.5171 New: P21/c
+data_0056_Energy_5.965_Density_1.5171 # New:P21/c
 _csp_data_block.class                          "Theoretical Structure"
 _csp_data_block.id     ec1766d7-1277-4e1f-a1b5-c294e6c98b78
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
@@ -6408,7 +6408,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0057_Energy_6.007_Density_1.5252 New: P21/n
+data_0057_Energy_6.007_Density_1.5252 # New:P21/n
 _csp_data_block.class                          "Theoretical Structure"
 _csp_data_block.id     772b1c98-c41f-4d47-8035-795774f350e5
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
@@ -6519,7 +6519,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0058_Energy_6.042_Density_1.5427 New: Pbcn
+data_0058_Energy_6.042_Density_1.5427 # New:Pbcn
 _csp_data_block.class                          "Theoretical Structure"
 _csp_data_block.id     6de4518f-c8ba-40eb-8724-e8f2e2c19830
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
@@ -6634,7 +6634,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0059_Energy_6.075_Density_1.5098 New: P-1
+data_0059_Energy_6.075_Density_1.5098 # New:P-1
 _csp_data_block.class                          "Theoretical Structure"
 _csp_data_block.id     016350b3-bedf-4d7f-b210-f04fd24ce56c
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
@@ -6743,7 +6743,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0060_Energy_6.088_Density_1.4904 New: P21/n
+data_0060_Energy_6.088_Density_1.4904 # New:P21/n
 _csp_data_block.class                          "Theoretical Structure"
 _csp_data_block.id     f9d2955b-f823-4b57-b1df-82d0ba67f6b5
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
@@ -6854,7 +6854,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0061_Energy_6.132_Density_1.4961 New: Pbca
+data_0061_Energy_6.132_Density_1.4961 # New:Pbca
 _csp_data_block.class                          "Theoretical Structure"
 _csp_data_block.id     f03d389c-4a05-4ea6-8a59-e0857bbf21a7
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
@@ -6969,7 +6969,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0062_Energy_6.168_Density_1.4961 New: P21/n
+data_0062_Energy_6.168_Density_1.4961 # New:P21/n
 _csp_data_block.class                          "Theoretical Structure"
 _csp_data_block.id     f84c19e4-9240-47ba-a0b9-9ae805c15754
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
@@ -7080,7 +7080,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0063_Energy_6.182_Density_1.5226 New: P21/c
+data_0063_Energy_6.182_Density_1.5226 # New:P21/c
 _csp_data_block.class                          "Theoretical Structure"
 _csp_data_block.id     dae27c79-9370-45fa-b10e-3a5288c5f20a
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
@@ -7191,7 +7191,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0064_Energy_6.238_Density_1.5152 New: P2/n
+data_0064_Energy_6.238_Density_1.5152 # New:P2/n
 _csp_data_block.class                          "Theoretical Structure"
 _csp_data_block.id     53201702-28f3-41e7-9a3e-370620209119
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
@@ -7302,7 +7302,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0065_Energy_6.286_Density_1.5216 New: P21/c
+data_0065_Energy_6.286_Density_1.5216 # New:P21/c
 _csp_data_block.class                          "Theoretical Structure"
 _csp_data_block.id     b1f02ea4-a58b-4113-acb6-6418d2092272
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
@@ -7413,7 +7413,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0066_Energy_6.322_Density_1.5317 New: P21/c
+data_0066_Energy_6.322_Density_1.5317 # New:P21/c
 _csp_data_block.class                          "Theoretical Structure"
 _csp_data_block.id     fef5773f-7cda-4d2a-9a81-fdf3329c94db
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
@@ -7524,7 +7524,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0067_Energy_6.497_Density_1.4905 New: P21/c
+data_0067_Energy_6.497_Density_1.4905 # New:P21/c
 _csp_data_block.class                          "Theoretical Structure"
 _csp_data_block.id     9cf8ecd0-f82a-4558-9780-078963d41954
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
@@ -7635,7 +7635,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0068_Energy_6.501_Density_1.5377 New: P-1
+data_0068_Energy_6.501_Density_1.5377 # New:P-1
 _csp_data_block.class                          "Theoretical Structure"
 _csp_data_block.id     0233815d-9de9-4235-9b34-bf184f160906
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
@@ -7744,7 +7744,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0069_Energy_6.516_Density_1.5390 New: P21/n
+data_0069_Energy_6.516_Density_1.5390 # New:P21/n
 _csp_data_block.class                          "Theoretical Structure"
 _csp_data_block.id     1a26a241-ae0c-4d9b-8ee1-8eb503fdefd9
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
@@ -7855,7 +7855,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0070_Energy_6.591_Density_1.5220 New: P-1
+data_0070_Energy_6.591_Density_1.5220 # New:P-1
 _csp_data_block.class                          "Theoretical Structure"
 _csp_data_block.id     6f476ff0-ca63-41fc-ac1a-0b48ed143a60
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
@@ -7964,7 +7964,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0071_Energy_6.604_Density_1.4921 New: C2/c
+data_0071_Energy_6.604_Density_1.4921 # New:C2/c
 _csp_data_block.class                          "Theoretical Structure"
 _csp_data_block.id     f52bdf2e-459e-40b9-a9a7-fadb1f8d8edd
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
@@ -8079,7 +8079,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0072_Y19_Energy_6.606_Density_1.5104 New: P21/c
+data_0072_Y19_Energy_6.606_Density_1.5104 # New:P21/c
 _csp_data_block.class                          "Theoretical Structure"
 _csp_data_block.id     61393f39-b204-4160-8366-402443152f34
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
@@ -8190,7 +8190,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0073_Energy_6.654_Density_1.5174 New: P21/c
+data_0073_Energy_6.654_Density_1.5174 # New:P21/c
 _csp_data_block.class                          "Theoretical Structure"
 _csp_data_block.id     d18bdf68-bd32-4fae-a026-b255f5d6b501
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
@@ -8301,7 +8301,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0074_Energy_6.662_Density_1.4931 New: P21/n
+data_0074_Energy_6.662_Density_1.4931 # New:P21/n
 _csp_data_block.class                          "Theoretical Structure"
 _csp_data_block.id     7b1213e8-e022-4547-8baa-5ef6bf98a0e0
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
@@ -8412,7 +8412,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0075_Energy_6.736_Density_1.5005 New: Aba2
+data_0075_Energy_6.736_Density_1.5005 # New:Aba2
 _csp_data_block.class                          "Theoretical Structure"
 _csp_data_block.id     2630a5a1-667b-42d3-b546-4311cfb568f4
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
@@ -8527,7 +8527,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0076_Energy_6.745_Density_1.5165 New: C2/c
+data_0076_Energy_6.745_Density_1.5165 # New:C2/c
 _csp_data_block.class                          "Theoretical Structure"
 _csp_data_block.id     3fa92ec1-f2ad-4936-b8d6-335d2bf10aeb
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
@@ -8642,7 +8642,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0077_Energy_6.797_Density_1.5538 New: I2/c
+data_0077_Energy_6.797_Density_1.5538 # New:I2/c
 _csp_data_block.class                          "Theoretical Structure"
 _csp_data_block.id     6d4f3395-a8db-4e84-add1-cd81656f7741
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
@@ -8757,7 +8757,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0078_Energy_6.805_Density_1.5401 New: C2/c
+data_0078_Energy_6.805_Density_1.5401 # New:C2/c
 _csp_data_block.class                          "Theoretical Structure"
 _csp_data_block.id     d1f0656b-9ccb-456c-85d4-8b46c1be026d
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
@@ -8872,7 +8872,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0079_Energy_6.815_Density_1.5344 New: Fdd2
+data_0079_Energy_6.815_Density_1.5344 # New:Fdd2
 _csp_data_block.class                          "Theoretical Structure"
 _csp_data_block.id     30454604-bcbc-4e0c-a4c9-65604a25ab05
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
@@ -8995,7 +8995,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0080_Energy_6.829_Density_1.5207 New: Pn
+data_0080_Energy_6.829_Density_1.5207 # New:Pn
 _csp_data_block.class                          "Theoretical Structure"
 _csp_data_block.id     243a0719-5335-4cc3-9d63-51a8860cb4de
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
@@ -9104,7 +9104,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0081_Energy_6.853_Density_1.4809 New: P21/n
+data_0081_Energy_6.853_Density_1.4809 # New:P21/n
 _csp_data_block.class                          "Theoretical Structure"
 _csp_data_block.id     8e0629d1-d41c-42f9-9657-93ed09bf7f99
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
@@ -9215,7 +9215,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0082_Energy_6.871_Density_1.5042 New: P21/c
+data_0082_Energy_6.871_Density_1.5042 # New:P21/c
 _csp_data_block.class                          "Theoretical Structure"
 _csp_data_block.id     ddd3fd10-f2f7-46a0-98c5-85afe2d5ade7
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
@@ -9326,7 +9326,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0083_Energy_6.895_Density_1.5083 New: P21/c
+data_0083_Energy_6.895_Density_1.5083 # New:P21/c
 _csp_data_block.class                          "Theoretical Structure"
 _csp_data_block.id     68858986-b1de-4189-a6ca-2a98c2e55ab1
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
@@ -9437,7 +9437,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0084_Energy_6.901_Density_1.5169 New: Pccn
+data_0084_Energy_6.901_Density_1.5169 # New:Pccn
 _csp_data_block.class                          "Theoretical Structure"
 _csp_data_block.id     ff37ef99-7aaf-4207-8462-56402f79bd93
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
@@ -9552,7 +9552,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0085_Energy_6.916_Density_1.5006 New: C2/c
+data_0085_Energy_6.916_Density_1.5006 # New:C2/c
 _csp_data_block.class                          "Theoretical Structure"
 _csp_data_block.id     fc98d2dd-63a9-4bd0-ac29-cbb1db6b1619
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
@@ -9667,7 +9667,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0086_Energy_6.919_Density_1.5119 New: Pbca
+data_0086_Energy_6.919_Density_1.5119 # New:Pbca
 _csp_data_block.class                          "Theoretical Structure"
 _csp_data_block.id     4d2ba097-eb12-45b6-a2c3-6709fa62d34c
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
@@ -9782,7 +9782,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0087_Energy_6.955_Density_1.5243 New: P-1
+data_0087_Energy_6.955_Density_1.5243 # New:P-1
 _csp_data_block.class                          "Theoretical Structure"
 _csp_data_block.id     a3cf7996-43fe-4a81-9aad-e5a4832bfa10
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
@@ -9891,7 +9891,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0088_Energy_6.957_Density_1.5041 New: I2/c
+data_0088_Energy_6.957_Density_1.5041 # New:I2/c
 _csp_data_block.class                          "Theoretical Structure"
 _csp_data_block.id     804504b8-b936-45b7-af8b-7c3c95934822
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
@@ -10006,7 +10006,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0089_Energy_6.958_Density_1.5155 New: P21/c
+data_0089_Energy_6.958_Density_1.5155 # New:P21/c
 _csp_data_block.class                          "Theoretical Structure"
 _csp_data_block.id     c278c84f-2bad-4b42-890e-bf7a4b554ecd
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
@@ -10117,7 +10117,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0090_Energy_6.986_Density_1.4904 New: P-1
+data_0090_Energy_6.986_Density_1.4904 # New:P-1
 _csp_data_block.class                          "Theoretical Structure"
 _csp_data_block.id     7041f025-2f2e-44ea-8906-611dc36b3379
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
@@ -10226,7 +10226,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0091_Energy_6.990_Density_1.5260 New: P21/n
+data_0091_Energy_6.990_Density_1.5260 # New:P21/n
 _csp_data_block.class                          "Theoretical Structure"
 _csp_data_block.id     0b06f24c-0b60-4c83-a98e-693e46b8e86a
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
@@ -10337,7 +10337,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0092_Energy_6.995_Density_1.5091 New: Pbcn
+data_0092_Energy_6.995_Density_1.5091 # New:Pbcn
 _csp_data_block.class                          "Theoretical Structure"
 _csp_data_block.id     9fdb1dec-a792-4ed4-8099-fa703874623d
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
@@ -10452,7 +10452,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0093_Energy_7.038_Density_1.4947 New: P21/c
+data_0093_Energy_7.038_Density_1.4947 # New:P21/c
 _csp_data_block.class                          "Theoretical Structure"
 _csp_data_block.id     3390478f-ee16-4c78-a940-7713ca4ff09e
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
@@ -10563,7 +10563,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0094_Energy_7.110_Density_1.5482 New: P21/n
+data_0094_Energy_7.110_Density_1.5482 # New:P21/n
 _csp_data_block.class                          "Theoretical Structure"
 _csp_data_block.id     e7c44ef8-0f1e-4c7b-9da5-c8dd2c017631
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
@@ -10674,7 +10674,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0095_Energy_7.147_Density_1.5076 New: Fdd2
+data_0095_Energy_7.147_Density_1.5076 # New:Fdd2
 _csp_data_block.class                          "Theoretical Structure"
 _csp_data_block.id     6f80da65-6885-40c6-86b2-86b4804d86a5
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
@@ -10797,7 +10797,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0096_Energy_7.153_Density_1.5054 New: P21/c
+data_0096_Energy_7.153_Density_1.5054 # New:P21/c
 _csp_data_block.class                          "Theoretical Structure"
 _csp_data_block.id     bc7786c8-f4e5-4081-bef7-889e0b943480
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
@@ -10908,7 +10908,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0097_Energy_7.162_Density_1.4983 New: P-1
+data_0097_Energy_7.162_Density_1.4983 # New:P-1
 _csp_data_block.class                          "Theoretical Structure"
 _csp_data_block.id     5368b956-8d83-416b-a4fd-6a05592b2832
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
@@ -11017,7 +11017,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0098_Energy_7.201_Density_1.4855 New: P21/n
+data_0098_Energy_7.201_Density_1.4855 # New:P21/n
 _csp_data_block.class                          "Theoretical Structure"
 _csp_data_block.id     dc341ab7-0c9c-462e-8610-59f1e2ca1787
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
@@ -11128,7 +11128,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0099_Energy_7.231_Density_1.4890 New: P21/n
+data_0099_Energy_7.231_Density_1.4890 # New:P21/n
 _csp_data_block.class                          "Theoretical Structure"
 _csp_data_block.id     bc548991-6ceb-4913-9eb1-144acd75b55e
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
@@ -11239,7 +11239,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0100_Energy_7.279_Density_1.5220 New: P21/n
+data_0100_Energy_7.279_Density_1.5220 # New:P21/n
 _csp_data_block.id     60b40b45-d2c1-4507-96c2-d0fc4eab0a5a
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -11349,7 +11349,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0101_Energy_7.362_Density_1.5263 New: Pca21
+data_0101_Energy_7.362_Density_1.5263 # New:Pca21
 _csp_data_block.id     02e7fcbc-5328-4561-a773-dbbc73531d9b
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -11459,7 +11459,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0102_Energy_7.492_Density_1.4791 New: P21/c
+data_0102_Energy_7.492_Density_1.4791 # New:P21/c
 _csp_data_block.id     509b6ded-69ce-4d71-a4a7-5c4a18aaecbe
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -11569,7 +11569,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0103_Energy_7.532_Density_1.4837 New: Cc
+data_0103_Energy_7.532_Density_1.4837 # New:Cc
 _csp_data_block.id     1e545ef3-8088-4fa0-ab6d-327e91f5f2eb
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -11679,7 +11679,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0104_Energy_7.579_Density_1.5023 New: P21/c
+data_0104_Energy_7.579_Density_1.5023 # New:P21/c
 _csp_data_block.id     5ee8faff-4060-4592-a471-d5c846df7084
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -11789,7 +11789,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0105_Energy_7.586_Density_1.4932 New: P21/c
+data_0105_Energy_7.586_Density_1.4932 # New:P21/c
 _csp_data_block.id     15a198b3-664a-40bc-bdc0-ca7d0f4d7e75
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -11899,7 +11899,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0106_Energy_7.605_Density_1.5138 New: P21/c
+data_0106_Energy_7.605_Density_1.5138 # New:P21/c
 _csp_data_block.id     ff5d5b72-be42-4a8d-8d39-89f0696549b8
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -12009,7 +12009,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0107_Energy_7.609_Density_1.5210 New: Fdd2
+data_0107_Energy_7.609_Density_1.5210 # New:Fdd2
 _csp_data_block.id     a4a87508-4061-4bb8-9ea7-c67890910374
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -12131,7 +12131,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0108_Energy_7.627_Density_1.4979 New: P21/c
+data_0108_Energy_7.627_Density_1.4979 # New:P21/c
 _csp_data_block.id     9f1da64f-1178-4813-b638-8a6b23da909b
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -12241,7 +12241,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0109_Energy_7.765_Density_1.4762 New: P21/c
+data_0109_Energy_7.765_Density_1.4762 # New:P21/c
 _csp_data_block.id     732840b9-e5ff-4a3f-bcb6-58d28f3a7df5
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -12351,7 +12351,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0110_Energy_7.784_Density_1.5228 New: P21/c
+data_0110_Energy_7.784_Density_1.5228 # New:P21/c
 _csp_data_block.id     c94b9c54-1eb2-4213-a585-9e4cfb65673b
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -12461,7 +12461,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0111_Energy_7.790_Density_1.4655 New: Pbca
+data_0111_Energy_7.790_Density_1.4655 # New:Pbca
 _csp_data_block.id     6f32a91c-f8d3-4ef3-bdb2-83d80af3e028
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -12575,7 +12575,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0112_Energy_7.803_Density_1.5173 New: C2/c
+data_0112_Energy_7.803_Density_1.5173 # New:C2/c
 _csp_data_block.id     bbb36174-5f4b-480e-87b5-df70ce475ffa
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -12689,7 +12689,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0113_Energy_7.813_Density_1.5299 New: C2/c
+data_0113_Energy_7.813_Density_1.5299 # New:C2/c
 _csp_data_block.id     d7b1cac4-3b26-409b-b9de-2286f65a690a
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -12803,7 +12803,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0114_Energy_7.853_Density_1.4819 New: Pna21
+data_0114_Energy_7.853_Density_1.4819 # New:Pna21
 _csp_data_block.id     44c597b4-846a-421f-b357-c2cf187d75ba
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -12913,7 +12913,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0115_Energy_7.900_Density_1.5432 New: P21/c
+data_0115_Energy_7.900_Density_1.5432 # New:P21/c
 _csp_data_block.id     6dd838ba-8a5d-4233-8a9c-bf8ea2f572bb
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -13023,7 +13023,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0116_Energy_7.948_Density_1.5525 New: P2/n
+data_0116_Energy_7.948_Density_1.5525 # New:P2/n
 _csp_data_block.id     73f59b1b-4ac1-4b0d-8b7f-95e3773c3060
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -13133,7 +13133,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0117_Energy_8.069_Density_1.4865 New: Pna21
+data_0117_Energy_8.069_Density_1.4865 # New:Pna21
 _csp_data_block.id     65ba7162-a392-4919-a6de-502d6dd4b34e
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -13243,7 +13243,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0118_Energy_8.069_Density_1.5316 New: P-1
+data_0118_Energy_8.069_Density_1.5316 # New:P-1
 _csp_data_block.id     a1e6e022-5947-4633-9fab-12bbd56aadec
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -13351,7 +13351,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0119_Energy_8.073_Density_1.4861 New: P21/n
+data_0119_Energy_8.073_Density_1.4861 # New:P21/n
 _csp_data_block.id     1725e052-5941-41d0-a96b-47a952fd90a0
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -13461,7 +13461,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0120_Energy_8.134_Density_1.5348 New: P21/c
+data_0120_Energy_8.134_Density_1.5348 # New:P21/c
 _csp_data_block.id     a77c6a66-c6d5-489b-ac8c-d66aff171aeb
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -13571,7 +13571,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0121_Energy_8.152_Density_1.4854 New: I2
+data_0121_Energy_8.152_Density_1.4854 # New:I2
 _csp_data_block.id     65948d7e-ed2f-4aad-8ebc-bc21b346eaa9
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -13681,7 +13681,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0122_Energy_8.163_Density_1.5439 New: Pccn
+data_0122_Energy_8.163_Density_1.5439 # New:Pccn
 _csp_data_block.id     fbe43e70-42f4-4284-abf3-29031f12709d
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -13795,7 +13795,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0123_Energy_8.166_Density_1.5404 New: P21/c
+data_0123_Energy_8.166_Density_1.5404 # New:P21/c
 _csp_data_block.id     78cf5a1a-9203-448c-bd8f-59491cf47462
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -13905,7 +13905,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0124_Energy_8.169_Density_1.4726 New: Fdd2
+data_0124_Energy_8.169_Density_1.4726 # New:Fdd2
 _csp_data_block.id     ecad1ba3-b5ad-426d-a7b9-36a93fc02a69
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -14027,7 +14027,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0125_Energy_8.211_Density_1.4883 New: Pccn
+data_0125_Energy_8.211_Density_1.4883 # New:Pccn
 _csp_data_block.id     3867be6e-f304-4922-90c4-1189669f4619
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -14141,7 +14141,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0126_Energy_8.216_Density_1.5269 New: C2/c
+data_0126_Energy_8.216_Density_1.5269 # New:C2/c
 _csp_data_block.id     1aaffc4a-5889-4c1d-bf8f-f6a4e7f3783d
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -14255,7 +14255,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0127_Energy_8.239_Density_1.5089 New: P21/n
+data_0127_Energy_8.239_Density_1.5089 # New:P21/n
 _csp_data_block.id     8863fc74-36e1-448a-907b-73ace74fbbee
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -14365,7 +14365,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0128_Energy_8.272_Density_1.4878 New: P21/n
+data_0128_Energy_8.272_Density_1.4878 # New:P21/n
 _csp_data_block.id     610abe5b-283a-4017-8d99-c78708a1611e
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -14475,7 +14475,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0129_Energy_8.285_Density_1.5334 New: P-1
+data_0129_Energy_8.285_Density_1.5334 # New:P-1
 _csp_data_block.id     fc50d1c2-befd-4dec-93c5-67d679354d55
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -14583,7 +14583,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0130_Energy_8.295_Density_1.5065 New: Pbcn
+data_0130_Energy_8.295_Density_1.5065 # New:Pbcn
 _csp_data_block.id     7948fe35-8fe2-4261-8425-3662a315c1b6
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -14697,7 +14697,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0131_Energy_8.459_Density_1.5131 New: P212121
+data_0131_Energy_8.459_Density_1.5131 # New:P212121
 _csp_data_block.id     7a7f93ba-84c6-4b2e-a323-0c87bc213649
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -14807,7 +14807,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0132_Energy_8.468_Density_1.4960 New: P-1
+data_0132_Energy_8.468_Density_1.4960 # New:P-1
 _csp_data_block.id     a6aa0f63-04a8-4dda-8853-9fa9f9c2bab7
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -14915,7 +14915,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0133_Energy_8.527_Density_1.4950 New: P21/n
+data_0133_Energy_8.527_Density_1.4950 # New:P21/n
 _csp_data_block.id     3ab0129f-1c8c-4505-bf44-2cbf0535f505
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -15025,7 +15025,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0134_Energy_8.556_Density_1.4746 New: Pbcn
+data_0134_Energy_8.556_Density_1.4746 # New:Pbcn
 _csp_data_block.id     8c260ce3-6ec3-4b20-b273-db7b87b7d822
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -15139,7 +15139,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0135_Energy_8.578_Density_1.5111 New: P21/c
+data_0135_Energy_8.578_Density_1.5111 # New:P21/c
 _csp_data_block.id     c1cda1a6-e9fb-4553-a3e0-2441299be303
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -15249,7 +15249,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0136_Energy_8.595_Density_1.4961 New: P21/n
+data_0136_Energy_8.595_Density_1.4961 # New:P21/n
 _csp_data_block.id     43cdcf88-a3a1-472f-bb54-e56c17079cd4
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -15359,7 +15359,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0137_Energy_8.704_Density_1.5118 New: P21/n
+data_0137_Energy_8.704_Density_1.5118 # New:P21/n
 _csp_data_block.id     acc4d4db-5107-4c37-b7a9-0c66c48b430e
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -15469,7 +15469,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0138_Energy_8.721_Density_1.5002 New: P-1
+data_0138_Energy_8.721_Density_1.5002 # New:P-1
 _csp_data_block.id     e9fc9225-5f88-453c-9f0d-286f6ca64df4
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -15577,7 +15577,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0139_Energy_8.760_Density_1.5304 New: P-1
+data_0139_Energy_8.760_Density_1.5304 # New:P-1
 _csp_data_block.id     4afa2667-ab7b-4c69-8178-5de2b677978c
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -15685,7 +15685,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0140_Energy_8.771_Density_1.4909 New: P2/n
+data_0140_Energy_8.771_Density_1.4909 # New:P2/n
 _csp_data_block.id     38a73e38-ecc2-4890-9dca-90fe69af3bdc
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -15795,7 +15795,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0141_Energy_8.801_Density_1.5541 New: I2/a
+data_0141_Energy_8.801_Density_1.5541 # New:I2/a
 _csp_data_block.id     40810395-577d-4d1a-854b-2f5cd05b348b
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -15909,7 +15909,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0142_Energy_8.819_Density_1.4681 New: Pnna
+data_0142_Energy_8.819_Density_1.4681 # New:Pnna
 _csp_data_block.id     5f853637-2c70-4eea-bef7-7a6c0b8432e2
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -16023,7 +16023,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0143_Energy_8.831_Density_1.5372 New: P212121
+data_0143_Energy_8.831_Density_1.5372 # New:P212121
 _csp_data_block.id     048e4f19-db66-4c9e-b720-d4570ed9d31a
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -16133,7 +16133,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0144_Energy_8.860_Density_1.4995 New: P21/c
+data_0144_Energy_8.860_Density_1.4995 # New:P21/c
 _csp_data_block.id     8358eace-b091-4ea9-a4e6-c67b2d066edf
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -16243,7 +16243,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0145_Energy_8.909_Density_1.5294 New: I2
+data_0145_Energy_8.909_Density_1.5294 # New:I2
 _csp_data_block.id     f7ba7897-83f9-4c61-a493-365770e39539
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -16353,7 +16353,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0146_Energy_8.925_Density_1.4797 New: P-1
+data_0146_Energy_8.925_Density_1.4797 # New:P-1
 _csp_data_block.id     04787400-f235-4f32-8de5-d1a86a08d215
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -16461,7 +16461,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0147_Energy_8.938_Density_1.4766 New: I2/c
+data_0147_Energy_8.938_Density_1.4766 # New:I2/c
 _csp_data_block.id     c4db9467-83a8-43a5-a392-d165090f4adc
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -16575,7 +16575,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0148_Energy_8.943_Density_1.5029 New: P21
+data_0148_Energy_8.943_Density_1.5029 # New:P21
 _csp_data_block.id     66245f55-0c9a-4aae-92fc-cd122419f649
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -16683,7 +16683,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0149_Energy_8.995_Density_1.4654 New: Pbca
+data_0149_Energy_8.995_Density_1.4654 # New:Pbca
 _csp_data_block.id     f8f34798-14d6-4aff-ae63-f44091ebc639
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -16797,7 +16797,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0150_Energy_9.006_Density_1.5322 New: C2/c
+data_0150_Energy_9.006_Density_1.5322 # New:C2/c
 _csp_data_block.id     583f0921-02df-441b-8337-88e734cc4b04
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -16911,7 +16911,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0151_Energy_9.041_Density_1.4942 New: Pna21
+data_0151_Energy_9.041_Density_1.4942 # New:Pna21
 _csp_data_block.id     76bdd09d-85c0-441c-8c07-9e30d1cf4464
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -17021,7 +17021,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0152_Energy_9.043_Density_1.5274 New: P21/c
+data_0152_Energy_9.043_Density_1.5274 # New:P21/c
 _csp_data_block.id     373a663a-fae2-456a-b024-d159add025c1
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -17131,7 +17131,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0153_Energy_9.084_Density_1.5259 New: Pna21
+data_0153_Energy_9.084_Density_1.5259 # New:Pna21
 _csp_data_block.id     9845e7f0-1e22-4968-9d6f-f7f70d8cac4c
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -17241,7 +17241,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0154_Energy_9.173_Density_1.5169 New: P21/n
+data_0154_Energy_9.173_Density_1.5169 # New:P21/n
 _csp_data_block.id     a81f8a6e-e84a-4b0e-9bf8-f18fb3276b29
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -17351,7 +17351,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0155_Energy_9.246_Density_1.5075 New: C2/c
+data_0155_Energy_9.246_Density_1.5075 # New:C2/c
 _csp_data_block.id     75ff957e-ba43-41dd-936b-4286197160d5
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -17465,7 +17465,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0156_Energy_9.269_Density_1.4988 New: C2/c
+data_0156_Energy_9.269_Density_1.4988 # New:C2/c
 _csp_data_block.id     e9fd51a1-3121-4c48-9b6b-1839e9ca7e57
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -17579,7 +17579,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0157_Energy_9.299_Density_1.5065 New: Pc
+data_0157_Energy_9.299_Density_1.5065 # New:Pc
 _csp_data_block.id     65456afe-7550-49b2-90b1-b4e57848606e
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -17687,7 +17687,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0158_Energy_9.335_Density_1.5407 New: Fdd2
+data_0158_Energy_9.335_Density_1.5407 # New:Fdd2
 _csp_data_block.id     1b0d90b7-945b-44a7-a36c-36cc0c3dce8a
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -17809,7 +17809,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0159_Energy_9.357_Density_1.4813 New: Pbca
+data_0159_Energy_9.357_Density_1.4813 # New:Pbca
 _csp_data_block.id     c6f4a9ae-c1bd-494d-b9b9-f84f210387d1
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -17923,7 +17923,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0160_Energy_9.418_Density_1.4797 New: P21/c
+data_0160_Energy_9.418_Density_1.4797 # New:P21/c
 _csp_data_block.id     d35f5c3d-2f1e-40e9-9e20-afadd136a405
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -18033,7 +18033,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0161_Energy_9.463_Density_1.5043 New: P21/n
+data_0161_Energy_9.463_Density_1.5043 # New:P21/n
 _csp_data_block.id     667384ec-9c3c-4fd3-9bbe-28483c15a941
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -18143,7 +18143,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0162_Energy_9.470_Density_1.5440 New: C2/c
+data_0162_Energy_9.470_Density_1.5440 # New:C2/c
 _csp_data_block.id     666c1dfb-8cad-4d1d-85fb-6db28652adfa
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -18257,7 +18257,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0163_Energy_9.474_Density_1.4591 New: Pbca
+data_0163_Energy_9.474_Density_1.4591 # New:Pbca
 _csp_data_block.id     ab451e78-ef93-4968-9195-85f6bd64033c
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -18371,7 +18371,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0164_Energy_9.570_Density_1.5033 New: P21
+data_0164_Energy_9.570_Density_1.5033 # New:P21
 _csp_data_block.id     2bfb4f98-3477-4db2-82f6-cd0f04fd3e4c
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -18479,7 +18479,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0165_Energy_9.592_Density_1.5088 New: P-1
+data_0165_Energy_9.592_Density_1.5088 # New:P-1
 _csp_data_block.id     ef50ff61-ed7c-4c70-898a-cbf1f16711cb
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -18587,7 +18587,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0166_Energy_9.688_Density_1.5040 New: P21/c
+data_0166_Energy_9.688_Density_1.5040 # New:P21/c
 _csp_data_block.id     9e99f0bb-1b73-496e-8077-6e787200022b
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -18697,7 +18697,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0167_Energy_9.732_Density_1.4924 New: P21/c
+data_0167_Energy_9.732_Density_1.4924 # New:P21/c
 _csp_data_block.id     d8c5d39f-4acd-412b-80c1-bcdaa887ddd6
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -18807,7 +18807,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0168_Energy_9.813_Density_1.5501 New: C2/c
+data_0168_Energy_9.813_Density_1.5501 # New:C2/c
 _csp_data_block.id     cfae26b6-d841-4445-b140-a8cf4a37ee68
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -18921,7 +18921,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0169_Energy_9.816_Density_1.4721 New: P2/n
+data_0169_Energy_9.816_Density_1.4721 # New:P2/n
 _csp_data_block.id     ce0ac2b7-0575-4e5e-bcd6-e9f037fd6cf9
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -19031,7 +19031,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0170_Energy_9.825_Density_1.4795 New: P21/c
+data_0170_Energy_9.825_Density_1.4795 # New:P21/c
 _csp_data_block.id     88edf523-b9db-4eb6-826a-ced9a9358813
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -19141,7 +19141,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0171_Energy_9.859_Density_1.5259 New: Pbca
+data_0171_Energy_9.859_Density_1.5259 # New:Pbca
 _csp_data_block.id     12087632-7c6e-43fe-aaee-a69f0077fd19
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -19255,7 +19255,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0172_Energy_9.917_Density_1.4828 New: C2/c
+data_0172_Energy_9.917_Density_1.4828 # New:C2/c
 _csp_data_block.id     49e4debc-5b75-483a-9136-4ee0514d2eef
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -19369,7 +19369,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0173_Energy_9.979_Density_1.5140 New: Cc
+data_0173_Energy_9.979_Density_1.5140 # New:Cc
 _csp_data_block.id     94ebd322-18a5-4939-878a-d6eaa00c0716
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -19479,7 +19479,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0174_Energy_9.991_Density_1.4888 New: P-1
+data_0174_Energy_9.991_Density_1.4888 # New:P-1
 _csp_data_block.id     8feb1b61-cf22-4618-a5c0-8bc3399c0aeb
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -19587,7 +19587,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0175_Energy_10.029_Density_1.4911 New: Pbcn
+data_0175_Energy_10.029_Density_1.4911 # New:Pbcn
 _csp_data_block.id     a9908a71-1eec-4927-a3e7-b8522e740f6a
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -19701,7 +19701,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0176_Energy_10.040_Density_1.5517 New: P21/n
+data_0176_Energy_10.040_Density_1.5517 # New:P21/n
 _csp_data_block.id     4690ceb2-859c-4b9c-a74f-4488e8e01034
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -19811,7 +19811,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0177_Energy_10.064_Density_1.4809 New: Fdd2
+data_0177_Energy_10.064_Density_1.4809 # New:Fdd2
 _csp_data_block.id     e0205eed-75f8-4819-9aca-c331015ce442
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -19933,7 +19933,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0178_Energy_10.072_Density_1.5327 New: I2
+data_0178_Energy_10.072_Density_1.5327 # New:I2
 _csp_data_block.id     bae102bb-914c-4273-a84f-ed81edfe9fa6
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -20043,7 +20043,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0179_Energy_10.111_Density_1.5173 New: P21/c
+data_0179_Energy_10.111_Density_1.5173 # New:P21/c
 _csp_data_block.id     15edfd80-be24-407c-a593-0923cfb3388a
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -20153,7 +20153,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0180_Energy_10.115_Density_1.5143 New: C2/c
+data_0180_Energy_10.115_Density_1.5143 # New:C2/c
 _csp_data_block.id     2b8ef173-0853-43f2-8e9a-885697e2afb2
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -20267,7 +20267,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0181_Energy_10.149_Density_1.5041 New: P21/c
+data_0181_Energy_10.149_Density_1.5041 # New:P21/c
 _csp_data_block.id     b41acddc-64a4-4668-aae7-bd88f22276c4
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -20377,7 +20377,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0182_Energy_10.204_Density_1.4740 New: P21/c
+data_0182_Energy_10.204_Density_1.4740 # New:P21/c
 _csp_data_block.id     5298193d-07f0-4531-9fed-8a63d7709e9c
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -20487,7 +20487,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0183_Energy_10.215_Density_1.4750 New: P21/n
+data_0183_Energy_10.215_Density_1.4750 # New:P21/n
 _csp_data_block.id     7c8c1abb-3af2-46f5-8a62-2f6441cac263
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -20597,7 +20597,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0184_Energy_10.242_Density_1.4962 New: P21/c
+data_0184_Energy_10.242_Density_1.4962 # New:P21/c
 _csp_data_block.id     4d07c9bf-2d70-434e-ab2f-aed0bf66ff9a
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -20707,7 +20707,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0185_Energy_10.263_Density_1.5419 New: Pna21
+data_0185_Energy_10.263_Density_1.5419 # New:Pna21
 _csp_data_block.id     687be182-8e18-4bbf-abff-e913d6d5cc6a
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -20817,7 +20817,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0186_Energy_10.284_Density_1.5195 New: C2/c
+data_0186_Energy_10.284_Density_1.5195 # New:C2/c
 _csp_data_block.id     2060bc45-c3ff-40ac-8c0c-e656e0c9ad4e
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -20931,7 +20931,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0187_Energy_10.303_Density_1.5062 New: P21/n
+data_0187_Energy_10.303_Density_1.5062 # New:P21/n
 _csp_data_block.id     638c7d2a-8367-471c-a1ed-be648d807d55
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -21041,7 +21041,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0188_Energy_10.331_Density_1.5195 New: P21/n
+data_0188_Energy_10.331_Density_1.5195 # New:P21/n
 _csp_data_block.id     77d22e28-335a-434f-b30e-429c75ad73cd
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -21151,7 +21151,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0189_Energy_10.467_Density_1.5243 New: P21/c
+data_0189_Energy_10.467_Density_1.5243 # New:P21/c
 _csp_data_block.id     8cc99dd1-1358-4aff-85ed-470d6ecee92d
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -21261,7 +21261,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0190_Energy_10.487_Density_1.5189 New: P21/c
+data_0190_Energy_10.487_Density_1.5189 # New:P21/c
 _csp_data_block.id     ff6e45b2-aa68-4d6c-b490-39c8c779b6a4
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -21371,7 +21371,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0191_Energy_10.521_Density_1.4621 New: C2/c
+data_0191_Energy_10.521_Density_1.4621 # New:C2/c
 _csp_data_block.id     8473b126-c267-4696-b8ff-03272b9a99c6
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -21485,7 +21485,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0192_Energy_10.551_Density_1.5415 New: C2/c
+data_0192_Energy_10.551_Density_1.5415 # New:C2/c
 _csp_data_block.id     662d4681-7b53-4804-b761-a4fe34fe8187
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -21599,7 +21599,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0193_Energy_10.551_Density_1.4801 New: P21/n
+data_0193_Energy_10.551_Density_1.4801 # New:P21/n
 _csp_data_block.id     c314253e-6552-4dd5-8d89-e0853eaf50b2
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -21709,7 +21709,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0194_Energy_10.608_Density_1.4668 New: Pnna
+data_0194_Energy_10.608_Density_1.4668 # New:Pnna
 _csp_data_block.id     07e6978e-2d81-4c96-ad88-e8c33b8da2e2
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -21823,7 +21823,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0195_Energy_10.672_Density_1.4900 New: C2/c
+data_0195_Energy_10.672_Density_1.4900 # New:C2/c
 _csp_data_block.id     e1ce91aa-ea65-4ba1-9512-908523042dea
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -21937,7 +21937,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0196_Energy_10.694_Density_1.4669 New: P21/c
+data_0196_Energy_10.694_Density_1.4669 # New:P21/c
 _csp_data_block.id     c2a9099c-1754-4bbe-9b46-3b56e8a1bd04
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -22047,7 +22047,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0197_Energy_10.712_Density_1.5155 New: P21/n
+data_0197_Energy_10.712_Density_1.5155 # New:P21/n
 _csp_data_block.id     223a5ab7-25a9-4eeb-9c0a-1adbb25f8086
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -22157,7 +22157,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0198_Energy_10.733_Density_1.5197 New: Fdd2
+data_0198_Energy_10.733_Density_1.5197 # New:Fdd2
 _csp_data_block.id     331cbb04-1f46-4144-89ee-1e6595b5c631
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -22279,7 +22279,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0199_Energy_10.737_Density_1.4841 New: P21/n
+data_0199_Energy_10.737_Density_1.4841 # New:P21/n
 _csp_data_block.id     7e86a56a-f820-4a20-ad5f-045432490152
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -22389,7 +22389,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0200_Energy_10.768_Density_1.5488 New: P2/n
+data_0200_Energy_10.768_Density_1.5488 # New:P2/n
 _csp_data_block.id     86d4e4fb-c81a-4272-a3c2-10057c02910d
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -22499,7 +22499,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0201_Energy_10.783_Density_1.4844 New: P212121
+data_0201_Energy_10.783_Density_1.4844 # New:P212121
 _csp_data_block.id     9c31c0ac-305f-421f-ac01-0b3d52c5f1f0
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -22609,7 +22609,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0202_Energy_10.789_Density_1.4791 New: Fdd2
+data_0202_Energy_10.789_Density_1.4791 # New:Fdd2
 _csp_data_block.id     07aa42b6-0577-4227-b61d-e957ec6f1c1a
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -22731,7 +22731,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0203_Energy_10.828_Density_1.4712 New: P21/c
+data_0203_Energy_10.828_Density_1.4712 # New:P21/c
 _csp_data_block.id     f47f0b4c-744d-4242-95ed-dc469903d783
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -22841,7 +22841,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0204_Energy_10.832_Density_1.4710 New: P21/c
+data_0204_Energy_10.832_Density_1.4710 # New:P21/c
 _csp_data_block.id     88a9bae2-2cda-427c-a837-b10b38384f29
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -22951,7 +22951,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0205_Energy_10.848_Density_1.4746 New: C2/c
+data_0205_Energy_10.848_Density_1.4746 # New:C2/c
 _csp_data_block.id     08831d7c-e36b-4a35-9ae9-bbf3e85b5c3e
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -23065,7 +23065,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0206_Energy_10.899_Density_1.4800 New: C2/c
+data_0206_Energy_10.899_Density_1.4800 # New:C2/c
 _csp_data_block.id     a4d8cd79-5780-4e99-ace0-f4575d097b0a
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -23179,7 +23179,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0207_Energy_10.925_Density_1.4977 New: I2/a
+data_0207_Energy_10.925_Density_1.4977 # New:I2/a
 _csp_data_block.id     f770e819-04b1-4521-8c9b-3d09e4089929
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -23293,7 +23293,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0208_Energy_10.938_Density_1.4977 New: P21/c
+data_0208_Energy_10.938_Density_1.4977 # New:P21/c
 _csp_data_block.id     aa496652-e920-41f5-b279-4d338c330789
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -23403,7 +23403,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0209_Energy_10.975_Density_1.5159 New: P21/c
+data_0209_Energy_10.975_Density_1.5159 # New:P21/c
 _csp_data_block.id     428a46b0-e329-4a5c-b5ad-79592becfc8e
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -23513,7 +23513,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0210_Energy_11.023_Density_1.5287 New: P21/n
+data_0210_Energy_11.023_Density_1.5287 # New:P21/n
 _csp_data_block.id     f48bf578-97ce-4eca-99c2-dcbbb594b029
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -23623,7 +23623,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0211_Energy_11.025_Density_1.5362 New: P2/n
+data_0211_Energy_11.025_Density_1.5362 # New:P2/n
 _csp_data_block.id     5b373b5e-9739-44b3-929f-75ca4554c8af
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -23733,7 +23733,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0212_Energy_11.131_Density_1.4930 New: P21/c
+data_0212_Energy_11.131_Density_1.4930 # New:P21/c
 _csp_data_block.id     75c14a36-b863-40ac-a518-7ba3f5db23c5
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -23843,7 +23843,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0213_Energy_11.190_Density_1.4658 New: C2/c
+data_0213_Energy_11.190_Density_1.4658 # New:C2/c
 _csp_data_block.id     b921df80-9feb-4234-9f04-1bab0131a3db
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -23957,7 +23957,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0214_Energy_11.278_Density_1.5234 New: P21/n
+data_0214_Energy_11.278_Density_1.5234 # New:P21/n
 _csp_data_block.id     acbad93c-d60c-40f6-9e9b-dc417c06d7f3
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -24067,7 +24067,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0215_Energy_11.329_Density_1.4545 New: P21/c
+data_0215_Energy_11.329_Density_1.4545 # New:P21/c
 _csp_data_block.id     2ecd9f54-8f02-4c0f-8da0-847f826181bd
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -24177,7 +24177,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0216_Energy_11.419_Density_1.5038 New: P21/c
+data_0216_Energy_11.419_Density_1.5038 # New:P21/c
 _csp_data_block.id     e546c2f4-31cd-4367-84ed-8ae8ef39070e
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -24287,7 +24287,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0217_Energy_11.436_Density_1.4875 New: P21/c
+data_0217_Energy_11.436_Density_1.4875 # New:P21/c
 _csp_data_block.id     cd799699-e0f9-4af6-ae6d-fcc3ce9bde24
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -24397,7 +24397,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0218_Energy_11.445_Density_1.4968 New: P212121
+data_0218_Energy_11.445_Density_1.4968 # New:P212121
 _csp_data_block.id     fc950ebb-8132-46bc-83ca-5fbf5db22dba
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -24507,7 +24507,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0219_Energy_11.542_Density_1.4760 New: I2/c
+data_0219_Energy_11.542_Density_1.4760 # New:I2/c
 _csp_data_block.id     4434b8cf-9fd7-450e-908e-5e1e786281b9
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -24621,7 +24621,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0220_Energy_11.588_Density_1.4795 New: P21/n
+data_0220_Energy_11.588_Density_1.4795 # New:P21/n
 _csp_data_block.id     b35bd26f-c42f-40f7-9049-23cc721ed1cd
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -24731,7 +24731,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0221_Energy_11.623_Density_1.5202 New: P-1
+data_0221_Energy_11.623_Density_1.5202 # New:P-1
 _csp_data_block.id     1919a309-a8ae-4d86-b911-872e7be56465
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -24839,7 +24839,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0222_Energy_11.638_Density_1.5082 New: P21/n
+data_0222_Energy_11.638_Density_1.5082 # New:P21/n
 _csp_data_block.id     a8215c03-a9c7-476c-b90f-60ae14fc15b2
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -24949,7 +24949,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0223_Energy_11.664_Density_1.5240 New: I2/a
+data_0223_Energy_11.664_Density_1.5240 # New:I2/a
 _csp_data_block.id     6326cf5f-8689-41ae-a0c1-6753e6892655
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -25063,7 +25063,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0224_Energy_11.775_Density_1.5285 New: P21/c
+data_0224_Energy_11.775_Density_1.5285 # New:P21/c
 _csp_data_block.id     0f1c867b-284e-48d8-9aec-77e1491f8fdf
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -25173,7 +25173,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0225_Energy_11.941_Density_1.5018 New: C2/c
+data_0225_Energy_11.941_Density_1.5018 # New:C2/c
 _csp_data_block.id     be22e8a7-5d8b-4ece-86d4-39d43a2c4e7f
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -25287,7 +25287,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0226_Energy_11.985_Density_1.4405 New: P21/c
+data_0226_Energy_11.985_Density_1.4405 # New:P21/c
 _csp_data_block.id     c56e1869-5ef1-4db5-bbd5-8a73148446f9
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -25397,7 +25397,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0227_Energy_12.180_Density_1.5237 New: Pbca
+data_0227_Energy_12.180_Density_1.5237 # New:Pbca
 _csp_data_block.id     1f44e2f2-363a-4f5c-945c-71a281a3e709
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -25511,7 +25511,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0228_Energy_12.215_Density_1.4752 New: P-1
+data_0228_Energy_12.215_Density_1.4752 # New:P-1
 _csp_data_block.id     fb85176a-5737-4c4f-b76f-f47fb69bc1d6
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -25619,7 +25619,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0229_Energy_12.286_Density_1.4747 New: P-1
+data_0229_Energy_12.286_Density_1.4747 # New:P-1
 _csp_data_block.id     76c78ca5-d0c7-4f22-985b-cad38d2cb056
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -25727,7 +25727,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0230_Energy_12.349_Density_1.5054 New: Aba2
+data_0230_Energy_12.349_Density_1.5054 # New:Aba2
 _csp_data_block.id     998891ff-8284-49e2-9f0f-e6421ab7332e
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -25841,7 +25841,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0231_Energy_12.532_Density_1.4808 New: P21/c
+data_0231_Energy_12.532_Density_1.4808 # New:P21/c
 _csp_data_block.id     00ba56b3-1377-404d-885b-5839c8ef27f2
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -25951,7 +25951,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0232_Energy_12.560_Density_1.5236 New: C2/c
+data_0232_Energy_12.560_Density_1.5236 # New:C2/c
 _csp_data_block.id     0cca26fa-5eb4-44a2-ae4d-9d19e09015cf
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -26065,7 +26065,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0233_Energy_12.634_Density_1.4770 New: P21/n
+data_0233_Energy_12.634_Density_1.4770 # New:P21/n
 _csp_data_block.id     a9383c76-d291-42e1-a26b-e56fc260e62a
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -26175,7 +26175,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0234_Energy_12.634_Density_1.4891 New: Pna21
+data_0234_Energy_12.634_Density_1.4891 # New:Pna21
 _csp_data_block.id     0e288bf2-8a8d-46fe-9cf1-7ad320522ee6
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -26285,7 +26285,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0235_Energy_12.677_Density_1.5082 New: P-1
+data_0235_Energy_12.677_Density_1.5082 # New:P-1
 _csp_data_block.id     8f6c4caa-6d19-4ae9-a8ee-d36ca51c5e26
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -26393,7 +26393,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0236_Energy_12.692_Density_1.5108 New: Pbca
+data_0236_Energy_12.692_Density_1.5108 # New:Pbca
 _csp_data_block.id     dcccb4a6-b255-4eaf-853d-84065f7a7c8d
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -26507,7 +26507,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0237_Energy_12.702_Density_1.4922 New: P21/c
+data_0237_Energy_12.702_Density_1.4922 # New:P21/c
 _csp_data_block.id     7cf04266-ae6d-427b-9873-8d940ea4ab51
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -26617,7 +26617,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0238_Energy_12.757_Density_1.5105 New: P21/c
+data_0238_Energy_12.757_Density_1.5105 # New:P21/c
 _csp_data_block.id     b7892faf-7827-4a35-8a1c-f3738e21104f
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -26727,7 +26727,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0239_Energy_12.860_Density_1.4897 New: Pbcn
+data_0239_Energy_12.860_Density_1.4897 # New:Pbcn
 _csp_data_block.id     83a95e12-8644-4a27-b105-41109ea999e4
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -26841,7 +26841,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0240_Energy_12.886_Density_1.5230 New: I2/a
+data_0240_Energy_12.886_Density_1.5230 # New:I2/a
 _csp_data_block.id     14065336-86eb-44cd-b061-3c9eca43f36d
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -26955,7 +26955,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0241_Energy_12.943_Density_1.4628 New: P2/n
+data_0241_Energy_12.943_Density_1.4628 # New:P2/n
 _csp_data_block.id     03e42ccb-9931-489b-b08f-91ae05c5c6a1
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -27065,7 +27065,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0242_Energy_13.071_Density_1.5117 New: P21/c
+data_0242_Energy_13.071_Density_1.5117 # New:P21/c
 _csp_data_block.id     dbd1dca6-c8c3-4a85-b309-f20c1c920651
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -27175,7 +27175,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0243_Energy_13.138_Density_1.5270 New: P21/n
+data_0243_Energy_13.138_Density_1.5270 # New:P21/n
 _csp_data_block.id     8baa06b7-1149-421b-b33c-352a1b7d6cce
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -27285,7 +27285,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0244_Energy_13.165_Density_1.4828 New: P21/c
+data_0244_Energy_13.165_Density_1.4828 # New:P21/c
 _csp_data_block.id     2c8d1b05-cc20-4253-92b3-01bf841cb63e
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -27395,7 +27395,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0245_Energy_13.275_Density_1.5030 New: P21/n
+data_0245_Energy_13.275_Density_1.5030 # New:P21/n
 _csp_data_block.id     df4e21e6-cecb-495d-9bcc-5eb09fe61222
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -27505,7 +27505,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0246_Energy_13.354_Density_1.5164 New: Pbca
+data_0246_Energy_13.354_Density_1.5164 # New:Pbca
 _csp_data_block.id     0a04d54d-d5d0-4120-a483-7259e6ce5347
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -27619,7 +27619,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0247_Energy_13.409_Density_1.4897 New: P21/c
+data_0247_Energy_13.409_Density_1.4897 # New:P21/c
 _csp_data_block.id     27f69250-f722-4a4c-bcee-58dea6137988
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -27729,7 +27729,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0248_Energy_13.426_Density_1.4532 New: P21/n
+data_0248_Energy_13.426_Density_1.4532 # New:P21/n
 _csp_data_block.id     f82d21e8-c00f-4f66-b225-8192802dbca1
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -27839,7 +27839,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0249_Energy_13.530_Density_1.4773 New: C2/c
+data_0249_Energy_13.530_Density_1.4773 # New:C2/c
 _csp_data_block.id     0a47455f-b023-40e1-9505-7d54180c116f
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -27953,7 +27953,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0250_Energy_13.567_Density_1.5071 New: P21/n
+data_0250_Energy_13.567_Density_1.5071 # New:P21/n
 _csp_data_block.id     03a2d900-a4b4-4fa7-a83a-24eb5ef43d60
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -28063,7 +28063,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0251_Energy_13.784_Density_1.4566 New: Pna21
+data_0251_Energy_13.784_Density_1.4566 # New:Pna21
 _csp_data_block.id     440b9377-4ab0-454c-8e69-bc1c312a3f71
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -28173,7 +28173,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0252_Energy_13.823_Density_1.5072 New: C2/c
+data_0252_Energy_13.823_Density_1.5072 # New:C2/c
 _csp_data_block.id     d8017c68-4d55-4da1-91c7-84942dd24140
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -28287,7 +28287,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0253_Energy_13.873_Density_1.4840 New: C2/c
+data_0253_Energy_13.873_Density_1.4840 # New:C2/c
 _csp_data_block.id     9833d9e5-0542-46f0-8d0b-e27d8ad03bec
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -28401,7 +28401,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0254_Energy_14.219_Density_1.4743 New: P21/n
+data_0254_Energy_14.219_Density_1.4743 # New:P21/n
 _csp_data_block.id     3d709924-d079-4113-8415-8a447eb55440
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -28511,7 +28511,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0255_Energy_14.286_Density_1.4752 New: C2
+data_0255_Energy_14.286_Density_1.4752 # New:C2
 _csp_data_block.id     aa0458a9-2a38-44af-8baa-9236d97f553f
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -28621,7 +28621,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0256_Energy_14.402_Density_1.5179 New: Aba2
+data_0256_Energy_14.402_Density_1.5179 # New:Aba2
 _csp_data_block.id     c6f8fbff-0c16-435c-9d39-cbb26f1e9d9a
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -28735,7 +28735,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0257_Energy_14.524_Density_1.5211 New: Pbca
+data_0257_Energy_14.524_Density_1.5211 # New:Pbca
 _csp_data_block.id     79c693e0-59bd-4227-8626-919397adb270
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -28849,7 +28849,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0258_Energy_14.938_Density_1.4615 New: Pbca
+data_0258_Energy_14.938_Density_1.4615 # New:Pbca
 _csp_data_block.id     0685ee16-2a63-4dc3-b0ce-e3ce80d30bd0
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -28963,7 +28963,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0259_Energy_15.242_Density_1.4934 New: Ic
+data_0259_Energy_15.242_Density_1.4934 # New:Ic
 _csp_data_block.id     a4a47b5e-b5d4-427e-80f7-edbe9f7937d0
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -29073,7 +29073,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0260_Energy_15.817_Density_1.4635 New: P21/c
+data_0260_Energy_15.817_Density_1.4635 # New:P21/c
 _csp_data_block.id     00d5930f-ef2b-4377-9903-0e5c69188f73
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -29183,7 +29183,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0261_Energy_16.133_Density_1.4717 New: Pbca
+data_0261_Energy_16.133_Density_1.4717 # New:Pbca
 _csp_data_block.id     f3632361-ae8c-4065-bfad-eb5453ea1692
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -29297,7 +29297,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0262_Energy_16.592_Density_1.4632 New: Pna21
+data_0262_Energy_16.592_Density_1.4632 # New:Pna21
 _csp_data_block.id     5b798586-5bc7-4acd-9628-2795725f5932
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -29407,7 +29407,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0263_Energy_16.748_Density_1.4419 New: C2221
+data_0263_Energy_16.748_Density_1.4419 # New:C2221
 _csp_data_block.id     140173bb-e7c9-49de-8b82-3f69697c8c15
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d
@@ -29521,7 +29521,7 @@ C11 H9 1_555 1_555
 #
 #######################################################################
 
-data_0264_Energy_17.512_Density_1.4381 New: Pccn
+data_0264_Energy_17.512_Density_1.4381 # New:Pccn
 _csp_data_block.id     c96b6849-fb59-4eec-aac1-8f3e0844f084
 _csp_data_block.additional_files              [ "csp_input.cif" "csp_workflows.cif" ]
 _theoretical_structure.csp_input_system_id                         10628627-856c-4176-acf7-b18b0d98681d

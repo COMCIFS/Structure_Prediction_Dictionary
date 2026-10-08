@@ -25,12 +25,13 @@ calculate these.
 Category `_csp_data_block.[]`: This section specifies the class type of the data block and assigns a unique identifier
 to it.
 
-| Group             | Data Field         | Type       | Definition                                                                                                                 | Constraints                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | Units | Example                                                            |
-|-------------------|--------------------|------------|----------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------|--------------------------------------------------------------------|
-| `_csp_data_block` | `class`            | char       | Class type of the data block.                                                                                              | - "Input": Describes the input atoms or molecular entities for CSP. <br/>- "Generation Method": Describes the method used to generate theoretical crystal structures. <br/>- "Ranking Method": Describes the energy evaluation models used to optimise and rank the structures. <br/>- "Workflow": Describes how generation, ranking and intermediate steps are linked together to create the CSP Workflow. <br/>- "Theoretical Structure": Describes the properties and 3D coordinates of output structures. <br/>- "Output": Describes the general outputs of a CSP run, such as the computational cost and global minima of each step. <br/>- "Step": Describes possible intermediate steps, such as clustering to remove duplicates on conformer generation for CSP of molecular crystals. |       | "Input"                                                            |
-| `_csp_data_block` | `id`               | char       | Unique identifier of the data block. This will be used to link the different datablocks in a workflow or output structure. | It is recommended that a unique identifier generation protocol is used, such as UUID.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |       | "`dd55207f-9649-435b-9708-c8154c33fc03`"                           |
-| `_csp_data_block` | `description`      | char       | Text identifier of a datablock for human readability.                                                                      | Free text                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |       | "Molecule 1"                                                       |
-| `_csp_data_block` | `additional_files` | list[char] | If datablocks are specified in different files, add the position of these files.                                           | `List[str]`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |       | `["generation_methods.cif" "ranking_methods.cif" "workflows.cif"]` |
+| Group             | Data Field         | Type       | Definition                                                                                                             | Constraints                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | Units | Example                                                            |
+|-------------------|--------------------|------------|------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------|--------------------------------------------------------------------|
+| `_csp_data_block` | `class`            | char       | Class type of the data block.                                                                                          | - "Input": Describes the input atoms or molecular entities for CSP. <br/>- "Generation Method": Describes the method used to generate theoretical crystal structures. <br/>- "Ranking Method": Describes the energy evaluation models used to optimise and rank the structures. <br/>- "Workflow": Describes how generation, ranking and intermediate steps are linked together to create the CSP Workflow. <br/>- "Theoretical Structure": Describes the properties and 3D coordinates of output structures. <br/>- "Output": Describes the general outputs of a CSP run, such as the computational cost and global minima of each step. <br/>- "Step": Describes possible intermediate steps, such as clustering to remove duplicates on conformer generation for CSP of molecular crystals. |       | "Input"                                                            |
+| `_csp_data_block` | `id`               | char       | Unique identifier of the data block. This is used to link the different datablocks in a workflow or output structure.  | It is recommended that a unique identifier generation protocol is used, such as UUID.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |       | "`dd55207f-9649-435b-9708-c8154c33fc03`"                           |
+| `_csp_data_block` | `landscape_id`     | char       | Unique identifier of the CSP landscape. This can be used to identify a landscape or link multiple landscapes together. | It is recommended that a unique identifier generation protocol is used, such as UUID. To be used in system-specific datablocks (Input, Theoretical Stucture, Output).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |       | "`dd55207f-9649-435b-9708-c8154c33fc03`"                           |
+| `_csp_data_block` | `description`      | char       | Text identifier of a datablock for human readability.                                                                  | Free text                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |       | "Molecule 1"                                                       |
+| `_csp_data_block` | `additional_files` | list[char] | If datablocks are specified in different files, add the position of these files.                                       | `List[str]`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |       | `["generation_methods.cif" "ranking_methods.cif" "workflows.cif"]` |
 
 Single input systems, generation methods and ranking methods must be described in separate datablocks and a unique
 identifier should be assigned to them. We recommend the use of Universally Unique Identifiers (UUIDs), described
@@ -49,21 +50,26 @@ structure's data blocks.
 Category `_csp_input.[]`, `_csp_input_molecular_entity.[]`, `_csp_input_atom.[]`: These categories specify the atomic
 species used in inorganic CSP or the input molecular entities for organic or organometallic crystal generation.
 
-| Group                         | Data Field                     | Type       | Definition                                                                                                                                                              | Constraints                                                                                                                                                         | Units | Example                                                     |
-|-------------------------------|--------------------------------|------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------|-------------------------------------------------------------|
-| `_csp_input`                  | `name`                         | char       | See name_common and name_systematic from Core CIF dictionary.                                                                                                           | Free Text                                                                                                                                                           |       | "urea hydrate"                                              |
-| `_csp_input`                  | `identifier`                   | char       | An input identifier used for internal databases or classification.                                                                                                      | Free Text                                                                                                                                                           |       | "UREAXXH2O"                                                 |
-| `_csp_input`                  | `composition_calculation`      | char       | "fixed" or "variable" composition calculation.                                                                                                                          | - "Fixed": The composition is not a variable in the search/generation of new structures. <br/>- "Variable": The composition is allowed to change during the search. |       | "Fixed"                                                     |
-| `_csp_input`                  | `composition_coefficients`     | list[numb] | List of possible compositions for fixed-composition calculations or extremes for variable-composition simulations.                                                      | `List[PositiveInt]`                                                                                                                                                 |       | - `[1 1]`<br/>- `[2 1]`                                     |
-| `_csp_input`                  | `maximum_number_of_components` | numb       | The maximum number of components (atoms or molecular entities) in the unit cell.                                                                                        | \>1                                                                                                                                                                 |       | 4                                                           |
-| `_csp_input`                  | `minimum_number_of_components` | numb       | The minimum number of components (atoms or molecular entities) in the unit cell.                                                                                        | \>1                                                                                                                                                                 |       | 2                                                           |
-| `_csp_input`                  | `atom_types`                   | list[char] | List of atomic species defining the composition. This simplifies the input definition in inorganic CSP, avoiding defining a separate molecular entity for each species. | `List[str]` or `List[PositiveInt]`                                                                                                                                  |       | - `[Mg O]` (Atomic symbols)<br/>- `[12 8]` (Atomic numbers) |
-| `_csp_input_molecular_entity` | `number`                       | numb       | Molecular entity component index.                                                                                                                                       | \>1                                                                                                                                                                 |       | 1                                                           |
-| `_csp_input_molecular_entity` | `identifier`                   | char       | Label used to identify the molecular entity.                                                                                                                            | Free Text                                                                                                                                                           |       | - "urea"<br/>- "water"                                      |
-| `_csp_input_molecular_entity` | `smiles`                       | char       | SMILES of the component.                                                                                                                                                | Free Text                                                                                                                                                           |       | "C(=O)(N)N"                                                 |
-| `_csp_input_atom`             | `molecular_entity_number`      | numb       | In a loop describing the atoms in a molecular entity, the molecular entity component index of which the atom belongs.                                                   | \>1                                                                                                                                                                 |       | 1                                                           |
-| `_csp_input_atom`             | `molecular_entity_identifier`  | char       | In a loop describing the atoms in a molecular entity, the label of the molecular entity of which the atom belongs.                                                      | Free Text                                                                                                                                                           |       | - "urea"<br/>- "water"                                      |
-| `_csp_input_atom`             | `label`                        | char       | In a loop describing the atoms in a molecular entity, the label of the atom in the molecular entity.                                                                    | Free Text                                                                                                                                                           |       | C1                                                          |
+| Group                            | Data Field                     | Type       | Definition                                                                                                                                                              | Constraints                                                                                                                                                         | Units | Example                                                     |
+|----------------------------------|--------------------------------|------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------|-------------------------------------------------------------|
+| `_csp_input`                     | `name`                         | char       | See name_common and name_systematic from Core CIF dictionary.                                                                                                           | Free Text                                                                                                                                                           |       | "urea hydrate"                                              |
+| `_csp_input`                     | `identifier`                   | char       | An input identifier used for internal databases or classification.                                                                                                      | Free Text                                                                                                                                                           |       | "UREAXXH2O"                                                 |
+| `_csp_input`                     | `composition_calculation`      | char       | "fixed" or "variable" composition calculation.                                                                                                                          | - "Fixed": The composition is not a variable in the search/generation of new structures. <br/>- "Variable": The composition is allowed to change during the search. |       | "Fixed"                                                     |
+| `_csp_input`                     | `composition_coefficients`     | list[numb] | List of possible compositions for fixed-composition calculations or extremes for variable-composition simulations.                                                      | `List[PositiveInt]`                                                                                                                                                 |       | - `[1 1]`<br/>- `[2 1]`                                     |
+| `_csp_input`                     | `maximum_number_of_components` | numb       | The maximum number of components (atoms or molecular entities) in the unit cell.                                                                                        | \>1                                                                                                                                                                 |       | 4                                                           |
+| `_csp_input`                     | `minimum_number_of_components` | numb       | The minimum number of components (atoms or molecular entities) in the unit cell.                                                                                        | \>1                                                                                                                                                                 |       | 2                                                           |
+| `_csp_input`                     | `atom_types`                   | list[char] | List of atomic species defining the composition. This simplifies the input definition in inorganic CSP, avoiding defining a separate molecular entity for each species. | `List[str]` or `List[PositiveInt]`                                                                                                                                  |       | - `[Mg O]` (Atomic symbols)<br/>- `[12 8]` (Atomic numbers) |
+| `_csp_input_molecular_entity`    | `number`                       | numb       | Molecular entity component index.                                                                                                                                       | \>1                                                                                                                                                                 |       | 1                                                           |
+| `_csp_input_molecular_entity`    | `identifier`                   | char       | Label used to identify the molecular entity.                                                                                                                            | Free Text                                                                                                                                                           |       | - "urea"<br/>- "water"                                      |
+| `_csp_input_molecular_entity`    | `smiles`                       | char       | SMILES of the component.                                                                                                                                                | Free Text                                                                                                                                                           |       | "C(=O)(N)N"                                                 |
+| `_csp_input_atom`                | `molecular_entity_number`      | numb       | In a loop describing the atoms in a molecular entity, the molecular entity component index of which the atom belongs.                                                   | \>1                                                                                                                                                                 |       | 1                                                           |
+| `_csp_input_atom`                | `molecular_entity_identifier`  | char       | In a loop describing the atoms in a molecular entity, the label of the molecular entity of which the atom belongs.                                                      | Free Text                                                                                                                                                           |       | - "urea"<br/>- "water"                                      |
+| `_csp_input_atom`                | `label`                        | char       | In a loop describing the atoms in a molecular entity, the label of the atom in the molecular entity.                                                                    | Free Text                                                                                                                                                           |       | C1                                                          |
+| `_csp_search_variables`          |                                |            |                                                                                                                                                                         |                                                                                                                                                                     |       |                                                             |
+| `_csp_landscape_cross_reference` | `relationship_description`     | char       | To be used in a loop, this data field allows to describe custom types of relationships between CSP landscapes.                                                          | Free Text                                                                                                                                                           |       |                                                             |
+| `_csp_landscape_cross_reference` | `related_id`                   | char       | To be used in a loop, the identifier of the linked landscape.                                                                                                           | Free Text                                                                                                                                                           |       |                                                             |
+| `_csp_landscape_cross_reference` | `related_description`          | char       | To be used in a loop, the description of the linked landscape.                                                                                                          | Free Text                                                                                                                                                           |       |                                                             |
+| `_csp_landscape_cross_reference` | `related_location`             | char       | To be used in a loop, the location (database or path to the file) of the linked landscape.                                                                              | Free Text                                                                                                                                                           |       |                                                             |
 
 Additional details on atoms in molecule ad their connectivity can be specified through the CIF Chemical dictionary,
 available at: https://www.iucr.org/__data/iucr/cifdic_html/1/cif_core.dic/index.html
@@ -88,6 +94,60 @@ _csp_input.name                     Ferrosilite
 _csp_input.atom_types               [ Fe Si O ] 
 _csp_input.composition_calculation  fixed
 _csp_input.composition_coefficients [ 1 1 3 ]
+
+# Search Variables
+loop_
+    _csp_search_variable.id
+    _csp_search_variable.type
+    _csp_search_variable.domain_type
+    _csp_search_variable.target
+    _csp_search_variable.variable
+    _csp_search_variable.description
+    1   cell_length continuous  .    a      "Cell Parameters"
+    2   cell_length continuous  .    b      "Cell Parameters"
+    3   cell_length continuous  .    c      "Cell Parameters"
+    4   cell_angle  continuous  .    alpha  "Cell Parameters"
+    5   cell_angle  continuous  .    beta   "Cell Parameters"
+    6   cell_angle  continuous  .    gamma  "Cell Parameters"
+    7   position    periodic    [1]  x1     "Fractional Coordinate"
+    8   position    periodic    [1]  y1     "Fractional Coordinate"
+    9   position    periodic    [1]  z1     "Fractional Coordinate"
+    10  position    periodic    [2]  x2     "Fractional Coordinate"
+    11  position    periodic    [2]  y2     "Fractional Coordinate"
+    12  position    periodic    [2]  z2     "Fractional Coordinate"
+    13  position    periodic    [3]  x3     "Fractional Coordinate"
+    14  position    periodic    [3]  y3     "Fractional Coordinate"
+    15  position    periodic    [3]  z3     "Fractional Coordinate"
+        
+# Search Constraints
+loop_ 
+    _csp_search_constraints.id
+    _csp_search_constraints.type
+    _csp_search_constraints.target
+    _csp_search_constraints.lower_bound
+    _csp_search_constraints.upper_bound
+    _csp_search_constraints.boundary_type
+    _csp_search_constraints.allowed_values
+    _csp_search_constraints.description
+    1  variable              1          4.0     30.0  hard      .        .
+    2  variable              2          4.0     30.0  hard      .        .
+    3  variable              3          4.0     30.0  hard      .        .
+    4  variable              4         60.0    120.0  hard      .        .
+    5  variable              5         60.0    120.0  hard      .        .
+    6  variable              6         60.0    120.0  hard      .        .
+    7  variable              7          0.0      1.0  hard      .        .
+    8  variable              8          0.0      1.0  hard      .        .
+    9  variable              9          0.0      1.0  hard      .        .
+    10 variable              10         0.0      1.0  hard      .        .
+    11 variable              11         0.0      1.0  hard      .        .
+    12 variable              12         0.0      1.0  hard      .        .
+    13 variable              13         0.0      1.0  hard      .        .
+    14 variable              14         0.0      1.0  hard      .        .
+    15 variable              15         0.0      1.0  hard      .        .
+    16 global                density 1200.0   1800.0  hard      .        .
+    17 interatomic_distance  [1, 2]     2.0   .       hard      .        "Fe-Si"
+    18 interatomic_distance  [2, 3]     1.5   .       hard      .        "Si-O"
+    19 interatomic_distance  [1, 3]     1.5   .       hard      .        "Fe-O"
 ```
 
 Inorganic CSP input with variable stoichiometry:
@@ -106,6 +166,8 @@ _csp_input.composition_calculation      variable
 _csp_input.composition_coefficients     [[1 0 1 3] [0 1 1 3]]
 _csp_input.minimum_number_of_components 2
 _csp_input.maximum_number_of_components 10
+
+...
 ```
 
 This implies that the resulting structures will have the formula *x*(FeSiO3)+ *y*(MgSiO3) with *2<x+y<10*. It is worth
@@ -116,11 +178,12 @@ Multi-component molecular crystal CSP with fixed stoichiometry:
 ```text
 data_molecule
 # Datablock Details
-_csp_data_block.class       "Input"
-_csp_data_block.id          2a2611e3-2021-4b03-a7c6-0ef71239008f
-_csp_data_block.description input1
+_csp_data_block.class        "Input"
+_csp_data_block.id           2a2611e3-2021-4b03-a7c6-0ef71239008f
+_csp_data_block.landscape_id e4f89e83-5745-4b8b-a597-0c6076343a03
+_csp_data_block.description  "input1"
 
-_csp_input.name             Urea_Hydrate
+_csp_input.name              "Urea Hydrate"
 
 # Molecules
 loop_
@@ -131,6 +194,15 @@ loop_
     1 WAT O      water
     2 URE OCN(N) urea
 
+# Related Landscapes
+loop_
+    _csp_landscape_cross_reference.relationship_description 
+    _csp_landscape_cross_reference.related_id               
+    _csp_landscape_cross_reference.related_description      
+    _csp_landscape_cross_reference.related_location
+    "Anhydrous Form"       ca8d454a-8772 "Urea"         "Internal DB" 
+    "Alternative Workflow" 7b66880d-b5b0 "Urea Hydrate" "Internal DB"      
+    
 # Atoms in molecules
 loop_
     _csp_input_atom.molecular_entity_number     
@@ -168,6 +240,67 @@ loop_
 
 _csp_input.composition_calculation  "fixed"
 _csp_input.composition_coefficients [ 2 1 ] # Indexes from molecule section (2 water molecules and one urea)
+
+# Search Variables
+loop_
+    _csp_search_variable.id
+    _csp_search_variable.type
+    _csp_search_variable.domain_type
+    _csp_search_variable.target
+    _csp_search_variable.variable
+    _csp_search_variable.description
+    1  cell_length continuous  .          a        "Cell Parameters"
+    2  cell_length continuous  .          b        "Cell Parameters"
+    3  cell_length continuous  .          c        "Cell Parameters"
+    4  cell_angle  continuous  .          alpha    "Cell Parameters"
+    5  cell_angle  continuous  .          beta     "Cell Parameters"
+    6  cell_angle  continuous  .          gamma    "Cell Parameters"
+    7  position    periodic    [1]        x1       "Fractional Coordinate"
+    8  position    periodic    [1]        y1       "Fractional Coordinate"
+    9  position    periodic    [1]        z1       "Fractional Coordinate"
+    10 position    periodic    [2]        x2       "Fractional Coordinate"
+    11 position    periodic    [2]        y2       "Fractional Coordinate"
+    12 position    periodic    [2]        z2       "Fractional Coordinate"
+    13 rotation    periodic    [1]        theta11  "Rotation constrained by molecular C2 symmetry"
+    14 rotation    periodic    [1]        theta12  "Rotation"
+    15 rotation    periodic    [1]        theta13  "Rotation"
+    16 rotation    periodic    [2]        theta21  "Rotation constrained by molecular C2 symmetry"
+    17 rotation    periodic    [2]        theta22  "Rotation"
+    18 rotation    periodic    [2]        theta23  "Rotation"
+    19 torsion     periodic    [4,5,6,8]  phi1     "Torsion describing pyramidalisation of urea nitrogen"
+    
+    
+# Search Constraints
+loop_ 
+    _csp_search_constraints.id
+    _csp_search_constraints.type
+    _csp_search_constraints.target
+    _csp_search_constraints.lower_bound
+    _csp_search_constraints.upper_bound
+    _csp_search_constraints.boundary_type
+    _csp_search_constraints.allowed_values
+    _csp_search_constraints.description
+    1   variable              1          4.0     30.0  hard      .        .
+    2   variable              2          4.0     30.0  hard      .        .
+    3   variable              3          4.0     30.0  hard      .        .
+    4   variable              4         60.0    120.0  hard      .        .
+    5   variable              5         60.0    120.0  hard      .        .
+    6   variable              6         60.0    120.0  hard      .        .
+    7   variable              7          0.0      1.0  hard      .        .
+    8   variable              8          0.0      1.0  hard      .        .
+    9   variable              9          0.0      1.0  hard      .        .
+    10  variable              10         0.0      1.0  hard      .        .
+    11  variable              11         0.0      1.0  hard      .        .
+    12  variable              12         0.0      1.0  hard      .        .
+    13  variable              13         0.0    180.0  hard      .        "C2 axis"
+    14  variable              14         0.0    360.0  hard      .        .
+    15  variable              15         0.0    360.0  hard      .        .
+    16  variable              16         0.0    180.0  hard      .        "C2 axis"
+    17  variable              17         0.0    360.0  hard      .        .
+    18  variable              18         0.0    360.0  hard      .        .    
+    19  variable              19       150.0    180.0  hard      .        "Planar or pyramidal configurations"
+    20  global                z_prime .        .       .         [1 2]    .
+    21  global                density 1200.0   1800.0  harmonic  .        .
 ```
 
 `composition_coefficients` here refers to the molecular entity number. Worthy of note the use of the `Chemical`
@@ -181,6 +314,31 @@ _csp_input.composition_calculation      "variable"
 _csp_input.composition_coefficients     [[1 0] [0 1]]
 _csp_input.maximum_number_of_components 4
 _csp_input.minimum_number_of_components 2
+```
+
+Relationships between landscapes can be included using the `_csp_data_block.landscape_id` identifiers. In the example
+above a CSP search was conducted on both the anhydrous and hydrate forms of Urea. This example should be interpreted as:
+
+* The related landscape `Urea` (ID: `ca8d454a-8772`), available from `Internal DB`, represents the `anhydrous form` of
+  the current landscape.
+* The related landscape `Urea Hydrate` (ID: `7b66880d-b5b0`), available from `Internal DB`, was generated using an
+  `alternative workflow`.
+
+Relationships are user defined and can depend on the application for the CSP study. Below we show an example of how we
+can link several landscapes of potential drugs by having a common protein or binding site as target:
+
+```text
+...
+loop_
+    _csp_landscape_cross_reference.relationship_description 
+    _csp_landscape_cross_reference.related_id               
+    _csp_landscape_cross_reference.related_description      
+    _csp_landscape_cross_reference.related_location
+    "Target ACE2-Lys353" 079b5459-07b4 "Mol1" "Internal DB" 
+    "Target ACE2-Lys353" 6cfd0766-eb75 "Mol2" "Internal DB"   
+    "Target ACE2-Lys353" f6442576-39ff "Mol3" "Internal DB" 
+    "Target ACE2-Lys353" d3aa26d3-cf6b "Mol4" "Internal DB"      
+    ...
 ```
 
 For metal-organic systems, the `_csp.input_molecular_entity` and `Chemical` dictionaries can be used to specify metallic
@@ -850,9 +1008,9 @@ Describes the structure-specific outputs of CSP methods. Categories:
 | `_theoretical_structure`                 | `experimental_match_similarity_method`     | char       | This data field allows to specify which method has been used for the theoretical-experimental matching. It could either be a description or a link (UUID) to a Step datablock.       | Free Text                                                           |                                     |          |
 | `_theoretical_structure`                 | `experimental_match_similarity_score`      | char       | The similarity score obtained comparing the theoretical and experimental structure.                                                                                                  | Free Text                                                           |                                     |          |
 | `_theoretical_structure_cross_reference` | `relationship_description`                 | char       | To be used in a loop, this data field allows to describe custom types of relationships between structures.                                                                           | Free Text                                                           |                                     |          |
-| `_theoretical_structure_cross_reference` | `related_structure_id`                     | char       | To be used in a loop, the structure identifier of the linked structure.                                                                                                              | Free Text                                                           |                                     |          |
-| `_theoretical_structure_cross_reference` | `related_structure_description`            | char       | To be used in a loop, the structure description of the linked structure.                                                                                                             | Free Text                                                           |                                     |          |
-| `_theoretical_structure_cross_reference` | `related_structure_location`               | char       | To be used in a loop, the structure location (database or path to the file) of the linked structure.                                                                                 | Free Text                                                           |                                     |          |
+| `_theoretical_structure_cross_reference` | `related_structure_id`                     | char       | To be used in a loop, the identifier of the linked structure.                                                                                                                        | Free Text                                                           |                                     |          |
+| `_theoretical_structure_cross_reference` | `related_structure_description`            | char       | To be used in a loop, the description of the linked structure.                                                                                                                       | Free Text                                                           |                                     |          |
+| `_theoretical_structure_cross_reference` | `related_structure_location`               | char       | To be used in a loop, the location (database or path to the file) of the linked structure.                                                                                           | Free Text                                                           |                                     |          |
 | `_theoretical_structure_cross_reference` | `assessment_method`                        | char       | To be used in a loop, this data field allows to specify which method has been used to asses the relationship. It could either be a description or a link (UUID) to a Step datablock. | Free Text                                                           |                                     |          |
 | `_theoretical_structure_cross_reference` | `score`                                    | char       | To be used in a loop, the score of the method used to assess the structure-structure relation.                                                                                       | Free Text                                                           |                                     |          |
 | `_theoretical_structure_cross_reference` | `units`                                    | char       | To be used in a loop, the score units of the assessment method.                                                                                                                      | Free Text                                                           |                                     |          |

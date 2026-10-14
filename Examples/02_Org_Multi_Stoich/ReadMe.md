@@ -29,6 +29,9 @@ analysed in the search.
 As stoichiometries are not variables in the optimisation (the `_csp_input.composition_calculation` is set to `"fixed"`),
 this is equivalent to have three different input files each one with a single stoichiometry.
 
+It then specifies the search space, limiting it to the 10 most popular space groups for organic crystals.
+The random sampling generates 10,000 structures which are then used by the other three methods as inputs to generated at
+most 1,500,000 structures each. These relationships between methods are then described in the `csp_workflow.cif` file.
 ---
 
 ## Structure Generation Methods
@@ -38,10 +41,6 @@ While this could add complexity to the search, the combined strengths of these d
 relevant states.
 The four structure generation methods here described are: a random sampling method using the Sobol algorithm, a Monte
 Carlo parallel tempering approach, an evolutionary algorithm and a particle swarm optimisation.
-
-In all these methods, the 10 most popular spacegroups for organic crystals are used.
-The random sampling generates 7500 structures which are then used by the other three methods as inputs to generated at
-most 100,000 structures each. These relationships between methods are described in the `csp_workflow.cif` file.
 
 ---
 

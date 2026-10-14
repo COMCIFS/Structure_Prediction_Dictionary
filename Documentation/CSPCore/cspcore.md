@@ -50,26 +50,56 @@ structure's data blocks.
 Category `_csp_input.[]`, `_csp_input_molecular_entity.[]`, `_csp_input_atom.[]`: These categories specify the atomic
 species used in inorganic CSP or the input molecular entities for organic or organometallic crystal generation.
 
-| Group                            | Data Field                     | Type       | Definition                                                                                                                                                              | Constraints                                                                                                                                                         | Units | Example                                                     |
-|----------------------------------|--------------------------------|------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------|-------------------------------------------------------------|
-| `_csp_input`                     | `name`                         | char       | See name_common and name_systematic from Core CIF dictionary.                                                                                                           | Free Text                                                                                                                                                           |       | "urea hydrate"                                              |
-| `_csp_input`                     | `identifier`                   | char       | An input identifier used for internal databases or classification.                                                                                                      | Free Text                                                                                                                                                           |       | "UREAXXH2O"                                                 |
-| `_csp_input`                     | `composition_calculation`      | char       | "fixed" or "variable" composition calculation.                                                                                                                          | - "Fixed": The composition is not a variable in the search/generation of new structures. <br/>- "Variable": The composition is allowed to change during the search. |       | "Fixed"                                                     |
-| `_csp_input`                     | `composition_coefficients`     | list[numb] | List of possible compositions for fixed-composition calculations or extremes for variable-composition simulations.                                                      | `List[PositiveInt]`                                                                                                                                                 |       | - `[1 1]`<br/>- `[2 1]`                                     |
-| `_csp_input`                     | `maximum_number_of_components` | numb       | The maximum number of components (atoms or molecular entities) in the unit cell.                                                                                        | \>1                                                                                                                                                                 |       | 4                                                           |
-| `_csp_input`                     | `minimum_number_of_components` | numb       | The minimum number of components (atoms or molecular entities) in the unit cell.                                                                                        | \>1                                                                                                                                                                 |       | 2                                                           |
-| `_csp_input`                     | `atom_types`                   | list[char] | List of atomic species defining the composition. This simplifies the input definition in inorganic CSP, avoiding defining a separate molecular entity for each species. | `List[str]` or `List[PositiveInt]`                                                                                                                                  |       | - `[Mg O]` (Atomic symbols)<br/>- `[12 8]` (Atomic numbers) |
-| `_csp_input_molecular_entity`    | `number`                       | numb       | Molecular entity component index.                                                                                                                                       | \>1                                                                                                                                                                 |       | 1                                                           |
-| `_csp_input_molecular_entity`    | `identifier`                   | char       | Label used to identify the molecular entity.                                                                                                                            | Free Text                                                                                                                                                           |       | - "urea"<br/>- "water"                                      |
-| `_csp_input_molecular_entity`    | `smiles`                       | char       | SMILES of the component.                                                                                                                                                | Free Text                                                                                                                                                           |       | "C(=O)(N)N"                                                 |
-| `_csp_input_atom`                | `molecular_entity_number`      | numb       | In a loop describing the atoms in a molecular entity, the molecular entity component index of which the atom belongs.                                                   | \>1                                                                                                                                                                 |       | 1                                                           |
-| `_csp_input_atom`                | `molecular_entity_identifier`  | char       | In a loop describing the atoms in a molecular entity, the label of the molecular entity of which the atom belongs.                                                      | Free Text                                                                                                                                                           |       | - "urea"<br/>- "water"                                      |
-| `_csp_input_atom`                | `label`                        | char       | In a loop describing the atoms in a molecular entity, the label of the atom in the molecular entity.                                                                    | Free Text                                                                                                                                                           |       | C1                                                          |
-| `_csp_search_variables`          |                                |            |                                                                                                                                                                         |                                                                                                                                                                     |       |                                                             |
-| `_csp_landscape_cross_reference` | `relationship_description`     | char       | To be used in a loop, this data field allows to describe custom types of relationships between CSP landscapes.                                                          | Free Text                                                                                                                                                           |       |                                                             |
-| `_csp_landscape_cross_reference` | `related_id`                   | char       | To be used in a loop, the identifier of the linked landscape.                                                                                                           | Free Text                                                                                                                                                           |       |                                                             |
-| `_csp_landscape_cross_reference` | `related_description`          | char       | To be used in a loop, the description of the linked landscape.                                                                                                          | Free Text                                                                                                                                                           |       |                                                             |
-| `_csp_landscape_cross_reference` | `related_location`             | char       | To be used in a loop, the location (database or path to the file) of the linked landscape.                                                                              | Free Text                                                                                                                                                           |       |                                                             |
+| Group                            | Data Field                       | Type       | Definition                                                                                                                                                                                                                                                                           | Constraints                                                                                                                                                                                                                                     | Units               | Example                                                                |
+|----------------------------------|----------------------------------|------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------|------------------------------------------------------------------------|
+| `_csp_input`                     | `name`                           | char       | See name_common and name_systematic from Core CIF dictionary.                                                                                                                                                                                                                        | Free Text                                                                                                                                                                                                                                       |                     | "urea hydrate"                                                         |
+| `_csp_input`                     | `identifier`                     | char       | An input identifier used for internal databases or classification.                                                                                                                                                                                                                   | Free Text                                                                                                                                                                                                                                       |                     | "UREAXXH2O"                                                            |
+| `_csp_input`                     | `composition_calculation`        | char       | "fixed" or "variable" composition calculation.                                                                                                                                                                                                                                       | - "Fixed": The composition is not a variable in the search/generation of new structures. <br/>- "Variable": The composition is allowed to change during the search.                                                                             |                     | "Fixed"                                                                |
+| `_csp_input`                     | `composition_coefficients`       | list[numb] | List of possible compositions for fixed-composition calculations or extremes for variable-composition simulations.                                                                                                                                                                   | `List[PositiveInt]`                                                                                                                                                                                                                             |                     | - `[1 1]`<br/>- `[2 1]`                                                |
+| `_csp_input`                     | `maximum_number_of_components`   | numb       | The maximum number of components (atoms or molecular entities) in the unit cell.                                                                                                                                                                                                     | \>1                                                                                                                                                                                                                                             |                     | 4                                                                      |
+| `_csp_input`                     | `minimum_number_of_components`   | numb       | The minimum number of components (atoms or molecular entities) in the unit cell.                                                                                                                                                                                                     | \>1                                                                                                                                                                                                                                             |                     | 2                                                                      |
+| `_csp_input`                     | `atom_types`                     | list[char] | List of atomic species defining the composition. This simplifies the input definition in inorganic CSP, avoiding defining a separate molecular entity for each species.                                                                                                              | `List[str]` or `List[PositiveInt]`                                                                                                                                                                                                              |                     | - `[Mg O]` (Atomic symbols)<br/>- `[12 8]` (Atomic numbers)            |
+| `_csp_input_molecular_entity`    | `number`                         | numb       | Molecular entity component index.                                                                                                                                                                                                                                                    | \>1                                                                                                                                                                                                                                             |                     | 1                                                                      |
+| `_csp_input_molecular_entity`    | `identifier`                     | char       | Label used to identify the molecular entity.                                                                                                                                                                                                                                         | Free Text                                                                                                                                                                                                                                       |                     | - "urea"<br/>- "water"                                                 |
+| `_csp_input_molecular_entity`    | `smiles`                         | char       | SMILES of the component.                                                                                                                                                                                                                                                             | Free Text                                                                                                                                                                                                                                       |                     | "C(=O)(N)N"                                                            |
+| `_csp_input_atom`                | `molecular_entity_number`        | numb       | In a loop describing the atoms in a molecular entity, the molecular entity component index of which the atom belongs.                                                                                                                                                                | \>1                                                                                                                                                                                                                                             |                     | 1                                                                      |
+| `_csp_input_atom`                | `molecular_entity_identifier`    | char       | In a loop describing the atoms in a molecular entity, the label of the molecular entity of which the atom belongs.                                                                                                                                                                   | Free Text                                                                                                                                                                                                                                       |                     | - "urea"<br/>- "water"                                                 |
+| `_csp_input_atom`                | `label`                          | char       | In a loop describing the atoms in a molecular entity, the label of the atom in the molecular entity.                                                                                                                                                                                 | Free Text                                                                                                                                                                                                                                       |                     | C1                                                                     |
+| `_csp_search`                    | `space_group_number_list`        | List[numb] | Space group selection: a subset (list) specifying which space group numbers were used.                                                                                                                                                                                               | 1-230                                                                                                                                                                                                                                           |                     | `[14 2 15 61 19 4 33 29 5 1]`                                          |
+| `_csp_search`                    | `space_group_list`               | List[char] | Space group selection: it could be "all" or a subset (list) specifying which space groups were used.                                                                                                                                                                                 | Either "all" or list of sg labels                                                                                                                                                                                                               |                     | `["P1" "P-1" "P21" "P21/c" "P21212" "P212121" "Pna21" "Pca21" "Pbca"]` |
+| `_csp_search`                    | `stopping_criteria_description`  | List[char] | List of rules for stopping the generation of new structures. This can be a single field or a list of criteria. Additional datafields are present for two popular approaches (max structures and no new low-energy structures added).                                                 | Free text                                                                                                                                                                                                                                       |                     | `["Max Structures" "Low-Energy Structures Unchanged"]`                 |
+| `_csp_search`                    | `max_structures_evaluated`       | numb       | The maximum total number of unique crystal structures that will be generated and evaluated during the search.                                                                                                                                                                        | \>0                                                                                                                                                                                                                                             |                     | 10000                                                                  |
+| `_csp_search`                    | `z_prime`                        | List[numb] | The values of Z' to use in the search.                                                                                                                                                                                                                                               |                                                                                                                                                                                                                                                 |                     |                                                                        |
+| `_csp_search`                    | `csp_workflow_description`       | char       | Human-readable description of the workflow data block.                                                                                                                                                                                                                               |                                                                                                                                                                                                                                                 |                     |                                                                        |
+| `_csp_search`                    | `csp_workflow_id`                | char       | Identifier of the workflow data block.                                                                                                                                                                                                                                               |                                                                                                                                                                                                                                                 |                     |                                                                        |
+| `_csp_search_variable`           | `index`                          | numb       | In a loop describing search variables, the number of the variable.                                                                                                                                                                                                                   |                                                                                                                                                                                                                                                 |                     |                                                                        |
+| `_csp_search_variable`           | `type`                           | char       | In a loop describing search variables, the type of variable used. It could relate to a molecular entity, atoms or cell parameters.                                                                                                                                                   |                                                                                                                                                                                                                                                 |                     |                                                                        |
+| `_csp_search_variable`           | `domain_type`                    | char       | In a loop describing search variables, the variable domain type. It could be "periodic", "continuous" or "categorical".                                                                                                                                                              | - "periodic": The maximum value wraps around to meet the minimum value (e.g. angles form 0 to 360 degrees). <br/>- "continuous": measured variable (e.g. cell lengths). <br/>- "categorical": distinct, separate categories (e.g. enantiomers). |                     |                                                                        |
+| `_csp_search_variable`           | `target`                         | List[char] | In a loop describing search variables, depending on the variable type, the target molecular entity or atoms indexes.                                                                                                                                                                 |                                                                                                                                                                                                                                                 |                     |                                                                        |
+| `_csp_search_variable`           | `variable`                       | char       | In a loop describing search variables, the label of variable.                                                                                                                                                                                                                        |                                                                                                                                                                                                                                                 |                     |                                                                        |
+| `_csp_search_variable`           | `description`                    | char       | In a loop describing search variables, a description of the variable.                                                                                                                                                                                                                |                                                                                                                                                                                                                                                 |                     |                                                                        |
+| `_csp_search_constraint`         | `index`                          | numb       | In a loop describing search constraints, the number of the constraint.                                                                                                                                                                                                               |                                                                                                                                                                                                                                                 |                     |                                                                        |
+| `_csp_search_constraint`         | `type`                           | char       | In a loop describing search constraints, the type of contraint used. It could relate to a single `variable` previously defined (e.g. cell lengths range), a general property of the crystal (labelled as as `global`) or any atomic/molecular property.                              |                                                                                                                                                                                                                                                 |                     |                                                                        |
+| `_csp_search_constraint`         | `target`                         | char       | In a loop describing search constraints and depending on the constraint `type`, it could be the `index` of a variable, a structure property (e.g. density), a list of atoms or molecular entities.                                                                                   |                                                                                                                                                                                                                                                 |                     |                                                                        |
+| `_csp_search_constraint`         | `lower_bound`                    | numb       | In a loop describing search constraints, the lower bound of a continuous or periodic variable.                                                                                                                                                                                       |                                                                                                                                                                                                                                                 |                     |                                                                        |
+| `_csp_search_constraint`         | `upper_bound`                    | numb       | In a loop describing search constraints, the upper bound of a continuous or periodic variable.                                                                                                                                                                                       |                                                                                                                                                                                                                                                 |                     |                                                                        |
+| `_csp_search_constraint`         | `boundary_type`                  | char       | In a loop describing search constraints, the type of boundary. It could be `hard` as no values are allowed above or below the limits or `repulsive` if a repulsive potential is used to force the variable in a certain range of values.                                             |                                                                                                                                                                                                                                                 |                     |                                                                        |
+| `_csp_search_constraint`         | `allowed_values`                 | List[char] | In a loop describing search constraints and in case of a categorical constraint (Z' values or enantiomers used), a list of possible classes.                                                                                                                                         |                                                                                                                                                                                                                                                 |                     |                                                                        |
+| `_csp_search_constraint`         | `description`                    | char       | In a loop describing search constraints, a description of the constraint.                                                                                                                                                                                                            |                                                                                                                                                                                                                                                 |                     |                                                                        |
+| `_csp_search_constraint`         | `space_group_number`             | List[numb] | In a loop describing search constraints, a space group filter on which applying the constraint. Useful if different domains are used for different space groups.                                                                                                                     |                                                                                                                                                                                                                                                 |                     |                                                                        |
+| `_csp_search_constraint`         | `z_prime`                        | List[numb] | In a loop describing search constraints, a Z' filter on which applying the constraint. Useful if different domains are used for different values of Z'.                                                                                                                              |                                                                                                                                                                                                                                                 |                     |                                                                        |
+| `_csp_search_space`              | `space_group_number_list`        | List[numb] | If different stopping criteria are used for each space group, it allows a user to specify a single space group or a subset of space groups numbers in a loop.                                                                                                                        | 1-230                                                                                                                                                                                                                                           |                     |                                                                        |
+| `_csp_search_space`              | `space_group_list`               | List[char] | If different stopping criteria are used for each space group, it allows a user to specify a single space group or a subset of space groups names in a loop.                                                                                                                          |                                                                                                                                                                                                                                                 |                     |                                                                        |
+| `_csp_search_space`              | `z_prime`                        | List[numb] | If different stopping criteria are used for each value of Z', it allows a user to specify it in a loop.                                                                                                                                                                              | \>0                                                                                                                                                                                                                                             |                     |                                                                        |
+| `_csp_search_space`              | `structure_generation_stage`     | List[numb] | If different stopping criteria are used for each structure generation method, it allows a user to specify the generation stage number. It requires `_csp_search.csp_workflow_id`.                                                                                                    |                                                                                                                                                                                                                                                 |                     |                                                                        |
+| `_csp_search_stopping_criteria`  | `max_structures_evaluated`       | numb       | The maximum total number of unique crystal structures that will be generated and evaluated during the search. If it relates to a list of spacegroups in `stopping_criteria_space_group_number_list`, the value applies to all spacegroups in total (see the Examples section below). | \>0                                                                                                                                                                                                                                             |                     | 10000                                                                  |
+| `_csp_search_stopping_criteria`  | `iterations_without_improvement` | numb       | The maximum number of consecutive iterations (generations, MC steps, etc.) where the global minimum (or the lowest few structures) does not change.                                                                                                                                  | \>0                                                                                                                                                                                                                                             |                     | 50                                                                     |
+| `_csp_search_stopping_criteria`  | `energy_range`                   | numb       | An energy threshold for the selection of low-energy structures to be considered in the convergence criteria.                                                                                                                                                                         | \>0.                                                                                                                                                                                                                                            | kJ mol<sup>-1</sup> | 5.0                                                                    |
+| `_csp_search_stopping_criteria`  | `structures_range`               | numb       | The number of low-energy structures to be considered in the convergence criteria.                                                                                                                                                                                                    | \>0                                                                                                                                                                                                                                             |                     | 1000                                                                   |
+| `_csp_landscape_cross_reference` | `relationship_description`       | char       | To be used in a loop, this data field allows to describe custom types of relationships between CSP landscapes.                                                                                                                                                                       | Free Text                                                                                                                                                                                                                                       |                     |                                                                        |
+| `_csp_landscape_cross_reference` | `related_id`                     | char       | To be used in a loop, the identifier of the linked landscape.                                                                                                                                                                                                                        | Free Text                                                                                                                                                                                                                                       |                     |                                                                        |
+| `_csp_landscape_cross_reference` | `related_description`            | char       | To be used in a loop, the description of the linked landscape.                                                                                                                                                                                                                       | Free Text                                                                                                                                                                                                                                       |                     |                                                                        |
+| `_csp_landscape_cross_reference` | `related_location`               | char       | To be used in a loop, the location (database or path to the file) of the linked landscape.                                                                                                                                                                                           | Free Text                                                                                                                                                                                                                                       |                     |                                                                        |
 
 Additional details on atoms in molecule ad their connectivity can be specified through the CIF Chemical dictionary,
 available at: https://www.iucr.org/__data/iucr/cifdic_html/1/cif_core.dic/index.html
@@ -94,7 +124,32 @@ _csp_input.name                     Ferrosilite
 _csp_input.atom_types               [ Fe Si O ] 
 _csp_input.composition_calculation  fixed
 _csp_input.composition_coefficients [ 1 1 3 ]
+```
 
+Inorganic CSP input with variable stoichiometry:
+
+```text
+data_input2
+# Datablock Details
+_csp_data_block.class                   "Input"
+_csp_data_block.id                      d5c894e9-561c-490a-89b0-877bbc516b14
+_csp_data_block.description             Hypersthene
+
+# Input Details
+_csp_input.name                         Hypersthene 
+_csp_input.atom_types                   [ Fe Mg Si O ]
+_csp_input.composition_calculation      variable
+_csp_input.composition_coefficients     [[1 0 1 3] [0 1 1 3]]
+_csp_input.minimum_number_of_components 2
+_csp_input.maximum_number_of_components 10
+```
+
+This implies that the resulting structures will have the formula *x*(FeSiO3)+ *y*(MgSiO3) with *2<x+y<10*. It is worth
+noting that the string following `data_` is not used in the linking of datablocks.
+
+Optionally, search variables and constraints can be specified:
+
+```text
 # Search Variables
 loop_
     _csp_search_variable.id
@@ -118,17 +173,20 @@ loop_
     13  position    periodic    [3]  x3     "Fractional Coordinate"
     14  position    periodic    [3]  y3     "Fractional Coordinate"
     15  position    periodic    [3]  z3     "Fractional Coordinate"
+    16  position    periodic    [4]  x4     "Fractional Coordinate"
+    17  position    periodic    [4]  y4     "Fractional Coordinate"
+    18  position    periodic    [4]  z4     "Fractional Coordinate"
         
 # Search Constraints
 loop_ 
-    _csp_search_constraints.id
-    _csp_search_constraints.type
-    _csp_search_constraints.target
-    _csp_search_constraints.lower_bound
-    _csp_search_constraints.upper_bound
-    _csp_search_constraints.boundary_type
-    _csp_search_constraints.allowed_values
-    _csp_search_constraints.description
+    _csp_search_constraint.id
+    _csp_search_constraint.type
+    _csp_search_constraint.target
+    _csp_search_constraint.lower_bound
+    _csp_search_constraint.upper_bound
+    _csp_search_constraint.boundary_type
+    _csp_search_constraint.allowed_values
+    _csp_search_constraint.description
     1  variable              1          4.0     30.0  hard      .        .
     2  variable              2          4.0     30.0  hard      .        .
     3  variable              3          4.0     30.0  hard      .        .
@@ -145,33 +203,12 @@ loop_
     14 variable              14         0.0      1.0  hard      .        .
     15 variable              15         0.0      1.0  hard      .        .
     16 global                density 1200.0   1800.0  hard      .        .
-    17 interatomic_distance  [1, 2]     2.0   .       hard      .        "Fe-Si"
-    18 interatomic_distance  [2, 3]     1.5   .       hard      .        "Si-O"
-    19 interatomic_distance  [1, 3]     1.5   .       hard      .        "Fe-O"
+    17 interatomic_distance  [3, 4]     1.5   .       hard      .        "Si-O"
+    18 interatomic_distance  [1, 3]     2.1   .       hard      .        "Fe-Si"
+    19 interatomic_distance  [1, 4]     1.6   .       hard      .        "Fe-O"
+    20 interatomic_distance  [2, 3]     2.0   .       hard      .        "Mg-Si"
+    21 interatomic_distance  [2, 4]     1.5   .       hard      .        "Mg-O"
 ```
-
-Inorganic CSP input with variable stoichiometry:
-
-```text
-data_input2
-# Datablock Details
-_csp_data_block.class                   "Input"
-_csp_data_block.id                      d5c894e9-561c-490a-89b0-877bbc516b14
-_csp_data_block.description             Hypersthene
-
-# Input Details
-_csp_input.name                         Hypersthene 
-_csp_input.atom_types                   [ Fe Mg Si O ]
-_csp_input.composition_calculation      variable
-_csp_input.composition_coefficients     [[1 0 1 3] [0 1 1 3]]
-_csp_input.minimum_number_of_components 2
-_csp_input.maximum_number_of_components 10
-
-...
-```
-
-This implies that the resulting structures will have the formula *x*(FeSiO3)+ *y*(MgSiO3) with *2<x+y<10*. It is worth
-noting that the string following `data_` is not used in the linking of datablocks.
 
 Multi-component molecular crystal CSP with fixed stoichiometry:
 
@@ -240,67 +277,6 @@ loop_
 
 _csp_input.composition_calculation  "fixed"
 _csp_input.composition_coefficients [ 2 1 ] # Indexes from molecule section (2 water molecules and one urea)
-
-# Search Variables
-loop_
-    _csp_search_variable.id
-    _csp_search_variable.type
-    _csp_search_variable.domain_type
-    _csp_search_variable.target
-    _csp_search_variable.variable
-    _csp_search_variable.description
-    1  cell_length continuous  .          a        "Cell Parameters"
-    2  cell_length continuous  .          b        "Cell Parameters"
-    3  cell_length continuous  .          c        "Cell Parameters"
-    4  cell_angle  continuous  .          alpha    "Cell Parameters"
-    5  cell_angle  continuous  .          beta     "Cell Parameters"
-    6  cell_angle  continuous  .          gamma    "Cell Parameters"
-    7  position    periodic    [1]        x1       "Fractional Coordinate"
-    8  position    periodic    [1]        y1       "Fractional Coordinate"
-    9  position    periodic    [1]        z1       "Fractional Coordinate"
-    10 position    periodic    [2]        x2       "Fractional Coordinate"
-    11 position    periodic    [2]        y2       "Fractional Coordinate"
-    12 position    periodic    [2]        z2       "Fractional Coordinate"
-    13 rotation    periodic    [1]        theta11  "Rotation constrained by molecular C2 symmetry"
-    14 rotation    periodic    [1]        theta12  "Rotation"
-    15 rotation    periodic    [1]        theta13  "Rotation"
-    16 rotation    periodic    [2]        theta21  "Rotation constrained by molecular C2 symmetry"
-    17 rotation    periodic    [2]        theta22  "Rotation"
-    18 rotation    periodic    [2]        theta23  "Rotation"
-    19 torsion     periodic    [4,5,6,8]  phi1     "Torsion describing pyramidalisation of urea nitrogen"
-    
-    
-# Search Constraints
-loop_ 
-    _csp_search_constraints.id
-    _csp_search_constraints.type
-    _csp_search_constraints.target
-    _csp_search_constraints.lower_bound
-    _csp_search_constraints.upper_bound
-    _csp_search_constraints.boundary_type
-    _csp_search_constraints.allowed_values
-    _csp_search_constraints.description
-    1   variable              1          4.0     30.0  hard      .        .
-    2   variable              2          4.0     30.0  hard      .        .
-    3   variable              3          4.0     30.0  hard      .        .
-    4   variable              4         60.0    120.0  hard      .        .
-    5   variable              5         60.0    120.0  hard      .        .
-    6   variable              6         60.0    120.0  hard      .        .
-    7   variable              7          0.0      1.0  hard      .        .
-    8   variable              8          0.0      1.0  hard      .        .
-    9   variable              9          0.0      1.0  hard      .        .
-    10  variable              10         0.0      1.0  hard      .        .
-    11  variable              11         0.0      1.0  hard      .        .
-    12  variable              12         0.0      1.0  hard      .        .
-    13  variable              13         0.0    180.0  hard      .        "C2 axis"
-    14  variable              14         0.0    360.0  hard      .        .
-    15  variable              15         0.0    360.0  hard      .        .
-    16  variable              16         0.0    180.0  hard      .        "C2 axis"
-    17  variable              17         0.0    360.0  hard      .        .
-    18  variable              18         0.0    360.0  hard      .        .    
-    19  variable              19       150.0    180.0  hard      .        "Planar or pyramidal configurations"
-    20  global                z_prime .        .       .         [1 2]    .
-    21  global                density 1200.0   1800.0  harmonic  .        .
 ```
 
 `composition_coefficients` here refers to the molecular entity number. Worthy of note the use of the `Chemical`
@@ -340,6 +316,132 @@ loop_
     "Target ACE2-Lys353" d3aa26d3-cf6b "Mol4" "Internal DB"      
     ...
 ```
+
+Again, search variables and constraints can be specified:
+
+```text
+...
+# Search Variables
+loop_
+    _csp_search_variable.id
+    _csp_search_variable.type
+    _csp_search_variable.domain_type
+    _csp_search_variable.target
+    _csp_search_variable.variable
+    _csp_search_variable.description
+    1  cell_length continuous  .          a        "Cell Parameters"
+    2  cell_length continuous  .          b        "Cell Parameters"
+    3  cell_length continuous  .          c        "Cell Parameters"
+    4  cell_angle  continuous  .          alpha    "Cell Parameters"
+    5  cell_angle  continuous  .          beta     "Cell Parameters"
+    6  cell_angle  continuous  .          gamma    "Cell Parameters"
+    7  position    periodic    [1]        x1       "Fractional Coordinate"
+    8  position    periodic    [1]        y1       "Fractional Coordinate"
+    9  position    periodic    [1]        z1       "Fractional Coordinate"
+    10 position    periodic    [2]        x2       "Fractional Coordinate"
+    11 position    periodic    [2]        y2       "Fractional Coordinate"
+    12 position    periodic    [2]        z2       "Fractional Coordinate"
+    13 rotation    periodic    [1]        theta11  "Rotation constrained by molecular C2 symmetry"
+    14 rotation    periodic    [1]        theta12  "Rotation"
+    15 rotation    periodic    [1]        theta13  "Rotation"
+    16 rotation    periodic    [2]        theta21  "Rotation constrained by molecular C2 symmetry"
+    17 rotation    periodic    [2]        theta22  "Rotation"
+    18 rotation    periodic    [2]        theta23  "Rotation"
+    19 torsion     periodic    [4,5,6,8]  phi1     "Torsion describing pyramidalisation of urea nitrogen"
+    
+    
+# Search Constraints
+loop_ 
+    _csp_search_constraint.id
+    _csp_search_constraint.type
+    _csp_search_constraint.target
+    _csp_search_constraint.lower_bound
+    _csp_search_constraint.upper_bound
+    _csp_search_constraint.boundary_type
+    _csp_search_constraint.allowed_values
+    _csp_search_constraint.description
+    1   variable              1          4.0     30.0  hard      .        .
+    2   variable              2          4.0     30.0  hard      .        .
+    3   variable              3          4.0     30.0  hard      .        .
+    4   variable              4         60.0    120.0  hard      .        .
+    5   variable              5         60.0    120.0  hard      .        .
+    6   variable              6         60.0    120.0  hard      .        .
+    7   variable              7          0.0      1.0  hard      .        .
+    8   variable              8          0.0      1.0  hard      .        .
+    9   variable              9          0.0      1.0  hard      .        .
+    10  variable              10         0.0      1.0  hard      .        .
+    11  variable              11         0.0      1.0  hard      .        .
+    12  variable              12         0.0      1.0  hard      .        .
+    13  variable              13         0.0    180.0  hard      .        "C2 axis"
+    14  variable              14         0.0    360.0  hard      .        .
+    15  variable              15         0.0    360.0  hard      .        .
+    16  variable              16         0.0    180.0  hard      .        "C2 axis"
+    17  variable              17         0.0    360.0  hard      .        .
+    18  variable              18         0.0    360.0  hard      .        .    
+    19  variable              19       150.0    180.0  hard      .        "Planar or pyramidal configurations"
+    20  global                density 1200.0   1800.0  harmonic  .        .
+```
+
+In addition, it is possible to specify subsets of space groups and stopping criteria for the CSP Search:
+
+```text
+...
+_csp_search.space_group_number_list        [14 2 15 61 19 4 33 29 5 1]
+_csp_search.z_prime                        [1 2]
+_csp_search.stopping_criteria_description  "Max Structures"
+_csp_search.max_structures_evaluated       2000000  
+```
+
+The data field `_csp_search.max_structures_evaluated` indicates the _total_ number of structures generated across the
+different space groups specified into the `_csp_search.space_group_number_list` or `_csp_search.space_group_list`. The
+search stops when this limit is reached regardless of how many structures were evaluated in any specific space group.
+
+Alternatively, stopping criteria can be specified for each space group and for each value of `Z'`:
+
+```text
+_csp_search.space_group_number_list        [14 2 15 61 19 4 33 29 5 1]
+_csp_search.stopping_criteria_description  "Max Structures"
+
+loop_
+    _csp_search_space.z_prime
+    _csp_search_space.space_group_number_list                         
+    _csp_search_stopping_criteria.max_structures_evaluated  
+    1   14   1000  # 1000 structures for the top 5 spacegroup in organic structures
+    1   2    1000
+    1   15   1000
+    1   61   1000
+    1   19   1000
+    1   4     500  # 500 structures for the next 5 spacegroup in organic structures
+    1   33    500
+    1   29    500
+    1   5     500
+    1   1     500
+    2   14    500  # 500 structures for the top 5 spacegroup in organic structres and Z'=2                 
+    2   2     500                                                         
+    2   15    500                                                         
+    2   61    500                                                               
+    2   19    500                                                         
+```
+
+In this case, for the space groups **14, 2, 15, 61 and 19**, the criterion is set to 1000 structures each, while for
+**4, 33, 29, 5 and 1**, it is set to 500 structures each, resulting in a total of 7500 structures for the `Z'=1`
+calculations.
+
+```text
+_csp_search.space_group_number_list        [14 2 15 61 19 4 33 29 5 1]
+_csp_search.stopping_criteria_description  "Max Structures"
+
+loop_
+    _csp_search_space.z_prime
+    _csp_search_space.space_group_number_list                         
+    _csp_search_stopping_criteria.max_structures_evaluated  
+    1 [14 2 15 61 19]  5000 # Structures in total, not necessarily equally distributed
+    2 [14 2 15 61 19]  2500    
+    1 [4 33 29 5 1]    2500 
+```
+
+While similar to the previous example, the 5000 (Z'=1), 2500 (Z'=2) and 2500 structures generated for subsets
+[14, 2, 15, 61, 19] and [4, 33, 29, 5, 1], are not necessarily equally distributed among the spacegroups of the subset.
 
 For metal-organic systems, the `_csp.input_molecular_entity` and `Chemical` dictionaries can be used to specify metallic
 atoms and ligands:
@@ -404,33 +506,21 @@ This section helps delineate the space search range and specify the parameters u
 
 Category `_csp.structure_generation_[]`: Category for structure generation methods.
 
-| Group                                         | Data Field                                     | Type       | Definition                                                                                                                                                                                                                                                                           | Constraints                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           | Units               | Example                                                                |
-|-----------------------------------------------|------------------------------------------------|------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------|------------------------------------------------------------------------|
-| `_csp`                                        | `structure_generation_space_group_number_list` | List[numb] | Space group selection: a subset (list) specifying which space group numbers were used.                                                                                                                                                                                               | 1-230                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |                     | `[14 2 15 61 19 4 33 29 5 1]`                                          |
-| `_csp`                                        | `structure_generation_space_group_list`        | List[char] | Space group selection: it could be "all" or a subset (list) specifying which space groups were used.                                                                                                                                                                                 | Either "all" or list of sg labels                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |                     | `["P1" "P-1" "P21" "P21/c" "P21212" "P212121" "Pna21" "Pca21" "Pbca"]` |
-| `_csp`                                        | `structure_generation_method`                  | char       | Structure generation method.                                                                                                                                                                                                                                                         | - "Evolutionary Algorithm" (Sec. 3.2): Search methods based on Evolutionary Algorithms. <br>- "Particle Swarm Optimisation" (Sec. 3.3): Search methods based on Particle Swarm Optimisation.  <br>- "Simulated Annealing" (Sec. 3.4): Search methods based on Monte Carlo Simulated Annealing optimisations. <br>- "Monte Carlo Parallel Tempering" (Sec. 3.5): Search methods based on Monte Carlo Parallel Tempering optimisations. <br>- "Random Search" (Sec. 3.6): Search methods based on random sampling. <br>- "Analogue Templates": Search methods based on templating structures from similar systems. <br>- Other: Any other structure generation methods. |                     | "Simulated Annealing"                                                  |
-| `_csp`                                        | `structure_generation_method_description`      | char       | Short description of the method used.                                                                                                                                                                                                                                                | Free text                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |                     |                                                                        |
-| `_csp`                                        | `structure_generation_method_other`            | char       | If `_csp.structure_generation_method` is "Other", it specifies the label of the method used.                                                                                                                                                                                         | Free text                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |                     |                                                                        |
-| `_csp`                                        | `structure_generation_software`                | char       | Name of the software used for structure generation.                                                                                                                                                                                                                                  | Free text                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |                     |                                                                        |
-| `_csp`                                        | `structure_generation_software_citation`       | char       | Details of the software used for structure generation. Either URL to webpage or DOI of the related publication.                                                                                                                                                                      | Free text                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |                     |                                                                        |
-| `_csp`                                        | `structure_generation_software_version`        | char       | Version of software used for structure generation.                                                                                                                                                                                                                                   | Free text                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |                     |                                                                        |
-| `_csp`                                        | `structure_generation_density_lower_limit`     | numb       | Minimum Cell Density.                                                                                                                                                                                                                                                                | \>0.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  | kg m<sup>-3</sup>   | 800.0                                                                  |
-| `_csp`                                        | `structure_generation_density_upper_limit`     | numb       | Maximum Cell Density.                                                                                                                                                                                                                                                                | \>0.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  | kg m<sup>-3</sup>   | 1400.0                                                                 |
-| `_csp`                                        | `structure_generation_reference_temperature`   | numb       | Reference temperature for finite-temperature simulations.                                                                                                                                                                                                                            | \>0.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  | K                   | 0.0                                                                    |
-| `_csp`                                        | `structure_generation_reference_pressure`      | numb       | Reference pressure for variable cell calculations.                                                                                                                                                                                                                                   | \>0.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  | Pa                  | 100000.0                                                               |
-| `_csp_structure_generation_stopping_criteria` | `description`                                  | List[char] | List of rules for stopping the generation of new structures. This can be a single field or a list of criteria. Additional datafields are present for two popular approaches (max structures and no new low-energy structures added).                                                 | Free text                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |                     | `["Max Structures" "Low-Energy Structures Unchanged"]`                 |
-| `_csp_structure_generation_stopping_criteria` | `max_structures_evaluated`                     | numb       | The maximum total number of unique crystal structures that will be generated and evaluated during the search. If it relates to a list of spacegroups in `stopping_criteria_space_group_number_list`, the value applies to all spacegroups in total (see the Examples section below). | \>0                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |                     | 10000                                                                  |
-| `_csp_structure_generation_stopping_criteria` | `iterations_without_improvement`               | numb       | The maximum number of consecutive iterations (generations, MC steps, etc.) where the global minimum (or the lowest few structures) does not change.                                                                                                                                  | \>0                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |                     | 50                                                                     |
-| `_csp_structure_generation_stopping_criteria` | `energy_range`                                 | numb       | An energy threshold for the selection of low-energy structures to be considered in the convergence criteria.                                                                                                                                                                         | \>0.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  | kJ mol<sup>-1</sup> | 5.0                                                                    |
-| `_csp_structure_generation_stopping_criteria` | `structures_range`                             | numb       | The number of low-energy structures to be considered in the convergence criteria.                                                                                                                                                                                                    | \>0                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |                     | 1000                                                                   |
-| `_csp_structure_generation_search_space`      | `space_group_number_list`                      | List[numb] | If different stopping criteria are used for each space group, it allows a user to specify a single space group or a subset of space groups numbers in a loop.                                                                                                                        | 1-230                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |                     |                                                                        |
-| `_csp_structure_generation_search_space`      | `space_group_list`                             | List[char] | If different stopping criteria are used for each space group, it allows a user to specify a single space group or a subset of space groups names in a loop.                                                                                                                          |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |                     |                                                                        |
-| `_csp_structure_generation_search_space`      | `z_prime`                                      | List[numb] | If different stopping criteria are used for each value of Z', it allows a user to specify it in a loop.                                                                                                                                                                              | \>0                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |                     |                                                                        |
-| `_csp_structure_generation`                   | `stage`                                        | numb       | To be used in the "Workflow" datablock, specifying the stage number of the generation method.                                                                                                                                                                                        |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |                     |                                                                        |
-| `_csp_structure_generation`                   | `preceding_stage`                              | numb       | To be used in the "Workflow" datablock, specifying the stage number of the previous generation method.                                                                                                                                                                               |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |                     |                                                                        |
-| `_csp_structure_generation`                   | `data_block_id`                                | char       | To be used in the "Workflow" datablock, specifying the identifier of the datablock in which the structure generation method is described.                                                                                                                                            |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |                     |                                                                        |
-| `_csp_structure_generation`                   | `data_block_label`                             | char       | To be used in the "Workflow" datablock, it is a short, human-readable label of the generation method.                                                                                                                                                                                |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |                     | "ea"                                                                   |
-| `_csp_structure_generation`                   | `data_block_description`                       | char       | To be used in the "Workflow" datablock, it is a short, human-readable description of the generation method.                                                                                                                                                                          |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |                     | "Evolutionary Algorithm"                                               |
+| Group                       | Data Field                                   | Type | Definition                                                                                                                                | Constraints                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           | Units | Example                  |
+|-----------------------------|----------------------------------------------|------|-------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------|--------------------------|
+| `_csp`                      | `structure_generation_method`                | char | Structure generation method.                                                                                                              | - "Evolutionary Algorithm" (Sec. 3.2): Search methods based on Evolutionary Algorithms. <br>- "Particle Swarm Optimisation" (Sec. 3.3): Search methods based on Particle Swarm Optimisation.  <br>- "Simulated Annealing" (Sec. 3.4): Search methods based on Monte Carlo Simulated Annealing optimisations. <br>- "Monte Carlo Parallel Tempering" (Sec. 3.5): Search methods based on Monte Carlo Parallel Tempering optimisations. <br>- "Random Search" (Sec. 3.6): Search methods based on random sampling. <br>- "Analogue Templates": Search methods based on templating structures from similar systems. <br>- Other: Any other structure generation methods. |       | "Simulated Annealing"    |
+| `_csp`                      | `structure_generation_method_description`    | char | Short description of the method used.                                                                                                     | Free text                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |       |                          |
+| `_csp`                      | `structure_generation_method_other`          | char | If `_csp.structure_generation_method` is "Other", it specifies the label of the method used.                                              | Free text                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |       |                          |
+| `_csp`                      | `structure_generation_software`              | char | Name of the software used for structure generation.                                                                                       | Free text                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |       |                          |
+| `_csp`                      | `structure_generation_software_citation`     | char | Details of the software used for structure generation. Either URL to webpage or DOI of the related publication.                           | Free text                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |       |                          |
+| `_csp`                      | `structure_generation_software_version`      | char | Version of software used for structure generation.                                                                                        | Free text                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |       |                          |
+| `_csp`                      | `structure_generation_reference_temperature` | numb | Reference temperature for finite-temperature simulations.                                                                                 | \>0.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  | K     | 0.0                      |
+| `_csp`                      | `structure_generation_reference_pressure`    | numb | Reference pressure for variable cell calculations.                                                                                        | \>0.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  | Pa    | 100000.0                 |
+| `_csp_structure_generation` | `stage`                                      | numb | To be used in the "Workflow" datablock, specifying the stage number of the generation method.                                             |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |       |                          |
+| `_csp_structure_generation` | `preceding_stage`                            | numb | To be used in the "Workflow" datablock, specifying the stage number of the previous generation method.                                    |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |       |                          |
+| `_csp_structure_generation` | `data_block_id`                              | char | To be used in the "Workflow" datablock, specifying the identifier of the datablock in which the structure generation method is described. |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |       |                          |
+| `_csp_structure_generation` | `data_block_label`                           | char | To be used in the "Workflow" datablock, it is a short, human-readable label of the generation method.                                     |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |       | "ea"                     |
+| `_csp_structure_generation` | `data_block_description`                     | char | To be used in the "Workflow" datablock, it is a short, human-readable description of the generation method.                               |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |       | "Evolutionary Algorithm" |
 
 ### 3.2 Evolutionary Algorithms
 
@@ -500,28 +590,25 @@ fields to be used, the `_csp.structure_generation_method` should be set to "Rand
 
 ### Examples
 
-Search in all space groups until 10000 structures are generated with an evolutionary algorithm:
+Specify a structure generation method (`Simulated Annealing`) and method-specific settings:
 
 ```text
-data_ea
-# Datablock Details
-_csp_data_block.class                                                "Generation Method"
-_csp_data_block.id                                                   af534fed-8153-4af2-bd9f-29b0fef8d805
-_csp_data_block.description                                          "ea"
-
-# Method Details
-_csp.structure_generation_method                                     "Evolutionary Algorithm"
-_csp.structure_generation_density_lower_limit                        750
-_csp.structure_generation_density_upper_limit                        1600
-_csp.structure_generation_space_group_number_list                    "all"
-_csp_structure_generation_stopping_criteria.description              "Max Structures"
-_csp_structure_generation_stopping_criteria.max_structures_evaluated 10000
+# Simulated Annealing
+data_sa
+    _csp_data_block.class                                                "Generation Method"
+    _csp_data_block.description                                          sa
+    _csp_data_block.id                                                   95f28b3c-d029-4840-a69a-3ced34219c28
+    
+    _csp.structure_generation_method                                     "Simulated Annealing"
+    _csp_simulated_annealing.initial_temperature                         400
+    _csp_simulated_annealing.cooling_rate                                0.95
+    _csp_simulated_annealing.number_of_steps                             100
 ```
 
-Combination of different structure generation methods, search limited on most popular space groups for organic crystals.
+Combination of different structure generation methods:
 
 ```text
-# Random Search 1
+# Random Search
 data_rs
     _csp_data_block.class                                                "Generation Method"
     _csp_data_block.description                                          rs
@@ -530,47 +617,6 @@ data_rs
     _csp.structure_generation_method                                     "Random Search"
     _csp_random_search.algorithm_type                                    "Quasirandom"
     _csp_random_search.algorithm                                         "Sobol"
-    
-    _csp.structure_generation_space_group_number_list                    [14 2 15 61 19 4 33 29 5 1]
-    _csp_structure_generation_stopping_criteria.description              "Max Structures"
-    loop_
-        _csp_structure_generation_search_space.z_prime
-        _csp_structure_generation_search_space.space_group_number_list                         
-        _csp_structure_generation_stopping_criteria.max_structures_evaluated  
-        1   14   1000  # 1000 structures for the top 5 spacegroup in organic structures
-        1   2    1000
-        1   15   1000
-        1   61   1000
-        1   19   1000
-        1   4     500  # 500 structures for the next 5 spacegroup in organic structures
-        1   33    500
-        1   29    500
-        1   5     500
-        1   1     500
-        2   14    500  # 500 structures for the top 5 spacegroup in organic structres and Z'=2                 
-        2   2     500                                                         
-        2   15    500                                                         
-        2   61    500                                                               
-        2   19    500                                                         
-
-# Random Search 2
-data_rs2
-    _csp_data_block.class                                                "Generation Method"
-    _csp_data_block.description                                          rs2
-    _csp_data_block.id                                                   6e0147be-0454-44a1-a3bb-de7b326dde1b
-    
-    _csp.structure_generation_method                                     "Random Search"
-    _csp_random_search.algorithm_type                                    "Quasirandom"
-    _csp_random_search.algorithm                                         "Sobol"
-    
-    _csp.structure_generation_space_group_number_list                    [14 2 15 61 19 4 33 29 5 1]
-    _csp_structure_generation_stopping_criteria.description              "Max Structures"
-    loop_
-        _csp_structure_generation_search_space.space_group_number_list                      
-        _csp_structure_generation_stopping_criteria.max_structures_evaluated  
-        [14 2 15 61 19]  5000 # 5000 structures in total, not necessarily equally distributed
-        [4 33 29 5 1]    2500    
-       
 
 # Simulated Annealing
 data_sa
@@ -579,15 +625,9 @@ data_sa
     _csp_data_block.id                                                   95f28b3c-d029-4840-a69a-3ced34219c28
     
     _csp.structure_generation_method                                     "Simulated Annealing"
-    _csp.structure_generation_space_group_number_list                    [14 2 15 61 19 4 33 29 5 1]
-    
-    _csp_structure_generation_stopping_criteria.description              "Max Structures"
-    _csp_structure_generation_stopping_criteria.max_structures_evaluated 2000000  
-    
     _csp_simulated_annealing.initial_temperature                         400
     _csp_simulated_annealing.cooling_rate                                0.95
     _csp_simulated_annealing.number_of_steps                             100
-    
 
 # Relations between methods
 data_workflow
@@ -602,7 +642,7 @@ data_workflow
         _csp_structure_generation.data_block_description
         _csp_structure_generation.method
         _csp_structure_generation.data_block_id
-        0 . "rs" "Random Search"     6e0147be-0454-44a1-a3bb-de7b326dde1b
+        0 . "rs" "Random Search"       8e0147be-0k54-44a1-a3bb-de7df26ddeer 
         1 0 "sa" "Simulated Annealing" 95f28b3c-d029-4840-a69a-3ced34219c28
 
     # Structure Ranking Methods
@@ -612,23 +652,6 @@ data_workflow
 For the last section, the mandatory data fields to identify and link the different datablocks are
 `_csp_structure_generation.stage`, `_csp_structure_generation.preceding_stage` and
 `_csp_structure_generation.data_block_id`. Other data fields are included to make the file more human-readable.
-
-The data field `_csp_structure_generation_stopping_criteria.max_structures_evaluated` indicates the _total_ number of
-structures generated across the different space groups specified into the
-`_csp_structure_generation_space_group_number_list` or
-`_csp_structure_generation_stopping_criteria.space_group_number_list`. In the three `Generation Method` datablocks, we
-show the use of
-`_csp_structure_generation_stopping_criteria.max_structures_evaluated` data fields:
-
-1. In the first `Random Search` approach (Datablock 1), for the space groups **14, 2, 15, 61 and 19**, the criterion is
-   set to 1000 structures each, while for **4, 33, 29, 5 and 1**, it is set to 500 structures each, resulting in a total
-   of 7500 structures for the `Z'=1` calculations.
-2. In the second `Random Search` approach (Datablock 2), 5000 and 2500 structures are generated in total for subsets
-   [14, 2, 15, 61, 19] and [4, 33, 29, 5, 1], respectively, for a total of 7500 structures. Contrary to the previous
-   example, these are not necessarily equally distributed among the spacegroups of the subset.
-3. In the `Simulated Annealing` approach (Datablock 3), the value represents the maximum total number of structures
-   evaluated across all space groups combined. The search stops when this limit is reached regardless of how many
-   structures were evaluated in any specific space group.
 
 ## 4. Structure Ranking Methods
 

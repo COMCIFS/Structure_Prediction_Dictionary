@@ -1,3 +1,4 @@
+#\#CIF_2.0
 data_cbn_tmp
 # Datablock Details
 _csp_data_block.class       "Input"
@@ -44,8 +45,6 @@ loop_
     1 B29 19 H17 H  0.1243
     1 B29 20 H18 H  0.1243
 
-
-
 # Bonds
 loop_
     _chemical_conn_bond.atom_1
@@ -71,3 +70,12 @@ loop_
      9    18    sing
     11    19    sing
     11    20    sing
+
+# Search Space & Stopping Criteria
+_csp_search.space_group_number_list                          [14 2 15 61 19 4 33 29 5 1]
+_csp_search.z_prime                                          [1 2 3]
+_csp_search.stopping_criteria_description                    ["Max Structures" "Low-Energy Structures Unchanged"]
+
+_csp_search.max_structures_evaluated                         1000000 # Stop if maximum number of structures is reached
+_csp_search_stopping_criteria.iterations_without_improvement 500     # Stop if structures below 10 kJ/mol from the global minima do not change for 500 iterations
+_csp_search_stopping_criteria.energy_range                   10.0

@@ -10,7 +10,7 @@ data_CIF_COMPCHEM
 
     _dictionary.title             CIF_COMPCHEM
     _dictionary.class             Instance
-    _dictionary.version           0.1.1-dev
+    _dictionary.version           0.1.2-dev
     _dictionary.date              2026-10-14
     _dictionary.uri               https://github.com/COMCIFS/Structure_Prediction_Dictionary
     _dictionary.ddl_conformance   4.1.0  # https://www.iucr.org/__data/iucr/cifdic_html/3/DDL_DIC/index.html

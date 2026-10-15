@@ -1,13 +1,42 @@
+# 2026.10.15
+
+## New Features
+
+- Data fields for custom links between crystal structures (either inside the CSP landscape or from any database). For
+  example, you could relate a CSP structure with a disorder component of an experimental structure.
+- Data fields for custom links between landscapes. For example, you can relate multiple landscape by studing a set of
+  molecules targeting the same binding site of a protein.
+- Data fields to describe variables and constraints in a CSP search.
+
+## Fixes
+
+- A series of data fields have been moved from the "Structure Generation" data block to the "Input" data block so to
+  make a CSP protocol independent of input systems and allow it to be reused across different systems. Below is a
+  table with modified data fields:
+
+| Old Data Fields                                                              | New Data Fields                                                                                   |
+|------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|
+| `_csp_structure_generation_stopping_criteria.description`                    | `_csp_search.stopping_criteria_description`                                                       |
+| `_csp_structure_generation_stopping_criteria.max_structures_evaluated`       | `_csp_search_stopping_criteria.max_structures_evaluated` - `_csp_search.max_structures_evaluated` |
+| `_csp_structure_generation_stopping_criteria.iterations_without_improvement` | `_csp_search_stopping_criteria.iterations_without_improvement`                                    |
+| `_csp_structure_generation_stopping_criteria.energy_range`                   | `_csp_search_stopping_criteria.energy_range`                                                      |
+| `_csp_structure_generation_stopping_criteria.structures_range`               | `_csp_search_stopping_criteria.structures_range`                                                  |
+| `_csp_structure_generation_search_space.space_group_number_list`             | `_csp_search_space.space_group_number_list`                                                       |
+| `_csp_structure_generation_search_space.space_group_list`                    | `_csp_search_space.space_group_list`                                                              |
+| `_csp_structure_generation_search_space.z_prime`                             | `_csp_search_space.z_prime`                                                                       |
+| `_csp.structure_generation_space_group_number_list`                          | `_csp_search.space_group_number_list`                                                             |
+| `_csp.structure_generation_space_group_list`                                 | `_csp_search.space_group_list`                                                                    |
+
 # 2026.07.27
 
 ## New Features
-- Multiple data fields have been added to describe the output crystal properties. These can be classified into:
-  - Energy data fields related to variable compositions calculations.
-  - Per atom properties (forces, partial charges)
-  - Band structure, density of states and related propeties
-  - Phonons
-  - Magnetic, Mechanical and transport properties
 
+- Multiple data fields have been added to describe the output crystal properties. These can be classified into:
+    - Energy data fields related to variable compositions calculations.
+    - Per atom properties (forces, partial charges)
+    - Band structure, density of states and related propeties
+    - Phonons
+    - Magnetic, Mechanical and transport properties
 
 ## Fixes
 
@@ -127,13 +156,13 @@ loop_
   Old version:
 
   | Group | Category   | Data Field         |
-  |-------|------------|--------------------|
+    |-------|------------|--------------------|
   | CSP   | Data Block | `class`            |
 
   New version:
 
   | Group             | Data Field         |
-  |-------------------|--------------------|
+    |-------------------|--------------------|
   | `_csp_data_block` | `class`            |
 
 - "Definition", "Constraints" and "Examples" columns changed to improved clarity.

@@ -33,10 +33,10 @@
 
 - Multiple data fields have been added to describe the output crystal properties. These can be classified into:
     - Energy data fields related to variable compositions calculations.
-    - Per atom properties (forces, partial charges)
-    - Band structure, density of states and related propeties
-    - Phonons
-    - Magnetic, Mechanical and transport properties
+    - Per atom properties (forces, partial charges).
+    - Band structure, density of states and related propeties.
+    - Phonons.
+    - Magnetic, Mechanical and transport properties.
 
 ## Fixes
 

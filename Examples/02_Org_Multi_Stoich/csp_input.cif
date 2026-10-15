@@ -1,12 +1,13 @@
 #\#CIF_2.0
 data_cbn_tmp
 # Datablock Details
-_csp_data_block.class       "Input"
-_csp_data_block.id          2a2611e3-2021-4b03-a7c6-0ef71239008f
-_csp_data_block.description input1
+_csp_data_block.class            "Input"
+_csp_data_block.id               2a2611e3-2021-4b03-a7c6-0ef71239008f
+_csp_data_block.description      input1
+_csp_data_block.additional_files ["csp_workflows.cif"]
 
-_csp_input.name             cannabinol_tetramethylpyrazine
-_csp_input.identifier       BT-XXX
+_csp_input.name                  cannabinol_tetramethylpyrazine
+_csp_input.identifier            BT-XXX
 
 # Molecules
 loop_
@@ -181,3 +182,42 @@ loop_
 # Type of Composition Search
 _csp_input.composition_calculation  "fixed"
 _csp_input.composition_coefficients [[2 1] [1 1] [1 2]] # 2:1, 1:1, 1:2 stoichiometries considered
+
+# Search space
+_csp_search.space_group_number_list        [14 2 15 61 19 4 33 29 5 1]
+_csp_search.stopping_criteria_description  "Max Structures"
+_csp_search.z_prime                        [1 2]
+_csp_search.csp_workflow_id                425a77e3-a2a4-40fb-acdb-1e25b2d00bbd
+
+loop_
+    _csp_search_space.structure_generation_stage
+    _csp_search_space.z_prime
+    _csp_search_space.space_group_number_list
+    _csp_search_stopping_criteria.max_structures_evaluated
+    _csp_search_stopping_criteria.iterations_without_improvement
+    _csp_search_stopping_criteria.energy_range
+    # Random Sampling
+    0    1   14   1000  .  . # 1000 structures for the top 5 spacegroup in organic structures
+    0    1   2    1000  .  .
+    0    1   15   1000  .  .
+    0    1   61   1000  .  .
+    0    1   19   1000  .  .
+    0    1   4     500  .  . # 500 structures for the next 5 spacegroup in organic structures
+    0    1   33    500  .  .
+    0    1   29    500  .  .
+    0    1   5     500  .  .
+    0    1   1     500  .  .
+    0    2   14    500  .  . # 500 structures for the top 5 spacegroup in organic structres and Z'=2
+    0    2   2     500  .  .
+    0    2   15    500  .  .
+    0    2   61    500  .  .
+    0    2   19    500  .  .
+    # MCPT
+    1    1   [14 2 15 61 19 4 33 29 5 1]   1000000   200   10.0
+    1    2   [14 2 15 61 19]                500000   200   10.0
+    # EA
+    2    1   [14 2 15 61 19 4 33 29 5 1]   1000000   200   10.0
+    2    2   [14 2 15 61 19]                500000   200   10.0
+    # PSO
+    3    1   [14 2 15 61 19 4 33 29 5 1]   1000000   200   10.0
+    3    2   [14 2 15 61 19]                500000   200   10.0

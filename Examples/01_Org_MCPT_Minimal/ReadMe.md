@@ -24,15 +24,15 @@ The datablock (in file `csp_input.cif`) starts by introducing three identifiers 
 
 Only the latter will be used to link output structures to the input datablock.
 
-The input then describe the molecule with details on atoms and bonds.
+The input then describe the molecule with details on atoms and bonds, constraints in the search (
+for example the number spacegroups used) and stopping criteria for ending the generation of structures.
 
 ---
 
 ## Structure Generation Methods
 
 In the file `structure_generation_methods.cif` we describe Monte Carlo Parallel Tempering (MCPT).
-This includes parameters specific to the MCPT method (for example the number of replicas), constraints in the search (
-for example the number spacegroups used) and stopping criteria for ending the generation of structures.
+This includes parameters specific to the MCPT method (for example the number of replicas).
 
 ---
 

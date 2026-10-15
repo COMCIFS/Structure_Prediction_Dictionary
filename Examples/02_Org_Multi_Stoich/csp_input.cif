@@ -186,7 +186,7 @@ _csp_input.composition_coefficients [[2 1] [1 1] [1 2]] # 2:1, 1:1, 1:2 stoichio
 # Search space
 _csp_search.space_group_number_list        [14 2 15 61 19 4 33 29 5 1]
 _csp_search.stopping_criteria_description  "Max Structures"
-_csp_search.z_prime                        [1, 2]
+_csp_search.z_prime                        [1 2]
 _csp_search.csp_workflow_id                425a77e3-a2a4-40fb-acdb-1e25b2d00bbd
 
 loop_
@@ -197,27 +197,27 @@ loop_
     _csp_search_stopping_criteria.iterations_without_improvement
     _csp_search_stopping_criteria.energy_range
     # Random Sampling
-    1    1   14   1000  .  . # 1000 structures for the top 5 spacegroup in organic structures
-    1    1   2    1000  .  .
-    1    1   15   1000  .  .
-    1    1   61   1000  .  .
-    1    1   19   1000  .  .
-    1    1   4     500  .  . # 500 structures for the next 5 spacegroup in organic structures
-    1    1   33    500  .  .
-    1    1   29    500  .  .
-    1    1   5     500  .  .
-    1    1   1     500  .  .
-    1    2   14    500  .  . # 500 structures for the top 5 spacegroup in organic structres and Z'=2
-    1    2   2     500  .  .
-    1    2   15    500  .  .
-    1    2   61    500  .  .
-    1    2   19    500  .  .
+    0    1   14   1000  .  . # 1000 structures for the top 5 spacegroup in organic structures
+    0    1   2    1000  .  .
+    0    1   15   1000  .  .
+    0    1   61   1000  .  .
+    0    1   19   1000  .  .
+    0    1   4     500  .  . # 500 structures for the next 5 spacegroup in organic structures
+    0    1   33    500  .  .
+    0    1   29    500  .  .
+    0    1   5     500  .  .
+    0    1   1     500  .  .
+    0    2   14    500  .  . # 500 structures for the top 5 spacegroup in organic structres and Z'=2
+    0    2   2     500  .  .
+    0    2   15    500  .  .
+    0    2   61    500  .  .
+    0    2   19    500  .  .
     # MCPT
+    1    1   [14 2 15 61 19 4 33 29 5 1]   1000000   200   10.0
+    1    2   [14 2 15 61 19]                500000   200   10.0
+    # EA
     2    1   [14 2 15 61 19 4 33 29 5 1]   1000000   200   10.0
     2    2   [14 2 15 61 19]                500000   200   10.0
-    # EA
+    # PSO
     3    1   [14 2 15 61 19 4 33 29 5 1]   1000000   200   10.0
     3    2   [14 2 15 61 19]                500000   200   10.0
-    # PSO
-    4    1   [14 2 15 61 19 4 33 29 5 1]   1000000   200   10.0
-    4    2   [14 2 15 61 19]                500000   200   10.0

@@ -224,9 +224,9 @@ It describes input constraints in a CSP search.
         
 save_
 
-save_CSP_SEARCH_STOPPING_CRITERIA
+save_CSP_STOPPING_CRITERIA
 
-    _definition.id                CSP_SEARCH_STOPPING_CRITERIA
+    _definition.id                CSP_STOPPING_CRITERIA
     _definition.scope             Category
     _definition.class             Loop
     _definition.update            2026-10-23
@@ -234,14 +234,14 @@ save_CSP_SEARCH_STOPPING_CRITERIA
 ;
 It describes rules to stop a CSP Search.
 ;
-    _name.category_id             CSP_SEARCH
-    _name.object_id               CSP_SEARCH_STOPPING_CRITERIA
+    _name.category_id             CSP
+    _name.object_id               CSP_STOPPING_CRITERIA
     loop_
         _category_key.name
-        '_csp_search_stopping_criteria.space_group_number_list' 
-        '_csp_search_stopping_criteria.space_group_list'        
-        '_csp_search_stopping_criteria.z_prime'      
-        '_csp_search_stopping_criteria.structure_generation_stage'              
+        '_csp_stopping_criteria.space_group_number_list' 
+        '_csp_stopping_criteria.space_group_list'        
+        '_csp_stopping_criteria.z_prime'      
+        '_csp_stopping_criteria.structure_generation_stage'              
                    
 save_
 
@@ -1516,16 +1516,16 @@ In a loop describing search constraints, a Z' filter on which applying the const
 
 save_
 
-save_csp_search_stopping_criteria.structure_generation_stage
+save_csp_stopping_criteria.structure_generation_stage
 
-    _definition.id                '_csp_search_stopping_criteria.structure_generation_stage'
-    _alias.definition_id          '_csp_search_stopping_criteria_structure_generation_stage'
+    _definition.id                '_csp_stopping_criteria.structure_generation_stage'
+    _alias.definition_id          '_csp_stopping_criteria_structure_generation_stage'
     _definition.update            2026-10-23
     _description.text
 ;
 If different stopping criteria are used for each structure generation method, it allows a user to specify the generation stage number. It requires `_csp_search.csp_workflow_id`.
 ;
-    _name.category_id             'csp_search_stopping_criteria'
+    _name.category_id             'csp_stopping_criteria'
     _name.object_id               'structure_generation_stage'
     _type.purpose                 Number
     _type.source                  Assigned
@@ -1536,16 +1536,16 @@ If different stopping criteria are used for each structure generation method, it
 
 save_
 
-save_csp_search_stopping_criteria.z_prime
+save_csp_stopping_criteria.z_prime
 
-    _definition.id                '_csp_search_stopping_criteria.z_prime'
-    _alias.definition_id          '_csp_search_stopping_criteria_z_prime'
+    _definition.id                '_csp_stopping_criteria.z_prime'
+    _alias.definition_id          '_csp_stopping_criteria_z_prime'
     _definition.update            2026-10-23
     _description.text
 ;
 If different stopping criteria are used for each value of Z', it allows a user to specify it in a loop.
 ;
-    _name.category_id             'csp_search_stopping_criteria'
+    _name.category_id             'csp_stopping_criteria'
     _name.object_id               'z_prime'
     _type.purpose                 Number
     _type.source                  Assigned
@@ -1558,16 +1558,16 @@ If different stopping criteria are used for each value of Z', it allows a user t
 
 save_
 
-save_csp_search_stopping_criteria.space_group_number_list
+save_csp_stopping_criteria.space_group_number_list
 
-    _definition.id                '_csp_search_stopping_criteria.space_group_number_list'
-    _alias.definition_id          '_csp_search_stopping_criteria_space_group_number_list'
+    _definition.id                '_csp_stopping_criteria.space_group_number_list'
+    _alias.definition_id          '_csp_stopping_criteria_space_group_number_list'
     _definition.update            2026-10-23
     _description.text
 ;
 If different stopping criteria are used for each space group, it allows a user to specify a single space group or a subset of space groups numbers in a loop.
 ;
-    _name.category_id             'csp_search_stopping_criteria'
+    _name.category_id             'csp_stopping_criteria'
     _name.object_id               'space_group_number_list'
     _type.purpose                 Number
     _type.source                  Assigned
@@ -1579,16 +1579,16 @@ If different stopping criteria are used for each space group, it allows a user t
 
 save_
 
-save_csp_search_stopping_criteria.space_group_list
+save_csp_stopping_criteria.space_group_list
 
-    _definition.id                '_csp_search_stopping_criteria.space_group_list'
-    _alias.definition_id          '_csp_search_stopping_criteria_space_group_list'
+    _definition.id                '_csp_stopping_criteria.space_group_list'
+    _alias.definition_id          '_csp_stopping_criteria_space_group_list'
     _definition.update            2026-10-23
     _description.text
 ;
 If different stopping criteria are used for each space group, it allows a user to specify a single space group or a subset of space groups names in a loop.
 ;
-    _name.category_id             'csp_search_stopping_criteria'
+    _name.category_id             'csp_stopping_criteria'
     _name.object_id               'space_group_list'
     _type.purpose                 Describe
     _type.source                  Assigned
@@ -1598,16 +1598,16 @@ If different stopping criteria are used for each space group, it allows a user t
 
 save_
 
-save_csp_search_stopping_criteria.max_structures_evaluated
+save_csp_stopping_criteria.max_structures_evaluated
 
-    _definition.id                '_csp_search_stopping_criteria.max_structures_evaluated'
-    _alias.definition_id          '_csp_search_stopping_criteria_max_structures_evaluated'
+    _definition.id                '_csp_stopping_criteria.max_structures_evaluated'
+    _alias.definition_id          '_csp_stopping_criteria_max_structures_evaluated'
     _definition.update            2026-10-23
     _description.text
 ;
-In a loop, the maximum total number of unique crystal structures that will be generated and evaluated during the search. If it relates to a list of spacegroups in `_csp_search_stopping_criteriaspace_group_number_list`, the value applies to all spacegroups in total (see the Examples section below).
+In a loop, the maximum total number of unique crystal structures that will be generated and evaluated during the search. If it relates to a list of spacegroups in `_csp_stopping_criteriaspace_group_number_list`, the value applies to all spacegroups in total (see the Examples section below).
 ;
-    _name.category_id             'csp_search_stopping_criteria'
+    _name.category_id             'csp_stopping_criteria'
     _name.object_id               'max_structures_evaluated'
     _type.purpose                 Number
     _type.source                  Assigned
@@ -1619,16 +1619,16 @@ In a loop, the maximum total number of unique crystal structures that will be ge
 
 save_
 
-save_csp_search_stopping_criteria.iterations_without_improvement
+save_csp_stopping_criteria.iterations_without_improvement
 
-    _definition.id                '_csp_search_stopping_criteria.iterations_without_improvement'
-    _alias.definition_id          '_csp_search_stopping_criteria_iterations_without_improvement'
+    _definition.id                '_csp_stopping_criteria.iterations_without_improvement'
+    _alias.definition_id          '_csp_stopping_criteria_iterations_without_improvement'
     _definition.update            2026-10-23
     _description.text
 ;
 In a loop, the maximum number of consecutive iterations (generations, MC steps, etc.) where the global minimum (or the lowest few structures) does not change.
 ;
-    _name.category_id             'csp_search_stopping_criteria'
+    _name.category_id             'csp_stopping_criteria'
     _name.object_id               'iterations_without_improvement'
     _type.purpose                 Number
     _type.source                  Assigned
@@ -1640,16 +1640,16 @@ In a loop, the maximum number of consecutive iterations (generations, MC steps, 
 
 save_
 
-save_csp_search_stopping_criteria.energy_range
+save_csp_stopping_criteria.energy_range
 
-    _definition.id                '_csp_search_stopping_criteria.energy_range'
-    _alias.definition_id          '_csp_search_stopping_criteria_energy_range'
+    _definition.id                '_csp_stopping_criteria.energy_range'
+    _alias.definition_id          '_csp_stopping_criteria_energy_range'
     _definition.update            2026-10-23
     _description.text
 ;
 In a loop, an energy threshold for the selection of low-energy structures to be considered in the convergence criteria.
 ;
-    _name.category_id             'csp_search_stopping_criteria'
+    _name.category_id             'csp_stopping_criteria'
     _name.object_id               'energy_range'
     _type.purpose                 Number
     _type.source                  Assigned
@@ -1661,16 +1661,16 @@ In a loop, an energy threshold for the selection of low-energy structures to be 
 
 save_
 
-save_csp_search_stopping_criteria.structures_range
+save_csp_stopping_criteria.structures_range
 
-    _definition.id                '_csp_search_stopping_criteria.structures_range'
-    _alias.definition_id          '_csp_search_stopping_criteria_structures_range'
+    _definition.id                '_csp_stopping_criteria.structures_range'
+    _alias.definition_id          '_csp_stopping_criteria_structures_range'
     _definition.update            2026-10-23
     _description.text
 ;
 In a loop, the number of low-energy structures to be considered in the convergence criteria.
 ;
-    _name.category_id             'csp_search_stopping_criteria'
+    _name.category_id             'csp_stopping_criteria'
     _name.object_id               'structures_range'
     _type.purpose                 Number
     _type.source                  Assigned

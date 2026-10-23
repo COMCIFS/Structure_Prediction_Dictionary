@@ -207,9 +207,9 @@ loop_
     _csp_search_space.structure_generation_stage
     _csp_search_space.z_prime
     _csp_search_space.space_group_number_list
-    _csp_search_stopping_criteria.max_structures_evaluated
-    _csp_search_stopping_criteria.iterations_without_improvement
-    _csp_search_stopping_criteria.energy_range
+    _csp_stopping_criteria.max_structures_evaluated
+    _csp_stopping_criteria.iterations_without_improvement
+    _csp_stopping_criteria.energy_range
     # Random Sampling
     [0]    [1]   [14]   1000  .  . # 1000 structures for the top 5 spacegroup in organic structures
     [0]    [1]   [2]    1000  .  .

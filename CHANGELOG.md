@@ -14,18 +14,18 @@
   make a CSP protocol independent of input systems and allow it to be reused across different systems. Below is a table
   with modified data fields:
 
-| Old Data Fields                                                              | New Data Fields                                                                                   |
-|------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|
-| `_csp_structure_generation_stopping_criteria.description`                    | `_csp_search.stopping_criteria_description`                                                       |
-| `_csp_structure_generation_stopping_criteria.max_structures_evaluated`       | `_csp_search_stopping_criteria.max_structures_evaluated` - `_csp_search.max_structures_evaluated` |
-| `_csp_structure_generation_stopping_criteria.iterations_without_improvement` | `_csp_search_stopping_criteria.iterations_without_improvement`                                    |
-| `_csp_structure_generation_stopping_criteria.energy_range`                   | `_csp_search_stopping_criteria.energy_range`                                                      |
-| `_csp_structure_generation_stopping_criteria.structures_range`               | `_csp_search_stopping_criteria.structures_range`                                                  |
-| `_csp_structure_generation_search_space.space_group_number_list`             | `_csp_search_stopping_criteria.space_group_number_list`                                           |
-| `_csp_structure_generation_search_space.space_group_list`                    | `_csp_search_stopping_criteria.space_group_list`                                                  |
-| `_csp_structure_generation_search_space.z_prime`                             | `_csp_search_stopping_criteria.z_prime`                                                           |
-| `_csp.structure_generation_space_group_number_list`                          | `_csp_search.space_group_number_list`                                                             |
-| `_csp.structure_generation_space_group_list`                                 | `_csp_search.space_group_list`                                                                    |
+| Old Data Fields                                                              | New Data Fields                                                                            |
+|------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------|
+| `_csp_structure_generation_stopping_criteria.description`                    | `_csp_search.stopping_criteria_description`                                                |
+| `_csp_structure_generation_stopping_criteria.max_structures_evaluated`       | `_csp_stopping_criteria.max_structures_evaluated` - `_csp_search.max_structures_evaluated` |
+| `_csp_structure_generation_stopping_criteria.iterations_without_improvement` | `_csp_stopping_criteria.iterations_without_improvement`                                    |
+| `_csp_structure_generation_stopping_criteria.energy_range`                   | `_csp_stopping_criteria.energy_range`                                                      |
+| `_csp_structure_generation_stopping_criteria.structures_range`               | `_csp_stopping_criteria.structures_range`                                                  |
+| `_csp_structure_generation_search_space.space_group_number_list`             | `_csp_stopping_criteria.space_group_number_list`                                           |
+| `_csp_structure_generation_search_space.space_group_list`                    | `_csp_stopping_criteria.space_group_list`                                                  |
+| `_csp_structure_generation_search_space.z_prime`                             | `_csp_stopping_criteria.z_prime`                                                           |
+| `_csp.structure_generation_space_group_number_list`                          | `_csp_search.space_group_number_list`                                                      |
+| `_csp.structure_generation_space_group_list`                                 | `_csp_search.space_group_list`                                                             |
 
 - Data fields from the CHEMICAL dictionary have been copied to `_csp_input_atom.[]` and `_csp_input_bond.[]` for
   consistency in loops:
@@ -88,9 +88,9 @@ _csp_search.space_group_number_list        [14 2 15 61 19 4 33 29 5 1]
 _csp_search.stopping_criteria_description  "Max Structures"
 
 loop_
-    _csp_search_stopping_criteria.z_prime
-    _csp_search_stopping_criteria.space_group_number_list                         
-    _csp_search_stopping_criteria.max_structures_evaluated  
+    _csp_stopping_criteria.z_prime
+    _csp_stopping_criteria.space_group_number_list                         
+    _csp_stopping_criteria.max_structures_evaluated  
     1 [14 2 15 61 19]  5000 # Structures in total, not necessarily equally distributed
     2 [14 2 15 61 19]  2500    
     1 [4 33 29 5 1]    2500 
@@ -103,9 +103,9 @@ _csp_search.space_group_number_list        [14 2 15 61 19 4 33 29 5 1]
 _csp_search.stopping_criteria_description  ["Max Structures"]
 
 loop_
-    _csp_search_stopping_criteria.z_prime
-    _csp_search_stopping_criteria.space_group_number_list                         
-    _csp_search_stopping_criteria.max_structures_evaluated  
+    _csp_stopping_criteria.z_prime
+    _csp_stopping_criteria.space_group_number_list                         
+    _csp_stopping_criteria.max_structures_evaluated  
     [1] [14 2 15 61 19]  5000 # Structures in total, not necessarily equally distributed
     [2] [14 2 15 61 19]  2500    
     [1] [4 33 29 5 1]    2500 
@@ -116,11 +116,11 @@ loop_
 ## New Features
 
 - Multiple data fields have been added to describe the output crystal properties. These can be classified into:
-    - Energy data fields related to variable compositions calculations.
-    - Per atom properties (forces, partial charges).
-    - Band structure, density of states and related propeties.
-    - Phonons.
-    - Magnetic, Mechanical and transport properties.
+  - Energy data fields related to variable compositions calculations.
+  - Per atom properties (forces, partial charges).
+  - Band structure, density of states and related propeties.
+  - Phonons.
+  - Magnetic, Mechanical and transport properties.
 
 ## Fixes
 
@@ -240,13 +240,13 @@ loop_
   Old version:
 
   | Group | Category   | Data Field         |
-            |-------|------------|--------------------|
+                |-------|------------|--------------------|
   | CSP   | Data Block | `class`            |
 
   New version:
 
   | Group             | Data Field         |
-            |-------------------|--------------------|
+                |-------------------|--------------------|
   | `_csp_data_block` | `class`            |
 
 - "Definition", "Constraints" and "Examples" columns changed to improved clarity.

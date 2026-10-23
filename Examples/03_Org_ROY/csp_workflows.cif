@@ -9,10 +9,11 @@ data_workflow
     # Structure Generation Methods
     loop_
         _csp_structure_generation.stage
+        _csp_structure_generation.preceding_stage
         _csp_structure_generation.data_block_label
         _csp_structure_generation.data_block_description
         _csp_structure_generation.data_block_id
-        0 "rs"   "Quasi-Random Sampling"                d515466d-f996-44d8-b52f-c22a6990de76
+        0 . "rs"   "Quasi-Random Sampling"                d515466d-f996-44d8-b52f-c22a6990de76
 
     # Structure Ranking Methods
     loop_

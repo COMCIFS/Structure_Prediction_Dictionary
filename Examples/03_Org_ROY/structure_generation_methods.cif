@@ -8,5 +8,5 @@ data_rs
 
     # Method Details
     _csp.structure_generation_method                                           "Random Search"
-    _csp_random_search.algorithm_type                                          "Quasi-random"
+    _csp_random_search.algorithm_type                                          "Quasirandom"
     _csp_random_search.algorithm                                               "Sobol"

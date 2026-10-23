@@ -8,29 +8,9 @@ data_rs
 
     # Method Details
     _csp.structure_generation_method                                           "Random Search"
-    _csp_random_search.algorithm_type                           "Quasi-random"
-    _csp_random_search.algorithm                                "Sobol"
+    _csp_random_search.algorithm_type                                          "Quasirandom"
+    _csp_random_search.algorithm                                               "Sobol"
 
-    # Search Space & Stopping Criteria
-    _csp.structure_generation_density_lower_limit                              1000
-    _csp.structure_generation_density_upper_limit                              1500
-
-    _csp.structure_generation_space_group_number_list                          [14 2 15 61 19 4 33 29 5 1]
-
-    _csp_structure_generation_stopping_criteria.description                    "Max Structures"
-    loop_
-        _csp_structure_generation_search_space.space_group_number_list
-        _csp_structure_generation_stopping_criteria.max_structures_evaluated
-        14   1000  # 1000 structures for each spacegroup
-        2    1000
-        15   1000
-        61   1000
-        19   1000
-        4     500
-        33    500
-        29    500
-        5     500
-        1     500
 
 # Monte Carlo Parallel Tempering
 data_mcpt
@@ -42,18 +22,9 @@ data_mcpt
     # Method Details
     _csp.structure_generation_method                                           "Monte Carlo Parallel Tempering"
     _csp_monte_carlo_parallel_tempering.number_of_replicas                     8
-    _csp_monte_carlo_parallel_tempering.temperatures_list                      [400 350 300 250 200 150 100 50]
-    _csp_monte_carlo_parallel_tempering.number_of_steps                        100
+    _csp_monte_carlo_parallel_tempering.temperatures_list                      [5000 500 300 250 200 150 100 50]
+    _csp_monte_carlo_parallel_tempering.number_of_steps                        20
 
-    # Search Space & Stopping Criteria
-    _csp.structure_generation_density_lower_limit                              1000
-    _csp.structure_generation_density_upper_limit                              1500
-    _csp.structure_generation_space_group_number_list                          [14 2 15 61 19 4 33 29 5 1]
-
-    _csp_structure_generation_stopping_criteria.description                    ["Max Structures" "Low-Energy Structures Unchanged"]
-    _csp_structure_generation_stopping_criteria.max_structures_evaluated       100000
-    _csp_structure_generation_stopping_criteria.iterations_without_improvement 20
-    _csp_structure_generation_stopping_criteria.energy_range                   10.0
 
 # Evolutionary Algorithm
 data_ea
@@ -70,16 +41,6 @@ data_ea
     _csp_evolutionary_algorithms.mutation_fraction                              0.5
     _csp_evolutionary_algorithms.heredity_fraction                              0.5  # Crossover or recombination
 
-    # Search Space & Stopping Criteria
-    _csp.structure_generation_density_lower_limit                              1000
-    _csp.structure_generation_density_upper_limit                              1500
-    _csp.structure_generation_space_group_number_list                          [14 2 15 61 19 4 33 29 5 1]
-
-    _csp_structure_generation_stopping_criteria.description                    ["Max Structures" "Low-Energy Structures Unchanged"]
-    _csp_structure_generation_stopping_criteria.max_structures_evaluated       100000
-    _csp_structure_generation_stopping_criteria.iterations_without_improvement 20
-    _csp_structure_generation_stopping_criteria.energy_range                   10.0
-
 # Particle Swarm Optimisation
 data_pso
     # Datablock Details
@@ -95,14 +56,3 @@ data_pso
     _csp_particle_swarm_optimisation.min_inertia_weight                        0.4
     _csp_particle_swarm_optimisation.cognitive_coefficient                     2
     _csp_particle_swarm_optimisation.social_coefficient                        2
-
-
-    # Search Space & Stopping Criteria
-    _csp.structure_generation_density_lower_limit                              1000
-    _csp.structure_generation_density_upper_limit                              1500
-    _csp.structure_generation_space_group_number_list                          [14 2 15 61 19 4 33 29 5 1]
-
-    _csp_structure_generation_stopping_criteria.description                    ["Max Structures" "Low-Energy Structures Unchanged"]
-    _csp_structure_generation_stopping_criteria.max_structures_evaluated       100000
-    _csp_structure_generation_stopping_criteria.iterations_without_improvement 20
-    _csp_structure_generation_stopping_criteria.energy_range                   10.0

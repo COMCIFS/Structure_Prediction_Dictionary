@@ -1,19 +1,34 @@
 #\#CIF_2.0
 data_cbn_tmp
 # Datablock Details
-_csp_data_block.class       "Input"
-_csp_data_block.id          2a2611e3-2021-4b03-a7c6-0ef71239008f
-_csp_data_block.description input1
+_csp_data_block.class            "Input"
+_csp_data_block.id               2a2611e3-2021-4b03-a7c6-0ef71239008f
+_csp_data_block.landscape_id     4336550d-0f62
+_csp_data_block.description      input1
+_csp_data_block.additional_files ["csp_workflows.cif"]
 
-_csp_input.name             cannabinol_tetramethylpyrazine
-_csp_input.identifier       BT-XXX
+_csp_input.name                  cannabinol_tetramethylpyrazine
+_csp_input.identifier            BT-XXX
+
+# Related Landscapes
+loop_
+    _csp_landscape_cross_reference.relationship_description
+    _csp_landscape_cross_reference.related_id
+    _csp_landscape_cross_reference.related_description
+    _csp_landscape_cross_reference.related_location
+    "7th CSP Blind Test"  "6710a82f-0f5f"  "XXVII"  "Internal DB"
+    "7th CSP Blind Test"  "c80d7913-30df"  "XXVIII" "Internal DB"
+    "7th CSP Blind Test"  "e4f89e83-5745"  "XXIX"   "Internal DB"
+    "7th CSP Blind Test"  "e4bb3a68-385d"  "XXXI"   "Internal DB"
+    "7th CSP Blind Test"  "275a2128-8895"  "XXXII"  "Internal DB"
+    "7th CSP Blind Test"  "5e1064e2-ecf6"  "XXXIII" "Internal DB"
 
 # Molecules
 loop_
     _csp_input_molecular_entity.number
     _csp_input_molecular_entity.identifier
     _csp_input_molecular_entity.smiles
-    _chemical.name_common
+    _csp_input_molecular_entity.common_name
     1 CBN 'CCCCCc1cc(O)c2c(OC(C)(C)c3ccc([CH6])cc23)c1' cannabinol
     2 TMP Cc1nc(C)c(C)nc1C                            tetramethylpyrazine
 
@@ -21,10 +36,10 @@ loop_
 loop_
     _csp_input_atom.molecular_entity_number
     _csp_input_atom.molecular_entity_identifier
-    _chemical_conn_atom.number
+    _csp_input_atom.number
     _csp_input_atom.label
-    _chemical_conn_atom.type_symbol
-    _chemical_conn_atom.charge
+    _csp_input_atom.symbol
+    _csp_input_atom.charge
     1 CBN  1 O8   O -0.4823
     1 CBN  2 O1   O -0.5071
     1 CBN  3 H1   H  0.2931
@@ -101,9 +116,9 @@ loop_
 
 # Bonds
 loop_
-    _chemical_conn_bond.atom_1
-    _chemical_conn_bond.atom_2
-    _chemical_conn_bond.type
+    _csp_input_bond.atom_1
+    _csp_input_bond.atom_2
+    _csp_input_bond.type
      1    10    sing 
      1    14    sing 
      2     3    sing 
@@ -179,5 +194,44 @@ loop_
     68    71    sing 
 
 # Type of Composition Search
-_csp_input.composition_calculation  "fixed"
+_csp_input.composition_calculation  "Fixed"
 _csp_input.composition_coefficients [[2 1] [1 1] [1 2]] # 2:1, 1:1, 1:2 stoichiometries considered
+
+# Search space
+_csp_search.space_group_number_list        [14 2 15 61 19 4 33 29 5 1]
+_csp_search.z_prime                        [1 2]
+_csp_search.stopping_criteria_description  ["Max Structures"]
+_csp_search.csp_workflow_id                425a77e3-a2a4-40fb-acdb-1e25b2d00bbd
+
+loop_
+    _csp_search_space.structure_generation_stage
+    _csp_search_space.z_prime
+    _csp_search_space.space_group_number_list
+    _csp_stopping_criteria.max_structures_evaluated
+    _csp_stopping_criteria.iterations_without_improvement
+    _csp_stopping_criteria.energy_range
+    # Random Sampling
+    [0]    [1]   [14]   1000  .  . # 1000 structures for the top 5 spacegroup in organic structures
+    [0]    [1]   [2]    1000  .  .
+    [0]    [1]   [15]   1000  .  .
+    [0]    [1]   [61]   1000  .  .
+    [0]    [1]   [19]   1000  .  .
+    [0]    [1]   [4]     500  .  . # 500 structures for the next 5 spacegroup in organic structures
+    [0]    [1]   [33]    500  .  .
+    [0]    [1]   [29]    500  .  .
+    [0]    [1]   [5]     500  .  .
+    [0]    [1]   [1]     500  .  .
+    [0]    [2]   [14]    500  .  . # 500 structures for the top 5 spacegroup in organic structres and Z'=2
+    [0]    [2]   [2]     500  .  .
+    [0]    [2]   [15]    500  .  .
+    [0]    [2]   [61]    500  .  .
+    [0]    [2]   [19]    500  .  .
+    # MCPT
+    [1]    [1]   [14 2 15 61 19 4 33 29 5 1]   1000000   200   10.0
+    [1]    [2]   [14 2 15 61 19]                500000   200   10.0
+    # EA
+    [2]    [1]   [14 2 15 61 19 4 33 29 5 1]   1000000   200   10.0
+    [2]    [2]   [14 2 15 61 19]                500000   200   10.0
+    # PSO
+    [3]    [1]   [14 2 15 61 19 4 33 29 5 1]   1000000   200   10.0
+    [3]    [2]   [14 2 15 61 19]                500000   200   10.0

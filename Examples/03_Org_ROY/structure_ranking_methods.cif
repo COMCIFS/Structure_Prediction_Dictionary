@@ -1,3 +1,4 @@
+#\#CIF_2.0
 # Forcefields
 data_PCLAMS
     # Datablock Details
@@ -17,11 +18,11 @@ data_PCLAMS
     _forcefield.dihedral_type            "Periodic"
     _forcefield.1_4_pairs                False
 
-    _forcefield.electrostatic_term       "Point-Charges"
+    _forcefield.electrostatic_term       "Point Charges"
     _forcefield.long_range_electrostatic "PME"
 
     _forcefield.vdw_term                 "Buckhingham"
-    _forcefield.long_range_electrostatic "LJ-PME"
+    _forcefield.long_range_vdw "LJ-PME"
 
     _forcefield.combination_rule         "Lorentz-Berthelot"
 
@@ -29,13 +30,13 @@ data_PCLAMS
         _forcefield_parameterisation.term
         _forcefield_parameterisation.description
         _forcefield_parameterisation.method
-        intra         "Local Approximate Models fit to QM data"     "CrystPredLAMs"
-        electrostatic "Fitting to gas-phase QM data"                "B3LYP/6-31G(d,p)"
-        vdw           "Transferable parameters based on atom types" "FIT"
+        intramolecular "Local Approximate Models fit to QM data"     "CrystPredLAMs"
+        electrostatic  "Fitting to gas-phase QM data"                "B3LYP/6-31G(d,p)"
+        vdw            "Transferable parameters based on atom types" "FIT"
 
     # Geometry Optimisation
     _compchem.calculation_type                              "Optimisation"
-    _compchem_geometry_optimisation.algorithm               steep
+    _compchem_geometry_optimisation.algorithm               "Steepest Descent"
     _compchem_geometry_optimisation.cell                    anisotropic
     _compchem_geometry_optimisation.atoms                   all
 
@@ -70,13 +71,13 @@ data_MPLAMS
         _forcefield_parameterisation.term
         _forcefield_parameterisation.description
         _forcefield_parameterisation.method
-        intra         "Local Approximate Models fit to QM data"     "CrystOptLAMs"
-        electrostatic "Fitting to gas-phase QM data"                "B3LYP/6-31G(d,p)"
-        vdw           "Transferable parameters based on atom types" "FIT"
+        intramolecular "Local Approximate Models fit to QM data"     "CrystOptLAMs"
+        electrostatic  "Fitting to gas-phase QM data"                "B3LYP/6-31G(d,p)"
+        vdw            "Transferable parameters based on atom types" "FIT"
 
     # Geometry Optimisation
     _compchem.calculation_type                              "Optimisation"
-    _compchem_geometry_optimisation.algorithm               steep
+    _compchem_geometry_optimisation.algorithm               "Steepest Descent"
     _compchem_geometry_optimisation.cell                    anisotropic
     _compchem_geometry_optimisation.atoms                   all
 
@@ -102,7 +103,7 @@ data_B86bPBE-XDM
 
     # Geometry Optimisation
     _compchem.calculation_type                              "Optimisation"
-    _compchem_geometry_optimisation.algorithm               "CG"
+    _compchem_geometry_optimisation.algorithm               "Conjugate Gradient"
     _compchem_geometry_optimisation.cell                    "anisotropic"
     _compchem_geometry_optimisation.atoms                   "all"
 
@@ -115,9 +116,13 @@ data_SCS-MP2D
     _csp_data_block.id                                      ec2ac04a-7781-44d1-a0bf-7a1535269b42
 
     # Energy Method Details
-    _dft.monomer_correction                                 "SCS-MP2D"
-    _dft.exchange_correlation_functional_type               "HF"
-    _dft.exchange_correlation_functional_name               "SCS-MP2D"
+    _compchem.method                                        "pDFT"
+    _dft.exchange_correlation_functional_type               "Hybrid"
+    _dft.exchange_correlation_functional_name               "B86bPBE"
+    _dft.dispersion_correction                              "XDM"
+    _dft.monomer_correction_functional                      "SCS-MP2D"
+    _dft.monomer_correction_basis_set                       "aug-cc-pVQZ"
+
 
     # Geometry Optimisation
-    _compchem.calculation_type                              "Single-Point"
+    _compchem.calculation_type                              "Single point"

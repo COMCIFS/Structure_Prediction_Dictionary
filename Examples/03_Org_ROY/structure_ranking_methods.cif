@@ -125,4 +125,4 @@ data_SCS-MP2D
 
 
     # Geometry Optimisation
-    _compchem.calculation_type                              "Single point"
+    _compchem.calculation_type                              "Single Point"

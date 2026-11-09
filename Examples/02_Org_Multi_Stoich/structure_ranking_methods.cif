@@ -138,7 +138,7 @@ data_pbe0_d3
     _dft.BZ_integration_grid_dens_Z                         0.5
 
     # Geometry Optimisation
-    _compchem.calculation_type                              "Single point"
+    _compchem.calculation_type                              "Single Point"
 
 # Meta DFT
 data_r2scan
@@ -161,7 +161,7 @@ data_r2scan
     _dft.BZ_integration_grid_dens_Z                         0.5
 
     # Geometry Optimisation
-    _compchem.calculation_type                              "Single point"
+    _compchem.calculation_type                              "Single Point"
 
 # Wavefunction
 data_mp2
@@ -176,7 +176,7 @@ data_mp2
     _wavefunction.basis_set_type                            "NAO"
 
     # Geometry Optimisation
-    _compchem.calculation_type                              "Single point"
+    _compchem.calculation_type                              "Single Point"
 
 data_pbe0_mbd_opt
     # Datablock Details
@@ -229,4 +229,4 @@ data_pbe0_mbd_qha
     _compchem.calculation_type                              "Dynamic Ensemble"
     _free_energy.method                                     "QHA"
     _free_energy.reference_temperature                      [100 200 300]
-    _free_energy.reference_pressure                         100000.0
+    _free_energy.reference_pressure                         [100000.0]
